@@ -26,31 +26,46 @@ export interface ReviewStatus {
 export const reviewStatus: ReviewStatus = {
   // IDs of people we've thoroughly examined
   reviewedPeople: [
+    // Union commanders
     1,   // Ulysses S. Grant - 13 battles
     2,   // William T. Sherman - 10 battles
     3,   // George B. McClellan - 8 battles
     4,   // George G. Meade - 9 battles
     5,   // Philip Sheridan - 9 battles
     6,   // George Thomas - 6 battles
+    7,   // Ambrose E. Burnside - 5 battles
     8,   // Joseph Hooker - 5 battles
+    9,   // Irvin McDowell - 2 battles
+    10,  // Don Carlos Buell - 3 battles
+    11,  // William Rosecrans - 5 battles
+    12,  // John Pope - 2 battles
+    50,  // Winfield Scott Hancock - 9 battles
+    53,  // John Sedgwick - 7 battles
+    70,  // George Custer - 5 battles
+    // Confederate commanders
     20,  // Robert E. Lee - 17 battles
     21,  // Stonewall Jackson - 13 battles
     22,  // James Longstreet - 10 battles
     23,  // P.G.T. Beauregard - 4 battles
     24,  // Joseph E. Johnston - 5 battles
-    25,  // J.E.B. Stuart - 8 battles
+    25,  // J.E.B. Stuart - 9 battles
+    26,  // Braxton Bragg - 7 battles
     27,  // John Bell Hood - 11 battles
     28,  // Nathan Bedford Forrest - 4 battles
-    50,  // Winfield Scott Hancock - 9 battles
+    29,  // A.P. Hill - 13 battles
+    30,  // Jubal Early - 10 battles
+    80,  // Richard S. Ewell - 8 battles
+    82,  // John B. Gordon - 11 battles
     84,  // George Pickett - 5 battles
+    87,  // William J. Hardee - 7 battles
     88,  // Patrick Cleburne - 9 battles
+    89,  // Wade Hampton - 8 battles
+    91,  // Joseph Wheeler - 9 battles
   ],
 
-  // IDs of people pending review (start with all current people)
+  // IDs of people pending review
   pendingPeople: [
-    // From people-expanded.ts (IDs 1-12, 20-30, 40-45)
-    /*1-6,8 reviewed*/ 7, 9, 10, 11, 12,  // Union military
-    /*20-25,27-28 reviewed*/ 26, 29, 30,  // Confederate military
+    // All base people IDs 1-12, 20-30 now reviewed
     40, 41, 42, 43, 44, 45,  // Political leaders
     // From people-batch2.ts (IDs 50-131)
     50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70,

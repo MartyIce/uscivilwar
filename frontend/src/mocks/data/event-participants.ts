@@ -457,6 +457,58 @@ export const eventParticipants: EventParticipant[] = [
   { event_id: 50, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
   { event_id: 51, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
   { event_id: 52, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+
+  // ==================== MCDOWELL (9) - BULL RUN ====================
+  { event_id: 9, person_id: 9, role: 'subordinate', side: 'union', unit_commanded: 'III Corps, Army of Virginia', rank_at_time: 'Major General' },
+
+  // ==================== BUELL (10) - WESTERN THEATER ====================
+  { event_id: 13, person_id: 10, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Ohio', rank_at_time: 'Major General' },
+
+  // ==================== POPE (12) - SECOND BULL RUN ====================
+  { event_id: 49, person_id: 12, role: 'commander', side: 'union', unit_commanded: 'Army of Virginia', rank_at_time: 'Major General' },
+
+  // ==================== BRAGG (26) - ADDITIONAL ====================
+  { event_id: 6, person_id: 26, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Major General' },
+  { event_id: 50, person_id: 26, role: 'subordinate', side: 'confederate', unit_commanded: 'Adviser', rank_at_time: 'General' },
+  { event_id: 51, person_id: 26, role: 'subordinate', side: 'confederate', unit_commanded: 'Adviser', rank_at_time: 'General' },
+
+  // ==================== EARLY (30) - ADDITIONAL ====================
+  { event_id: 2, person_id: 30, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Colonel' },
+  { event_id: 8, person_id: 30, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 9, person_id: 30, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 20, person_id: 30, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 21, person_id: 30, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+
+  // ==================== A.P. HILL (29) - ADDITIONAL ====================
+  { event_id: 2, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Regiment', rank_at_time: 'Colonel' },
+  { event_id: 7, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 21, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Third Corps', rank_at_time: 'Lieutenant General' },
+
+  // ==================== WHEELER (91) - ADDITIONAL ====================
+  { event_id: 11, person_id: 91, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry', rank_at_time: 'Colonel' },
+  { event_id: 50, person_id: 91, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+  { event_id: 51, person_id: 91, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+  { event_id: 52, person_id: 91, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+
+  // ==================== GORDON (82) - ADDITIONAL ====================
+  { event_id: 14, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 16, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 21, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 25, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 29, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Major General' },
+  { event_id: 30, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Major General' },
+
+  // ==================== HAMPTON (89) - ADDITIONAL ====================
+  { event_id: 9, person_id: 89, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 12, person_id: 89, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 14, person_id: 89, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+
+  // ==================== CUSTER (70) - ADDITIONAL ====================
+  { event_id: 25, person_id: 70, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Brigadier General' },
+  { event_id: 30, person_id: 70, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+
+  // ==================== SEDGWICK (53) - ADDITIONAL ====================
+  { event_id: 8, person_id: 53, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
 ];
 
 // Helper functions for querying the join table
