@@ -1,0 +1,16 @@
+/* App-specific styles - using Tailwind CSS for most styling */
+
+/* Custom Leaflet marker styles */
+.custom-marker {
+  background: transparent;
+  border: none;
+}
+
+/* Ensure map popups have proper z-index */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+}

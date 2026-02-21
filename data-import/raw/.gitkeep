@@ -1,0 +1,8 @@
+# This directory stores raw downloaded data from various sources.
+# Files in this directory are typically:
+# - nps_parks_raw.json - Raw National Park Service API responses
+# - acw_battles_raw.json - Raw ACW battle data
+# - wikidata_*.json - Raw Wikidata SPARQL query results
+# - wikipedia_*.html - Raw Wikipedia pages
+
+# This file ensures the directory is tracked by git even when empty.

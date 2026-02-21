@@ -1,0 +1,674 @@
+[
+  {
+    "id": "acw_VA020",
+    "source_id": "VA020",
+    "source": "acw_battle_data",
+    "name": "Battle of First Bull Run",
+    "alternate_names": ["First Battle of Manassas", "First Manassas"],
+    "type": "battle",
+    "date_start": "1861-07-21",
+    "date_end": "1861-07-21",
+    "description": "The first major land battle of the American Civil War. Confederate forces routed the Union army, dashing hopes for a quick end to the rebellion.",
+    "location": {
+      "name": "Manassas",
+      "lat": 38.8123,
+      "lng": -77.5214,
+      "state": "Virginia",
+      "county": "Prince William"
+    },
+    "theater": "Eastern",
+    "campaign": "Manassas Campaign",
+    "casualties": {
+      "union": {
+        "killed": 460,
+        "wounded": 1124,
+        "captured": 1312,
+        "missing": null,
+        "total": 2896
+      },
+      "confederate": {
+        "killed": 387,
+        "wounded": 1582,
+        "captured": 13,
+        "missing": null,
+        "total": 1982
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 28450,
+        "units": ["Army of Northeastern Virginia"]
+      },
+      "confederate": {
+        "strength": 32230,
+        "units": ["Army of the Potomac (Confederate)", "Army of the Shenandoah"]
+      }
+    },
+    "commanders": {
+      "union": ["Irvin McDowell"],
+      "confederate": ["P.G.T. Beauregard", "Joseph E. Johnston"]
+    },
+    "result": "Confederate victory",
+    "significance": 5,
+    "cwsac_id": "VA020",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/First_Battle_of_Bull_Run",
+    "wikidata_id": "Q211745",
+    "image_url": null
+  },
+  {
+    "id": "acw_SC001",
+    "source_id": "SC001",
+    "source": "acw_battle_data",
+    "name": "Battle of Fort Sumter",
+    "alternate_names": ["Bombardment of Fort Sumter"],
+    "type": "battle",
+    "date_start": "1861-04-12",
+    "date_end": "1861-04-13",
+    "description": "The bombardment of Fort Sumter by Confederate forces marked the beginning of the American Civil War.",
+    "location": {
+      "name": "Fort Sumter",
+      "lat": 32.7522,
+      "lng": -79.8745,
+      "state": "South Carolina",
+      "county": "Charleston"
+    },
+    "theater": "Eastern",
+    "campaign": null,
+    "casualties": {
+      "union": {
+        "killed": 0,
+        "wounded": 4,
+        "captured": 0,
+        "missing": null,
+        "total": 4
+      },
+      "confederate": {
+        "killed": 0,
+        "wounded": 4,
+        "captured": 0,
+        "missing": null,
+        "total": 4
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 85,
+        "units": ["Fort Sumter Garrison"]
+      },
+      "confederate": {
+        "strength": 500,
+        "units": ["South Carolina Militia"]
+      }
+    },
+    "commanders": {
+      "union": ["Robert Anderson"],
+      "confederate": ["P.G.T. Beauregard"]
+    },
+    "result": "Confederate victory",
+    "significance": 5,
+    "cwsac_id": "SC001",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Fort_Sumter",
+    "wikidata_id": "Q612636",
+    "image_url": null
+  },
+  {
+    "id": "acw_TN003",
+    "source_id": "TN003",
+    "source": "acw_battle_data",
+    "name": "Battle of Shiloh",
+    "alternate_names": ["Battle of Pittsburg Landing"],
+    "type": "battle",
+    "date_start": "1862-04-06",
+    "date_end": "1862-04-07",
+    "description": "A major battle in the Western Theater. Confederate forces launched a surprise attack but were ultimately defeated by Union reinforcements.",
+    "location": {
+      "name": "Shiloh",
+      "lat": 35.149,
+      "lng": -88.3239,
+      "state": "Tennessee",
+      "county": "Hardin"
+    },
+    "theater": "Western",
+    "campaign": "Federal Penetration of the Confederate Heartland",
+    "casualties": {
+      "union": {
+        "killed": 1754,
+        "wounded": 8408,
+        "captured": 2885,
+        "missing": null,
+        "total": 13047
+      },
+      "confederate": {
+        "killed": 1728,
+        "wounded": 8012,
+        "captured": 959,
+        "missing": null,
+        "total": 10699
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 65085,
+        "units": ["Army of the Tennessee", "Army of the Ohio"]
+      },
+      "confederate": {
+        "strength": 44968,
+        "units": ["Army of Mississippi"]
+      }
+    },
+    "commanders": {
+      "union": ["Ulysses S. Grant", "Don Carlos Buell"],
+      "confederate": ["Albert Sidney Johnston", "P.G.T. Beauregard"]
+    },
+    "result": "Union victory",
+    "significance": 5,
+    "cwsac_id": "TN003",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Shiloh",
+    "wikidata_id": "Q215697",
+    "image_url": null
+  },
+  {
+    "id": "acw_MD003",
+    "source_id": "MD003",
+    "source": "acw_battle_data",
+    "name": "Battle of Antietam",
+    "alternate_names": ["Battle of Sharpsburg"],
+    "type": "battle",
+    "date_start": "1862-09-17",
+    "date_end": "1862-09-17",
+    "description": "The bloodiest single-day battle in American history. The Union victory gave Lincoln the opportunity to issue the preliminary Emancipation Proclamation.",
+    "location": {
+      "name": "Antietam",
+      "lat": 39.4747,
+      "lng": -77.7439,
+      "state": "Maryland",
+      "county": "Washington"
+    },
+    "theater": "Eastern",
+    "campaign": "Maryland Campaign",
+    "casualties": {
+      "union": {
+        "killed": 2108,
+        "wounded": 9540,
+        "captured": 753,
+        "missing": null,
+        "total": 12401
+      },
+      "confederate": {
+        "killed": 1546,
+        "wounded": 7752,
+        "captured": 1018,
+        "missing": null,
+        "total": 10316
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 75316,
+        "units": ["Army of the Potomac"]
+      },
+      "confederate": {
+        "strength": 38000,
+        "units": ["Army of Northern Virginia"]
+      }
+    },
+    "commanders": {
+      "union": ["George B. McClellan"],
+      "confederate": ["Robert E. Lee"]
+    },
+    "result": "Union victory",
+    "significance": 5,
+    "cwsac_id": "MD003",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Antietam",
+    "wikidata_id": "Q211790",
+    "image_url": null
+  },
+  {
+    "id": "acw_PA002",
+    "source_id": "PA002",
+    "source": "acw_battle_data",
+    "name": "Battle of Gettysburg",
+    "alternate_names": [],
+    "type": "battle",
+    "date_start": "1863-07-01",
+    "date_end": "1863-07-03",
+    "description": "The turning point of the Civil War. Lee's invasion of the North was repulsed with heavy casualties on both sides. Site of Lincoln's famous Gettysburg Address.",
+    "location": {
+      "name": "Gettysburg",
+      "lat": 39.8309,
+      "lng": -77.2311,
+      "state": "Pennsylvania",
+      "county": "Adams"
+    },
+    "theater": "Eastern",
+    "campaign": "Gettysburg Campaign",
+    "casualties": {
+      "union": {
+        "killed": 3155,
+        "wounded": 14529,
+        "captured": 5365,
+        "missing": null,
+        "total": 23049
+      },
+      "confederate": {
+        "killed": 4708,
+        "wounded": 12693,
+        "captured": 5830,
+        "missing": null,
+        "total": 23231
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 83289,
+        "units": ["Army of the Potomac"]
+      },
+      "confederate": {
+        "strength": 75000,
+        "units": ["Army of Northern Virginia"]
+      }
+    },
+    "commanders": {
+      "union": ["George G. Meade"],
+      "confederate": ["Robert E. Lee"]
+    },
+    "result": "Union victory",
+    "significance": 5,
+    "cwsac_id": "PA002",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Gettysburg",
+    "wikidata_id": "Q211798",
+    "image_url": null
+  },
+  {
+    "id": "acw_MS009",
+    "source_id": "MS009",
+    "source": "acw_battle_data",
+    "name": "Siege of Vicksburg",
+    "alternate_names": ["Vicksburg Campaign"],
+    "type": "siege",
+    "date_start": "1863-05-18",
+    "date_end": "1863-07-04",
+    "description": "Grant's masterful campaign resulted in the capture of Vicksburg, giving the Union complete control of the Mississippi River and splitting the Confederacy.",
+    "location": {
+      "name": "Vicksburg",
+      "lat": 32.3463,
+      "lng": -90.8499,
+      "state": "Mississippi",
+      "county": "Warren"
+    },
+    "theater": "Western",
+    "campaign": "Vicksburg Campaign",
+    "casualties": {
+      "union": {
+        "killed": 806,
+        "wounded": 3940,
+        "captured": 164,
+        "missing": null,
+        "total": 4910
+      },
+      "confederate": {
+        "killed": 805,
+        "wounded": 1938,
+        "captured": 29491,
+        "missing": null,
+        "total": 32234
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 77000,
+        "units": ["Army of the Tennessee"]
+      },
+      "confederate": {
+        "strength": 33000,
+        "units": ["Vicksburg Garrison"]
+      }
+    },
+    "commanders": {
+      "union": ["Ulysses S. Grant"],
+      "confederate": ["John C. Pemberton"]
+    },
+    "result": "Union victory",
+    "significance": 5,
+    "cwsac_id": "MS009",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Siege_of_Vicksburg",
+    "wikidata_id": "Q386268",
+    "image_url": null
+  },
+  {
+    "id": "acw_GA005",
+    "source_id": "GA005",
+    "source": "acw_battle_data",
+    "name": "Battle of Chickamauga",
+    "alternate_names": [],
+    "type": "battle",
+    "date_start": "1863-09-19",
+    "date_end": "1863-09-20",
+    "description": "The second bloodiest battle of the Civil War. A rare Confederate victory in the Western Theater, though it failed to achieve strategic objectives.",
+    "location": {
+      "name": "Chickamauga",
+      "lat": 34.9418,
+      "lng": -85.2595,
+      "state": "Georgia",
+      "county": "Walker"
+    },
+    "theater": "Western",
+    "campaign": "Chickamauga Campaign",
+    "casualties": {
+      "union": {
+        "killed": 1657,
+        "wounded": 9756,
+        "captured": 4757,
+        "missing": null,
+        "total": 16170
+      },
+      "confederate": {
+        "killed": 2312,
+        "wounded": 14674,
+        "captured": 1468,
+        "missing": null,
+        "total": 18454
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 60000,
+        "units": ["Army of the Cumberland"]
+      },
+      "confederate": {
+        "strength": 65000,
+        "units": ["Army of Tennessee"]
+      }
+    },
+    "commanders": {
+      "union": ["William Rosecrans"],
+      "confederate": ["Braxton Bragg"]
+    },
+    "result": "Confederate victory",
+    "significance": 4,
+    "cwsac_id": "GA005",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Chickamauga",
+    "wikidata_id": "Q215695",
+    "image_url": null
+  },
+  {
+    "id": "acw_VA048",
+    "source_id": "VA048",
+    "source": "acw_battle_data",
+    "name": "Battle of the Wilderness",
+    "alternate_names": [],
+    "type": "battle",
+    "date_start": "1864-05-05",
+    "date_end": "1864-05-07",
+    "description": "The first battle of Grant's Overland Campaign. Fierce fighting in dense woods resulted in heavy casualties but Grant continued to advance.",
+    "location": {
+      "name": "Wilderness",
+      "lat": 38.315,
+      "lng": -77.745,
+      "state": "Virginia",
+      "county": "Orange"
+    },
+    "theater": "Eastern",
+    "campaign": "Overland Campaign",
+    "casualties": {
+      "union": {
+        "killed": 2246,
+        "wounded": 12037,
+        "captured": 3383,
+        "missing": null,
+        "total": 17666
+      },
+      "confederate": {
+        "killed": 1495,
+        "wounded": 7928,
+        "captured": 1702,
+        "missing": null,
+        "total": 11125
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 101895,
+        "units": ["Army of the Potomac"]
+      },
+      "confederate": {
+        "strength": 61025,
+        "units": ["Army of Northern Virginia"]
+      }
+    },
+    "commanders": {
+      "union": ["Ulysses S. Grant", "George G. Meade"],
+      "confederate": ["Robert E. Lee"]
+    },
+    "result": "Inconclusive",
+    "significance": 4,
+    "cwsac_id": "VA048",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_the_Wilderness",
+    "wikidata_id": "Q647689",
+    "image_url": null
+  },
+  {
+    "id": "acw_GA012",
+    "source_id": "GA012",
+    "source": "acw_battle_data",
+    "name": "Battle of Atlanta",
+    "alternate_names": [],
+    "type": "battle",
+    "date_start": "1864-07-22",
+    "date_end": "1864-07-22",
+    "description": "A key battle in Sherman's Atlanta Campaign. Confederate General McPherson was killed, and the city fell to Union forces on September 2, 1864.",
+    "location": {
+      "name": "Atlanta",
+      "lat": 33.749,
+      "lng": -84.388,
+      "state": "Georgia",
+      "county": "Fulton"
+    },
+    "theater": "Western",
+    "campaign": "Atlanta Campaign",
+    "casualties": {
+      "union": {
+        "killed": 430,
+        "wounded": 1559,
+        "captured": 1733,
+        "missing": null,
+        "total": 3722
+      },
+      "confederate": {
+        "killed": 2500,
+        "wounded": 2500,
+        "captured": 3000,
+        "missing": null,
+        "total": 8000
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 34863,
+        "units": ["Army of the Tennessee"]
+      },
+      "confederate": {
+        "strength": 40000,
+        "units": ["Army of Tennessee"]
+      }
+    },
+    "commanders": {
+      "union": ["William T. Sherman", "James B. McPherson"],
+      "confederate": ["John Bell Hood"]
+    },
+    "result": "Union victory",
+    "significance": 5,
+    "cwsac_id": "GA012",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Atlanta",
+    "wikidata_id": "Q796626",
+    "image_url": null
+  },
+  {
+    "id": "acw_VA097",
+    "source_id": "VA097",
+    "source": "acw_battle_data",
+    "name": "Appomattox Court House",
+    "alternate_names": ["Lee's Surrender"],
+    "type": "surrender",
+    "date_start": "1865-04-09",
+    "date_end": "1865-04-09",
+    "description": "General Robert E. Lee surrendered the Army of Northern Virginia to Ulysses S. Grant, effectively ending the Civil War.",
+    "location": {
+      "name": "Appomattox Court House",
+      "lat": 37.3765,
+      "lng": -78.7969,
+      "state": "Virginia",
+      "county": "Appomattox"
+    },
+    "theater": "Eastern",
+    "campaign": "Appomattox Campaign",
+    "casualties": {
+      "union": {
+        "killed": 164,
+        "wounded": 0,
+        "captured": 0,
+        "missing": null,
+        "total": 164
+      },
+      "confederate": {
+        "killed": 500,
+        "wounded": 0,
+        "captured": 27805,
+        "missing": null,
+        "total": 28305
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 63285,
+        "units": ["Army of the Potomac", "Army of the James"]
+      },
+      "confederate": {
+        "strength": 28231,
+        "units": ["Army of Northern Virginia"]
+      }
+    },
+    "commanders": {
+      "union": ["Ulysses S. Grant"],
+      "confederate": ["Robert E. Lee"]
+    },
+    "result": "Union victory",
+    "significance": 5,
+    "cwsac_id": "VA097",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Appomattox_Court_House",
+    "wikidata_id": "Q651991",
+    "image_url": null
+  },
+  {
+    "id": "acw_VA026",
+    "source_id": "VA026",
+    "source": "acw_battle_data",
+    "name": "Battle of Fredericksburg",
+    "alternate_names": [],
+    "type": "battle",
+    "date_start": "1862-12-11",
+    "date_end": "1862-12-15",
+    "description": "A disastrous Union defeat where repeated frontal assaults against entrenched Confederate positions on Marye's Heights resulted in devastating casualties.",
+    "location": {
+      "name": "Fredericksburg",
+      "lat": 38.3032,
+      "lng": -77.4605,
+      "state": "Virginia",
+      "county": "Spotsylvania"
+    },
+    "theater": "Eastern",
+    "campaign": "Fredericksburg Campaign",
+    "casualties": {
+      "union": {
+        "killed": 1284,
+        "wounded": 9600,
+        "captured": 1769,
+        "missing": null,
+        "total": 12653
+      },
+      "confederate": {
+        "killed": 608,
+        "wounded": 4116,
+        "captured": 653,
+        "missing": null,
+        "total": 5377
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 114000,
+        "units": ["Army of the Potomac"]
+      },
+      "confederate": {
+        "strength": 72500,
+        "units": ["Army of Northern Virginia"]
+      }
+    },
+    "commanders": {
+      "union": ["Ambrose Burnside"],
+      "confederate": ["Robert E. Lee"]
+    },
+    "result": "Confederate victory",
+    "significance": 4,
+    "cwsac_id": "VA026",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Fredericksburg",
+    "wikidata_id": "Q383889",
+    "image_url": null
+  },
+  {
+    "id": "acw_VA032",
+    "source_id": "VA032",
+    "source": "acw_battle_data",
+    "name": "Battle of Chancellorsville",
+    "alternate_names": [],
+    "type": "battle",
+    "date_start": "1863-04-30",
+    "date_end": "1863-05-06",
+    "description": "Lee's greatest victory, achieved through bold flanking maneuvers. However, the Confederacy lost Stonewall Jackson, mortally wounded by friendly fire.",
+    "location": {
+      "name": "Chancellorsville",
+      "lat": 38.2993,
+      "lng": -77.6461,
+      "state": "Virginia",
+      "county": "Spotsylvania"
+    },
+    "theater": "Eastern",
+    "campaign": "Chancellorsville Campaign",
+    "casualties": {
+      "union": {
+        "killed": 1606,
+        "wounded": 9762,
+        "captured": 5919,
+        "missing": null,
+        "total": 17287
+      },
+      "confederate": {
+        "killed": 1665,
+        "wounded": 9081,
+        "captured": 2018,
+        "missing": null,
+        "total": 12764
+      }
+    },
+    "forces": {
+      "union": {
+        "strength": 133868,
+        "units": ["Army of the Potomac"]
+      },
+      "confederate": {
+        "strength": 60892,
+        "units": ["Army of Northern Virginia"]
+      }
+    },
+    "commanders": {
+      "union": ["Joseph Hooker"],
+      "confederate": ["Robert E. Lee", "Stonewall Jackson"]
+    },
+    "result": "Confederate victory",
+    "significance": 5,
+    "cwsac_id": "VA032",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Chancellorsville",
+    "wikidata_id": "Q205527",
+    "image_url": null
+  }
+]

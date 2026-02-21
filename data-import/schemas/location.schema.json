@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "location.schema.json",
+  "title": "Civil War Location",
+  "description": "Schema for Civil War locations (battlefields, forts, cities, etc.)",
+  "type": "object",
+  "required": ["id", "name", "type"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the location"
+    },
+    "source_id": {
+      "type": "string",
+      "description": "Original ID from the data source"
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source name (e.g., 'nps', 'wikidata')"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the location"
+    },
+    "alternate_names": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Alternative names for the location"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["city", "battlefield", "fort", "river", "landmark", "capital", "camp", "hospital", "cemetery", "other"],
+      "description": "Type of location"
+    },
+    "coordinates": {
+      "type": ["object", "null"],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90,
+          "description": "Latitude in decimal degrees"
+        },
+        "lng": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180,
+          "description": "Longitude in decimal degrees"
+        }
+      },
+      "required": ["lat", "lng"]
+    },
+    "state": {
+      "type": ["string", "null"],
+      "description": "State where the location is situated"
+    },
+    "county": {
+      "type": ["string", "null"],
+      "description": "County where the location is situated"
+    },
+    "description": {
+      "type": ["string", "null"],
+      "description": "Description of the location"
+    },
+    "historical_significance": {
+      "type": ["string", "null"],
+      "description": "Historical significance during the Civil War"
+    },
+    "current_status": {
+      "type": ["string", "null"],
+      "description": "Current status (preserved, developed, etc.)"
+    },
+    "nps_unit_code": {
+      "type": ["string", "null"],
+      "description": "National Park Service unit code, if applicable"
+    },
+    "website_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Official website URL"
+    },
+    "wikipedia_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Wikipedia article URL"
+    },
+    "wikidata_id": {
+      "type": ["string", "null"],
+      "description": "Wikidata entity ID (e.g., Q123456)"
+    },
+    "image_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL to an image of the location"
+    },
+    "geojson": {
+      "type": ["object", "null"],
+      "description": "GeoJSON geometry for the location boundary or area"
+    }
+  }
+}

@@ -1,0 +1,508 @@
+[
+  {
+    "id": "boundary_sc_1861",
+    "source_id": "SC",
+    "source": "ahcb",
+    "name": "South Carolina",
+    "type": "state",
+    "abbreviation": "SC",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1860-12-20",
+    "readmission_date": "1868-07-09",
+    "capital": "Columbia",
+    "population_1860": 703708,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-83.35, 32.0], [-78.5, 32.0], [-78.5, 35.2], [-83.35, 35.2], [-83.35, 32.0]]]
+      },
+      "properties": {"name": "South Carolina", "abbreviation": "SC", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_ms_1861",
+    "source_id": "MS",
+    "source": "ahcb",
+    "name": "Mississippi",
+    "type": "state",
+    "abbreviation": "MS",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1861-01-09",
+    "readmission_date": "1870-02-23",
+    "capital": "Jackson",
+    "population_1860": 791305,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-91.7, 30.2], [-88.1, 30.2], [-88.1, 35.0], [-91.7, 35.0], [-91.7, 30.2]]]
+      },
+      "properties": {"name": "Mississippi", "abbreviation": "MS", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_fl_1861",
+    "source_id": "FL",
+    "source": "ahcb",
+    "name": "Florida",
+    "type": "state",
+    "abbreviation": "FL",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1861-01-10",
+    "readmission_date": "1868-06-25",
+    "capital": "Tallahassee",
+    "population_1860": 140424,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-87.6, 24.5], [-79.8, 24.5], [-79.8, 31.0], [-87.6, 31.0], [-87.6, 24.5]]]
+      },
+      "properties": {"name": "Florida", "abbreviation": "FL", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_al_1861",
+    "source_id": "AL",
+    "source": "ahcb",
+    "name": "Alabama",
+    "type": "state",
+    "abbreviation": "AL",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1861-01-11",
+    "readmission_date": "1868-07-13",
+    "capital": "Montgomery",
+    "population_1860": 964201,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-88.5, 30.2], [-84.9, 30.2], [-84.9, 35.0], [-88.5, 35.0], [-88.5, 30.2]]]
+      },
+      "properties": {"name": "Alabama", "abbreviation": "AL", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_ga_1861",
+    "source_id": "GA",
+    "source": "ahcb",
+    "name": "Georgia",
+    "type": "state",
+    "abbreviation": "GA",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1861-01-19",
+    "readmission_date": "1870-07-15",
+    "capital": "Atlanta",
+    "population_1860": 1057286,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-85.6, 30.4], [-80.8, 30.4], [-80.8, 35.0], [-85.6, 35.0], [-85.6, 30.4]]]
+      },
+      "properties": {"name": "Georgia", "abbreviation": "GA", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_la_1861",
+    "source_id": "LA",
+    "source": "ahcb",
+    "name": "Louisiana",
+    "type": "state",
+    "abbreviation": "LA",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1861-01-26",
+    "readmission_date": "1868-07-09",
+    "capital": "Baton Rouge",
+    "population_1860": 708002,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-94.0, 29.0], [-89.0, 29.0], [-89.0, 33.0], [-94.0, 33.0], [-94.0, 29.0]]]
+      },
+      "properties": {"name": "Louisiana", "abbreviation": "LA", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_tx_1861",
+    "source_id": "TX",
+    "source": "ahcb",
+    "name": "Texas",
+    "type": "state",
+    "abbreviation": "TX",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1861-02-01",
+    "readmission_date": "1870-03-30",
+    "capital": "Austin",
+    "population_1860": 604215,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-106.6, 25.8], [-93.5, 25.8], [-93.5, 36.5], [-106.6, 36.5], [-106.6, 25.8]]]
+      },
+      "properties": {"name": "Texas", "abbreviation": "TX", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_va_1861",
+    "source_id": "VA",
+    "source": "ahcb",
+    "name": "Virginia",
+    "type": "state",
+    "abbreviation": "VA",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1861-04-17",
+    "readmission_date": "1870-01-26",
+    "capital": "Richmond",
+    "population_1860": 1596318,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-83.7, 36.5], [-75.2, 36.5], [-75.2, 39.5], [-83.7, 39.5], [-83.7, 36.5]]]
+      },
+      "properties": {"name": "Virginia", "abbreviation": "VA", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_ar_1861",
+    "source_id": "AR",
+    "source": "ahcb",
+    "name": "Arkansas",
+    "type": "state",
+    "abbreviation": "AR",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1861-05-06",
+    "readmission_date": "1868-06-22",
+    "capital": "Little Rock",
+    "population_1860": 435450,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-94.6, 33.0], [-89.6, 33.0], [-89.6, 36.5], [-94.6, 36.5], [-94.6, 33.0]]]
+      },
+      "properties": {"name": "Arkansas", "abbreviation": "AR", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_nc_1861",
+    "source_id": "NC",
+    "source": "ahcb",
+    "name": "North Carolina",
+    "type": "state",
+    "abbreviation": "NC",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1861-05-20",
+    "readmission_date": "1868-07-04",
+    "capital": "Raleigh",
+    "population_1860": 992622,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-84.3, 33.8], [-75.5, 33.8], [-75.5, 36.6], [-84.3, 36.6], [-84.3, 33.8]]]
+      },
+      "properties": {"name": "North Carolina", "abbreviation": "NC", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_tn_1861",
+    "source_id": "TN",
+    "source": "ahcb",
+    "name": "Tennessee",
+    "type": "state",
+    "abbreviation": "TN",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "confederate",
+    "secession_date": "1861-06-08",
+    "readmission_date": "1866-07-24",
+    "capital": "Nashville",
+    "population_1860": 1109801,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-90.3, 35.0], [-81.6, 35.0], [-81.6, 36.7], [-90.3, 36.7], [-90.3, 35.0]]]
+      },
+      "properties": {"name": "Tennessee", "abbreviation": "TN", "side": "confederate"}
+    }
+  },
+  {
+    "id": "boundary_md_1861",
+    "source_id": "MD",
+    "source": "ahcb",
+    "name": "Maryland",
+    "type": "state",
+    "abbreviation": "MD",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "border",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Annapolis",
+    "population_1860": 687049,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-79.5, 38.0], [-75.0, 38.0], [-75.0, 39.7], [-79.5, 39.7], [-79.5, 38.0]]]
+      },
+      "properties": {"name": "Maryland", "abbreviation": "MD", "side": "border"}
+    }
+  },
+  {
+    "id": "boundary_ky_1861",
+    "source_id": "KY",
+    "source": "ahcb",
+    "name": "Kentucky",
+    "type": "state",
+    "abbreviation": "KY",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "border",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Frankfort",
+    "population_1860": 1155684,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-89.6, 36.5], [-82.0, 36.5], [-82.0, 39.1], [-89.6, 39.1], [-89.6, 36.5]]]
+      },
+      "properties": {"name": "Kentucky", "abbreviation": "KY", "side": "border"}
+    }
+  },
+  {
+    "id": "boundary_mo_1861",
+    "source_id": "MO",
+    "source": "ahcb",
+    "name": "Missouri",
+    "type": "state",
+    "abbreviation": "MO",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "border",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Jefferson City",
+    "population_1860": 1182012,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-95.8, 36.0], [-89.1, 36.0], [-89.1, 40.6], [-95.8, 40.6], [-95.8, 36.0]]]
+      },
+      "properties": {"name": "Missouri", "abbreviation": "MO", "side": "border"}
+    }
+  },
+  {
+    "id": "boundary_de_1861",
+    "source_id": "DE",
+    "source": "ahcb",
+    "name": "Delaware",
+    "type": "state",
+    "abbreviation": "DE",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "border",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Dover",
+    "population_1860": 112216,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-75.8, 38.4], [-75.0, 38.4], [-75.0, 39.8], [-75.8, 39.8], [-75.8, 38.4]]]
+      },
+      "properties": {"name": "Delaware", "abbreviation": "DE", "side": "border"}
+    }
+  },
+  {
+    "id": "boundary_pa_1861",
+    "source_id": "PA",
+    "source": "ahcb",
+    "name": "Pennsylvania",
+    "type": "state",
+    "abbreviation": "PA",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "union",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Harrisburg",
+    "population_1860": 2906215,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-80.5, 39.7], [-74.7, 39.7], [-74.7, 42.3], [-80.5, 42.3], [-80.5, 39.7]]]
+      },
+      "properties": {"name": "Pennsylvania", "abbreviation": "PA", "side": "union"}
+    }
+  },
+  {
+    "id": "boundary_ny_1861",
+    "source_id": "NY",
+    "source": "ahcb",
+    "name": "New York",
+    "type": "state",
+    "abbreviation": "NY",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "union",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Albany",
+    "population_1860": 3880735,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-79.8, 40.5], [-71.9, 40.5], [-71.9, 45.0], [-79.8, 45.0], [-79.8, 40.5]]]
+      },
+      "properties": {"name": "New York", "abbreviation": "NY", "side": "union"}
+    }
+  },
+  {
+    "id": "boundary_oh_1861",
+    "source_id": "OH",
+    "source": "ahcb",
+    "name": "Ohio",
+    "type": "state",
+    "abbreviation": "OH",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "union",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Columbus",
+    "population_1860": 2339511,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-84.8, 38.4], [-80.5, 38.4], [-80.5, 42.0], [-84.8, 42.0], [-84.8, 38.4]]]
+      },
+      "properties": {"name": "Ohio", "abbreviation": "OH", "side": "union"}
+    }
+  },
+  {
+    "id": "boundary_in_1861",
+    "source_id": "IN",
+    "source": "ahcb",
+    "name": "Indiana",
+    "type": "state",
+    "abbreviation": "IN",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "union",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Indianapolis",
+    "population_1860": 1350428,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-88.1, 37.8], [-84.8, 37.8], [-84.8, 41.8], [-88.1, 41.8], [-88.1, 37.8]]]
+      },
+      "properties": {"name": "Indiana", "abbreviation": "IN", "side": "union"}
+    }
+  },
+  {
+    "id": "boundary_il_1861",
+    "source_id": "IL",
+    "source": "ahcb",
+    "name": "Illinois",
+    "type": "state",
+    "abbreviation": "IL",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "union",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Springfield",
+    "population_1860": 1711951,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-91.5, 37.0], [-87.5, 37.0], [-87.5, 42.5], [-91.5, 42.5], [-91.5, 37.0]]]
+      },
+      "properties": {"name": "Illinois", "abbreviation": "IL", "side": "union"}
+    }
+  },
+  {
+    "id": "boundary_ma_1861",
+    "source_id": "MA",
+    "source": "ahcb",
+    "name": "Massachusetts",
+    "type": "state",
+    "abbreviation": "MA",
+    "valid_from": "1861-01-01",
+    "valid_to": "1865-12-31",
+    "side": "union",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Boston",
+    "population_1860": 1231066,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-73.5, 41.2], [-69.9, 41.2], [-69.9, 42.9], [-73.5, 42.9], [-73.5, 41.2]]]
+      },
+      "properties": {"name": "Massachusetts", "abbreviation": "MA", "side": "union"}
+    }
+  },
+  {
+    "id": "boundary_wv_1863",
+    "source_id": "WV",
+    "source": "ahcb",
+    "name": "West Virginia",
+    "type": "state",
+    "abbreviation": "WV",
+    "valid_from": "1863-06-20",
+    "valid_to": "1865-12-31",
+    "side": "union",
+    "secession_date": null,
+    "readmission_date": null,
+    "capital": "Wheeling",
+    "population_1860": null,
+    "geojson": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-82.6, 37.2], [-77.7, 37.2], [-77.7, 40.6], [-82.6, 40.6], [-82.6, 37.2]]]
+      },
+      "properties": {"name": "West Virginia", "abbreviation": "WV", "side": "union"}
+    }
+  }
+]

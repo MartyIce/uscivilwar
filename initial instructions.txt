@@ -1,0 +1,25 @@
+I want to create an interactive US civil war web map/battle/events/timeline site. At a high level, I want the following:
+
+- backend to provide repository and rest api
+  - repository should be some sort of crud database (let's stick w sql for now), and store anything relevant to rendering the map/battle/events/timeline, including:
+    - notable people
+    - notable locations
+    - notable events
+    - military groups, sizes, events, casualties, etc
+  - rest api shoudl serve it all
+- front end to render, including:
+  - scrollable/zoomable map of US showing cities/boundaries from that time
+  - slidable timeline that can be used to move across time to see various battles, troop movements, boundaries, etc
+  - click on battles/events to view details, stats, description, images, etc. Images can link to externally available images
+- we will need to mine this data from publicly available websites, apis, repositories, etc.
+  - we will need to import the data into a common format
+
+Using the architect agent, create a plan for implementation, including:
+
+- what urls data will come from, how we will input
+- what we will use to build db, front, back
+- sketch of db data model
+- sketch of rest api topology
+- highlights of front end capabilities and features
+
+Save plan in a markdown file. Organize it in a way that I can run multiple agents in parallel to build "layers" (eg, data import, data model buildout, db buildout, rest api buildout, UI). Each layer should have ability to mock other layers so they can be built independently. We will build that way first (with mocks), then as the impelemntation develops, begin hooking them together

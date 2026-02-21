@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "person.schema.json",
+  "title": "Civil War Person",
+  "description": "Schema for Civil War historical figures (generals, politicians, etc.)",
+  "type": "object",
+  "required": ["id", "name"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the person"
+    },
+    "source_id": {
+      "type": "string",
+      "description": "Original ID from the data source"
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source name (e.g., 'wikipedia', 'wikidata')"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the person"
+    },
+    "first_name": {
+      "type": ["string", "null"],
+      "description": "First name"
+    },
+    "last_name": {
+      "type": ["string", "null"],
+      "description": "Last name"
+    },
+    "alternate_names": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Alternative names, nicknames, or spellings"
+    },
+    "birth_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Birth date in ISO 8601 format (YYYY-MM-DD)"
+    },
+    "birth_place": {
+      "type": ["string", "null"],
+      "description": "Place of birth"
+    },
+    "death_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Death date in ISO 8601 format (YYYY-MM-DD)"
+    },
+    "death_place": {
+      "type": ["string", "null"],
+      "description": "Place of death"
+    },
+    "side": {
+      "type": ["string", "null"],
+      "enum": ["union", "confederate", "neutral", "border", null],
+      "description": "Side in the Civil War"
+    },
+    "rank": {
+      "type": ["string", "null"],
+      "description": "Military rank during the war"
+    },
+    "highest_rank": {
+      "type": ["string", "null"],
+      "description": "Highest rank achieved"
+    },
+    "rank_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Date of rank promotion"
+    },
+    "branch": {
+      "type": ["string", "null"],
+      "enum": ["army", "navy", "marines", null],
+      "description": "Military branch"
+    },
+    "role": {
+      "type": ["string", "null"],
+      "description": "Primary role (general, admiral, politician, etc.)"
+    },
+    "biography": {
+      "type": ["string", "null"],
+      "description": "Brief biography"
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "unit": { "type": "string" },
+          "start_date": { "type": ["string", "null"], "format": "date" },
+          "end_date": { "type": ["string", "null"], "format": "date" }
+        }
+      },
+      "description": "Units commanded during the war"
+    },
+    "battles": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Names or IDs of battles participated in"
+    },
+    "image_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL to portrait or photograph"
+    },
+    "wikipedia_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Wikipedia article URL"
+    },
+    "wikidata_id": {
+      "type": ["string", "null"],
+      "description": "Wikidata entity ID (e.g., Q123456)"
+    },
+    "west_point_class": {
+      "type": ["integer", "null"],
+      "description": "West Point graduation year, if applicable"
+    }
+  }
+}

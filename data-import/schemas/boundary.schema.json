@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "boundary.schema.json",
+  "title": "Historical Boundary",
+  "description": "Schema for historical territory boundaries (states, territories, counties)",
+  "type": "object",
+  "required": ["id", "name", "type", "valid_from", "geojson"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the boundary"
+    },
+    "source_id": {
+      "type": "string",
+      "description": "Original ID from the data source"
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source name (e.g., 'ahcb', 'openhistoricalmap')"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the territory"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["state", "territory", "county", "country"],
+      "description": "Type of boundary"
+    },
+    "abbreviation": {
+      "type": ["string", "null"],
+      "description": "State/territory abbreviation"
+    },
+    "valid_from": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date when this boundary was valid"
+    },
+    "valid_to": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "End date when this boundary was valid (null if still current)"
+    },
+    "side": {
+      "type": ["string", "null"],
+      "enum": ["union", "confederate", "border", "territory", null],
+      "description": "Allegiance during the Civil War"
+    },
+    "secession_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Date of secession from the Union, if applicable"
+    },
+    "readmission_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Date of readmission to the Union, if applicable"
+    },
+    "capital": {
+      "type": ["string", "null"],
+      "description": "Capital city"
+    },
+    "population_1860": {
+      "type": ["integer", "null"],
+      "description": "Population in 1860 census"
+    },
+    "geojson": {
+      "type": "object",
+      "description": "GeoJSON Feature with polygon geometry",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["Feature"]
+        },
+        "geometry": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["Polygon", "MultiPolygon"]
+            },
+            "coordinates": {
+              "type": "array"
+            }
+          },
+          "required": ["type", "coordinates"]
+        },
+        "properties": {
+          "type": ["object", "null"]
+        }
+      },
+      "required": ["type", "geometry"]
+    }
+  }
+}
