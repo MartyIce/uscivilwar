@@ -509,6 +509,61 @@ export const eventParticipants: EventParticipant[] = [
 
   // ==================== SEDGWICK (53) - ADDITIONAL ====================
   { event_id: 8, person_id: 53, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
+
+  // ==================== POLITICAL FIGURES ====================
+  // Lincoln visited troops and was present at some key moments
+  { event_id: 10, person_id: 40, role: 'participant', side: 'union', rank_at_time: 'President' }, // Visited Antietam
+  { event_id: 29, person_id: 40, role: 'participant', side: 'union', rank_at_time: 'President' }, // Visited Petersburg
+
+  // Jefferson Davis visited Western armies
+  { event_id: 17, person_id: 41, role: 'participant', side: 'confederate', rank_at_time: 'President' }, // At Chickamauga
+  { event_id: 18, person_id: 41, role: 'participant', side: 'confederate', rank_at_time: 'President' }, // At Chattanooga
+
+  // ==================== ADDITIONAL BATCH2 COMMANDERS ====================
+  // Reynolds (51) - killed at Gettysburg
+  { event_id: 10, person_id: 51, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
+  { event_id: 12, person_id: 51, role: 'subordinate', side: 'union', unit_commanded: 'I Corps', rank_at_time: 'Major General' },
+  { event_id: 14, person_id: 51, role: 'subordinate', side: 'union', unit_commanded: 'I Corps', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 51, role: 'subordinate', side: 'union', unit_commanded: 'I Corps', rank_at_time: 'Major General' },
+
+  // Sickles (52) - wounded at Gettysburg
+  { event_id: 14, person_id: 52, role: 'subordinate', side: 'union', unit_commanded: 'III Corps', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 52, role: 'subordinate', side: 'union', unit_commanded: 'III Corps', rank_at_time: 'Major General' },
+
+  // Howard (54) - Additional
+  { event_id: 10, person_id: 54, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
+  { event_id: 12, person_id: 54, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
+
+  // Slocum (55) - XII Corps
+  { event_id: 10, person_id: 55, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
+  { event_id: 14, person_id: 55, role: 'subordinate', side: 'union', unit_commanded: 'XII Corps', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 55, role: 'subordinate', side: 'union', unit_commanded: 'XII Corps', rank_at_time: 'Major General' },
+  { event_id: 18, person_id: 55, role: 'subordinate', side: 'union', unit_commanded: 'XII Corps', rank_at_time: 'Major General' },
+  { event_id: 26, person_id: 55, role: 'subordinate', side: 'union', unit_commanded: 'Left Wing', rank_at_time: 'Major General' },
+
+  // McLaws (83) - Division commander
+  { event_id: 10, person_id: 83, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 12, person_id: 83, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 14, person_id: 83, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 83, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 17, person_id: 83, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+
+  // Polk (86) - Corps commander, Western Theater
+  { event_id: 6, person_id: 86, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Major General' },
+  { event_id: 11, person_id: 86, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 13, person_id: 86, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 17, person_id: 86, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+
+  // D.H. Hill (81) - Additional
+  { event_id: 7, person_id: 81, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 8, person_id: 81, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 17, person_id: 81, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+
+  // Armistead (101) - Pickett's Charge
+  { event_id: 16, person_id: 101, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+
+  // Garnett (102) - Pickett's Charge
+  { event_id: 16, person_id: 102, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
 ];
 
 // Helper functions for querying the join table
