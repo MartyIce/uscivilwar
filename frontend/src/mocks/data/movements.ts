@@ -195,6 +195,136 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     color: '#292524',
     baseLocation: { lat: 33.7490, lng: -84.3880 }, // Atlanta
   },
+  {
+    personId: 28,
+    name: 'Nathan Bedford Forrest',
+    side: 'confederate',
+    armyName: "Forrest's Cavalry Corps",
+    color: '#1c1917',
+    baseLocation: { lat: 35.1495, lng: -90.0490 }, // Memphis area
+  },
+  {
+    personId: 29,
+    name: 'A.P. Hill',
+    side: 'confederate',
+    armyName: 'Third Corps, ANV',
+    color: '#4b5563',
+    baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+  },
+  {
+    personId: 30,
+    name: 'Jubal Early',
+    side: 'confederate',
+    armyName: 'Army of the Valley',
+    color: '#6b7280',
+    baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+  },
+  // Additional Union commanders from batch2
+  {
+    personId: 50,
+    name: 'Winfield Scott Hancock',
+    side: 'union',
+    armyName: 'II Corps',
+    color: '#1d4ed8',
+    baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+  },
+  {
+    personId: 53,
+    name: 'John Sedgwick',
+    side: 'union',
+    armyName: 'VI Corps',
+    color: '#3730a3',
+    baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+  },
+  {
+    personId: 54,
+    name: 'Oliver O. Howard',
+    side: 'union',
+    armyName: 'XI Corps / Army of the Tennessee',
+    color: '#4338ca',
+    baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+  },
+  {
+    personId: 59,
+    name: 'James B. McPherson',
+    side: 'union',
+    armyName: 'Army of the Tennessee',
+    color: '#0369a1',
+    baseLocation: { lat: 35.1495, lng: -90.0490 }, // Memphis
+  },
+  {
+    personId: 70,
+    name: 'George Custer',
+    side: 'union',
+    armyName: 'Michigan Cavalry Brigade',
+    color: '#b91c1c',
+    baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+  },
+  // Additional Confederate commanders from batch2
+  {
+    personId: 80,
+    name: 'Richard S. Ewell',
+    side: 'confederate',
+    armyName: 'Second Corps, ANV',
+    color: '#525252',
+    baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+  },
+  {
+    personId: 82,
+    name: 'John B. Gordon',
+    side: 'confederate',
+    armyName: 'Second Corps, ANV',
+    color: '#737373',
+    baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+  },
+  {
+    personId: 84,
+    name: 'George Pickett',
+    side: 'confederate',
+    armyName: "Pickett's Division",
+    color: '#a3a3a3',
+    baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+  },
+  {
+    personId: 87,
+    name: 'William J. Hardee',
+    side: 'confederate',
+    armyName: "Hardee's Corps",
+    color: '#3f3f46',
+    baseLocation: { lat: 35.0456, lng: -85.3097 }, // Chattanooga
+  },
+  {
+    personId: 88,
+    name: 'Patrick Cleburne',
+    side: 'confederate',
+    armyName: "Cleburne's Division",
+    color: '#27272a',
+    baseLocation: { lat: 35.0456, lng: -85.3097 }, // Chattanooga
+  },
+  {
+    personId: 89,
+    name: 'Wade Hampton',
+    side: 'confederate',
+    armyName: 'Cavalry Corps, ANV',
+    color: '#44403c',
+    baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+  },
+  {
+    personId: 91,
+    name: 'Joseph Wheeler',
+    side: 'confederate',
+    armyName: 'Cavalry Corps, Army of Tennessee',
+    color: '#57534e',
+    baseLocation: { lat: 35.0456, lng: -85.3097 }, // Chattanooga
+  },
+  {
+    personId: 25,
+    name: 'J.E.B. Stuart',
+    side: 'confederate',
+    armyName: 'Cavalry Corps, ANV',
+    color: '#78716c',
+    baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+  },
   // Political leaders
   {
     personId: 40,

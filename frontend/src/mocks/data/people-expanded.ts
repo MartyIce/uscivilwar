@@ -1,7 +1,8 @@
 import type { Person, Side } from '../../types';
+import { peopleBatch2 } from './people-batch2';
 
-// Comprehensive list of Civil War figures including military and political leaders
-export const expandedPeople: Person[] = [
+// Base list of Civil War figures including military and political leaders
+const basePeople: Person[] = [
   // ==================== UNION MILITARY ====================
   {
     id: 1,
@@ -354,6 +355,9 @@ export const expandedPeople: Person[] = [
     wikipedia_url: "https://en.wikipedia.org/wiki/Edwin_Stanton"
   }
 ];
+
+// Combine base people with batch 2
+export const expandedPeople: Person[] = [...basePeople, ...peopleBatch2];
 
 // Helper to get person by ID
 export function getPersonById(id: number): Person | undefined {

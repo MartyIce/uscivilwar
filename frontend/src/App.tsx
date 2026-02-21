@@ -5,6 +5,7 @@ import DetailPanel from './components/DetailPanel/DetailPanel';
 import TimelineBar from './components/Timeline/TimelineBar';
 import FilterSidebar from './components/Filters/FilterSidebar';
 import CommanderSelector from './components/CommanderTracker/CommanderSelector';
+import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useBoundaries } from './hooks/useBoundaries';
 import { mockArmyMovements } from './mocks/data/movements';
@@ -33,6 +34,7 @@ function App() {
   // UI state
   const [showFilters, setShowFilters] = useState(false);
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
+  const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
   const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
   const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
@@ -220,6 +222,27 @@ function App() {
             onToggleCommander={handleCommanderToggle}
             isOpen={showCommanderSelector}
             onClose={() => setShowCommanderSelector(false)}
+          />
+
+          {/* People browser button */}
+          <button
+            onClick={() => setShowPeopleBrowser(!showPeopleBrowser)}
+            className={`absolute top-4 right-4 z-[1000] px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
+              showPeopleBrowser
+                ? 'bg-amber-600 text-white hover:bg-amber-700'
+                : 'bg-white text-gray-700 hover:bg-gray-50'
+            }`}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+            </svg>
+            <span className="text-sm font-medium">People</span>
+          </button>
+
+          {/* People browser panel */}
+          <PeopleBrowser
+            isOpen={showPeopleBrowser}
+            onClose={() => setShowPeopleBrowser(false)}
           />
         </div>
 

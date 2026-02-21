@@ -146,6 +146,127 @@ export const eventParticipants: EventParticipant[] = [
 
   // ==================== LINCOLN (present at key events) ====================
   { event_id: 32, person_id: 40, role: 'participant', side: 'union', rank_at_time: 'President' },
+
+  // ==================== HANCOCK (50) - II Corps ====================
+  { event_id: 10, person_id: 50, role: 'subordinate', side: 'union', unit_commanded: 'Division, II Corps', rank_at_time: 'Brigadier General' },
+  { event_id: 12, person_id: 50, role: 'subordinate', side: 'union', unit_commanded: 'Division, II Corps', rank_at_time: 'Brigadier General' },
+  { event_id: 14, person_id: 50, role: 'subordinate', side: 'union', unit_commanded: 'Division, II Corps', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 50, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+  { event_id: 19, person_id: 50, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+  { event_id: 20, person_id: 50, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+  { event_id: 21, person_id: 50, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+  { event_id: 22, person_id: 50, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+
+  // ==================== SEDGWICK (53) - VI Corps ====================
+  { event_id: 10, person_id: 53, role: 'subordinate', side: 'union', unit_commanded: 'Division, II Corps', rank_at_time: 'Major General' },
+  { event_id: 12, person_id: 53, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 14, person_id: 53, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 53, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 19, person_id: 53, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 20, person_id: 53, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+
+  // ==================== HOWARD (54) - XI Corps ====================
+  { event_id: 7, person_id: 54, role: 'subordinate', side: 'union', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 14, person_id: 54, role: 'subordinate', side: 'union', unit_commanded: 'XI Corps', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 54, role: 'subordinate', side: 'union', unit_commanded: 'XI Corps', rank_at_time: 'Major General' },
+  { event_id: 23, person_id: 54, role: 'subordinate', side: 'union', unit_commanded: 'IV Corps', rank_at_time: 'Major General' },
+  { event_id: 26, person_id: 54, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Tennessee', rank_at_time: 'Major General' },
+
+  // ==================== MCPHERSON (59) - Army of the Tennessee ====================
+  { event_id: 15, person_id: 59, role: 'subordinate', side: 'union', unit_commanded: 'XVII Corps', rank_at_time: 'Major General' },
+  { event_id: 23, person_id: 59, role: 'commander', side: 'union', unit_commanded: 'Army of the Tennessee', rank_at_time: 'Major General' },
+
+  // ==================== CUSTER (70) - Cavalry ====================
+  { event_id: 16, person_id: 70, role: 'subordinate', side: 'union', unit_commanded: 'Michigan Cavalry Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 19, person_id: 70, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Brigadier General' },
+  { event_id: 31, person_id: 70, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+
+  // ==================== EWELL (80) - Second Corps CSA ====================
+  { event_id: 9, person_id: 80, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 80, role: 'subordinate', side: 'confederate', unit_commanded: 'Second Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 19, person_id: 80, role: 'subordinate', side: 'confederate', unit_commanded: 'Second Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 20, person_id: 80, role: 'subordinate', side: 'confederate', unit_commanded: 'Second Corps', rank_at_time: 'Lieutenant General' },
+
+  // ==================== GORDON (82) - Corps Commander ====================
+  { event_id: 10, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Regiment', rank_at_time: 'Colonel' },
+  { event_id: 19, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 20, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 22, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Second Corps', rank_at_time: 'Major General' },
+  { event_id: 31, person_id: 82, role: 'subordinate', side: 'confederate', unit_commanded: 'Second Corps', rank_at_time: 'Major General' },
+
+  // ==================== PICKETT (84) - Famous Charge ====================
+  { event_id: 12, person_id: 84, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 84, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 29, person_id: 84, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+
+  // ==================== HARDEE (87) - Western Theater ====================
+  { event_id: 6, person_id: 87, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Major General' },
+  { event_id: 13, person_id: 87, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 17, person_id: 87, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 18, person_id: 87, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 23, person_id: 87, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+
+  // ==================== CLEBURNE (88) - Stonewall of the West ====================
+  { event_id: 6, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 13, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 17, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 18, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 23, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 27, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+
+  // ==================== HAMPTON (89) - Cavalry ====================
+  { event_id: 2, person_id: 89, role: 'subordinate', side: 'confederate', unit_commanded: 'Hampton Legion', rank_at_time: 'Colonel' },
+  { event_id: 8, person_id: 89, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 10, person_id: 89, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 16, person_id: 89, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Major General' },
+  { event_id: 22, person_id: 89, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Lieutenant General' },
+
+  // ==================== WHEELER (91) - Western Cavalry ====================
+  { event_id: 6, person_id: 91, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry', rank_at_time: 'Colonel' },
+  { event_id: 13, person_id: 91, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+  { event_id: 17, person_id: 91, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+  { event_id: 18, person_id: 91, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+  { event_id: 23, person_id: 91, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+
+  // ==================== J.E.B. STUART (25) - Cavalry Corps ANV ====================
+  { event_id: 2, person_id: 25, role: 'subordinate', side: 'confederate', unit_commanded: '1st Virginia Cavalry', rank_at_time: 'Colonel' },
+  { event_id: 8, person_id: 25, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+  { event_id: 9, person_id: 25, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+  { event_id: 10, person_id: 25, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+  { event_id: 12, person_id: 25, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+  { event_id: 14, person_id: 25, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 25, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+
+  // ==================== A.P. HILL (29) - Third Corps ====================
+  { event_id: 8, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 9, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Light Division', rank_at_time: 'Major General' },
+  { event_id: 10, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Light Division', rank_at_time: 'Major General' },
+  { event_id: 12, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Light Division', rank_at_time: 'Major General' },
+  { event_id: 14, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Light Division', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Third Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 19, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Third Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 20, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Third Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 22, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Third Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 29, person_id: 29, role: 'subordinate', side: 'confederate', unit_commanded: 'Third Corps', rank_at_time: 'Lieutenant General' },
+
+  // ==================== FORREST (28) - Cavalry ====================
+  { event_id: 6, person_id: 28, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Regiment', rank_at_time: 'Colonel' },
+  { event_id: 17, person_id: 28, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+  { event_id: 28, person_id: 28, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Corps', rank_at_time: 'Lieutenant General' },
+
+  // ==================== EARLY (30) - Valley Campaign ====================
+  { event_id: 10, person_id: 30, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 12, person_id: 30, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 14, person_id: 30, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 30, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 19, person_id: 30, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 25, person_id: 30, role: 'commander', side: 'confederate', unit_commanded: 'Army of the Valley', rank_at_time: 'Lieutenant General' },
+
+  // ==================== BURNSIDE (7) - IX Corps ====================
+  { event_id: 10, person_id: 7, role: 'subordinate', side: 'union', unit_commanded: 'IX Corps', rank_at_time: 'Major General' },
+  { event_id: 12, person_id: 7, role: 'commander', side: 'union', unit_commanded: 'Army of the Potomac', rank_at_time: 'Major General' },
+  { event_id: 19, person_id: 7, role: 'subordinate', side: 'union', unit_commanded: 'IX Corps', rank_at_time: 'Major General' },
+  { event_id: 22, person_id: 7, role: 'subordinate', side: 'union', unit_commanded: 'IX Corps', rank_at_time: 'Major General' },
 ];
 
 // Helper functions for querying the join table
