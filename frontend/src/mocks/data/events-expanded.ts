@@ -108,6 +108,401 @@ export const expandedEvents: CivilWarEvent[] = [
       confederate: ["Nathan G. Evans"]
     }
   },
+  // ==================== JACKSON'S VALLEY CAMPAIGN (1862) ====================
+  {
+    id: 43,
+    name: "Battle of Kernstown",
+    type: "battle",
+    date_start: "1862-03-23",
+    date_end: "1862-03-23",
+    description: "Jackson's only tactical defeat, but a strategic success. The battle convinced Lincoln to withhold troops from McClellan to protect Washington.",
+    campaign: "Jackson's Valley Campaign",
+    theater: "Eastern",
+    result: "Union victory",
+    significance: 3,
+    cwsac_id: "VA027",
+    wikipedia_url: "https://en.wikipedia.org/wiki/First_Battle_of_Kernstown",
+    image_url: null,
+    location: {
+      id: 43,
+      name: "Kernstown",
+      type: "battlefield",
+      coordinates: { lat: 39.1697, lng: -78.1742 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["James Shields"],
+      confederate: ["Thomas J. Jackson"]
+    }
+  },
+  {
+    id: 44,
+    name: "Battle of McDowell",
+    type: "battle",
+    date_start: "1862-05-08",
+    date_end: "1862-05-08",
+    description: "Jackson repulsed a Union attack in the Allegheny Mountains, beginning his legendary Valley Campaign offensive.",
+    campaign: "Jackson's Valley Campaign",
+    theater: "Eastern",
+    result: "Confederate victory",
+    significance: 2,
+    cwsac_id: "VA031",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_McDowell",
+    image_url: null,
+    location: {
+      id: 44,
+      name: "McDowell",
+      type: "battlefield",
+      coordinates: { lat: 38.3058, lng: -79.5642 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["Robert H. Milroy", "Robert C. Schenck"],
+      confederate: ["Thomas J. Jackson"]
+    }
+  },
+  {
+    id: 45,
+    name: "Battle of Front Royal",
+    type: "battle",
+    date_start: "1862-05-23",
+    date_end: "1862-05-23",
+    description: "Jackson surprised and routed the Union garrison, capturing supplies and threatening Banks's flank. Belle Boyd provided intelligence to Jackson.",
+    campaign: "Jackson's Valley Campaign",
+    theater: "Eastern",
+    result: "Confederate victory",
+    significance: 2,
+    cwsac_id: "VA034",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Front_Royal",
+    image_url: null,
+    location: {
+      id: 45,
+      name: "Front Royal",
+      type: "battlefield",
+      coordinates: { lat: 38.9181, lng: -78.1944 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["John R. Kenly"],
+      confederate: ["Thomas J. Jackson"]
+    }
+  },
+  {
+    id: 46,
+    name: "First Battle of Winchester",
+    type: "battle",
+    date_start: "1862-05-25",
+    date_end: "1862-05-25",
+    description: "Jackson routed Banks's forces and pursued them to the Potomac. The victory caused panic in Washington and diverted troops from McClellan.",
+    campaign: "Jackson's Valley Campaign",
+    theater: "Eastern",
+    result: "Confederate victory",
+    significance: 3,
+    cwsac_id: "VA036",
+    wikipedia_url: "https://en.wikipedia.org/wiki/First_Battle_of_Winchester",
+    image_url: null,
+    location: {
+      id: 46,
+      name: "Winchester",
+      type: "battlefield",
+      coordinates: { lat: 39.1857, lng: -78.1633 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["Nathaniel P. Banks"],
+      confederate: ["Thomas J. Jackson"]
+    }
+  },
+  {
+    id: 47,
+    name: "Battle of Cross Keys",
+    type: "battle",
+    date_start: "1862-06-08",
+    date_end: "1862-06-08",
+    description: "Jackson's subordinate Ewell held off Fremont while Jackson prepared to strike Shields at Port Republic.",
+    campaign: "Jackson's Valley Campaign",
+    theater: "Eastern",
+    result: "Confederate victory",
+    significance: 2,
+    cwsac_id: "VA038",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Cross_Keys",
+    image_url: null,
+    location: {
+      id: 47,
+      name: "Cross Keys",
+      type: "battlefield",
+      coordinates: { lat: 38.4292, lng: -78.8167 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["John C. Fremont"],
+      confederate: ["Richard S. Ewell", "Thomas J. Jackson"]
+    }
+  },
+  {
+    id: 48,
+    name: "Battle of Port Republic",
+    type: "battle",
+    date_start: "1862-06-09",
+    date_end: "1862-06-09",
+    description: "Jackson defeated Shields in fierce fighting, then escaped before Fremont could join. The Valley Campaign ended in complete Confederate success.",
+    campaign: "Jackson's Valley Campaign",
+    theater: "Eastern",
+    result: "Confederate victory",
+    significance: 3,
+    cwsac_id: "VA039",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Port_Republic",
+    image_url: null,
+    location: {
+      id: 48,
+      name: "Port Republic",
+      type: "battlefield",
+      coordinates: { lat: 38.3008, lng: -78.8242 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["James Shields"],
+      confederate: ["Thomas J. Jackson"]
+    }
+  },
+  {
+    id: 49,
+    name: "Battle of Cedar Mountain",
+    type: "battle",
+    date_start: "1862-08-09",
+    date_end: "1862-08-09",
+    description: "Jackson narrowly defeated Banks in the opening battle of the Northern Virginia Campaign. Jackson personally rallied his troops with sword drawn.",
+    campaign: "Northern Virginia Campaign",
+    theater: "Eastern",
+    result: "Confederate victory",
+    significance: 3,
+    cwsac_id: "VA025",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Cedar_Mountain",
+    image_url: null,
+    location: {
+      id: 49,
+      name: "Cedar Mountain",
+      type: "battlefield",
+      coordinates: { lat: 38.3917, lng: -78.1111 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["Nathaniel P. Banks"],
+      confederate: ["Thomas J. Jackson"]
+    }
+  },
+  // ==================== MCCLELLAN'S WESTERN VIRGINIA CAMPAIGN (1861) ====================
+  {
+    id: 33,
+    name: "Battle of Rich Mountain",
+    type: "battle",
+    date_start: "1861-07-11",
+    date_end: "1861-07-11",
+    description: "A Union victory in western Virginia that made McClellan a national hero and led to his promotion to command of the Army of the Potomac.",
+    campaign: "Operations in Western Virginia",
+    theater: "Eastern",
+    result: "Union victory",
+    significance: 3,
+    cwsac_id: "WV002",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Rich_Mountain",
+    image_url: null,
+    location: {
+      id: 33,
+      name: "Rich Mountain",
+      type: "battlefield",
+      coordinates: { lat: 38.8806, lng: -80.0139 },
+      state: "West Virginia"
+    },
+    commanders: {
+      union: ["George B. McClellan", "William S. Rosecrans"],
+      confederate: ["Robert S. Garnett", "John Pegram"]
+    }
+  },
+  {
+    id: 34,
+    name: "Battle of Corrick's Ford",
+    type: "battle",
+    date_start: "1861-07-13",
+    date_end: "1861-07-13",
+    description: "Union forces pursued and defeated retreating Confederates. Confederate General Robert Garnett was killed, becoming the first general officer killed in the Civil War.",
+    campaign: "Operations in Western Virginia",
+    theater: "Eastern",
+    result: "Union victory",
+    significance: 2,
+    cwsac_id: "WV003",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Corrick%27s_Ford",
+    image_url: null,
+    location: {
+      id: 34,
+      name: "Corrick's Ford",
+      type: "battlefield",
+      coordinates: { lat: 39.0633, lng: -79.6753 },
+      state: "West Virginia"
+    },
+    commanders: {
+      union: ["George B. McClellan", "Thomas A. Morris"],
+      confederate: ["Robert S. Garnett"]
+    }
+  },
+  // ==================== PENINSULA CAMPAIGN (1862) ====================
+  {
+    id: 35,
+    name: "Siege of Yorktown",
+    type: "siege",
+    date_start: "1862-04-05",
+    date_end: "1862-05-04",
+    description: "McClellan besieged Confederate positions on the Virginia Peninsula. His cautious approach gave the Confederates time to prepare the defense of Richmond before withdrawing.",
+    campaign: "Peninsula Campaign",
+    theater: "Eastern",
+    result: "Union victory",
+    significance: 2,
+    cwsac_id: "VA007",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Siege_of_Yorktown_(1862)",
+    image_url: null,
+    location: {
+      id: 35,
+      name: "Yorktown",
+      type: "fort",
+      coordinates: { lat: 37.2385, lng: -76.5097 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["George B. McClellan"],
+      confederate: ["John B. Magruder", "Joseph E. Johnston"]
+    }
+  },
+  {
+    id: 36,
+    name: "Battle of Williamsburg",
+    type: "battle",
+    date_start: "1862-05-05",
+    date_end: "1862-05-05",
+    description: "A rearguard action during the Confederate withdrawal up the Peninsula. Union forces attacked Confederate defenses, resulting in a tactical Union victory.",
+    campaign: "Peninsula Campaign",
+    theater: "Eastern",
+    result: "Union victory",
+    significance: 2,
+    cwsac_id: "VA009",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Williamsburg",
+    image_url: null,
+    location: {
+      id: 36,
+      name: "Williamsburg",
+      type: "battlefield",
+      coordinates: { lat: 37.2707, lng: -76.7075 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["George B. McClellan", "Edwin V. Sumner", "Joseph Hooker"],
+      confederate: ["James Longstreet"]
+    }
+  },
+  // ==================== MARYLAND CAMPAIGN (1862) ====================
+  {
+    id: 37,
+    name: "Battle of South Mountain",
+    type: "battle",
+    date_start: "1862-09-14",
+    date_end: "1862-09-14",
+    description: "Union forces fought through the mountain gaps held by Confederate defenders, setting the stage for Antietam. Union General Jesse Reno was killed.",
+    campaign: "Maryland Campaign",
+    theater: "Eastern",
+    result: "Union victory",
+    significance: 3,
+    cwsac_id: "MD002",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_South_Mountain",
+    image_url: null,
+    location: {
+      id: 37,
+      name: "South Mountain",
+      type: "battlefield",
+      coordinates: { lat: 39.4589, lng: -77.6178 },
+      state: "Maryland"
+    },
+    commanders: {
+      union: ["George B. McClellan", "Ambrose E. Burnside", "Jesse Reno"],
+      confederate: ["D.H. Hill", "James Longstreet"]
+    }
+  },
+  // ==================== GRANT'S WESTERN CAMPAIGN (1862) ====================
+  {
+    id: 40,
+    name: "Battle of Fort Henry",
+    type: "battle",
+    date_start: "1862-02-06",
+    date_end: "1862-02-06",
+    description: "Grant's gunboats captured Fort Henry on the Tennessee River, opening the way into the Confederate heartland. The fort fell before most infantry arrived.",
+    campaign: "Fort Henry and Fort Donelson Campaign",
+    theater: "Western",
+    result: "Union victory",
+    significance: 3,
+    cwsac_id: "TN001",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Fort_Henry",
+    image_url: null,
+    location: {
+      id: 40,
+      name: "Fort Henry",
+      type: "fort",
+      coordinates: { lat: 36.4167, lng: -88.0333 },
+      state: "Tennessee"
+    },
+    commanders: {
+      union: ["Ulysses S. Grant", "Andrew H. Foote"],
+      confederate: ["Lloyd Tilghman"]
+    }
+  },
+  {
+    id: 41,
+    name: "Battle of Iuka",
+    type: "battle",
+    date_start: "1862-09-19",
+    date_end: "1862-09-19",
+    description: "Grant's forces under Rosecrans attacked Confederate troops at Iuka, Mississippi. The Confederates escaped due to poor coordination, but were prevented from reinforcing Bragg.",
+    campaign: "Iuka-Corinth Campaign",
+    theater: "Western",
+    result: "Union victory",
+    significance: 2,
+    cwsac_id: "MS002",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Iuka",
+    image_url: null,
+    location: {
+      id: 41,
+      name: "Iuka",
+      type: "battlefield",
+      coordinates: { lat: 34.8117, lng: -88.1900 },
+      state: "Mississippi"
+    },
+    commanders: {
+      union: ["William Rosecrans", "Ulysses S. Grant"],
+      confederate: ["Sterling Price"]
+    }
+  },
+  {
+    id: 42,
+    name: "Second Battle of Corinth",
+    type: "battle",
+    date_start: "1862-10-03",
+    date_end: "1862-10-04",
+    description: "Confederate forces under Van Dorn and Price attacked Rosecrans at Corinth. After initial gains, the assault was repulsed with heavy losses.",
+    campaign: "Iuka-Corinth Campaign",
+    theater: "Western",
+    result: "Union victory",
+    significance: 3,
+    cwsac_id: "MS003",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Second_Battle_of_Corinth",
+    image_url: null,
+    location: {
+      id: 42,
+      name: "Corinth",
+      type: "battlefield",
+      coordinates: { lat: 34.9342, lng: -88.5225 },
+      state: "Mississippi"
+    },
+    commanders: {
+      union: ["William Rosecrans", "Ulysses S. Grant"],
+      confederate: ["Earl Van Dorn", "Sterling Price"]
+    }
+  },
   // ==================== 1862 ====================
   {
     id: 5,
@@ -579,6 +974,111 @@ export const expandedEvents: CivilWarEvent[] = [
       confederate: ["Robert E. Lee"]
     }
   },
+  // ==================== ATLANTA CAMPAIGN BATTLES ====================
+  {
+    id: 50,
+    name: "Battle of Resaca",
+    type: "battle",
+    date_start: "1864-05-13",
+    date_end: "1864-05-15",
+    description: "First major battle of the Atlanta Campaign. Sherman flanked Johnston's position at Dalton, forcing a Confederate withdrawal.",
+    campaign: "Atlanta Campaign",
+    theater: "Western",
+    result: "Union victory",
+    significance: 3,
+    cwsac_id: "GA005",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Resaca",
+    image_url: null,
+    location: {
+      id: 50,
+      name: "Resaca",
+      type: "battlefield",
+      coordinates: { lat: 34.5803, lng: -84.9372 },
+      state: "Georgia"
+    },
+    commanders: {
+      union: ["William T. Sherman", "George Thomas", "James B. McPherson", "John Schofield"],
+      confederate: ["Joseph E. Johnston"]
+    }
+  },
+  {
+    id: 51,
+    name: "Battle of Kennesaw Mountain",
+    type: "battle",
+    date_start: "1864-06-27",
+    date_end: "1864-06-27",
+    description: "Sherman's frontal assault on entrenched Confederates was repulsed with 3,000 casualties. One of Sherman's few direct assaults during the campaign.",
+    campaign: "Atlanta Campaign",
+    theater: "Western",
+    result: "Confederate victory",
+    significance: 3,
+    cwsac_id: "GA011",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Kennesaw_Mountain",
+    image_url: null,
+    location: {
+      id: 51,
+      name: "Kennesaw Mountain",
+      type: "battlefield",
+      coordinates: { lat: 33.9831, lng: -84.5783 },
+      state: "Georgia"
+    },
+    commanders: {
+      union: ["William T. Sherman", "George Thomas"],
+      confederate: ["Joseph E. Johnston"]
+    }
+  },
+  {
+    id: 52,
+    name: "Battle of Jonesborough",
+    type: "battle",
+    date_start: "1864-08-31",
+    date_end: "1864-09-01",
+    description: "Sherman cut the last railroad into Atlanta. Hood was forced to evacuate the city, giving Sherman his crowning achievement.",
+    campaign: "Atlanta Campaign",
+    theater: "Western",
+    result: "Union victory",
+    significance: 4,
+    cwsac_id: "GA017",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Jonesborough",
+    image_url: null,
+    location: {
+      id: 52,
+      name: "Jonesborough",
+      type: "battlefield",
+      coordinates: { lat: 33.5218, lng: -84.3541 },
+      state: "Georgia"
+    },
+    commanders: {
+      union: ["William T. Sherman", "Oliver O. Howard"],
+      confederate: ["John Bell Hood", "William J. Hardee"]
+    }
+  },
+  {
+    id: 53,
+    name: "Battle of Bentonville",
+    type: "battle",
+    date_start: "1865-03-19",
+    date_end: "1865-03-21",
+    description: "Johnston's last attempt to stop Sherman in the Carolinas Campaign. The largest battle fought in North Carolina and Johnston's final offensive.",
+    campaign: "Carolinas Campaign",
+    theater: "Western",
+    result: "Union victory",
+    significance: 3,
+    cwsac_id: "NC009",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Bentonville",
+    image_url: null,
+    location: {
+      id: 53,
+      name: "Bentonville",
+      type: "battlefield",
+      coordinates: { lat: 35.3206, lng: -78.3422 },
+      state: "North Carolina"
+    },
+    commanders: {
+      union: ["William T. Sherman", "Henry W. Slocum"],
+      confederate: ["Joseph E. Johnston", "Braxton Bragg", "William J. Hardee"]
+    }
+  },
   {
     id: 23,
     name: "Battle of Atlanta",
@@ -733,6 +1233,59 @@ export const expandedEvents: CivilWarEvent[] = [
     commanders: {
       union: ["George Thomas"],
       confederate: ["John Bell Hood"]
+    }
+  },
+  // ==================== ADDITIONAL 1864 BATTLES ====================
+  {
+    id: 38,
+    name: "Battle of North Anna",
+    type: "battle",
+    date_start: "1864-05-23",
+    date_end: "1864-05-26",
+    description: "Lee fortified an inverted 'V' position along the North Anna River, but illness prevented him from exploiting Grant's divided forces. Grant disengaged and continued south.",
+    campaign: "Overland Campaign",
+    theater: "Eastern",
+    result: "Inconclusive",
+    significance: 3,
+    cwsac_id: "VA054",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_North_Anna",
+    image_url: null,
+    location: {
+      id: 38,
+      name: "North Anna River",
+      type: "battlefield",
+      coordinates: { lat: 37.8250, lng: -77.5225 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["Ulysses S. Grant", "George G. Meade"],
+      confederate: ["Robert E. Lee"]
+    }
+  },
+  {
+    id: 39,
+    name: "Battle of Five Forks",
+    type: "battle",
+    date_start: "1865-04-01",
+    date_end: "1865-04-01",
+    description: "Sheridan's decisive victory cut the last railroad into Petersburg, forcing Lee's evacuation. Pickett's division was overwhelmed; it was the 'Waterloo of the Confederacy.'",
+    campaign: "Appomattox Campaign",
+    theater: "Eastern",
+    result: "Union victory",
+    significance: 5,
+    cwsac_id: "VA088",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Five_Forks",
+    image_url: null,
+    location: {
+      id: 39,
+      name: "Five Forks",
+      type: "battlefield",
+      coordinates: { lat: 37.0800, lng: -77.7764 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["Philip Sheridan", "Gouverneur K. Warren"],
+      confederate: ["George Pickett"]
     }
   },
   // ==================== 1865 ====================

@@ -267,6 +267,196 @@ export const eventParticipants: EventParticipant[] = [
   { event_id: 12, person_id: 7, role: 'commander', side: 'union', unit_commanded: 'Army of the Potomac', rank_at_time: 'Major General' },
   { event_id: 19, person_id: 7, role: 'subordinate', side: 'union', unit_commanded: 'IX Corps', rank_at_time: 'Major General' },
   { event_id: 22, person_id: 7, role: 'subordinate', side: 'union', unit_commanded: 'IX Corps', rank_at_time: 'Major General' },
+  { event_id: 37, person_id: 7, role: 'subordinate', side: 'union', unit_commanded: 'IX Corps', rank_at_time: 'Major General' },
+
+  // ==================== MCCLELLAN (3) - COMPLETE BATTLE LIST ====================
+  // Rich Mountain (first major victory)
+  { event_id: 33, person_id: 3, role: 'commander', side: 'union', unit_commanded: 'Department of the Ohio', rank_at_time: 'Major General' },
+  // Corrick's Ford (pursuit of Garnett)
+  { event_id: 34, person_id: 3, role: 'commander', side: 'union', unit_commanded: 'Department of the Ohio', rank_at_time: 'Major General' },
+  // Siege of Yorktown (Peninsula Campaign begins)
+  { event_id: 35, person_id: 3, role: 'commander', side: 'union', unit_commanded: 'Army of the Potomac', rank_at_time: 'Major General' },
+  // Battle of Williamsburg (rearguard action)
+  { event_id: 36, person_id: 3, role: 'commander', side: 'union', unit_commanded: 'Army of the Potomac', rank_at_time: 'Major General' },
+  // South Mountain (gaps battle before Antietam)
+  { event_id: 37, person_id: 3, role: 'commander', side: 'union', unit_commanded: 'Army of the Potomac', rank_at_time: 'Major General' },
+
+  // ==================== ROSECRANS (11) - Additional ====================
+  { event_id: 33, person_id: 11, role: 'subordinate', side: 'union', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+
+  // ==================== HOOKER (8) - Additional ====================
+  { event_id: 36, person_id: 8, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
+  { event_id: 10, person_id: 8, role: 'subordinate', side: 'union', unit_commanded: 'Division, I Corps', rank_at_time: 'Brigadier General' },
+
+  // ==================== LONGSTREET (22) - Additional ====================
+  { event_id: 36, person_id: 22, role: 'commander', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 37, person_id: 22, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+
+  // ==================== D.H. HILL (81) - Additional ====================
+  { event_id: 37, person_id: 81, role: 'commander', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 10, person_id: 81, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+
+  // ==================== SUMNER (65) - Additional ====================
+  { event_id: 36, person_id: 65, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+  { event_id: 10, person_id: 65, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+
+  // ==================== ROBERT E. LEE (20) - ADDITIONAL BATTLES ====================
+  { event_id: 37, person_id: 20, role: 'commander', side: 'confederate', unit_commanded: 'Army of Northern Virginia', rank_at_time: 'General' },
+  { event_id: 38, person_id: 20, role: 'commander', side: 'confederate', unit_commanded: 'Army of Northern Virginia', rank_at_time: 'General' },
+
+  // ==================== NORTH ANNA (38) - PARTICIPANTS ====================
+  { event_id: 38, person_id: 1, role: 'commander', side: 'union', unit_commanded: 'Armies of the United States', rank_at_time: 'Lieutenant General' },
+  { event_id: 38, person_id: 4, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Potomac', rank_at_time: 'Major General' },
+  { event_id: 38, person_id: 50, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+
+  // ==================== FIVE FORKS (39) - PARTICIPANTS ====================
+  { event_id: 39, person_id: 5, role: 'commander', side: 'union', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+  { event_id: 39, person_id: 56, role: 'subordinate', side: 'union', unit_commanded: 'V Corps', rank_at_time: 'Major General' },
+  { event_id: 39, person_id: 84, role: 'commander', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 39, person_id: 70, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+
+  // ==================== SHERIDAN (5) - ADDITIONAL ====================
+  { event_id: 31, person_id: 5, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+
+  // ==================== PICKETT (84) - ADDITIONAL ====================
+  // (Five Forks already added above)
+
+  // ==================== WARREN (56) - ADDITIONAL ====================
+  { event_id: 19, person_id: 56, role: 'subordinate', side: 'union', unit_commanded: 'V Corps', rank_at_time: 'Major General' },
+  { event_id: 20, person_id: 56, role: 'subordinate', side: 'union', unit_commanded: 'V Corps', rank_at_time: 'Major General' },
+
+  // ==================== GRANT (1) - ADDITIONAL BATTLES ====================
+  { event_id: 40, person_id: 1, role: 'commander', side: 'union', unit_commanded: 'District of Cairo', rank_at_time: 'Brigadier General' },
+  { event_id: 41, person_id: 1, role: 'commander', side: 'union', unit_commanded: 'Army of the Tennessee', rank_at_time: 'Major General' },
+  { event_id: 42, person_id: 1, role: 'commander', side: 'union', unit_commanded: 'Army of the Tennessee', rank_at_time: 'Major General' },
+
+  // ==================== ROSECRANS (11) - IUKA/CORINTH ====================
+  { event_id: 41, person_id: 11, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Mississippi', rank_at_time: 'Major General' },
+  { event_id: 42, person_id: 11, role: 'commander', side: 'union', unit_commanded: 'Army of the Mississippi', rank_at_time: 'Major General' },
+
+  // ==================== VAN DORN (98) ====================
+  { event_id: 42, person_id: 98, role: 'commander', side: 'confederate', unit_commanded: 'Army of West Tennessee', rank_at_time: 'Major General' },
+
+  // ==================== PRICE (99) ====================
+  { event_id: 41, person_id: 99, role: 'commander', side: 'confederate', unit_commanded: 'Army of the West', rank_at_time: 'Major General' },
+  { event_id: 42, person_id: 99, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Major General' },
+
+  // ==================== JACKSON (21) - VALLEY CAMPAIGN ====================
+  { event_id: 43, person_id: 21, role: 'commander', side: 'confederate', unit_commanded: 'Valley District', rank_at_time: 'Major General' },
+  { event_id: 44, person_id: 21, role: 'commander', side: 'confederate', unit_commanded: 'Valley District', rank_at_time: 'Major General' },
+  { event_id: 45, person_id: 21, role: 'commander', side: 'confederate', unit_commanded: 'Valley District', rank_at_time: 'Major General' },
+  { event_id: 46, person_id: 21, role: 'commander', side: 'confederate', unit_commanded: 'Valley District', rank_at_time: 'Major General' },
+  { event_id: 47, person_id: 21, role: 'commander', side: 'confederate', unit_commanded: 'Valley District', rank_at_time: 'Major General' },
+  { event_id: 48, person_id: 21, role: 'commander', side: 'confederate', unit_commanded: 'Valley District', rank_at_time: 'Major General' },
+  { event_id: 49, person_id: 21, role: 'commander', side: 'confederate', unit_commanded: "Jackson's Corps", rank_at_time: 'Major General' },
+
+  // ==================== EWELL (80) - VALLEY CAMPAIGN ====================
+  { event_id: 45, person_id: 80, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 46, person_id: 80, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 47, person_id: 80, role: 'commander', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 48, person_id: 80, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+
+  // ==================== BANKS (72) ====================
+  { event_id: 46, person_id: 72, role: 'commander', side: 'union', unit_commanded: 'Department of the Shenandoah', rank_at_time: 'Major General' },
+  { event_id: 49, person_id: 72, role: 'commander', side: 'union', unit_commanded: 'II Corps, Army of Virginia', rank_at_time: 'Major General' },
+
+  // ==================== SHERMAN (2) - ATLANTA & CAROLINAS CAMPAIGNS ====================
+  { event_id: 50, person_id: 2, role: 'commander', side: 'union', unit_commanded: 'Military Division of the Mississippi', rank_at_time: 'Major General' },
+  { event_id: 51, person_id: 2, role: 'commander', side: 'union', unit_commanded: 'Military Division of the Mississippi', rank_at_time: 'Major General' },
+  { event_id: 52, person_id: 2, role: 'commander', side: 'union', unit_commanded: 'Military Division of the Mississippi', rank_at_time: 'Major General' },
+  { event_id: 53, person_id: 2, role: 'commander', side: 'union', unit_commanded: 'Military Division of the Mississippi', rank_at_time: 'Major General' },
+
+  // ==================== THOMAS (6) - ATLANTA CAMPAIGN ====================
+  { event_id: 50, person_id: 6, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Cumberland', rank_at_time: 'Major General' },
+  { event_id: 51, person_id: 6, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Cumberland', rank_at_time: 'Major General' },
+
+  // ==================== MCPHERSON (59) - ATLANTA CAMPAIGN ====================
+  { event_id: 50, person_id: 59, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Tennessee', rank_at_time: 'Major General' },
+
+  // ==================== SCHOFIELD (60) - ATLANTA CAMPAIGN ====================
+  { event_id: 50, person_id: 60, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Ohio', rank_at_time: 'Major General' },
+  { event_id: 27, person_id: 60, role: 'commander', side: 'union', unit_commanded: 'Army of the Ohio', rank_at_time: 'Major General' },
+
+  // ==================== HOWARD (54) - ATLANTA CAMPAIGN ====================
+  { event_id: 52, person_id: 54, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Tennessee', rank_at_time: 'Major General' },
+
+  // ==================== SLOCUM (55) - CAROLINAS ====================
+  { event_id: 53, person_id: 55, role: 'subordinate', side: 'union', unit_commanded: 'Left Wing', rank_at_time: 'Major General' },
+
+  // ==================== JOE JOHNSTON (24) - ATLANTA & BENTONVILLE ====================
+  { event_id: 50, person_id: 24, role: 'commander', side: 'confederate', unit_commanded: 'Army of Tennessee', rank_at_time: 'General' },
+  { event_id: 51, person_id: 24, role: 'commander', side: 'confederate', unit_commanded: 'Army of Tennessee', rank_at_time: 'General' },
+  { event_id: 53, person_id: 24, role: 'commander', side: 'confederate', unit_commanded: 'Army of Tennessee', rank_at_time: 'General' },
+
+  // ==================== HOOD (27) - JONESBORO ====================
+  { event_id: 52, person_id: 27, role: 'commander', side: 'confederate', unit_commanded: 'Army of Tennessee', rank_at_time: 'General' },
+
+  // ==================== HARDEE (87) - ADDITIONAL ====================
+  { event_id: 52, person_id: 87, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 53, person_id: 87, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+
+  // ==================== BRAGG (26) - BENTONVILLE ====================
+  { event_id: 53, person_id: 26, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'General' },
+
+  // ==================== LONGSTREET (22) - ADDITIONAL ====================
+  { event_id: 2, person_id: 22, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 10, person_id: 22, role: 'subordinate', side: 'confederate', unit_commanded: 'Wing', rank_at_time: 'Major General' },
+
+  // ==================== MEADE (4) - ADDITIONAL ====================
+  { event_id: 10, person_id: 4, role: 'subordinate', side: 'union', unit_commanded: 'Division, I Corps', rank_at_time: 'Brigadier General' },
+  { event_id: 12, person_id: 4, role: 'subordinate', side: 'union', unit_commanded: 'Division, V Corps', rank_at_time: 'Major General' },
+  { event_id: 14, person_id: 4, role: 'subordinate', side: 'union', unit_commanded: 'V Corps', rank_at_time: 'Major General' },
+  { event_id: 38, person_id: 4, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Potomac', rank_at_time: 'Major General' },
+  { event_id: 39, person_id: 4, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Potomac', rank_at_time: 'Major General' },
+  { event_id: 31, person_id: 4, role: 'subordinate', side: 'union', unit_commanded: 'Army of the Potomac', rank_at_time: 'Major General' },
+
+  // ==================== SHERIDAN (5) - ADDITIONAL ====================
+  { event_id: 6, person_id: 5, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Colonel' },
+  { event_id: 11, person_id: 5, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
+  { event_id: 13, person_id: 5, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 17, person_id: 5, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 19, person_id: 5, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+  { event_id: 29, person_id: 5, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+
+  // ==================== BEAUREGARD (23) - ADDITIONAL ====================
+  { event_id: 22, person_id: 23, role: 'subordinate', side: 'confederate', unit_commanded: 'Department of NC & Southern VA', rank_at_time: 'General' },
+
+  // ==================== JOE JOHNSTON (24) - ADDITIONAL ====================
+  { event_id: 2, person_id: 24, role: 'commander', side: 'confederate', unit_commanded: 'Army of the Shenandoah', rank_at_time: 'Brigadier General' },
+
+  // ==================== THOMAS (6) - ADDITIONAL ====================
+  { event_id: 11, person_id: 6, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
+  { event_id: 13, person_id: 6, role: 'subordinate', side: 'union', unit_commanded: 'Center Wing', rank_at_time: 'Major General' },
+
+  // ==================== HOOKER (8) - ADDITIONAL ====================
+  { event_id: 18, person_id: 8, role: 'subordinate', side: 'union', unit_commanded: 'XI & XII Corps', rank_at_time: 'Major General' },
+  { event_id: 50, person_id: 8, role: 'subordinate', side: 'union', unit_commanded: 'XX Corps', rank_at_time: 'Major General' },
+
+  // ==================== STUART (25) - ADDITIONAL ====================
+  { event_id: 49, person_id: 25, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry', rank_at_time: 'Major General' },
+
+  // ==================== FORREST (28) - ADDITIONAL ====================
+  { event_id: 18, person_id: 28, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry', rank_at_time: 'Brigadier General' },
+
+  // ==================== HANCOCK (50) - ADDITIONAL ====================
+  { event_id: 38, person_id: 50, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+
+  // ==================== PICKETT (84) - ADDITIONAL ====================
+  { event_id: 8, person_id: 84, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+
+  // ==================== HOOD (27) - ADDITIONAL ====================
+  { event_id: 8, person_id: 27, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 9, person_id: 27, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 10, person_id: 27, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 27, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 17, person_id: 27, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 50, person_id: 27, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+  { event_id: 51, person_id: 27, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Lieutenant General' },
+
+  // ==================== CLEBURNE (88) - ADDITIONAL ====================
+  { event_id: 50, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 51, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 52, person_id: 88, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
 ];
 
 // Helper functions for querying the join table
