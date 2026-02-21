@@ -44,6 +44,7 @@ function App() {
     'Robert E. Lee',
     'Ulysses S. Grant',
   ]);
+  const [showTroopStrength, setShowTroopStrength] = useState(false);
 
   // Filter state
   const [selectedTypes, setSelectedTypes] = useState<EventType[]>(ALL_EVENT_TYPES);
@@ -196,25 +197,47 @@ function App() {
               currentDate={currentDate}
               armyMovements={mockArmyMovements}
               selectedCommanders={selectedCommanders}
+              showTroopStrength={showTroopStrength}
             />
           )}
 
           {/* Army movement tracking button */}
-          <button
-            onClick={() => setShowCommanderSelector(!showCommanderSelector)}
-            className={`absolute top-4 left-4 z-[1000] px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
-              selectedCommanders.length > 0
-                ? 'bg-blue-600 text-white hover:bg-blue-700'
-                : 'bg-white text-gray-700 hover:bg-gray-50'
-            }`}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-            </svg>
-            <span className="text-sm font-medium">
-              Track Armies {selectedCommanders.length > 0 && `(${selectedCommanders.length})`}
-            </span>
-          </button>
+          <div className="absolute top-4 left-4 z-[1000] flex items-center gap-2">
+            <button
+              onClick={() => setShowCommanderSelector(!showCommanderSelector)}
+              className={`px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
+                selectedCommanders.length > 0
+                  ? 'bg-blue-600 text-white hover:bg-blue-700'
+                  : 'bg-white text-gray-700 hover:bg-gray-50'
+              }`}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm font-medium">
+                Track Armies {selectedCommanders.length > 0 && `(${selectedCommanders.length})`}
+              </span>
+            </button>
+
+            {/* Troop strength toggle - only show when commanders are selected */}
+            {selectedCommanders.length > 0 && (
+              <button
+                onClick={() => setShowTroopStrength(!showTroopStrength)}
+                className={`px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
+                  showTroopStrength
+                    ? 'bg-green-600 text-white hover:bg-green-700'
+                    : 'bg-white text-gray-700 hover:bg-gray-50'
+                }`}
+                title="Show army sizes - larger circles represent larger armies"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                  <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm font-medium">Size</span>
+              </button>
+            )}
+          </div>
 
           {/* Commander selector panel */}
           <CommanderSelector

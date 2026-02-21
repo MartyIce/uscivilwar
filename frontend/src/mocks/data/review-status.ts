@@ -98,6 +98,7 @@ export const reviewStatus: ReviewStatus = {
     "[Grant reviewed] Added 3 battles: Fort Henry, Iuka, Corinth. Now has 13 battles.",
     "[Jackson reviewed] Added 7 battles: Valley Campaign (Kernstown, McDowell, Front Royal, Winchester, Cross Keys, Port Republic) + Cedar Mountain. Now has 13 battles.",
     "[Sherman reviewed] Added 4 battles: Resaca, Kennesaw Mountain, Jonesborough, Bentonville. Now has 10 battles.",
+    "[Troop Strength] Added approximate peak troop strength values to all 27 trackable commanders. Ranges from 4k (Custer) to 130k (Hooker). Visualization toggle added.",
   ],
 
   lastUpdated: new Date().toISOString(),

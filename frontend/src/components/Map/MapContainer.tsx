@@ -13,6 +13,7 @@ interface MapContainerProps {
   currentDate: string;
   armyMovements?: ArmyMovement[];
   selectedCommanders?: string[];
+  showTroopStrength?: boolean;
 }
 
 // Center of continental US
@@ -27,6 +28,7 @@ export default function MapContainer({
   currentDate,
   armyMovements = [],
   selectedCommanders = [],
+  showTroopStrength = false,
 }: MapContainerProps) {
   return (
     <LeafletMapContainer
@@ -52,6 +54,7 @@ export default function MapContainer({
           movements={armyMovements}
           currentDate={currentDate}
           selectedCommanders={selectedCommanders}
+          showTroopStrength={showTroopStrength}
         />
       )}
 

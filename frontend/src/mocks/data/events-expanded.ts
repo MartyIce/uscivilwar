@@ -1367,6 +1367,111 @@ export const expandedEvents: CivilWarEvent[] = [
       confederate: ["Robert E. Lee"]
     }
   },
+  // ==================== NAVAL BATTLES ====================
+  {
+    id: 54,
+    name: "Battle of Hampton Roads",
+    type: "battle",
+    date_start: "1862-03-08",
+    date_end: "1862-03-09",
+    description: "First battle between ironclad warships. CSS Virginia fought USS Monitor to a draw, revolutionizing naval warfare forever.",
+    campaign: null,
+    theater: "Eastern",
+    result: "Inconclusive",
+    significance: 5,
+    cwsac_id: null,
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Hampton_Roads",
+    image_url: null,
+    location: {
+      id: 54,
+      name: "Hampton Roads",
+      type: "naval",
+      coordinates: { lat: 36.9687, lng: -76.3353 },
+      state: "Virginia"
+    },
+    commanders: {
+      union: ["John L. Worden"],
+      confederate: ["Franklin Buchanan", "Catesby ap Roger Jones"]
+    }
+  },
+  {
+    id: 55,
+    name: "Capture of New Orleans",
+    type: "battle",
+    date_start: "1862-04-25",
+    date_end: "1862-05-01",
+    description: "Farragut's fleet ran past Confederate forts and captured the South's largest city and most important port.",
+    campaign: null,
+    theater: "Western",
+    result: "Union victory",
+    significance: 5,
+    cwsac_id: null,
+    wikipedia_url: "https://en.wikipedia.org/wiki/Capture_of_New_Orleans",
+    image_url: null,
+    location: {
+      id: 55,
+      name: "New Orleans",
+      type: "city",
+      coordinates: { lat: 29.9511, lng: -90.0715 },
+      state: "Louisiana"
+    },
+    commanders: {
+      union: ["David G. Farragut", "Benjamin Butler"],
+      confederate: ["Mansfield Lovell"]
+    }
+  },
+  {
+    id: 56,
+    name: "Battle of Mobile Bay",
+    type: "battle",
+    date_start: "1864-08-05",
+    date_end: "1864-08-05",
+    description: "Farragut's famous 'Damn the torpedoes!' battle. Union fleet captured Mobile Bay, closing one of the last Confederate ports.",
+    campaign: null,
+    theater: "Western",
+    result: "Union victory",
+    significance: 4,
+    cwsac_id: null,
+    wikipedia_url: "https://en.wikipedia.org/wiki/Battle_of_Mobile_Bay",
+    image_url: null,
+    location: {
+      id: 56,
+      name: "Mobile Bay",
+      type: "naval",
+      coordinates: { lat: 30.2283, lng: -88.0417 },
+      state: "Alabama"
+    },
+    commanders: {
+      union: ["David G. Farragut"],
+      confederate: ["Franklin Buchanan"]
+    }
+  },
+  {
+    id: 57,
+    name: "Battle of Fort Fisher",
+    type: "battle",
+    date_start: "1865-01-13",
+    date_end: "1865-01-15",
+    description: "Largest amphibious operation of the war. Capture of Fort Fisher closed Wilmington, the last major Confederate port.",
+    campaign: null,
+    theater: "Eastern",
+    result: "Union victory",
+    significance: 4,
+    cwsac_id: "NC014",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Second_Battle_of_Fort_Fisher",
+    image_url: null,
+    location: {
+      id: 57,
+      name: "Fort Fisher",
+      type: "fort",
+      coordinates: { lat: 33.9651, lng: -77.9269 },
+      state: "North Carolina"
+    },
+    commanders: {
+      union: ["David D. Porter", "Alfred Terry"],
+      confederate: ["Braxton Bragg", "William Lamb"]
+    }
+  },
   {
     id: 32,
     name: "Lincoln Assassination",

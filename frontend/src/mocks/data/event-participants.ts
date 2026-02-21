@@ -564,6 +564,51 @@ export const eventParticipants: EventParticipant[] = [
 
   // Garnett (102) - Pickett's Charge
   { event_id: 16, person_id: 102, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+
+  // ==================== NAVAL OFFICERS ====================
+  // Farragut (62)
+  { event_id: 55, person_id: 62, role: 'commander', side: 'union', unit_commanded: 'West Gulf Blockading Squadron', rank_at_time: 'Flag Officer' },
+  { event_id: 56, person_id: 62, role: 'commander', side: 'union', unit_commanded: 'West Gulf Blockading Squadron', rank_at_time: 'Rear Admiral' },
+
+  // Porter (61)
+  { event_id: 15, person_id: 61, role: 'subordinate', side: 'union', unit_commanded: 'Mississippi Squadron', rank_at_time: 'Acting Rear Admiral' },
+  { event_id: 57, person_id: 61, role: 'commander', side: 'union', unit_commanded: 'North Atlantic Blockading Squadron', rank_at_time: 'Rear Admiral' },
+
+  // Buchanan (93) - CSS Virginia / Mobile Bay
+  { event_id: 54, person_id: 93, role: 'commander', side: 'confederate', unit_commanded: 'CSS Virginia', rank_at_time: 'Flag Officer' },
+  { event_id: 56, person_id: 93, role: 'commander', side: 'confederate', unit_commanded: 'Mobile Squadron', rank_at_time: 'Admiral' },
+
+  // Butler (71) - New Orleans
+  { event_id: 55, person_id: 71, role: 'subordinate', side: 'union', unit_commanded: 'Army Forces', rank_at_time: 'Major General' },
+
+  // ==================== ADDITIONAL BRIGADE COMMANDERS ====================
+  // Barksdale (100) - Gettysburg
+  { event_id: 12, person_id: 100, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 14, person_id: 100, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 16, person_id: 100, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+
+  // Pettigrew (103) - Gettysburg
+  { event_id: 16, person_id: 103, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
+
+  // Morgan (97) - Cavalry raids
+  { event_id: 11, person_id: 97, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry', rank_at_time: 'Colonel' },
+  { event_id: 13, person_id: 97, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry', rank_at_time: 'Brigadier General' },
+
+  // Wilcox (96)
+  { event_id: 8, person_id: 96, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 16, person_id: 96, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 19, person_id: 96, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+
+  // Fitz John Porter (63) - Peninsula
+  { event_id: 7, person_id: 63, role: 'subordinate', side: 'union', unit_commanded: 'V Corps', rank_at_time: 'Major General' },
+  { event_id: 8, person_id: 63, role: 'subordinate', side: 'union', unit_commanded: 'V Corps', rank_at_time: 'Major General' },
+  { event_id: 9, person_id: 63, role: 'subordinate', side: 'union', unit_commanded: 'V Corps', rank_at_time: 'Major General' },
+  { event_id: 10, person_id: 63, role: 'subordinate', side: 'union', unit_commanded: 'V Corps', rank_at_time: 'Major General' },
+
+  // Franklin (64) - Fredericksburg
+  { event_id: 8, person_id: 64, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 10, person_id: 64, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 12, person_id: 64, role: 'subordinate', side: 'union', unit_commanded: 'Left Grand Division', rank_at_time: 'Major General' },
 ];
 
 // Helper functions for querying the join table

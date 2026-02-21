@@ -77,7 +77,7 @@ function generateWaypointsBetween(
   return waypoints;
 }
 
-// Commander configurations with their army names and colors
+// Commander configurations with their army names, colors, and troop strength
 interface CommanderConfig {
   personId: number;
   name: string;
@@ -85,18 +85,20 @@ interface CommanderConfig {
   armyName: string;
   color: string;
   baseLocation: Coordinates;
+  troopStrength: number; // Peak approximate troop strength
 }
 
 // Build commander configs from expanded people data
 const COMMANDER_CONFIGS: CommanderConfig[] = [
-  // Union commanders
+  // Union commanders - troop strengths are approximate peak values
   {
     personId: 1,
     name: 'Ulysses S. Grant',
     side: 'union',
     armyName: 'Army of the Tennessee / Armies of the US',
     color: '#3b82f6',
-    baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+    baseLocation: { lat: 38.9072, lng: -77.0369 },
+    troopStrength: 120000, // Combined armies during Overland Campaign
   },
   {
     personId: 2,
@@ -104,7 +106,8 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     side: 'union',
     armyName: 'Military Division of the Mississippi',
     color: '#10b981',
-    baseLocation: { lat: 35.1495, lng: -90.0490 }, // Memphis
+    baseLocation: { lat: 35.1495, lng: -90.0490 },
+    troopStrength: 100000, // Atlanta Campaign
   },
   {
     personId: 3,
@@ -112,7 +115,8 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     side: 'union',
     armyName: 'Army of the Potomac',
     color: '#0ea5e9',
-    baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+    baseLocation: { lat: 38.9072, lng: -77.0369 },
+    troopStrength: 100000, // Peninsula Campaign
   },
   {
     personId: 4,
@@ -120,7 +124,8 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     side: 'union',
     armyName: 'Army of the Potomac',
     color: '#2563eb',
-    baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+    baseLocation: { lat: 38.9072, lng: -77.0369 },
+    troopStrength: 95000, // Gettysburg
   },
   {
     personId: 5,
@@ -128,7 +133,8 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     side: 'union',
     armyName: 'Cavalry Corps / Army of the Shenandoah',
     color: '#7c3aed',
-    baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+    baseLocation: { lat: 38.9072, lng: -77.0369 },
+    troopStrength: 40000, // Shenandoah Valley
   },
   {
     personId: 6,
@@ -136,7 +142,8 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     side: 'union',
     armyName: 'Army of the Cumberland',
     color: '#0284c7',
-    baseLocation: { lat: 36.1627, lng: -86.7816 }, // Nashville
+    baseLocation: { lat: 36.1627, lng: -86.7816 },
+    troopStrength: 60000, // Nashville
   },
   {
     personId: 8,
@@ -144,9 +151,10 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     side: 'union',
     armyName: 'Army of the Potomac',
     color: '#1d4ed8',
-    baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+    baseLocation: { lat: 38.9072, lng: -77.0369 },
+    troopStrength: 130000, // Chancellorsville (largest Union army)
   },
-  // Confederate commanders
+  // Confederate commanders - troop strengths are approximate peak values
   {
     personId: 20,
     name: 'Robert E. Lee',
@@ -154,6 +162,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Army of Northern Virginia',
     color: '#6b7280',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 75000, // Gettysburg
   },
   {
     personId: 21,
@@ -162,6 +171,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: "Jackson's Corps",
     color: '#78716c',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 25000, // Second Corps
   },
   {
     personId: 22,
@@ -170,6 +180,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'First Corps, ANV',
     color: '#57534e',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 20000, // First Corps
   },
   {
     personId: 23,
@@ -178,6 +189,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Confederate Forces',
     color: '#a3a3a3',
     baseLocation: { lat: 32.7765, lng: -79.9311 }, // Charleston
+    troopStrength: 35000, // Shiloh
   },
   {
     personId: 26,
@@ -186,6 +198,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Army of Tennessee',
     color: '#44403c',
     baseLocation: { lat: 35.0456, lng: -85.3097 }, // Chattanooga
+    troopStrength: 65000, // Chickamauga
   },
   {
     personId: 27,
@@ -194,6 +207,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Army of Tennessee',
     color: '#292524',
     baseLocation: { lat: 33.7490, lng: -84.3880 }, // Atlanta
+    troopStrength: 40000, // Atlanta Campaign
   },
   {
     personId: 28,
@@ -202,6 +216,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: "Forrest's Cavalry Corps",
     color: '#1c1917',
     baseLocation: { lat: 35.1495, lng: -90.0490 }, // Memphis area
+    troopStrength: 10000, // Cavalry Corps
   },
   {
     personId: 29,
@@ -210,6 +225,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Third Corps, ANV',
     color: '#4b5563',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 22000, // Third Corps
   },
   {
     personId: 30,
@@ -218,6 +234,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Army of the Valley',
     color: '#6b7280',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 14000, // Valley Campaign 1864
   },
   // Additional Union commanders from batch2
   {
@@ -227,6 +244,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'II Corps',
     color: '#1d4ed8',
     baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+    troopStrength: 25000, // II Corps
   },
   {
     personId: 53,
@@ -235,6 +253,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'VI Corps',
     color: '#3730a3',
     baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+    troopStrength: 15000, // VI Corps
   },
   {
     personId: 54,
@@ -243,6 +262,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'XI Corps / Army of the Tennessee',
     color: '#4338ca',
     baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+    troopStrength: 13000, // XI Corps
   },
   {
     personId: 59,
@@ -251,6 +271,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Army of the Tennessee',
     color: '#0369a1',
     baseLocation: { lat: 35.1495, lng: -90.0490 }, // Memphis
+    troopStrength: 24000, // XVII Corps / Army of the Tennessee
   },
   {
     personId: 70,
@@ -259,6 +280,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Michigan Cavalry Brigade',
     color: '#b91c1c',
     baseLocation: { lat: 38.9072, lng: -77.0369 }, // Washington DC
+    troopStrength: 4000, // Cavalry Brigade
   },
   // Additional Confederate commanders from batch2
   {
@@ -268,6 +290,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Second Corps, ANV',
     color: '#525252',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 20000, // Second Corps
   },
   {
     personId: 82,
@@ -276,6 +299,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Second Corps, ANV',
     color: '#737373',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 12000, // Division/Corps
   },
   {
     personId: 84,
@@ -284,6 +308,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: "Pickett's Division",
     color: '#a3a3a3',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 6000, // Division
   },
   {
     personId: 87,
@@ -292,6 +317,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: "Hardee's Corps",
     color: '#3f3f46',
     baseLocation: { lat: 35.0456, lng: -85.3097 }, // Chattanooga
+    troopStrength: 15000, // Corps
   },
   {
     personId: 88,
@@ -300,6 +326,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: "Cleburne's Division",
     color: '#27272a',
     baseLocation: { lat: 35.0456, lng: -85.3097 }, // Chattanooga
+    troopStrength: 7000, // Division
   },
   {
     personId: 89,
@@ -308,6 +335,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Cavalry Corps, ANV',
     color: '#44403c',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 6000, // Cavalry Corps
   },
   {
     personId: 91,
@@ -316,6 +344,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Cavalry Corps, Army of Tennessee',
     color: '#57534e',
     baseLocation: { lat: 35.0456, lng: -85.3097 }, // Chattanooga
+    troopStrength: 5000, // Cavalry Corps
   },
   {
     personId: 25,
@@ -324,8 +353,9 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'Cavalry Corps, ANV',
     color: '#78716c',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 10000, // Cavalry Corps
   },
-  // Political leaders
+  // Political leaders (no troop command)
   {
     personId: 40,
     name: 'Abraham Lincoln',
@@ -333,6 +363,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'President of the United States',
     color: '#1e40af',
     baseLocation: { lat: 38.8977, lng: -77.0365 }, // White House
+    troopStrength: 0, // Political leader
   },
   {
     personId: 41,
@@ -341,6 +372,7 @@ const COMMANDER_CONFIGS: CommanderConfig[] = [
     armyName: 'President of the Confederate States',
     color: '#374151',
     baseLocation: { lat: 37.5407, lng: -77.4360 }, // Richmond
+    troopStrength: 0, // Political leader
   },
 ];
 
@@ -530,4 +562,11 @@ export const availableCommanders = COMMANDER_CONFIGS.map(c => ({
   side: c.side,
   armyName: c.armyName,
   color: c.color,
+  troopStrength: c.troopStrength,
 }));
+
+// Get troop strength for a commander
+export function getCommanderTroopStrength(commanderName: string): number {
+  const config = COMMANDER_CONFIGS.find(c => c.name === commanderName);
+  return config?.troopStrength ?? 0;
+}
