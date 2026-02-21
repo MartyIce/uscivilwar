@@ -133,11 +133,13 @@ export const reviewStatus: ReviewStatus = {
     43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
     // Naval battles
     54, 55, 56, 57,
+    // Fort Wagner (54th Massachusetts)
+    58,
   ],
 
   // IDs of events pending review
   pendingEvents: [
-    3, 4, 32,  // Minor battles and Lincoln assassination
+    3, 4, 32,  // Minor battles (Cheat Mountain, Ball's Bluff) and Lincoln assassination
   ],
 
   notes: [
@@ -150,6 +152,7 @@ export const reviewStatus: ReviewStatus = {
     "[Sherman reviewed] Added 4 battles: Resaca, Kennesaw Mountain, Jonesborough, Bentonville. Now has 10 battles.",
     "[Troop Strength] Added approximate peak troop strength values to all 27 trackable commanders. Ranges from 4k (Custer) to 130k (Hooker). Visualization toggle added.",
     "[Systematic Review Complete] 75+ military commanders reviewed. Added: Humphreys, Wright, Pleasonton, Kilpatrick, Merritt, Schurz, Fitzhugh Lee, Gregg, Buckner, Pemberton, Hunt, Alexander, McCook, Crittenden. Naval officers: Farragut, Porter, Buchanan. 54 of 57 events reviewed.",
+    "[Fort Wagner] Added event 58 - Second Battle of Fort Wagner (54th Massachusetts assault). Shaw properly linked. 55 of 58 events now reviewed.",
   ],
 
   lastUpdated: new Date().toISOString(),

@@ -1473,6 +1473,32 @@ export const expandedEvents: CivilWarEvent[] = [
     }
   },
   {
+    id: 58,
+    name: "Second Battle of Fort Wagner",
+    type: "battle",
+    date_start: "1863-07-18",
+    date_end: "1863-07-18",
+    description: "Famous assault by the 54th Massachusetts Infantry, one of the first Black regiments. Colonel Robert Gould Shaw was killed leading the charge. Though the assault failed, it proved the valor of Black soldiers and boosted recruitment.",
+    campaign: "Operations Against Charleston",
+    theater: "Eastern",
+    result: "Confederate victory",
+    significance: 4,
+    cwsac_id: "SC007",
+    wikipedia_url: "https://en.wikipedia.org/wiki/Second_Battle_of_Fort_Wagner",
+    image_url: null,
+    location: {
+      id: 58,
+      name: "Fort Wagner",
+      type: "fort",
+      coordinates: { lat: 32.7581, lng: -79.8764 },
+      state: "South Carolina"
+    },
+    commanders: {
+      union: ["Truman Seymour", "Robert Gould Shaw", "Quincy Gillmore"],
+      confederate: ["William Taliaferro", "P.G.T. Beauregard"]
+    }
+  },
+  {
     id: 32,
     name: "Lincoln Assassination",
     type: "proclamation",

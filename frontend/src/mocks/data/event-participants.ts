@@ -664,8 +664,10 @@ export const eventParticipants: EventParticipant[] = [
   { event_id: 15, person_id: 120, role: 'commander', side: 'confederate', unit_commanded: 'Department of Mississippi', rank_at_time: 'Lieutenant General' },
 
   // Shaw (127) - 54th Massachusetts at Fort Wagner
-  // Note: Fort Wagner not in events yet, but linking him symbolically to Petersburg siege
-  { event_id: 22, person_id: 127, role: 'subordinate', side: 'union', unit_commanded: '54th Massachusetts', rank_at_time: 'Colonel' },
+  { event_id: 58, person_id: 127, role: 'subordinate', side: 'union', unit_commanded: '54th Massachusetts Infantry', rank_at_time: 'Colonel' },
+
+  // Fort Wagner (58) - additional participants
+  { event_id: 58, person_id: 23, role: 'commander', side: 'confederate', unit_commanded: 'Department of SC, GA & FL', rank_at_time: 'General' },
 
   // Hunt (130) - Artillery chief
   { event_id: 10, person_id: 130, role: 'subordinate', side: 'union', unit_commanded: 'Artillery Reserve', rank_at_time: 'Colonel' },
