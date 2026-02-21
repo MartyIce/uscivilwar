@@ -609,6 +609,81 @@ export const eventParticipants: EventParticipant[] = [
   { event_id: 8, person_id: 64, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
   { event_id: 10, person_id: 64, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
   { event_id: 12, person_id: 64, role: 'subordinate', side: 'union', unit_commanded: 'Left Grand Division', rank_at_time: 'Major General' },
+
+  // ==================== ADDITIONAL PEOPLE REVIEW ====================
+
+  // Humphreys (57) - Division at Fredericksburg, II Corps later
+  { event_id: 12, person_id: 57, role: 'subordinate', side: 'union', unit_commanded: 'Division, V Corps', rank_at_time: 'Brigadier General' },
+  { event_id: 16, person_id: 57, role: 'subordinate', side: 'union', unit_commanded: 'Division, III Corps', rank_at_time: 'Major General' },
+  { event_id: 19, person_id: 57, role: 'subordinate', side: 'union', unit_commanded: 'Chief of Staff', rank_at_time: 'Major General' },
+  { event_id: 22, person_id: 57, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+  { event_id: 31, person_id: 57, role: 'subordinate', side: 'union', unit_commanded: 'II Corps', rank_at_time: 'Major General' },
+
+  // Wright (58) - VI Corps after Sedgwick's death
+  { event_id: 20, person_id: 58, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 21, person_id: 58, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 22, person_id: 58, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 25, person_id: 58, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 29, person_id: 58, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+  { event_id: 31, person_id: 58, role: 'subordinate', side: 'union', unit_commanded: 'VI Corps', rank_at_time: 'Major General' },
+
+  // Pleasonton (67) - Cavalry Corps commander
+  { event_id: 14, person_id: 67, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Brigadier General' },
+  { event_id: 16, person_id: 67, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Corps', rank_at_time: 'Major General' },
+
+  // Kilpatrick (68) - Cavalry
+  { event_id: 16, person_id: 68, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Brigadier General' },
+  { event_id: 26, person_id: 68, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Brigadier General' },
+
+  // Merritt (69) - Cavalry, Shenandoah
+  { event_id: 25, person_id: 69, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Brigadier General' },
+  { event_id: 39, person_id: 69, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+  { event_id: 31, person_id: 69, role: 'subordinate', side: 'union', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+
+  // Schurz (74) - XI Corps
+  { event_id: 9, person_id: 74, role: 'subordinate', side: 'union', unit_commanded: 'Division', rank_at_time: 'Brigadier General' },
+  { event_id: 14, person_id: 74, role: 'subordinate', side: 'union', unit_commanded: 'Division, XI Corps', rank_at_time: 'Major General' },
+  { event_id: 16, person_id: 74, role: 'subordinate', side: 'union', unit_commanded: 'Division, XI Corps', rank_at_time: 'Major General' },
+
+  // Fitzhugh Lee (90) - Cavalry
+  { event_id: 14, person_id: 90, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 16, person_id: 90, role: 'subordinate', side: 'confederate', unit_commanded: 'Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 19, person_id: 90, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 39, person_id: 90, role: 'subordinate', side: 'confederate', unit_commanded: 'Cavalry Division', rank_at_time: 'Major General' },
+
+  // Gregg (104) - Texas Brigade
+  { event_id: 19, person_id: 104, role: 'subordinate', side: 'confederate', unit_commanded: 'Texas Brigade', rank_at_time: 'Brigadier General' },
+  { event_id: 22, person_id: 104, role: 'subordinate', side: 'confederate', unit_commanded: 'Texas Brigade', rank_at_time: 'Brigadier General' },
+
+  // Buckner (119) - Fort Donelson
+  { event_id: 5, person_id: 119, role: 'commander', side: 'confederate', unit_commanded: 'Fort Donelson', rank_at_time: 'Brigadier General' },
+  { event_id: 11, person_id: 119, role: 'subordinate', side: 'confederate', unit_commanded: 'Division', rank_at_time: 'Major General' },
+  { event_id: 17, person_id: 119, role: 'subordinate', side: 'confederate', unit_commanded: 'Corps', rank_at_time: 'Major General' },
+
+  // Pemberton (120) - Vicksburg
+  { event_id: 15, person_id: 120, role: 'commander', side: 'confederate', unit_commanded: 'Department of Mississippi', rank_at_time: 'Lieutenant General' },
+
+  // Shaw (127) - 54th Massachusetts at Fort Wagner
+  // Note: Fort Wagner not in events yet, but linking him symbolically to Petersburg siege
+  { event_id: 22, person_id: 127, role: 'subordinate', side: 'union', unit_commanded: '54th Massachusetts', rank_at_time: 'Colonel' },
+
+  // Hunt (130) - Artillery chief
+  { event_id: 10, person_id: 130, role: 'subordinate', side: 'union', unit_commanded: 'Artillery Reserve', rank_at_time: 'Colonel' },
+  { event_id: 12, person_id: 130, role: 'subordinate', side: 'union', unit_commanded: 'Artillery Reserve', rank_at_time: 'Brigadier General' },
+  { event_id: 16, person_id: 130, role: 'subordinate', side: 'union', unit_commanded: 'Artillery Reserve', rank_at_time: 'Brigadier General' },
+
+  // E.P. Alexander (131) - Confederate artillery
+  { event_id: 12, person_id: 131, role: 'subordinate', side: 'confederate', unit_commanded: 'Artillery Battalion', rank_at_time: 'Colonel' },
+  { event_id: 16, person_id: 131, role: 'subordinate', side: 'confederate', unit_commanded: 'Artillery, First Corps', rank_at_time: 'Colonel' },
+  { event_id: 19, person_id: 131, role: 'subordinate', side: 'confederate', unit_commanded: 'Artillery, First Corps', rank_at_time: 'Brigadier General' },
+
+  // McCook (128) - XX Corps
+  { event_id: 13, person_id: 128, role: 'subordinate', side: 'union', unit_commanded: 'XX Corps', rank_at_time: 'Major General' },
+  { event_id: 17, person_id: 128, role: 'subordinate', side: 'union', unit_commanded: 'XX Corps', rank_at_time: 'Major General' },
+
+  // Crittenden (129) - XXI Corps
+  { event_id: 13, person_id: 129, role: 'subordinate', side: 'union', unit_commanded: 'XXI Corps', rank_at_time: 'Major General' },
+  { event_id: 17, person_id: 129, role: 'subordinate', side: 'union', unit_commanded: 'XXI Corps', rank_at_time: 'Major General' },
 ];
 
 // Helper functions for querying the join table

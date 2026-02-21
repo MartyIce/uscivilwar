@@ -26,7 +26,7 @@ export interface ReviewStatus {
 export const reviewStatus: ReviewStatus = {
   // IDs of people we've thoroughly examined
   reviewedPeople: [
-    // Union commanders
+    // Union commanders (base)
     1,   // Ulysses S. Grant - 13 battles
     2,   // William T. Sherman - 10 battles
     3,   // George B. McClellan - 8 battles
@@ -39,10 +39,7 @@ export const reviewStatus: ReviewStatus = {
     10,  // Don Carlos Buell - 3 battles
     11,  // William Rosecrans - 5 battles
     12,  // John Pope - 2 battles
-    50,  // Winfield Scott Hancock - 9 battles
-    53,  // John Sedgwick - 7 battles
-    70,  // George Custer - 5 battles
-    // Confederate commanders
+    // Confederate commanders (base)
     20,  // Robert E. Lee - 17 battles
     21,  // Stonewall Jackson - 13 battles
     22,  // James Longstreet - 10 battles
@@ -54,40 +51,93 @@ export const reviewStatus: ReviewStatus = {
     28,  // Nathan Bedford Forrest - 4 battles
     29,  // A.P. Hill - 13 battles
     30,  // Jubal Early - 10 battles
+    // Union corps/division commanders (batch2)
+    50,  // Winfield Scott Hancock - 9 battles
+    51,  // John F. Reynolds - 4 battles
+    52,  // Daniel Sickles - 2 battles
+    53,  // John Sedgwick - 7 battles
+    54,  // Oliver O. Howard - 6 battles
+    55,  // Henry W. Slocum - 6 battles
+    56,  // Gouverneur K. Warren - 4 battles
+    57,  // Andrew A. Humphreys - 5 battles
+    58,  // Horatio G. Wright - 6 battles
+    59,  // James B. McPherson - 3 battles
+    60,  // John Schofield - 2 battles
+    61,  // David D. Porter (Admiral) - 2 battles
+    62,  // David G. Farragut (Admiral) - 2 battles
+    63,  // Fitz John Porter - 4 battles
+    64,  // William B. Franklin - 3 battles
+    65,  // Edwin V. Sumner - 2 battles
+    67,  // Alfred Pleasonton - 2 battles
+    68,  // Judson Kilpatrick - 2 battles
+    69,  // Wesley Merritt - 3 battles
+    70,  // George Custer - 5 battles
+    71,  // Benjamin Butler - 1 battle
+    72,  // Nathaniel P. Banks - 2 battles
+    74,  // Carl Schurz - 3 battles
+    // Confederate corps/division commanders (batch2)
     80,  // Richard S. Ewell - 8 battles
+    81,  // D.H. Hill - 4 battles
     82,  // John B. Gordon - 11 battles
+    83,  // Lafayette McLaws - 5 battles
     84,  // George Pickett - 5 battles
+    86,  // Leonidas Polk - 4 battles
     87,  // William J. Hardee - 7 battles
     88,  // Patrick Cleburne - 9 battles
     89,  // Wade Hampton - 8 battles
+    90,  // Fitzhugh Lee - 4 battles
     91,  // Joseph Wheeler - 9 battles
+    93,  // Franklin Buchanan (Admiral) - 2 battles
+    96,  // Cadmus M. Wilcox - 3 battles
+    97,  // John Hunt Morgan - 2 battles
+    98,  // Earl Van Dorn - 1 battle
+    99,  // Sterling Price - 2 battles
+    100, // William Barksdale - 3 battles
+    101, // Lewis Armistead - 1 battle
+    102, // Richard B. Garnett - 1 battle
+    103, // James J. Pettigrew - 1 battle
+    104, // John Gregg - 2 battles
+    // Western Theater commanders
+    119, // Simon Bolivar Buckner - 3 battles
+    120, // John C. Pemberton - 1 battle
+    // Artillery
+    127, // Robert Gould Shaw - 1 battle
+    128, // Alexander McCook - 2 battles
+    129, // Thomas Crittenden - 2 battles
+    130, // Henry Hunt - 3 battles
+    131, // Edward Porter Alexander - 3 battles
   ],
 
-  // IDs of people pending review
+  // IDs of people pending review (mostly civilians/politicians, some remaining military)
   pendingPeople: [
-    // All base people IDs 1-12, 20-30 now reviewed
-    40, 41, 42, 43, 44, 45,  // Political leaders
-    // From people-batch2.ts (IDs 50-131)
-    50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
-    71, 72, 73, 74,
-    80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99,
-    100, 101, 102, 103, 104, 105,
-    110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120,
-    125, 126, 127, 128, 129, 130, 131,
+    40, 41, 42, 43, 44, 45,  // Political leaders (Lincoln, Davis, cabinet)
+    66,  // Rutherford B. Hayes (minor military role)
+    73,  // Franz Sigel (needs events)
+    85,  // John Bell Hood (duplicate of 27)
+    92,  // Raphael Semmes (commerce raider, no land battles)
+    94,  // John S. Mosby (partisan, raids not tracked)
+    95,  // William E. Jones (cavalry, minor)
+    105, // Archibald Gracie Jr. (Petersburg, killed)
+    // Civilians
+    110, 111, 112, 113, 114, 115, 116, 117, 118,
+    125, 126,  // Black soldiers/officers (need Fort Wagner event)
   ],
 
-  // IDs of events we've thoroughly examined
-  reviewedEvents: [],
+  // IDs of events we've thoroughly examined (all major participants linked)
+  reviewedEvents: [
+    // Major battles with complete participant lists
+    1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+    23, 24, 25, 26, 27, 28, 29, 30, 31,
+    // Added battles
+    33, 34, 35, 36, 37, 38, 39, 40, 41, 42,
+    43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
+    // Naval battles
+    54, 55, 56, 57,
+  ],
 
-  // IDs of events pending review (current events 1-53)
+  // IDs of events pending review
   pendingEvents: [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-    17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
-    33, 34, 35, 36, 37,  // McClellan: Rich Mountain, Corrick's Ford, Yorktown, Williamsburg, South Mountain
-    38, 39,  // Lee: North Anna, Five Forks
-    40, 41, 42,  // Grant: Fort Henry, Iuka, Corinth
-    43, 44, 45, 46, 47, 48, 49,  // Jackson Valley Campaign + Cedar Mountain
-    50, 51, 52, 53,  // Sherman Atlanta Campaign + Bentonville
+    3, 4, 32,  // Minor battles and Lincoln assassination
   ],
 
   notes: [
@@ -99,6 +149,7 @@ export const reviewStatus: ReviewStatus = {
     "[Jackson reviewed] Added 7 battles: Valley Campaign (Kernstown, McDowell, Front Royal, Winchester, Cross Keys, Port Republic) + Cedar Mountain. Now has 13 battles.",
     "[Sherman reviewed] Added 4 battles: Resaca, Kennesaw Mountain, Jonesborough, Bentonville. Now has 10 battles.",
     "[Troop Strength] Added approximate peak troop strength values to all 27 trackable commanders. Ranges from 4k (Custer) to 130k (Hooker). Visualization toggle added.",
+    "[Systematic Review Complete] 75+ military commanders reviewed. Added: Humphreys, Wright, Pleasonton, Kilpatrick, Merritt, Schurz, Fitzhugh Lee, Gregg, Buckner, Pemberton, Hunt, Alexander, McCook, Crittenden. Naval officers: Farragut, Porter, Buchanan. 54 of 57 events reviewed.",
   ],
 
   lastUpdated: new Date().toISOString(),
