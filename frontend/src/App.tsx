@@ -83,7 +83,10 @@ function App() {
       // Filter by current date window (show events within last 6 months)
       const eventDate = event.date_end || event.date_start;
       if (eventDate > currentDate) return false; // Event hasn't happened yet
-      if (event.date_start < windowStartStr) return false; // Event is too old
+
+      // Event disappears 6 months after it ends
+      const eventEndDate = event.date_end || event.date_start;
+      if (eventEndDate < windowStartStr) return false; // Event ended too long ago
 
       return true;
     });
@@ -149,6 +152,44 @@ function App() {
     }
     setIsPlaying((prev) => !prev);
   }, [isPlaying, currentDate, dateRange]);
+
+  // Handle jump to next event
+  const handleNextEvent = useCallback(() => {
+    if (!allEvents.length) return;
+
+    // Find the next event after the current date
+    const sortedEvents = [...allEvents].sort((a, b) =>
+      a.date_start.localeCompare(b.date_start)
+    );
+
+    const nextEvent = sortedEvents.find(
+      (event) => event.date_start > currentDate
+    );
+
+    if (nextEvent) {
+      setCurrentDate(nextEvent.date_start);
+      setIsPlaying(false);
+    }
+  }, [allEvents, currentDate]);
+
+  // Handle jump to previous event
+  const handlePrevEvent = useCallback(() => {
+    if (!allEvents.length) return;
+
+    // Find the previous event before the current date
+    const sortedEvents = [...allEvents].sort((a, b) =>
+      b.date_start.localeCompare(a.date_start)
+    );
+
+    const prevEvent = sortedEvents.find(
+      (event) => event.date_start < currentDate
+    );
+
+    if (prevEvent) {
+      setCurrentDate(prevEvent.date_start);
+      setIsPlaying(false);
+    }
+  }, [allEvents, currentDate]);
 
   // Handle commander toggle for army tracking
   const handleCommanderToggle = useCallback((commander: string) => {
@@ -286,6 +327,8 @@ function App() {
         events={allEvents}
         isPlaying={isPlaying}
         onPlayToggle={handlePlayToggle}
+        onNextEvent={handleNextEvent}
+        onPrevEvent={handlePrevEvent}
       />
     </div>
   );

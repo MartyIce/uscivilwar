@@ -9,6 +9,8 @@ interface TimelineBarProps {
   events: CivilWarEvent[];
   isPlaying: boolean;
   onPlayToggle: () => void;
+  onNextEvent: () => void;
+  onPrevEvent: () => void;
 }
 
 export default function TimelineBar({
@@ -19,6 +21,8 @@ export default function TimelineBar({
   events,
   isPlaying,
   onPlayToggle,
+  onNextEvent,
+  onPrevEvent,
 }: TimelineBarProps) {
   // Format date for display
   const formatDate = (dateStr: string): string => {
@@ -64,23 +68,48 @@ export default function TimelineBar({
       {/* Main timeline controls */}
       <div className="px-4 py-3">
         <div className="flex items-center gap-4">
-          {/* Play/Pause button */}
-          <button
-            onClick={onPlayToggle}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500 hover:bg-blue-600 text-white transition-colors"
-            title={isPlaying ? 'Pause' : 'Play'}
-          >
-            {isPlaying ? (
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <rect x="5" y="4" width="3" height="12" />
-                <rect x="12" y="4" width="3" height="12" />
+          {/* Playback controls */}
+          <div className="flex items-center gap-1">
+            {/* Previous event button */}
+            <button
+              onClick={onPrevEvent}
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 transition-colors"
+              title="Previous event"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <polygon points="14,3 6,10 14,17" />
               </svg>
-            ) : (
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <polygon points="5,3 18,10 5,17" />
+            </button>
+
+            {/* Play/Pause button */}
+            <button
+              onClick={onPlayToggle}
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500 hover:bg-blue-600 text-white transition-colors"
+              title={isPlaying ? 'Pause' : 'Play'}
+            >
+              {isPlaying ? (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <rect x="5" y="4" width="3" height="12" />
+                  <rect x="12" y="4" width="3" height="12" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <polygon points="5,3 18,10 5,17" />
+                </svg>
+              )}
+            </button>
+
+            {/* Next event button */}
+            <button
+              onClick={onNextEvent}
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 transition-colors"
+              title="Next event"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <polygon points="6,3 14,10 6,17" />
               </svg>
-            )}
-          </button>
+            </button>
+          </div>
 
           {/* Current date display */}
           <div className="min-w-[180px] text-center">

@@ -62,6 +62,7 @@ function createMarkerIcon(event: CivilWarEvent, isSelected: boolean): DivIcon {
         box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         ${isSelected ? 'transform: scale(1.2);' : ''}
         transition: transform 0.2s;
+        pointer-events: none;
       ">
         ${icon}
       </div>
