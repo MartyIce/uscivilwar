@@ -515,7 +515,7 @@ export function getArmyPathUpToDate(
 }
 
 // Pre-generated movements for export
-export const mockArmyMovements: ArmyMovement[] = generateAllMovements();
+export const armyMovements: ArmyMovement[] = generateAllMovements();
 
 // List of available commanders (derived from person data)
 export const availableCommanders = COMMANDER_CONFIGS.map(c => {

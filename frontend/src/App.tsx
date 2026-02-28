@@ -9,9 +9,8 @@ import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
 import BattleDeepView from './components/BattleDeep/BattleDeepView';
 import OrgChart from './components/OrgChart/OrgChart';
 import { useEvents, useEvent } from './hooks/useEvents';
-import { useBoundaries } from './hooks/useBoundaries';
 import { useNavigationHistory } from './hooks/useNavigationHistory';
-import { mockArmyMovements } from './data';
+import { armyMovements, stateBoundaries } from './data';
 import type { EventType, Side } from './types';
 import './App.css';
 
@@ -59,6 +58,7 @@ function App() {
     'Ulysses S. Grant',
   ]);
   const [showTroopStrength, setShowTroopStrength] = useState(false);
+  const [showCities, setShowCities] = useState(true);
 
   // Filter state
   const [selectedTypes, setSelectedTypes] = useState<EventType[]>(ALL_EVENT_TYPES);
@@ -74,11 +74,6 @@ function App() {
   });
 
   const { data: selectedEvent, isLoading: eventLoading } = useEvent(selectedEventId);
-
-  const { data: boundariesData } = useBoundaries({
-    date: currentDate,
-    type: 'state',
-  });
 
   // Filter events by type and current date (rolling window)
   const filteredEvents = useMemo(() => {
@@ -305,13 +300,14 @@ function App() {
           ) : (
             <MapContainer
               events={filteredEvents}
-              boundaries={boundariesData?.boundaries || []}
+              boundaries={stateBoundaries}
               selectedEventId={selectedEventId}
               onEventSelect={handleEventSelect}
               currentDate={currentDate}
-              armyMovements={mockArmyMovements}
+              armyMovements={armyMovements}
               selectedCommanders={selectedCommanders}
               showTroopStrength={showTroopStrength}
+              showCities={showCities}
               onCityClick={handleCityClick}
               selectedCityName={selectedCityName}
               onStateClick={handleStateClick}
@@ -354,6 +350,22 @@ function App() {
                 <span className="text-sm font-medium">Troop #</span>
               </button>
             )}
+
+            {/* Cities toggle */}
+            <button
+              onClick={() => setShowCities(!showCities)}
+              className={`px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
+                showCities
+                  ? 'bg-purple-600 text-white hover:bg-purple-700'
+                  : 'bg-white text-gray-700 hover:bg-gray-50'
+              }`}
+              title="Show/hide major cities"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm font-medium">Cities</span>
+            </button>
           </div>
 
           {/* Commander selector panel */}

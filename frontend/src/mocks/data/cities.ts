@@ -192,6 +192,186 @@ export const majorCities: CityData[] = [
       "Siege of Chattanooga",
       "Battle of Chattanooga (November 1863)"
     ]
+  },
+  {
+    id: 13,
+    name: "New York City",
+    state: "New York",
+    coordinates: { lat: 40.7128, lng: -74.0060 },
+    side: 'union',
+    population_1860: 813669,
+    description: "The largest city in America and financial capital of the Union.",
+    wartime_role: "Financial center that helped fund the war through bond sales. Major port for receiving immigrants who filled Union ranks. Site of the 1863 Draft Riots, the largest civil insurrection in American history.",
+    key_events: [
+      "Draft Riots (July 1863)",
+      "Shipped troops and supplies throughout war",
+      "Lincoln's funeral procession (1865)"
+    ]
+  },
+  {
+    id: 14,
+    name: "Philadelphia",
+    state: "Pennsylvania",
+    coordinates: { lat: 39.9526, lng: -75.1652 },
+    side: 'union',
+    population_1860: 565529,
+    description: "Second largest Union city and major manufacturing center.",
+    wartime_role: "Produced locomotives, ships, textiles, and military equipment. The Frankford Arsenal manufactured ammunition while the Philadelphia Navy Yard built warships including the USS New Ironsides.",
+    key_events: [
+      "Major recruiting and training center",
+      "Great Central Fair raised war funds (1864)",
+      "Produced ironclad warships"
+    ]
+  },
+  {
+    id: 15,
+    name: "Boston",
+    state: "Massachusetts",
+    coordinates: { lat: 42.3601, lng: -71.0589 },
+    side: 'union',
+    population_1860: 177840,
+    description: "Center of the abolitionist movement and intellectual hub of the Union.",
+    wartime_role: "Hotbed of abolitionism where leaders like William Lloyd Garrison and Frederick Douglass rallied support. Home of the 54th Massachusetts, one of the first Black regiments.",
+    key_events: [
+      "54th Massachusetts formed (1863)",
+      "Recruiting center for Black soldiers",
+      "Abolitionist rallies throughout war"
+    ]
+  },
+  {
+    id: 16,
+    name: "Chicago",
+    state: "Illinois",
+    coordinates: { lat: 41.8781, lng: -87.6298 },
+    side: 'union',
+    population_1860: 112172,
+    description: "Rapidly growing railroad hub and grain center of the Midwest.",
+    wartime_role: "Major railroad junction that shipped grain, livestock, and troops. Camp Douglas held Confederate prisoners. The city's growth accelerated dramatically during the war years.",
+    key_events: [
+      "Republican Convention nominated Lincoln (1860)",
+      "Camp Douglas POW camp",
+      "Major supply depot for Western armies"
+    ]
+  },
+  {
+    id: 17,
+    name: "Cincinnati",
+    state: "Ohio",
+    coordinates: { lat: 39.1031, lng: -84.5120 },
+    side: 'union',
+    population_1860: 161044,
+    description: "The 'Queen City' and largest city in Ohio, vital to western operations.",
+    wartime_role: "Major manufacturing center producing weapons, uniforms, and supplies. Its location on the Ohio River made it crucial for supplying Union armies in Kentucky and Tennessee.",
+    key_events: [
+      "Supplied Western Theater armies",
+      "Threatened by Confederate raids (1862)",
+      "Built ironclad gunboats"
+    ]
+  },
+  {
+    id: 18,
+    name: "Pittsburgh",
+    state: "Pennsylvania",
+    coordinates: { lat: 40.4406, lng: -79.9959 },
+    side: 'union',
+    population_1860: 49221,
+    description: "The 'Arsenal of the Union' and center of iron and steel production.",
+    wartime_role: "Produced more iron and steel than any other American city. Fort Pitt Foundry cast enormous cannons while the Allegheny Arsenal manufactured ammunition and equipment.",
+    key_events: [
+      "Produced heavy artillery and armor plate",
+      "Allegheny Arsenal explosion (1862)",
+      "Supplied ironclad construction"
+    ]
+  },
+  {
+    id: 19,
+    name: "St. Louis",
+    state: "Missouri",
+    coordinates: { lat: 38.6270, lng: -90.1994 },
+    side: 'border',
+    population_1860: 160773,
+    description: "Gateway to the West and key to controlling Missouri.",
+    wartime_role: "Strategically vital city that remained under Union control despite Confederate sympathies in Missouri. The St. Louis Arsenal provided weapons for Union forces throughout the Western Theater.",
+    key_events: [
+      "Camp Jackson Affair (May 1861)",
+      "Base for Western operations",
+      "Arsenal supplied Union armies"
+    ]
+  },
+  {
+    id: 20,
+    name: "Baltimore",
+    state: "Maryland",
+    coordinates: { lat: 39.2904, lng: -76.6122 },
+    side: 'border',
+    population_1860: 212418,
+    description: "Divided border city strategically vital to protecting Washington.",
+    wartime_role: "Critical rail junction connecting Washington to the North. Pro-Confederate sentiment led to the Pratt Street Riot. The city was occupied by Union troops throughout the war to ensure Maryland's loyalty.",
+    key_events: [
+      "Pratt Street Riot (April 1861)",
+      "Martial law declared",
+      "Fort McHenry held political prisoners"
+    ]
+  },
+  {
+    id: 21,
+    name: "Buffalo",
+    state: "New York",
+    coordinates: { lat: 42.8864, lng: -78.8784 },
+    side: 'union',
+    population_1860: 81129,
+    description: "Major Great Lakes port and terminus of the Erie Canal.",
+    wartime_role: "Important transportation hub connecting the Midwest to the East Coast. Shipped grain and supplies eastward while receiving manufactured goods and immigrants heading west.",
+    key_events: [
+      "Major grain shipping port",
+      "Supplied Great Lakes region",
+      "Recruited regiments for Union army"
+    ]
+  },
+  {
+    id: 22,
+    name: "Cleveland",
+    state: "Ohio",
+    coordinates: { lat: 41.4993, lng: -81.6944 },
+    side: 'union',
+    population_1860: 43417,
+    description: "Lake Erie port and growing industrial center.",
+    wartime_role: "Manufactured iron products and shipped them via the Great Lakes. The city's refineries produced oil for lamps and lubricants needed by the military.",
+    key_events: [
+      "Iron and oil production center",
+      "Camp Cleveland trained troops",
+      "Shipped supplies via Great Lakes"
+    ]
+  },
+  {
+    id: 23,
+    name: "Detroit",
+    state: "Michigan",
+    coordinates: { lat: 42.3314, lng: -83.0458 },
+    side: 'union',
+    population_1860: 45619,
+    description: "Strategic Great Lakes city and gateway to the upper Midwest.",
+    wartime_role: "Produced military equipment and recruited regiments. Fort Wayne protected the city and housed Confederate prisoners. The city's iron industry supported Union manufacturing.",
+    key_events: [
+      "Recruited Michigan regiments",
+      "Fort Wayne POW camp",
+      "Iron and copper shipping hub"
+    ]
+  },
+  {
+    id: 24,
+    name: "Louisville",
+    state: "Kentucky",
+    coordinates: { lat: 38.2527, lng: -85.7585 },
+    side: 'border',
+    population_1860: 68033,
+    description: "Largest city in Kentucky and crucial Union supply base.",
+    wartime_role: "Though Kentucky was divided, Louisville remained firmly Union. The city served as a major supply depot for operations in Kentucky, Tennessee, and further south.",
+    key_events: [
+      "Remained loyal to Union",
+      "Major supply depot",
+      "Base for Army of the Ohio"
+    ]
   }
 ];
 

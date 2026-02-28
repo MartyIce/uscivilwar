@@ -15,6 +15,7 @@ interface MapContainerProps {
   armyMovements?: ArmyMovement[];
   selectedCommanders?: string[];
   showTroopStrength?: boolean;
+  showCities?: boolean;
   onCityClick?: (cityName: string) => void;
   selectedCityName?: string | null;
   onStateClick?: (stateName: string) => void;
@@ -34,6 +35,7 @@ export default function MapContainer({
   armyMovements = [],
   selectedCommanders = [],
   showTroopStrength = false,
+  showCities = true,
   onCityClick,
   selectedCityName,
   onStateClick,
@@ -72,7 +74,7 @@ export default function MapContainer({
       )}
 
       {/* City markers */}
-      {onCityClick && (
+      {showCities && onCityClick && (
         <CityMarkers
           onCityClick={onCityClick}
           selectedCityName={selectedCityName || null}

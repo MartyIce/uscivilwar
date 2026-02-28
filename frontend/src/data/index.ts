@@ -19,8 +19,6 @@ export {
   getPeopleBySide,
   getMilitaryCommanders,
   idMigration,
-  // Backwards compatibility
-  mockPeople,
   expandedPeople,
 } from './people';
 
@@ -49,18 +47,18 @@ export {
 
 // Locations
 export {
-  mockLocations,
+  locations,
   getLocationById,
   getLocationsByState,
   getLocationsByType,
 } from './locations';
 
 // Boundaries
-export { mockBoundaries } from './boundaries';
+export { stateBoundaries } from './boundaries';
 
 // Movements
 export {
-  mockArmyMovements,
+  armyMovements,
   availableCommanders,
   generateAllMovements,
   getCommanderMovement,

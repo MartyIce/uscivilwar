@@ -1578,6 +1578,5 @@ export const idMigration: Record<number, number> = {
   // but the event-participants.ts uses the higher IDs, so we might need to update those
 };
 
-// For backwards compatibility
-export const mockPeople = allPeople;
+// For backwards compatibility with existing components
 export const expandedPeople = allPeople;

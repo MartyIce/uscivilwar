@@ -1,6 +1,6 @@
 import type { Location } from '../types';
 
-export const mockLocations: Location[] = [
+export const locations: Location[] = [
   {
     id: 1,
     name: "Fort Sumter",
@@ -167,19 +167,19 @@ export const mockLocations: Location[] = [
  * Get location by ID
  */
 export function getLocationById(id: number): Location | undefined {
-  return mockLocations.find(l => l.id === id);
+  return locations.find(l => l.id === id);
 }
 
 /**
  * Get locations by state
  */
 export function getLocationsByState(state: string): Location[] {
-  return mockLocations.filter(l => l.state === state);
+  return locations.filter(l => l.state === state);
 }
 
 /**
  * Get locations by type
  */
 export function getLocationsByType(type: string): Location[] {
-  return mockLocations.filter(l => l.type === type);
+  return locations.filter(l => l.type === type);
 }

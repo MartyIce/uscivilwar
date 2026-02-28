@@ -1,5 +1,5 @@
 import { http, HttpResponse } from 'msw';
-import { expandedEvents as mockEvents, mockPeople, mockLocations, mockBoundaries } from '../data';
+import { expandedEvents, allPeople, locations as allLocations, stateBoundaries } from '../data';
 
 const API_BASE = '/api/v1';
 
@@ -15,31 +15,31 @@ export const handlers = [
     const theater = url.searchParams.get('theater');
     const minSignificance = url.searchParams.get('min_significance');
 
-    let events = [...mockEvents];
+    let filteredEvents = [...expandedEvents];
 
     // Apply filters
     if (type) {
-      events = events.filter(e => e.type === type);
+      filteredEvents = filteredEvents.filter(e => e.type === type);
     }
     if (dateFrom) {
-      events = events.filter(e => e.date_start >= dateFrom);
+      filteredEvents = filteredEvents.filter(e => e.date_start >= dateFrom);
     }
     if (dateTo) {
-      events = events.filter(e => e.date_start <= dateTo);
+      filteredEvents = filteredEvents.filter(e => e.date_start <= dateTo);
     }
     if (theater) {
-      events = events.filter(e => e.theater === theater);
+      filteredEvents = filteredEvents.filter(e => e.theater === theater);
     }
     if (minSignificance) {
       const minSig = parseInt(minSignificance);
-      events = events.filter(e => (e.significance || 0) >= minSig);
+      filteredEvents = filteredEvents.filter(e => (e.significance || 0) >= minSig);
     }
 
     // Sort by date
-    events.sort((a, b) => a.date_start.localeCompare(b.date_start));
+    filteredEvents.sort((a, b) => a.date_start.localeCompare(b.date_start));
 
-    const total = events.length;
-    const paginatedEvents = events.slice(offset, offset + limit);
+    const total = filteredEvents.length;
+    const paginatedEvents = filteredEvents.slice(offset, offset + limit);
 
     return HttpResponse.json({
       data: paginatedEvents,
@@ -57,12 +57,12 @@ export const handlers = [
     const dateFrom = url.searchParams.get('date_from') || '1861-01-01';
     const dateTo = url.searchParams.get('date_to') || '1865-12-31';
 
-    let events = mockEvents.filter(e =>
+    const timelineEvents = expandedEvents.filter(e =>
       e.date_start >= dateFrom && e.date_start <= dateTo
     );
 
     return HttpResponse.json({
-      events: events.map(e => ({
+      events: timelineEvents.map(e => ({
         id: e.id,
         name: e.name,
         type: e.type,
@@ -79,7 +79,7 @@ export const handlers = [
   }),
 
   http.get(`${API_BASE}/events/:id`, ({ params }) => {
-    const event = mockEvents.find(e => e.id === parseInt(params.id as string));
+    const event = expandedEvents.find(e => e.id === parseInt(params.id as string));
     if (!event) {
       return new HttpResponse(null, { status: 404 });
     }
@@ -88,7 +88,7 @@ export const handlers = [
 
   http.get(`${API_BASE}/events/:id/participants`, ({ params }) => {
     const eventId = parseInt(params.id as string);
-    const event = mockEvents.find(e => e.id === eventId);
+    const event = expandedEvents.find(e => e.id === eventId);
 
     if (!event) {
       return new HttpResponse(null, { status: 404 });
@@ -97,11 +97,11 @@ export const handlers = [
     // Return commanders as participants
     const participants = {
       union: event.commanders?.union.map(name => {
-        const person = mockPeople.find(p => p.name.includes(name.split(' ').pop() || ''));
+        const person = allPeople.find(p => p.name.includes(name.split(' ').pop() || ''));
         return person || { name, side: 'union', role: 'commander' };
       }) || [],
       confederate: event.commanders?.confederate.map(name => {
-        const person = mockPeople.find(p => p.name.includes(name.split(' ').pop() || ''));
+        const person = allPeople.find(p => p.name.includes(name.split(' ').pop() || ''));
         return person || { name, side: 'confederate', role: 'commander' };
       }) || []
     };
@@ -115,7 +115,7 @@ export const handlers = [
     const date = url.searchParams.get('date') || '1863-01-01';
     const type = url.searchParams.get('type');
 
-    let boundaries = [...mockBoundaries];
+    let boundaries = [...stateBoundaries];
 
     if (type) {
       boundaries = boundaries.filter(b => b.type === type);
@@ -145,7 +145,7 @@ export const handlers = [
     const offset = parseInt(url.searchParams.get('offset') || '0');
     const side = url.searchParams.get('side');
 
-    let people = [...mockPeople];
+    let people = [...allPeople];
 
     if (side) {
       people = people.filter(p => p.side === side);
@@ -166,13 +166,13 @@ export const handlers = [
   }),
 
   http.get(`${API_BASE}/people/:id`, ({ params }) => {
-    const person = mockPeople.find(p => p.id === parseInt(params.id as string));
+    const person = allPeople.find(p => p.id === parseInt(params.id as string));
     if (!person) {
       return new HttpResponse(null, { status: 404 });
     }
 
     // Add events this person participated in
-    const personEvents = mockEvents
+    const personEvents = expandedEvents
       .filter(e =>
         e.commanders?.union.some(c => c.includes(person.name.split(' ').pop() || '')) ||
         e.commanders?.confederate.some(c => c.includes(person.name.split(' ').pop() || ''))
@@ -193,20 +193,20 @@ export const handlers = [
   }),
 
   http.get(`${API_BASE}/people/:id/events`, ({ params }) => {
-    const person = mockPeople.find(p => p.id === parseInt(params.id as string));
+    const person = allPeople.find(p => p.id === parseInt(params.id as string));
     if (!person) {
       return new HttpResponse(null, { status: 404 });
     }
 
-    const events = mockEvents.filter(e =>
+    const personEventsList = expandedEvents.filter(e =>
       e.commanders?.union.some(c => c.includes(person.name.split(' ').pop() || '')) ||
       e.commanders?.confederate.some(c => c.includes(person.name.split(' ').pop() || ''))
     );
 
     return HttpResponse.json({
-      data: events,
+      data: personEventsList,
       meta: {
-        total: events.length,
+        total: personEventsList.length,
         limit: 50,
         offset: 0,
         has_more: false
@@ -222,17 +222,17 @@ export const handlers = [
     const type = url.searchParams.get('type');
     const state = url.searchParams.get('state');
 
-    let locations = [...mockLocations];
+    let filteredLocations = [...allLocations];
 
     if (type) {
-      locations = locations.filter(l => l.type === type);
+      filteredLocations = filteredLocations.filter(l => l.type === type);
     }
     if (state) {
-      locations = locations.filter(l => l.state === state);
+      filteredLocations = filteredLocations.filter(l => l.state === state);
     }
 
-    const total = locations.length;
-    const paginatedLocations = locations.slice(offset, offset + limit);
+    const total = filteredLocations.length;
+    const paginatedLocations = filteredLocations.slice(offset, offset + limit);
 
     return HttpResponse.json({
       data: paginatedLocations,
@@ -246,7 +246,7 @@ export const handlers = [
   }),
 
   http.get(`${API_BASE}/locations/:id`, ({ params }) => {
-    const location = mockLocations.find(l => l.id === parseInt(params.id as string));
+    const location = allLocations.find(l => l.id === parseInt(params.id as string));
     if (!location) {
       return new HttpResponse(null, { status: 404 });
     }
@@ -260,7 +260,7 @@ export const handlers = [
     const east = parseFloat(url.searchParams.get('east') || '-65');
     const west = parseFloat(url.searchParams.get('west') || '-125');
 
-    const locations = mockLocations.filter(l => {
+    const boundsLocations = allLocations.filter(l => {
       if (!l.coordinates) return false;
       return (
         l.coordinates.lat <= north &&
@@ -271,9 +271,9 @@ export const handlers = [
     });
 
     return HttpResponse.json({
-      data: locations,
+      data: boundsLocations,
       meta: {
-        total: locations.length,
+        total: boundsLocations.length,
         bounds: { north, south, east, west }
       }
     });
@@ -281,7 +281,7 @@ export const handlers = [
 
   // Stats endpoints
   http.get(`${API_BASE}/stats/casualties`, () => {
-    const unionCasualties = mockEvents.reduce((acc, e) => {
+    const unionCasualties = expandedEvents.reduce((acc, e) => {
       if (e.casualties?.union) {
         acc.killed += e.casualties.union.killed || 0;
         acc.wounded += e.casualties.union.wounded || 0;
@@ -292,7 +292,7 @@ export const handlers = [
       return acc;
     }, { killed: 0, wounded: 0, captured: 0, missing: 0, total_engaged: 0 });
 
-    const confederateCasualties = mockEvents.reduce((acc, e) => {
+    const confederateCasualties = expandedEvents.reduce((acc, e) => {
       if (e.casualties?.confederate) {
         acc.killed += e.casualties.confederate.killed || 0;
         acc.wounded += e.casualties.confederate.wounded || 0;
@@ -306,21 +306,21 @@ export const handlers = [
     return HttpResponse.json({
       union: unionCasualties,
       confederate: confederateCasualties,
-      total_events: mockEvents.length
+      total_events: expandedEvents.length
     });
   }),
 
   http.get(`${API_BASE}/stats/timeline`, () => {
     const eventsByYear: Record<string, number> = {};
 
-    mockEvents.forEach(e => {
+    expandedEvents.forEach(e => {
       const year = e.date_start.substring(0, 4);
       eventsByYear[year] = (eventsByYear[year] || 0) + 1;
     });
 
     return HttpResponse.json({
       by_year: eventsByYear,
-      total: mockEvents.length
+      total: expandedEvents.length
     });
   })
 ];
