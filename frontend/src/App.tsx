@@ -47,9 +47,11 @@ function App() {
   // Navigation history for detail panel
   const navHistory = useNavigationHistory();
 
-  // Derive selected event/person from navigation history
+  // Derive selected event/person/city/state from navigation history
   const selectedEventId = navHistory.current?.type === 'event' ? navHistory.current.eventId : null;
   const selectedPersonName = navHistory.current?.type === 'person' ? navHistory.current.personName : null;
+  const selectedCityName = navHistory.current?.type === 'city' ? navHistory.current.cityName : null;
+  const selectedStateName = navHistory.current?.type === 'state' ? navHistory.current.stateName : null;
 
   // Army movement tracking - default to showing Lee and Grant
   const [selectedCommanders, setSelectedCommanders] = useState<string[]>([
@@ -127,7 +129,13 @@ function App() {
   // Handle event selection (from map or person detail)
   const handleEventSelect = useCallback((eventId: number) => {
     navHistory.navigate({ type: 'event', eventId });
-  }, [navHistory]);
+
+    // Also update the timeline to the event's date
+    const event = eventsData?.data?.find(e => e.id === eventId);
+    if (event?.date_start) {
+      setCurrentDate(event.date_start);
+    }
+  }, [navHistory, eventsData?.data]);
 
   // Handle detail panel close
   const handleDetailClose = useCallback(() => {
@@ -147,6 +155,16 @@ function App() {
   // Handle person click from event details - show person in detail panel
   const handlePersonClick = useCallback((personName: string) => {
     navHistory.navigate({ type: 'person', personName });
+  }, [navHistory]);
+
+  // Handle city click - show city in detail panel
+  const handleCityClick = useCallback((cityName: string) => {
+    navHistory.navigate({ type: 'city', cityName });
+  }, [navHistory]);
+
+  // Handle state click - show state in detail panel
+  const handleStateClick = useCallback((stateName: string) => {
+    navHistory.navigate({ type: 'state', stateName });
   }, [navHistory]);
 
   // Handle side click - show org chart
@@ -294,6 +312,10 @@ function App() {
               armyMovements={mockArmyMovements}
               selectedCommanders={selectedCommanders}
               showTroopStrength={showTroopStrength}
+              onCityClick={handleCityClick}
+              selectedCityName={selectedCityName}
+              onStateClick={handleStateClick}
+              selectedStateName={selectedStateName}
             />
           )}
 
@@ -324,13 +346,12 @@ function App() {
                     ? 'bg-green-600 text-white hover:bg-green-700'
                     : 'bg-white text-gray-700 hover:bg-gray-50'
                 }`}
-                title="Show army sizes - larger circles represent larger armies"
+                title="Show troop strength - larger markers = larger armies, with troop counts shown"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                  <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
+                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
                 </svg>
-                <span className="text-sm font-medium">Size</span>
+                <span className="text-sm font-medium">Troop #</span>
               </button>
             )}
           </div>
@@ -370,6 +391,8 @@ function App() {
         <DetailPanel
           selectedEvent={selectedEvent || null}
           selectedPersonName={selectedPersonName}
+          selectedCityName={selectedCityName}
+          selectedStateName={selectedStateName}
           isLoading={eventLoading}
           onClose={handleDetailClose}
           onDeepDive={handleDeepDive}

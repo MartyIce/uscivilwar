@@ -1,4 +1,6 @@
-import { Polyline, CircleMarker, Tooltip } from 'react-leaflet';
+import { CircleMarker, Tooltip } from 'react-leaflet';
+// Polyline import preserved for when travel lines are re-enabled
+// import { Polyline } from 'react-leaflet';
 import type { ArmyMovement } from '../../types';
 import { getArmyPathUpToDate, getArmyPositionAtDate, getCommanderTroopStrength } from '../../data';
 
@@ -57,7 +59,7 @@ export default function ArmyMovementLayer({
 
         return (
           <div key={movement.id}>
-            {/* Path line showing where the army has traveled */}
+            {/* Path line showing where the army has traveled - commented out for now, can re-enable later
             {path.length >= 2 && (
               <Polyline
                 positions={path.map((p) => [p.lat, p.lng])}
@@ -69,6 +71,7 @@ export default function ArmyMovementLayer({
                 }}
               />
             )}
+            */}
 
             {/* Current position marker */}
             {currentPosition && (

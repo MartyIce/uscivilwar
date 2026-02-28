@@ -46,16 +46,16 @@ export default function TimelineBar({
     eventsByYear[year] = (eventsByYear[year] || 0) + 1;
   });
 
-  // Get top 20 battles sorted by significance and date
+  // Get top 20 battles sorted chronologically (only high-significance battles)
   const topBattles = useMemo(() => {
     return events
       .filter((e) => e.type === 'battle' && (e.significance || 0) >= 4)
       .sort((a, b) => {
-        // First by significance (descending)
-        const sigDiff = (b.significance || 0) - (a.significance || 0);
-        if (sigDiff !== 0) return sigDiff;
-        // Then by date
-        return a.date_start.localeCompare(b.date_start);
+        // Sort chronologically by date
+        const dateDiff = a.date_start.localeCompare(b.date_start);
+        if (dateDiff !== 0) return dateDiff;
+        // Then by significance for same-date events (descending)
+        return (b.significance || 0) - (a.significance || 0);
       })
       .slice(0, 20);
   }, [events]);

@@ -1,9 +1,13 @@
+import { useState } from 'react';
+
 interface HeaderProps {
   onToggleFilters: () => void;
   showFilters: boolean;
 }
 
 export default function Header({ onToggleFilters, showFilters }: HeaderProps) {
+  const [showInfoModal, setShowInfoModal] = useState(false);
+
   return (
     <header className="bg-slate-800 text-white shadow-lg">
       {/* Banner image */}
@@ -49,6 +53,7 @@ export default function Header({ onToggleFilters, showFilters }: HeaderProps) {
 
           {/* Info/Help button */}
           <button
+            onClick={() => setShowInfoModal(true)}
             className="px-3 py-2 rounded bg-slate-700 text-slate-300 hover:bg-slate-600 transition-colors"
             title="About"
           >
@@ -68,6 +73,66 @@ export default function Header({ onToggleFilters, showFilters }: HeaderProps) {
           </button>
         </div>
       </div>
+
+      {/* Info Modal */}
+      {showInfoModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[2000]">
+          <div className="bg-white rounded-lg shadow-xl max-w-lg w-full mx-4 max-h-[80vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-bold text-gray-900">About This App</h2>
+                <button
+                  onClick={() => setShowInfoModal(false)}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="space-y-4 text-sm text-gray-600">
+                <p>
+                  An interactive map exploring the American Civil War (1861-1865).
+                  Navigate through time to see battles, movements, and key figures.
+                </p>
+
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-2">Features</h3>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>Interactive timeline with play/pause controls</li>
+                    <li>Click battles on the map or timeline to see details</li>
+                    <li>Track army movements of major commanders</li>
+                    <li>Browse key figures from both sides</li>
+                    <li>Filter events by type, date, and theater</li>
+                    <li>Deep dive into major battles (e.g., Gettysburg)</li>
+                    <li>View military command structure</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-2">Quick Tips</h3>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li><strong>Timeline:</strong> Use play button or drag slider to move through time</li>
+                    <li><strong>Track Armies:</strong> Click to follow commanders across the map</li>
+                    <li><strong>People:</strong> Browse and click on figures to see their story</li>
+                    <li><strong>Battles:</strong> Click markers for details, some have "Deep Dive" views</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-gray-200">
+                <button
+                  onClick={() => setShowInfoModal(false)}
+                  className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                >
+                  Got it
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Legend bar */}
       <div className="bg-slate-700 px-4 py-2 flex items-center gap-6 text-xs">

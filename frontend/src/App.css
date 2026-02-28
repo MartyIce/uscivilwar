@@ -6,6 +6,39 @@
   border: none;
 }
 
+/* Pulse animation for selected map markers */
+@keyframes marker-pulse {
+  0%, 100% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.4);
+  }
+  50% {
+    transform: scale(1.4);
+    box-shadow: 0 0 0 12px rgba(0,0,0,0);
+  }
+}
+
+/* State tooltip styling */
+.state-tooltip {
+  background: rgba(30, 41, 59, 0.9);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.state-tooltip::before {
+  border: none;
+}
+
+/* City marker styling */
+.city-marker {
+  background: transparent;
+  border: none;
+}
+
 /* Ensure map popups have proper z-index */
 .leaflet-popup-content-wrapper {
   border-radius: 8px;

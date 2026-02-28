@@ -45,6 +45,11 @@ function createMarkerIcon(event: CivilWarEvent, isSelected: boolean): DivIcon {
   const size = isSelected ? 36 : 28;
   const fontSize = isSelected ? 16 : 12;
 
+  // Pulse animation for selected markers (keyframes defined in App.css)
+  const pulseAnimation = isSelected
+    ? `animation: marker-pulse 1.5s ease-in-out 3;`
+    : '';
+
   return new DivIcon({
     html: `
       <div style="
@@ -61,6 +66,7 @@ function createMarkerIcon(event: CivilWarEvent, isSelected: boolean): DivIcon {
         font-size: ${fontSize}px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         ${isSelected ? 'transform: scale(1.2);' : ''}
+        ${pulseAnimation}
         transition: transform 0.2s;
         pointer-events: none;
       ">
