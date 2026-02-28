@@ -5,7 +5,6 @@ import { useMemo } from 'react';
 
 interface BoundaryLayerProps {
   boundaries: Boundary[];
-  currentDate: string;
 }
 
 // Style function for boundaries based on side
@@ -44,7 +43,7 @@ function getBoundaryStyle(side: Side | null): PathOptions {
   }
 }
 
-export default function BoundaryLayer({ boundaries, currentDate }: BoundaryLayerProps) {
+export default function BoundaryLayer({ boundaries }: BoundaryLayerProps) {
   // Create a GeoJSON FeatureCollection from boundaries
   const geoJsonData = useMemo(() => {
     const features = boundaries
@@ -92,9 +91,13 @@ export default function BoundaryLayer({ boundaries, currentDate }: BoundaryLayer
     return null;
   }
 
+  // Use a stable key based on the data content, not the date
+  // This prevents unmount/remount flashing when dragging the timeline
+  const dataKey = boundaries.map(b => b.id).join(',');
+
   return (
     <GeoJSON
-      key={currentDate} // Re-render when date changes
+      key={dataKey}
       data={geoJsonData}
       style={style}
       onEachFeature={onEachFeature}

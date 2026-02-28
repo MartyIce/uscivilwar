@@ -8,6 +8,7 @@ import CommanderSelector from './components/CommanderTracker/CommanderSelector';
 import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useBoundaries } from './hooks/useBoundaries';
+import { usePersonByName } from './hooks/usePeople';
 import { mockArmyMovements } from './mocks/data/movements';
 import type { EventType } from './types';
 import './App.css';
@@ -36,6 +37,7 @@ function App() {
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
   const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
+  const [selectedPersonName, setSelectedPersonName] = useState<string | null>(null);
   const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -61,8 +63,13 @@ function App() {
 
   const { data: selectedEvent, isLoading: eventLoading } = useEvent(selectedEventId);
 
+  // Fetch person by name when a commander is clicked
+  const { data: selectedPerson, isLoading: personLoading } = usePersonByName(selectedPersonName);
+
+  // Use a fixed date for boundaries since they don't change frequently
+  // This prevents re-fetching on every timeline drag
   const { data: boundariesData } = useBoundaries({
-    date: currentDate,
+    date: '1863-01-01',
     type: 'state',
   });
 
@@ -120,6 +127,23 @@ function App() {
   // Handle detail panel close
   const handleDetailClose = useCallback(() => {
     setSelectedEventId(null);
+    setSelectedPersonName(null);
+  }, []);
+
+  // Handle person click from event detail
+  const handlePersonClick = useCallback((name: string) => {
+    setSelectedPersonName(name);
+  }, []);
+
+  // Handle back to event from person detail
+  const handleBackToEvent = useCallback(() => {
+    setSelectedPersonName(null);
+  }, []);
+
+  // Handle event click from person detail
+  const handleEventClickFromPerson = useCallback((eventId: number) => {
+    setSelectedEventId(eventId);
+    setSelectedPersonName(null);
   }, []);
 
   // Auto-play timeline
@@ -313,8 +337,13 @@ function App() {
         {/* Detail panel */}
         <DetailPanel
           selectedEvent={selectedEvent || null}
-          isLoading={eventLoading}
+          selectedPerson={selectedPerson || null}
+          selectedPersonName={selectedPersonName}
+          isLoading={eventLoading || personLoading}
           onClose={handleDetailClose}
+          onPersonClick={handlePersonClick}
+          onEventClick={handleEventClickFromPerson}
+          onBackToEvent={handleBackToEvent}
         />
       </div>
 

@@ -46,7 +46,7 @@ export default function MapContainer({
       <ZoomControl position="bottomright" />
 
       {/* Boundary layer for states */}
-      <BoundaryLayer boundaries={boundaries} currentDate={currentDate} />
+      <BoundaryLayer boundaries={boundaries} />
 
       {/* Army movement paths and markers */}
       {armyMovements.length > 0 && selectedCommanders.length > 0 && (

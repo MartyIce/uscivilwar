@@ -2,6 +2,7 @@ import type { CivilWarEvent, CasualtyStats } from '../../types';
 
 interface EventDetailProps {
   event: CivilWarEvent;
+  onPersonClick?: (name: string) => void;
 }
 
 // Format date for display
@@ -54,7 +55,7 @@ function getResultBadgeColor(result: string | null): string {
   return 'bg-amber-100 text-amber-800';
 }
 
-export default function EventDetail({ event }: EventDetailProps) {
+export default function EventDetail({ event, onPersonClick }: EventDetailProps) {
   const dateRange =
     event.date_end && event.date_end !== event.date_start
       ? `${formatDate(event.date_start)} - ${formatDate(event.date_end)}`
@@ -155,9 +156,16 @@ export default function EventDetail({ event }: EventDetailProps) {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <p className="text-xs font-medium text-blue-600 mb-1">Union</p>
-                <ul className="text-sm text-gray-600">
+                <ul className="text-sm">
                   {event.commanders.union.map((name, i) => (
-                    <li key={i}>{name}</li>
+                    <li key={i}>
+                      <button
+                        onClick={() => onPersonClick?.(name)}
+                        className="text-gray-600 hover:text-blue-600 hover:underline transition-colors text-left"
+                      >
+                        {name}
+                      </button>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -165,9 +173,16 @@ export default function EventDetail({ event }: EventDetailProps) {
                 <p className="text-xs font-medium text-gray-500 mb-1">
                   Confederate
                 </p>
-                <ul className="text-sm text-gray-600">
+                <ul className="text-sm">
                   {event.commanders.confederate.map((name, i) => (
-                    <li key={i}>{name}</li>
+                    <li key={i}>
+                      <button
+                        onClick={() => onPersonClick?.(name)}
+                        className="text-gray-600 hover:text-gray-800 hover:underline transition-colors text-left"
+                      >
+                        {name}
+                      </button>
+                    </li>
                   ))}
                 </ul>
               </div>
