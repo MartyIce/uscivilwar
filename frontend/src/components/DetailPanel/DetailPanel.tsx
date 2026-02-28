@@ -1,4 +1,4 @@
-import type { CivilWarEvent, Person } from '../../types';
+import type { CivilWarEvent, Person, Side } from '../../types';
 import EventDetail from './EventDetail';
 import PersonDetail from './PersonDetail';
 import UnknownPersonDetail from './UnknownPersonDetail';
@@ -12,6 +12,7 @@ interface DetailPanelProps {
   onPersonClick: (name: string) => void;
   onEventClick: (eventId: number) => void;
   onBackToEvent: () => void;
+  onSideClick?: (side: Side) => void;
 }
 
 export default function DetailPanel({
@@ -23,6 +24,7 @@ export default function DetailPanel({
   onPersonClick,
   onEventClick,
   onBackToEvent,
+  onSideClick,
 }: DetailPanelProps) {
   if (isLoading) {
     return (
@@ -66,6 +68,7 @@ export default function DetailPanel({
             person={selectedPerson}
             onBack={selectedEvent ? onBackToEvent : undefined}
             onEventClick={onEventClick}
+            onSideClick={onSideClick}
           />
         </div>
       </div>

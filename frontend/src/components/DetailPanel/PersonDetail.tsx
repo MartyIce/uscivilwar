@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import type { Person } from '../../types';
+import type { Person, Side } from '../../types';
 
 interface PersonDetailProps {
   person: Person;
   onBack?: () => void;
   onEventClick?: (eventId: number) => void;
+  onSideClick?: (side: Side) => void;
 }
 
 // Format date for display
@@ -43,7 +44,7 @@ function getSideBadgeColor(side: string | null): string {
   }
 }
 
-export default function PersonDetail({ person, onBack, onEventClick }: PersonDetailProps) {
+export default function PersonDetail({ person, onBack, onEventClick, onSideClick }: PersonDetailProps) {
   const lifespan = calculateLifespan(person.birth_date, person.death_date);
   const [imageError, setImageError] = useState(false);
 
@@ -93,9 +94,18 @@ export default function PersonDetail({ person, onBack, onEventClick }: PersonDet
 
           <div className="flex flex-wrap gap-2 mt-2">
             {person.side && (
-              <span className={`px-2 py-1 text-xs font-medium rounded ${getSideBadgeColor(person.side)}`}>
+              <button
+                onClick={() => onSideClick?.(person.side as Side)}
+                className={`px-2 py-1 text-xs font-medium rounded ${getSideBadgeColor(person.side)} hover:ring-2 hover:ring-offset-1 ${
+                  person.side === 'union' ? 'hover:ring-blue-400' : 'hover:ring-gray-400'
+                } transition-all cursor-pointer flex items-center gap-1`}
+                title={`View ${person.side === 'union' ? 'Union' : 'Confederate'} command structure`}
+              >
                 {person.side.charAt(0).toUpperCase() + person.side.slice(1)}
-              </span>
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+              </button>
             )}
             {person.highest_rank && (
               <span className="px-2 py-1 text-xs font-medium rounded bg-indigo-100 text-indigo-800">
