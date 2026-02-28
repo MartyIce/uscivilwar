@@ -5,12 +5,14 @@ interface DetailPanelProps {
   selectedEvent: CivilWarEvent | null;
   isLoading: boolean;
   onClose: () => void;
+  onDeepDive?: (battleId: string) => void;
 }
 
 export default function DetailPanel({
   selectedEvent,
   isLoading,
   onClose,
+  onDeepDive,
 }: DetailPanelProps) {
   if (isLoading) {
     return (
@@ -78,7 +80,7 @@ export default function DetailPanel({
 
       {/* Event details */}
       <div className="flex-1 overflow-y-auto">
-        <EventDetail event={selectedEvent} />
+        <EventDetail event={selectedEvent} onDeepDive={onDeepDive} />
       </div>
     </div>
   );

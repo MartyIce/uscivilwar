@@ -6,6 +6,7 @@ import TimelineBar from './components/Timeline/TimelineBar';
 import FilterSidebar from './components/Filters/FilterSidebar';
 import CommanderSelector from './components/CommanderTracker/CommanderSelector';
 import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
+import BattleDeepView from './components/BattleDeep/BattleDeepView';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useBoundaries } from './hooks/useBoundaries';
 import { mockArmyMovements } from './mocks/data/movements';
@@ -36,6 +37,7 @@ function App() {
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
   const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
+  const [deepBattleId, setDeepBattleId] = useState<string | null>(null);
   const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -122,6 +124,16 @@ function App() {
     setSelectedEventId(null);
   }, []);
 
+  // Handle deep dive into a battle
+  const handleDeepDive = useCallback((battleId: string) => {
+    setDeepBattleId(battleId);
+  }, []);
+
+  // Handle closing deep dive view
+  const handleDeepDiveClose = useCallback(() => {
+    setDeepBattleId(null);
+  }, []);
+
   // Auto-play timeline
   useEffect(() => {
     if (!isPlaying) return;
@@ -199,6 +211,11 @@ function App() {
         : [...prev, commander]
     );
   }, []);
+
+  // Show deep battle view if a battle is selected for deep dive
+  if (deepBattleId) {
+    return <BattleDeepView battleId={deepBattleId} onClose={handleDeepDiveClose} />;
+  }
 
   return (
     <div className="h-screen flex flex-col bg-gray-100">
@@ -315,6 +332,7 @@ function App() {
           selectedEvent={selectedEvent || null}
           isLoading={eventLoading}
           onClose={handleDetailClose}
+          onDeepDive={handleDeepDive}
         />
       </div>
 
@@ -329,6 +347,7 @@ function App() {
         onPlayToggle={handlePlayToggle}
         onNextEvent={handleNextEvent}
         onPrevEvent={handlePrevEvent}
+        onEventSelect={handleEventSelect}
       />
     </div>
   );

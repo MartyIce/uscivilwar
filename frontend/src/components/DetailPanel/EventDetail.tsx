@@ -1,7 +1,32 @@
 import type { CivilWarEvent, CasualtyStats } from '../../types';
+import { hasBattleDeepData } from '../../hooks/useBattleDeep';
 
 interface EventDetailProps {
   event: CivilWarEvent;
+  onDeepDive?: (battleId: string) => void;
+}
+
+// Map event names to deep battle IDs
+function getBattleDeepId(eventName: string): string | null {
+  const nameToId: Record<string, string> = {
+    'Battle of Gettysburg': 'gettysburg',
+    'Gettysburg': 'gettysburg',
+    // Add more mappings as we add more battles
+  };
+
+  // Check direct mapping first
+  if (nameToId[eventName]) {
+    return nameToId[eventName];
+  }
+
+  // Check if name contains a known battle
+  for (const [name, id] of Object.entries(nameToId)) {
+    if (eventName.toLowerCase().includes(name.toLowerCase())) {
+      return id;
+    }
+  }
+
+  return null;
 }
 
 // Format date for display
@@ -54,11 +79,15 @@ function getResultBadgeColor(result: string | null): string {
   return 'bg-amber-100 text-amber-800';
 }
 
-export default function EventDetail({ event }: EventDetailProps) {
+export default function EventDetail({ event, onDeepDive }: EventDetailProps) {
   const dateRange =
     event.date_end && event.date_end !== event.date_start
       ? `${formatDate(event.date_start)} - ${formatDate(event.date_end)}`
       : formatDate(event.date_start);
+
+  // Check if this battle has deep dive data
+  const deepBattleId = getBattleDeepId(event.name);
+  const hasDeepDive = deepBattleId && hasBattleDeepData(deepBattleId);
 
   return (
     <div className="relative">
@@ -245,6 +274,31 @@ export default function EventDetail({ event }: EventDetailProps) {
                 </tbody>
               </table>
             </div>
+          </div>
+        )}
+
+        {/* Deep Dive button */}
+        {hasDeepDive && onDeepDive && deepBattleId && (
+          <div className="mt-4 pt-4 border-t border-gray-200">
+            <button
+              onClick={() => onDeepDive(deepBattleId)}
+              className="w-full py-3 px-4 bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                />
+              </svg>
+              Deep Dive: Hour-by-Hour
+            </button>
           </div>
         )}
 

@@ -12,6 +12,7 @@ interface TimelineBarProps {
   onPlayToggle: () => void;
   onNextEvent: () => void;
   onPrevEvent: () => void;
+  onEventSelect?: (eventId: number) => void;
 }
 
 export default function TimelineBar({
@@ -24,6 +25,7 @@ export default function TimelineBar({
   onPlayToggle,
   onNextEvent,
   onPrevEvent,
+  onEventSelect,
 }: TimelineBarProps) {
   // Format date for display
   const formatDate = (dateStr: string): string => {
@@ -112,9 +114,12 @@ export default function TimelineBar({
     return battle <= current && battle >= current - sixMonths;
   };
 
-  // Handle battle click - jump to that date
+  // Handle battle click - jump to that date and select the event
   const handleBattleClick = (battle: CivilWarEvent) => {
     onDateChange(battle.date_start);
+    if (onEventSelect) {
+      onEventSelect(battle.id);
+    }
   };
 
   return (
