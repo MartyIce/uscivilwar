@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import Header from './components/Header';
 import MapContainer from './components/Map/MapContainer';
 import DetailPanel from './components/DetailPanel/DetailPanel';
@@ -9,6 +9,7 @@ import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useBoundaries } from './hooks/useBoundaries';
 import { usePersonByName } from './hooks/usePeople';
+import { useDeepLink } from './hooks/useDeepLink';
 import { mockArmyMovements } from './mocks/data/movements';
 import type { EventType } from './types';
 import './App.css';
@@ -32,12 +33,19 @@ const DEFAULT_DATE_RANGE = {
 };
 
 function App() {
+  // Deep linking for event and person selection
+  const {
+    eventId: selectedEventId,
+    personName: selectedPersonName,
+    setEventId: setSelectedEventId,
+    setPersonName: setSelectedPersonName,
+    clearSelection,
+  } = useDeepLink();
+
   // UI state
   const [showFilters, setShowFilters] = useState(false);
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
-  const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
-  const [selectedPersonName, setSelectedPersonName] = useState<string | null>(null);
   const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -122,29 +130,27 @@ function App() {
   // Handle event selection
   const handleEventSelect = useCallback((eventId: number) => {
     setSelectedEventId(eventId);
-  }, []);
+  }, [setSelectedEventId]);
 
   // Handle detail panel close
   const handleDetailClose = useCallback(() => {
-    setSelectedEventId(null);
-    setSelectedPersonName(null);
-  }, []);
+    clearSelection();
+  }, [clearSelection]);
 
   // Handle person click from event detail
   const handlePersonClick = useCallback((name: string) => {
     setSelectedPersonName(name);
-  }, []);
+  }, [setSelectedPersonName]);
 
   // Handle back to event from person detail
   const handleBackToEvent = useCallback(() => {
     setSelectedPersonName(null);
-  }, []);
+  }, [setSelectedPersonName]);
 
   // Handle event click from person detail
   const handleEventClickFromPerson = useCallback((eventId: number) => {
     setSelectedEventId(eventId);
-    setSelectedPersonName(null);
-  }, []);
+  }, [setSelectedEventId]);
 
   // Auto-play timeline
   useEffect(() => {
@@ -223,6 +229,25 @@ function App() {
         : [...prev, commander]
     );
   }, []);
+
+  // Track if we've initialized from URL to prevent re-scrolling
+  const initializedFromUrl = useRef(false);
+
+  // Scroll timeline to event date when loading from URL
+  useEffect(() => {
+    if (selectedEvent && !initializedFromUrl.current) {
+      // Set timeline to show the event's date
+      setCurrentDate(selectedEvent.date_start);
+      initializedFromUrl.current = true;
+    }
+  }, [selectedEvent]);
+
+  // Reset the initialization flag when selection is cleared
+  useEffect(() => {
+    if (!selectedEventId && !selectedPersonName) {
+      initializedFromUrl.current = false;
+    }
+  }, [selectedEventId, selectedPersonName]);
 
   return (
     <div className="h-screen flex flex-col bg-gray-100">
