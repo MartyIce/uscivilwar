@@ -9,6 +9,7 @@ import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
 import BattleDeepView from './components/BattleDeep/BattleDeepView';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useBoundaries } from './hooks/useBoundaries';
+import { useNavigationHistory } from './hooks/useNavigationHistory';
 import { mockArmyMovements } from './mocks/data/movements';
 import type { EventType } from './types';
 import './App.css';
@@ -36,11 +37,16 @@ function App() {
   const [showFilters, setShowFilters] = useState(false);
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
-  const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
-  const [selectedPersonName, setSelectedPersonName] = useState<string | null>(null);
   const [deepBattleId, setDeepBattleId] = useState<string | null>(null);
   const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
+
+  // Navigation history for detail panel
+  const navHistory = useNavigationHistory();
+
+  // Derive selected event/person from navigation history
+  const selectedEventId = navHistory.current?.type === 'event' ? navHistory.current.eventId : null;
+  const selectedPersonName = navHistory.current?.type === 'person' ? navHistory.current.personName : null;
 
   // Army movement tracking - default to showing Lee and Grant
   const [selectedCommanders, setSelectedCommanders] = useState<string[]>([
@@ -115,16 +121,15 @@ function App() {
     setSelectedTheater(null);
   }, []);
 
-  // Handle event selection
+  // Handle event selection (from map or person detail)
   const handleEventSelect = useCallback((eventId: number) => {
-    setSelectedEventId(eventId);
-  }, []);
+    navHistory.navigate({ type: 'event', eventId });
+  }, [navHistory]);
 
   // Handle detail panel close
   const handleDetailClose = useCallback(() => {
-    setSelectedEventId(null);
-    setSelectedPersonName(null);
-  }, []);
+    navHistory.clear();
+  }, [navHistory]);
 
   // Handle deep dive into a battle
   const handleDeepDive = useCallback((battleId: string) => {
@@ -138,19 +143,8 @@ function App() {
 
   // Handle person click from event details - show person in detail panel
   const handlePersonClick = useCallback((personName: string) => {
-    setSelectedPersonName(personName);
-  }, []);
-
-  // Handle going back from person detail to event detail
-  const handlePersonBack = useCallback(() => {
-    setSelectedPersonName(null);
-  }, []);
-
-  // Handle clicking an event from person detail
-  const handleEventClickFromPerson = useCallback((eventId: number) => {
-    setSelectedPersonName(null);
-    setSelectedEventId(eventId);
-  }, []);
+    navHistory.navigate({ type: 'person', personName });
+  }, [navHistory]);
 
   // Auto-play timeline
   useEffect(() => {
@@ -354,8 +348,11 @@ function App() {
           onClose={handleDetailClose}
           onDeepDive={handleDeepDive}
           onPersonClick={handlePersonClick}
-          onPersonBack={handlePersonBack}
-          onEventClick={handleEventClickFromPerson}
+          onEventClick={handleEventSelect}
+          canGoBack={navHistory.canGoBack}
+          canGoForward={navHistory.canGoForward}
+          onGoBack={navHistory.goBack}
+          onGoForward={navHistory.goForward}
         />
       </div>
 

@@ -3,7 +3,6 @@ import type { Person, Side } from '../../types';
 
 interface PersonDetailProps {
   person: Person;
-  onBack?: () => void;
   onEventClick?: (eventId: number) => void;
   onSideClick?: (side: Side) => void;
 }
@@ -44,7 +43,7 @@ function getSideBadgeColor(side: string | null): string {
   }
 }
 
-export default function PersonDetail({ person, onBack, onEventClick, onSideClick }: PersonDetailProps) {
+export default function PersonDetail({ person, onEventClick, onSideClick }: PersonDetailProps) {
   const lifespan = calculateLifespan(person.birth_date, person.death_date);
   const [imageError, setImageError] = useState(false);
 
@@ -55,19 +54,6 @@ export default function PersonDetail({ person, onBack, onEventClick, onSideClick
 
   return (
     <div className="relative">
-      {/* Back button */}
-      {onBack && (
-        <button
-          onClick={onBack}
-          className="absolute top-4 left-4 z-10 flex items-center gap-1 px-3 py-1.5 bg-white/90 rounded-lg shadow-sm text-sm text-gray-600 hover:bg-white hover:text-gray-900 transition-colors"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          Back
-        </button>
-      )}
-
       {/* Portrait image */}
       <div className="h-72 bg-gradient-to-b from-gray-200 to-gray-300 overflow-hidden flex items-center justify-center">
         {person.image_url && !imageError ? (
