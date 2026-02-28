@@ -1,7 +1,7 @@
-import { Marker, Popup, useMap } from 'react-leaflet';
-import { Icon, DivIcon } from 'leaflet';
+import { Marker, Tooltip, useMap, useMapEvents } from 'react-leaflet';
+import { DivIcon } from 'leaflet';
 import type { CivilWarEvent, EventType } from '../../types';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface EventMarkersProps {
   events: CivilWarEvent[];
@@ -90,16 +90,28 @@ function MapPanner({ event }: { event: CivilWarEvent | undefined }) {
   return null;
 }
 
+// Minimum zoom level to show labels (higher = more zoomed in)
+const LABEL_ZOOM_THRESHOLD = 7;
+
 export default function EventMarkers({
   events,
   selectedEventId,
   onEventSelect,
 }: EventMarkersProps) {
+  const map = useMap();
+  const [zoom, setZoom] = useState(map.getZoom());
+
+  // Track zoom level changes
+  useMapEvents({
+    zoomend: () => setZoom(map.getZoom()),
+  });
+
   const eventsWithCoordinates = events.filter(
     (event) => event.location?.coordinates
   );
 
   const selectedEvent = events.find((e) => e.id === selectedEventId);
+  const showLabels = zoom >= LABEL_ZOOM_THRESHOLD;
 
   return (
     <>
@@ -107,6 +119,8 @@ export default function EventMarkers({
       {eventsWithCoordinates.map((event) => {
         const { lat, lng } = event.location!.coordinates!;
         const isSelected = event.id === selectedEventId;
+        // Show label if zoomed in enough, or if this event is selected
+        const showLabel = showLabels || isSelected;
 
         return (
           <Marker
@@ -117,33 +131,11 @@ export default function EventMarkers({
               click: () => onEventSelect(event.id),
             }}
           >
-            <Popup>
-              <div className="p-2">
-                <h3 className="font-bold text-sm">{event.name}</h3>
-                <p className="text-xs text-gray-600">{event.date_start}</p>
-                {event.result && (
-                  <p className="text-xs mt-1">
-                    <span
-                      className={`inline-block px-2 py-0.5 rounded text-white ${
-                        event.result.toLowerCase().includes('union')
-                          ? 'bg-blue-500'
-                          : event.result.toLowerCase().includes('confederate')
-                          ? 'bg-gray-500'
-                          : 'bg-amber-500'
-                      }`}
-                    >
-                      {event.result}
-                    </span>
-                  </p>
-                )}
-                <button
-                  onClick={() => onEventSelect(event.id)}
-                  className="mt-2 text-xs text-blue-600 hover:underline"
-                >
-                  View Details
-                </button>
-              </div>
-            </Popup>
+            {showLabel && (
+              <Tooltip permanent direction="top" offset={[0, -20]}>
+                <div className="text-xs font-semibold">{event.name}</div>
+              </Tooltip>
+            )}
           </Marker>
         );
       })}
