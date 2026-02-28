@@ -1,3 +1,4 @@
+import { useRef, useEffect, useMemo } from 'react';
 import TimelineSlider from './TimelineSlider';
 import type { CivilWarEvent } from '../../types';
 
@@ -34,12 +35,87 @@ export default function TimelineBar({
     });
   };
 
+  const battleListRef = useRef<HTMLDivElement>(null);
+
   // Calculate events by year for the density indicator
   const eventsByYear: Record<number, number> = {};
   events.forEach((event) => {
     const year = parseInt(event.date_start.substring(0, 4));
     eventsByYear[year] = (eventsByYear[year] || 0) + 1;
   });
+
+  // Get top 20 battles sorted by significance and date
+  const topBattles = useMemo(() => {
+    return events
+      .filter((e) => e.type === 'battle' && (e.significance || 0) >= 4)
+      .sort((a, b) => {
+        // First by significance (descending)
+        const sigDiff = (b.significance || 0) - (a.significance || 0);
+        if (sigDiff !== 0) return sigDiff;
+        // Then by date
+        return a.date_start.localeCompare(b.date_start);
+      })
+      .slice(0, 20);
+  }, [events]);
+
+  // Find the index of the battle nearest to current date
+  const nearestBattleIndex = useMemo(() => {
+    if (topBattles.length === 0) return -1;
+
+    let nearestIdx = 0;
+    let minDiff = Infinity;
+
+    topBattles.forEach((battle, idx) => {
+      const battleDate = new Date(battle.date_start).getTime();
+      const current = new Date(currentDate).getTime();
+      const diff = Math.abs(battleDate - current);
+
+      // Prefer battles that have already happened
+      const hasHappened = battleDate <= current;
+      const adjustedDiff = hasHappened ? diff : diff + 1000 * 60 * 60 * 24 * 30; // Add 30 days penalty for future battles
+
+      if (adjustedDiff < minDiff) {
+        minDiff = adjustedDiff;
+        nearestIdx = idx;
+      }
+    });
+
+    return nearestIdx;
+  }, [topBattles, currentDate]);
+
+  // Auto-scroll to nearest battle
+  useEffect(() => {
+    if (battleListRef.current && nearestBattleIndex >= 0) {
+      const container = battleListRef.current;
+      const buttons = container.querySelectorAll('button');
+      const targetButton = buttons[nearestBattleIndex];
+
+      if (targetButton) {
+        const containerWidth = container.offsetWidth;
+        const buttonLeft = targetButton.offsetLeft;
+        const buttonWidth = targetButton.offsetWidth;
+
+        // Scroll to center the target button
+        container.scrollTo({
+          left: buttonLeft - containerWidth / 2 + buttonWidth / 2,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }, [nearestBattleIndex]);
+
+  // Check if a battle is in the current viewing window (within 6 months)
+  const isInWindow = (battleDate: string): boolean => {
+    const battle = new Date(battleDate).getTime();
+    const current = new Date(currentDate).getTime();
+    const sixMonths = 1000 * 60 * 60 * 24 * 180;
+    return battle <= current && battle >= current - sixMonths;
+  };
+
+  // Handle battle click - jump to that date
+  const handleBattleClick = (battle: CivilWarEvent) => {
+    onDateChange(battle.date_start);
+  };
 
   return (
     <div className="bg-white border-t border-gray-200 shadow-lg">
@@ -137,20 +213,48 @@ export default function TimelineBar({
         </div>
       </div>
 
-      {/* Key events indicator */}
-      <div className="px-4 pb-2 flex flex-wrap gap-2 text-xs">
-        <span className="text-gray-500">Key Events:</span>
-        {events
-          .filter((e) => e.significance === 5)
-          .slice(0, 5)
-          .map((e) => (
-            <span
-              key={e.id}
-              className="px-2 py-0.5 bg-gray-100 rounded text-gray-700"
-            >
-              {e.name.replace('Battle of ', '')} ({e.date_start.substring(0, 4)})
-            </span>
-          ))}
+      {/* Scrolling major battles list */}
+      <div className="px-4 pb-2">
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-gray-500 whitespace-nowrap">Major Battles:</span>
+          <div
+            ref={battleListRef}
+            className="flex-1 overflow-x-auto scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            <div className="flex gap-1.5 pb-1">
+              {topBattles.map((battle, idx) => {
+                const inWindow = isInWindow(battle.date_start);
+                const isNearest = idx === nearestBattleIndex;
+                const isPast = new Date(battle.date_start) <= new Date(currentDate);
+
+                return (
+                  <button
+                    key={battle.id}
+                    onClick={() => handleBattleClick(battle)}
+                    className={`
+                      px-2.5 py-1 rounded text-xs whitespace-nowrap transition-all
+                      ${isNearest
+                        ? 'bg-blue-500 text-white ring-2 ring-blue-300'
+                        : inWindow
+                        ? 'bg-blue-100 text-blue-800 hover:bg-blue-200'
+                        : isPast
+                        ? 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        : 'bg-gray-50 text-gray-400 hover:bg-gray-100'
+                      }
+                    `}
+                    title={`${battle.name} - ${battle.date_start}${battle.result ? ` (${battle.result})` : ''}`}
+                  >
+                    {battle.name.replace('Battle of ', '').replace('Siege of ', '')}
+                    <span className="ml-1 opacity-60">
+                      {battle.date_start.substring(0, 4)}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
