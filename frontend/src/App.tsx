@@ -87,10 +87,36 @@ function App() {
     return findEvent(eventsData.data);
   }, [eventsData?.data, eventSlug, findEvent]);
 
-  const selectedPerson = useMemo(() => {
+  const selectedPersonBase = useMemo(() => {
     if (!peopleData?.data || !personSlug) return null;
     return findPerson(peopleData.data);
   }, [peopleData?.data, personSlug, findPerson]);
+
+  // Augment selected person with their events from the loaded events data
+  const selectedPerson = useMemo(() => {
+    if (!selectedPersonBase || !eventsData?.data) return selectedPersonBase;
+
+    // Find events where this person was a commander
+    const lastName = selectedPersonBase.name.split(' ').pop() || '';
+    const personEvents = eventsData.data
+      .filter(e =>
+        e.commanders?.union.some(c => c.includes(lastName)) ||
+        e.commanders?.confederate.some(c => c.includes(lastName))
+      )
+      .map(e => ({
+        event_id: e.id,
+        event_name: e.name,
+        date: e.date_start,
+        role: 'commander' as const,
+        unit_commanded: null,
+      }))
+      .sort((a, b) => a.date.localeCompare(b.date));
+
+    return {
+      ...selectedPersonBase,
+      events: personEvents,
+    };
+  }, [selectedPersonBase, eventsData?.data]);
 
   // Filter events by type and current date (rolling window)
   const filteredEvents = useMemo(() => {
