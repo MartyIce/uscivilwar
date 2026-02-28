@@ -10,6 +10,7 @@ interface OrgChartProps {
   side: Side;
   initialDate: string;
   onPersonClick?: (personSlug: string) => void;
+  onDateChange?: (date: string) => void;
   onClose: () => void;
 }
 
@@ -94,9 +95,15 @@ function OrgNode({ position, level, onPersonClick, side }: OrgNodeProps) {
   );
 }
 
-export default function OrgChart({ side, initialDate, onPersonClick, onClose }: OrgChartProps) {
+export default function OrgChart({ side, initialDate, onPersonClick, onDateChange, onClose }: OrgChartProps) {
   // Local date state for the org chart timeline
   const [currentDate, setCurrentDate] = useState(initialDate);
+
+  // Notify parent of date changes
+  const handleDateChange = useCallback((date: string) => {
+    setCurrentDate(date);
+    onDateChange?.(date);
+  }, [onDateChange]);
 
   const hierarchy = getHierarchy(side);
 
@@ -181,7 +188,7 @@ export default function OrgChart({ side, initialDate, onPersonClick, onClose }: 
                 min="0"
                 max="100"
                 value={sliderValue}
-                onChange={(e) => setCurrentDate(sliderToDate(parseFloat(e.target.value)))}
+                onChange={(e) => handleDateChange(sliderToDate(parseFloat(e.target.value)))}
                 className={`w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer ${sliderColor}`}
               />
               {/* Year markers */}

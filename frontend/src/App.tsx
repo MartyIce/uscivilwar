@@ -51,6 +51,7 @@ function App() {
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
   const [showOrgChart, setShowOrgChart] = useState<Side | null>(null);
+  const [orgChartDate, setOrgChartDate] = useState<string | null>(null); // Remember org chart timeline position
   const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -440,8 +441,9 @@ function App() {
       {showOrgChart && (
         <OrgChart
           side={showOrgChart}
-          initialDate={currentDate}
+          initialDate={orgChartDate || currentDate}
           onPersonClick={handleOrgChartPersonClick}
+          onDateChange={setOrgChartDate}
           onClose={() => setShowOrgChart(null)}
         />
       )}
