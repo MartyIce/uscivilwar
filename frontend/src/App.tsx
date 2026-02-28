@@ -6,13 +6,14 @@ import TimelineBar from './components/Timeline/TimelineBar';
 import FilterSidebar from './components/Filters/FilterSidebar';
 import CommanderSelector from './components/CommanderTracker/CommanderSelector';
 import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
+import OrgChart from './components/OrgChart/OrgChart';
 import { useEvents } from './hooks/useEvents';
 import { useBoundaries } from './hooks/useBoundaries';
 import { usePeople } from './hooks/usePeople';
 import { useDeepLink } from './hooks/useDeepLink';
-import { slugToDisplayName } from './utils/slugs';
+import { slugToDisplayName, personNameToSlug } from './utils/slugs';
 import { mockArmyMovements } from './mocks/data/movements';
-import type { EventType } from './types';
+import type { EventType, Side } from './types';
 import './App.css';
 
 // All event types for initial filter state
@@ -49,6 +50,7 @@ function App() {
   const [showFilters, setShowFilters] = useState(false);
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
+  const [showOrgChart, setShowOrgChart] = useState<Side | null>(null);
   const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -273,6 +275,21 @@ function App() {
     );
   }, []);
 
+  // Handle side click to show org chart
+  const handleSideClick = useCallback((side: Side) => {
+    setShowOrgChart(side);
+  }, []);
+
+  // Handle person click from org chart
+  const handleOrgChartPersonClick = useCallback((personSlug: string) => {
+    // Find the person by slug and navigate to them
+    const person = peopleData?.data?.find(p => personNameToSlug(p.name) === personSlug);
+    if (person) {
+      setPersonByName(person.name);
+      setShowOrgChart(null);
+    }
+  }, [peopleData?.data, setPersonByName]);
+
   // Track if we've initialized from URL to prevent re-scrolling
   const initializedFromUrl = useRef(false);
 
@@ -415,8 +432,19 @@ function App() {
           onPersonClick={handlePersonClick}
           onEventClick={handleEventClickFromPerson}
           onBackToEvent={handleBackToEvent}
+          onSideClick={handleSideClick}
         />
       </div>
+
+      {/* Org Chart Modal */}
+      {showOrgChart && (
+        <OrgChart
+          side={showOrgChart}
+          currentDate={currentDate}
+          onPersonClick={handleOrgChartPersonClick}
+          onClose={() => setShowOrgChart(null)}
+        />
+      )}
 
       {/* Timeline bar */}
       <TimelineBar
