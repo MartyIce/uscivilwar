@@ -37,6 +37,7 @@ function App() {
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
   const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
+  const [selectedPersonName, setSelectedPersonName] = useState<string | null>(null);
   const [deepBattleId, setDeepBattleId] = useState<string | null>(null);
   const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
@@ -122,6 +123,7 @@ function App() {
   // Handle detail panel close
   const handleDetailClose = useCallback(() => {
     setSelectedEventId(null);
+    setSelectedPersonName(null);
   }, []);
 
   // Handle deep dive into a battle
@@ -132,6 +134,22 @@ function App() {
   // Handle closing deep dive view
   const handleDeepDiveClose = useCallback(() => {
     setDeepBattleId(null);
+  }, []);
+
+  // Handle person click from event details - show person in detail panel
+  const handlePersonClick = useCallback((personName: string) => {
+    setSelectedPersonName(personName);
+  }, []);
+
+  // Handle going back from person detail to event detail
+  const handlePersonBack = useCallback(() => {
+    setSelectedPersonName(null);
+  }, []);
+
+  // Handle clicking an event from person detail
+  const handleEventClickFromPerson = useCallback((eventId: number) => {
+    setSelectedPersonName(null);
+    setSelectedEventId(eventId);
   }, []);
 
   // Auto-play timeline
@@ -331,9 +349,13 @@ function App() {
         {/* Detail panel */}
         <DetailPanel
           selectedEvent={selectedEvent || null}
+          selectedPersonName={selectedPersonName}
           isLoading={eventLoading}
           onClose={handleDetailClose}
           onDeepDive={handleDeepDive}
+          onPersonClick={handlePersonClick}
+          onPersonBack={handlePersonBack}
+          onEventClick={handleEventClickFromPerson}
         />
       </div>
 

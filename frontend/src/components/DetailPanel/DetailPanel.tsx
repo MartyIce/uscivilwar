@@ -1,25 +1,78 @@
-import type { CivilWarEvent } from '../../types';
+import type { CivilWarEvent, Side } from '../../types';
+import { usePersonByName } from '../../hooks/usePeople';
 import EventDetail from './EventDetail';
+import PersonDetail from './PersonDetail';
 
 interface DetailPanelProps {
   selectedEvent: CivilWarEvent | null;
+  selectedPersonName: string | null;
   isLoading: boolean;
   onClose: () => void;
   onDeepDive?: (battleId: string) => void;
+  onPersonClick?: (personName: string) => void;
+  onPersonBack?: () => void;
+  onEventClick?: (eventId: number) => void;
+  onSideClick?: (side: Side) => void;
 }
 
 export default function DetailPanel({
   selectedEvent,
+  selectedPersonName,
   isLoading,
   onClose,
   onDeepDive,
+  onPersonClick,
+  onPersonBack,
+  onEventClick,
+  onSideClick,
 }: DetailPanelProps) {
-  if (isLoading) {
+  // Fetch person data when a person name is selected
+  const { data: selectedPerson, isLoading: personLoading } = usePersonByName(selectedPersonName);
+
+  if (isLoading || personLoading) {
     return (
       <div className="w-96 bg-white border-l border-gray-200 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
           <p className="mt-4 text-gray-500">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show person detail if a person is selected
+  if (selectedPersonName && selectedPerson) {
+    return (
+      <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 z-10 p-1 rounded-full hover:bg-gray-100 transition-colors"
+          title="Close"
+        >
+          <svg
+            className="w-6 h-6 text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        {/* Person details */}
+        <div className="flex-1 overflow-y-auto">
+          <PersonDetail
+            person={selectedPerson}
+            onBack={onPersonBack}
+            onEventClick={onEventClick}
+            onSideClick={onSideClick}
+          />
         </div>
       </div>
     );
@@ -80,7 +133,7 @@ export default function DetailPanel({
 
       {/* Event details */}
       <div className="flex-1 overflow-y-auto">
-        <EventDetail event={selectedEvent} onDeepDive={onDeepDive} />
+        <EventDetail event={selectedEvent} onDeepDive={onDeepDive} onPersonClick={onPersonClick} />
       </div>
     </div>
   );
