@@ -177,15 +177,6 @@ export default function FilterSidebar({
           </div>
         </div>
 
-        {/* Stats summary */}
-        <div className="pt-4 border-t border-gray-200">
-          <h3 className="text-sm font-medium text-gray-700 mb-2">Quick Facts</h3>
-          <div className="text-xs text-gray-500 space-y-1">
-            <p>Duration: April 12, 1861 - May 9, 1865</p>
-            <p>Total Battles: ~10,500</p>
-            <p>Total Casualties: ~620,000 - 750,000</p>
-          </div>
-        </div>
       </div>
     </div>
   );

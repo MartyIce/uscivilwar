@@ -2,6 +2,11 @@ import type { CivilWarEvent, Side } from '../../types';
 import { usePersonByName } from '../../hooks/usePeople';
 import EventDetail from './EventDetail';
 import PersonDetail from './PersonDetail';
+import CityDetail from './CityDetail';
+import StateDetail from './StateDetail';
+import { getCityByName } from '../../mocks/data/cities';
+import { getStateByName } from '../../mocks/data/states';
+import { expandedEvents } from '../../mocks/data/events-expanded';
 
 // Navigation header with back/forward buttons
 function NavigationHeader({
@@ -71,6 +76,8 @@ function NavigationHeader({
 interface DetailPanelProps {
   selectedEvent: CivilWarEvent | null;
   selectedPersonName: string | null;
+  selectedCityName: string | null;
+  selectedStateName: string | null;
   isLoading: boolean;
   onClose: () => void;
   onDeepDive?: (battleId: string) => void;
@@ -86,6 +93,8 @@ interface DetailPanelProps {
 export default function DetailPanel({
   selectedEvent,
   selectedPersonName,
+  selectedCityName,
+  selectedStateName,
   isLoading,
   onClose,
   onDeepDive,
@@ -165,6 +174,66 @@ export default function DetailPanel({
         </div>
       </div>
     );
+  }
+
+  // Show city detail if a city is selected
+  if (selectedCityName) {
+    const city = getCityByName(selectedCityName);
+    if (city) {
+      return (
+        <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
+          {/* Navigation header */}
+          <NavigationHeader
+            canGoBack={canGoBack}
+            canGoForward={canGoForward}
+            onGoBack={onGoBack}
+            onGoForward={onGoForward}
+            onClose={onClose}
+          />
+
+          {/* City details */}
+          <div className="flex-1 overflow-y-auto">
+            <CityDetail city={city} />
+          </div>
+        </div>
+      );
+    }
+  }
+
+  // Show state detail if a state is selected
+  if (selectedStateName) {
+    const state = getStateByName(selectedStateName);
+    if (state) {
+      // Handler to find battle by name and navigate to it
+      const handleBattleClick = (battleName: string) => {
+        // Try to find the event by matching the name
+        const event = expandedEvents.find(e =>
+          e.name.toLowerCase().includes(battleName.toLowerCase()) ||
+          battleName.toLowerCase().includes(e.name.replace('Battle of ', '').replace('Siege of ', '').toLowerCase())
+        );
+        if (event && onEventClick) {
+          onEventClick(event.id);
+        }
+      };
+
+      return (
+        <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
+          {/* Navigation header */}
+          <NavigationHeader
+            canGoBack={canGoBack}
+            canGoForward={canGoForward}
+            onGoBack={onGoBack}
+            onGoForward={onGoForward}
+            onClose={onClose}
+          />
+
+          {/* State details */}
+          <div className="flex-1 overflow-y-auto">
+            <StateDetail state={state} onBattleClick={handleBattleClick} />
+          </div>
+        </div>
+      );
+    }
   }
 
   if (!selectedEvent) {

@@ -5,14 +5,16 @@ import { useMemo } from 'react';
 
 interface BoundaryLayerProps {
   boundaries: Boundary[];
+  onStateClick?: (stateName: string) => void;
+  selectedStateName?: string | null;
 }
 
-// Style function for boundaries based on side
-function getBoundaryStyle(side: Side | null): PathOptions {
+// Style function for boundaries based on side and selection
+function getBoundaryStyle(side: Side | null, isSelected: boolean): PathOptions {
   const baseStyle: PathOptions = {
-    weight: 2,
-    opacity: 0.7,
-    fillOpacity: 0.2,
+    weight: isSelected ? 4 : 2,
+    opacity: isSelected ? 1 : 0.7,
+    fillOpacity: isSelected ? 0.4 : 0.2,
   };
 
   switch (side) {
@@ -43,7 +45,7 @@ function getBoundaryStyle(side: Side | null): PathOptions {
   }
 }
 
-export default function BoundaryLayer({ boundaries }: BoundaryLayerProps) {
+export default function BoundaryLayer({ boundaries, onStateClick, selectedStateName }: BoundaryLayerProps) {
   // Create a GeoJSON FeatureCollection from boundaries
   const geoJsonData = useMemo(() => {
     const features = boundaries
@@ -64,26 +66,43 @@ export default function BoundaryLayer({ boundaries }: BoundaryLayerProps) {
     };
   }, [boundaries]);
 
-  // Style each feature based on its properties
+  // Style each feature based on its properties and selection state
   const style = (feature: GeoJSON.Feature | undefined) => {
-    if (!feature?.properties) return getBoundaryStyle(null);
-    return getBoundaryStyle(feature.properties.side as Side | null);
+    if (!feature?.properties) return getBoundaryStyle(null, false);
+    const isSelected = feature.properties.name === selectedStateName;
+    return getBoundaryStyle(feature.properties.side as Side | null, isSelected);
   };
 
-  // Popup on each feature
+  // Click handler and hover effects on each feature
   const onEachFeature = (feature: GeoJSON.Feature, layer: L.Layer) => {
     if (feature.properties?.name) {
-      const side = feature.properties.side as Side | null;
-      const sideLabel = side
-        ? side.charAt(0).toUpperCase() + side.slice(1)
-        : 'Unknown';
+      // Add hover effect
+      layer.on({
+        mouseover: (e) => {
+          const target = e.target;
+          target.setStyle({
+            weight: 3,
+            fillOpacity: 0.35,
+          });
+        },
+        mouseout: (e) => {
+          const target = e.target;
+          const isSelected = feature.properties?.name === selectedStateName;
+          target.setStyle(getBoundaryStyle(feature.properties?.side as Side | null, isSelected));
+        },
+        click: () => {
+          if (onStateClick && feature.properties?.name) {
+            onStateClick(feature.properties.name);
+          }
+        },
+      });
 
-      layer.bindPopup(`
-        <div class="p-2">
-          <h3 class="font-bold">${feature.properties.name}</h3>
-          <p class="text-sm text-gray-600">Alignment: ${sideLabel}</p>
-        </div>
-      `);
+      // Add tooltip instead of popup
+      (layer as L.Path).bindTooltip(feature.properties.name, {
+        permanent: false,
+        direction: 'center',
+        className: 'state-tooltip',
+      });
     }
   };
 
@@ -91,9 +110,9 @@ export default function BoundaryLayer({ boundaries }: BoundaryLayerProps) {
     return null;
   }
 
-  // Use a stable key based on the data content, not the date
+  // Use a stable key based on the data content and selection
   // This prevents unmount/remount flashing when dragging the timeline
-  const dataKey = boundaries.map(b => b.id).join(',');
+  const dataKey = `${boundaries.map(b => b.id).join(',')}-${selectedStateName || ''}`;
 
   return (
     <GeoJSON

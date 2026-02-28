@@ -3,6 +3,7 @@ import { LatLngExpression } from 'leaflet';
 import EventMarkers from './EventMarkers';
 import BoundaryLayer from './BoundaryLayer';
 import ArmyMovementLayer from './ArmyMovementLayer';
+import CityMarkers from './CityMarkers';
 import type { CivilWarEvent, Boundary, ArmyMovement } from '../../types';
 
 interface MapContainerProps {
@@ -14,6 +15,10 @@ interface MapContainerProps {
   armyMovements?: ArmyMovement[];
   selectedCommanders?: string[];
   showTroopStrength?: boolean;
+  onCityClick?: (cityName: string) => void;
+  selectedCityName?: string | null;
+  onStateClick?: (stateName: string) => void;
+  selectedStateName?: string | null;
 }
 
 // Center of continental US
@@ -29,6 +34,10 @@ export default function MapContainer({
   armyMovements = [],
   selectedCommanders = [],
   showTroopStrength = false,
+  onCityClick,
+  selectedCityName,
+  onStateClick,
+  selectedStateName,
 }: MapContainerProps) {
   return (
     <LeafletMapContainer
@@ -46,7 +55,11 @@ export default function MapContainer({
       <ZoomControl position="bottomright" />
 
       {/* Boundary layer for states */}
-      <BoundaryLayer boundaries={boundaries} />
+      <BoundaryLayer
+        boundaries={boundaries}
+        onStateClick={onStateClick}
+        selectedStateName={selectedStateName}
+      />
 
       {/* Army movement paths and markers */}
       {armyMovements.length > 0 && selectedCommanders.length > 0 && (
@@ -55,6 +68,14 @@ export default function MapContainer({
           currentDate={currentDate}
           selectedCommanders={selectedCommanders}
           showTroopStrength={showTroopStrength}
+        />
+      )}
+
+      {/* City markers */}
+      {onCityClick && (
+        <CityMarkers
+          onCityClick={onCityClick}
+          selectedCityName={selectedCityName || null}
         />
       )}
 

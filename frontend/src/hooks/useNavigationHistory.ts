@@ -2,7 +2,9 @@ import { useState, useCallback, useMemo } from 'react';
 
 export type HistoryItem =
   | { type: 'event'; eventId: number }
-  | { type: 'person'; personName: string };
+  | { type: 'person'; personName: string }
+  | { type: 'city'; cityName: string }
+  | { type: 'state'; stateName: string };
 
 export interface NavigationHistory {
   current: HistoryItem | null;
