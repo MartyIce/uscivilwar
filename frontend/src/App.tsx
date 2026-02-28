@@ -6,10 +6,11 @@ import TimelineBar from './components/Timeline/TimelineBar';
 import FilterSidebar from './components/Filters/FilterSidebar';
 import CommanderSelector from './components/CommanderTracker/CommanderSelector';
 import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
-import { useEvents, useEvent } from './hooks/useEvents';
+import { useEvents } from './hooks/useEvents';
 import { useBoundaries } from './hooks/useBoundaries';
-import { usePersonByName } from './hooks/usePeople';
+import { usePeople } from './hooks/usePeople';
 import { useDeepLink } from './hooks/useDeepLink';
+import { slugToDisplayName } from './utils/slugs';
 import { mockArmyMovements } from './mocks/data/movements';
 import type { EventType } from './types';
 import './App.css';
@@ -33,13 +34,15 @@ const DEFAULT_DATE_RANGE = {
 };
 
 function App() {
-  // Deep linking for event and person selection
+  // Deep linking for event and person selection (using slugs)
   const {
-    eventId: selectedEventId,
-    personName: selectedPersonName,
-    setEventId: setSelectedEventId,
-    setPersonName: setSelectedPersonName,
+    eventSlug,
+    personSlug,
+    setEventByName,
+    setPersonByName,
     clearSelection,
+    findEvent,
+    findPerson,
   } = useDeepLink();
 
   // UI state
@@ -61,7 +64,7 @@ function App() {
   const [dateRange, setDateRange] = useState(DEFAULT_DATE_RANGE);
   const [selectedTheater, setSelectedTheater] = useState<string | null>(null);
 
-  // Fetch data
+  // Fetch events data
   const { data: eventsData, isLoading: eventsLoading } = useEvents({
     date_from: dateRange.from,
     date_to: dateRange.to,
@@ -69,17 +72,25 @@ function App() {
     limit: 200,
   });
 
-  const { data: selectedEvent, isLoading: eventLoading } = useEvent(selectedEventId);
-
-  // Fetch person by name when a commander is clicked
-  const { data: selectedPerson, isLoading: personLoading } = usePersonByName(selectedPersonName);
+  // Fetch people data for slug lookup
+  const { data: peopleData, isLoading: peopleLoading } = usePeople({ limit: 200 });
 
   // Use a fixed date for boundaries since they don't change frequently
-  // This prevents re-fetching on every timeline drag
   const { data: boundariesData } = useBoundaries({
     date: '1863-01-01',
     type: 'state',
   });
+
+  // Find selected event and person from loaded data using slugs
+  const selectedEvent = useMemo(() => {
+    if (!eventsData?.data || !eventSlug) return null;
+    return findEvent(eventsData.data);
+  }, [eventsData?.data, eventSlug, findEvent]);
+
+  const selectedPerson = useMemo(() => {
+    if (!peopleData?.data || !personSlug) return null;
+    return findPerson(peopleData.data);
+  }, [peopleData?.data, personSlug, findPerson]);
 
   // Filter events by type and current date (rolling window)
   const filteredEvents = useMemo(() => {
@@ -127,10 +138,13 @@ function App() {
     setSelectedTheater(null);
   }, []);
 
-  // Handle event selection
+  // Handle event selection (receives event ID, looks up name)
   const handleEventSelect = useCallback((eventId: number) => {
-    setSelectedEventId(eventId);
-  }, [setSelectedEventId]);
+    const event = eventsData?.data?.find(e => e.id === eventId);
+    if (event) {
+      setEventByName(event.name);
+    }
+  }, [eventsData?.data, setEventByName]);
 
   // Handle detail panel close
   const handleDetailClose = useCallback(() => {
@@ -139,18 +153,21 @@ function App() {
 
   // Handle person click from event detail
   const handlePersonClick = useCallback((name: string) => {
-    setSelectedPersonName(name);
-  }, [setSelectedPersonName]);
+    setPersonByName(name);
+  }, [setPersonByName]);
 
   // Handle back to event from person detail
   const handleBackToEvent = useCallback(() => {
-    setSelectedPersonName(null);
-  }, [setSelectedPersonName]);
+    setPersonByName(null);
+  }, [setPersonByName]);
 
-  // Handle event click from person detail
+  // Handle event click from person detail (receives event ID, looks up name)
   const handleEventClickFromPerson = useCallback((eventId: number) => {
-    setSelectedEventId(eventId);
-  }, [setSelectedEventId]);
+    const event = eventsData?.data?.find(e => e.id === eventId);
+    if (event) {
+      setEventByName(event.name);
+    }
+  }, [eventsData?.data, setEventByName]);
 
   // Auto-play timeline
   useEffect(() => {
@@ -244,10 +261,13 @@ function App() {
 
   // Reset the initialization flag when selection is cleared
   useEffect(() => {
-    if (!selectedEventId && !selectedPersonName) {
+    if (!eventSlug && !personSlug) {
       initializedFromUrl.current = false;
     }
-  }, [selectedEventId, selectedPersonName]);
+  }, [eventSlug, personSlug]);
+
+  // Detail panel loading when data is still being fetched
+  const isDetailLoading = (eventSlug && eventsLoading) || (personSlug && peopleLoading);
 
   return (
     <div className="h-screen flex flex-col bg-gray-100">
@@ -282,7 +302,7 @@ function App() {
             <MapContainer
               events={filteredEvents}
               boundaries={boundariesData?.boundaries || []}
-              selectedEventId={selectedEventId}
+              selectedEventId={selectedEvent?.id || null}
               onEventSelect={handleEventSelect}
               currentDate={currentDate}
               armyMovements={mockArmyMovements}
@@ -361,10 +381,10 @@ function App() {
 
         {/* Detail panel */}
         <DetailPanel
-          selectedEvent={selectedEvent || null}
-          selectedPerson={selectedPerson || null}
-          selectedPersonName={selectedPersonName}
-          isLoading={eventLoading || personLoading}
+          selectedEvent={selectedEvent}
+          selectedPerson={selectedPerson}
+          selectedPersonName={personSlug ? slugToDisplayName(personSlug) : null}
+          isLoading={eventsLoading || peopleLoading || isDetailLoading}
           onClose={handleDetailClose}
           onPersonClick={handlePersonClick}
           onEventClick={handleEventClickFromPerson}
