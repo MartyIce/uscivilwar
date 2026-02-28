@@ -1,6 +1,5 @@
 import type { ArmyMovement, ArmyWaypoint, Coordinates, Side } from '../../types';
 import { expandedEvents } from './events-expanded';
-import { expandedPeople } from './people-expanded';
 import { getPersonEvents } from './event-participants';
 
 // Average march speed: ~12-15 miles per day for Civil War armies

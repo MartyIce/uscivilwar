@@ -1,5 +1,5 @@
 import { MapContainer as LeafletMapContainer, TileLayer, ZoomControl } from 'react-leaflet';
-import { LatLngExpression } from 'leaflet';
+import type { LatLngExpression } from 'leaflet';
 import EventMarkers from './EventMarkers';
 import BoundaryLayer from './BoundaryLayer';
 import ArmyMovementLayer from './ArmyMovementLayer';

@@ -1,5 +1,5 @@
 import { GeoJSON } from 'react-leaflet';
-import { PathOptions } from 'leaflet';
+import type { PathOptions } from 'leaflet';
 import type { Boundary, Side } from '../../types';
 import { useMemo } from 'react';
 

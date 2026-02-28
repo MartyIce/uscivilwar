@@ -75,7 +75,7 @@ export const eventsApi = {
 // Boundaries API
 export const boundariesApi = {
   get: async (params: BoundaryQueryParams): Promise<BoundaryResponse> => {
-    const queryString = buildQueryString(params as Record<string, string | number | boolean | undefined>);
+    const queryString = buildQueryString({ ...params });
     return fetchJson<BoundaryResponse>(`${API_BASE}/boundaries${queryString}`);
   },
 
