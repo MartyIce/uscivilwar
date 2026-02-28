@@ -53,7 +53,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["Irvin McDowell"],
-      confederate: ["P.G.T. Beauregard", "Joseph E. Johnston", "Thomas J. Jackson"]
+      confederate: ["P.G.T. Beauregard", "Joseph E. Johnston", "Thomas J. 'Stonewall' Jackson"]
     }
   },
   {
@@ -132,7 +132,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["James Shields"],
-      confederate: ["Thomas J. Jackson"]
+      confederate: ["Thomas J. 'Stonewall' Jackson"]
     }
   },
   {
@@ -158,7 +158,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["Robert H. Milroy", "Robert C. Schenck"],
-      confederate: ["Thomas J. Jackson"]
+      confederate: ["Thomas J. 'Stonewall' Jackson"]
     }
   },
   {
@@ -184,7 +184,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["John R. Kenly"],
-      confederate: ["Thomas J. Jackson"]
+      confederate: ["Thomas J. 'Stonewall' Jackson"]
     }
   },
   {
@@ -210,7 +210,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["Nathaniel P. Banks"],
-      confederate: ["Thomas J. Jackson"]
+      confederate: ["Thomas J. 'Stonewall' Jackson"]
     }
   },
   {
@@ -236,7 +236,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["John C. Fremont"],
-      confederate: ["Richard S. Ewell", "Thomas J. Jackson"]
+      confederate: ["Richard S. Ewell", "Thomas J. 'Stonewall' Jackson"]
     }
   },
   {
@@ -262,7 +262,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["James Shields"],
-      confederate: ["Thomas J. Jackson"]
+      confederate: ["Thomas J. 'Stonewall' Jackson"]
     }
   },
   {
@@ -288,7 +288,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["Nathaniel P. Banks"],
-      confederate: ["Thomas J. Jackson"]
+      confederate: ["Thomas J. 'Stonewall' Jackson"]
     }
   },
   // ==================== MCCLELLAN'S WESTERN VIRGINIA CAMPAIGN (1861) ====================
@@ -314,7 +314,7 @@ export const expandedEvents: CivilWarEvent[] = [
       state: "West Virginia"
     },
     commanders: {
-      union: ["George B. McClellan", "William S. Rosecrans"],
+      union: ["George B. McClellan", "William Rosecrans"],
       confederate: ["Robert S. Garnett", "John Pegram"]
     }
   },
@@ -605,7 +605,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["George B. McClellan"],
-      confederate: ["Robert E. Lee", "Thomas J. Jackson", "James Longstreet"]
+      confederate: ["Robert E. Lee", "Thomas J. 'Stonewall' Jackson", "James Longstreet"]
     }
   },
   {
@@ -631,7 +631,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["John Pope"],
-      confederate: ["Robert E. Lee", "Thomas J. Jackson", "James Longstreet"]
+      confederate: ["Robert E. Lee", "Thomas J. 'Stonewall' Jackson", "James Longstreet"]
     }
   },
   {
@@ -657,7 +657,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["George B. McClellan"],
-      confederate: ["Robert E. Lee", "James Longstreet", "Thomas J. Jackson"]
+      confederate: ["Robert E. Lee", "James Longstreet", "Thomas J. 'Stonewall' Jackson"]
     }
   },
   {
@@ -709,7 +709,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["Ambrose E. Burnside"],
-      confederate: ["Robert E. Lee", "James Longstreet", "Thomas J. Jackson"]
+      confederate: ["Robert E. Lee", "James Longstreet", "Thomas J. 'Stonewall' Jackson"]
     }
   },
   {
@@ -762,7 +762,7 @@ export const expandedEvents: CivilWarEvent[] = [
     },
     commanders: {
       union: ["Joseph Hooker"],
-      confederate: ["Robert E. Lee", "Thomas J. Jackson", "James Longstreet"]
+      confederate: ["Robert E. Lee", "Thomas J. 'Stonewall' Jackson", "James Longstreet"]
     }
   },
   {

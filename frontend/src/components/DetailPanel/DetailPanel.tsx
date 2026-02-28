@@ -76,7 +76,7 @@ interface DetailPanelProps {
   onDeepDive?: (battleId: string) => void;
   onPersonClick?: (personName: string) => void;
   onEventClick?: (eventId: number) => void;
-  onSideClick?: (side: Side) => void;
+  onSideClick?: (side: Side, personSlug?: string) => void;
   canGoBack?: boolean;
   canGoForward?: boolean;
   onGoBack?: () => void;
@@ -111,7 +111,7 @@ export default function DetailPanel({
     );
   }
 
-  // Show person detail if a person is selected
+  // Show person detail if a person is selected and found
   if (selectedPersonName && selectedPerson) {
     return (
       <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
@@ -131,6 +131,37 @@ export default function DetailPanel({
             onEventClick={onEventClick}
             onSideClick={onSideClick}
           />
+        </div>
+      </div>
+    );
+  }
+
+  // Show "person not found" if person was selected but not in database
+  if (selectedPersonName && !selectedPerson) {
+    return (
+      <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
+        {/* Navigation header */}
+        <NavigationHeader
+          canGoBack={canGoBack}
+          canGoForward={canGoForward}
+          onGoBack={onGoBack}
+          onGoForward={onGoForward}
+          onClose={onClose}
+        />
+
+        {/* Person not found message */}
+        <div className="flex-1 flex items-center justify-center p-8 text-center">
+          <div>
+            <div className="w-20 h-20 mx-auto bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <svg className="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-medium text-gray-700">{selectedPersonName}</h3>
+            <p className="mt-2 text-sm text-gray-500">
+              Biographical data not yet available for this person.
+            </p>
+          </div>
         </div>
       </div>
     );

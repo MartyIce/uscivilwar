@@ -1,14 +1,16 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import type { Side } from '../../types';
 import {
   getHierarchy,
   filterByDate,
+  findPersonFirstAppearance,
   type MilitaryPosition,
 } from '../../data/militaryHierarchy';
 
 interface OrgChartProps {
   side: Side;
   initialDate: string;
+  highlightedPersonSlug?: string;
   onPersonClick?: (personSlug: string) => void;
   onDateChange?: (date: string) => void;
   onClose: () => void;
@@ -19,17 +21,39 @@ interface OrgNodeProps {
   level: number;
   onPersonClick?: (personSlug: string) => void;
   side: Side;
+  highlightedPersonSlug?: string;
 }
 
 // Civil War date range
 const WAR_START = new Date('1861-04-12').getTime();
 const WAR_END = new Date('1865-04-09').getTime();
 
-function OrgNode({ position, level, onPersonClick, side }: OrgNodeProps) {
-  const [expanded, setExpanded] = useState(level < 3);
+function OrgNode({ position, level, onPersonClick, side, highlightedPersonSlug }: OrgNodeProps) {
+  const isHighlighted = position.personSlug === highlightedPersonSlug;
+
+  // Check if any descendant contains the highlighted person (to auto-expand)
+  const containsHighlighted = useMemo(() => {
+    if (!highlightedPersonSlug) return false;
+    function check(pos: MilitaryPosition): boolean {
+      if (pos.personSlug === highlightedPersonSlug) return true;
+      return pos.children?.some(check) ?? false;
+    }
+    return check(position);
+  }, [position, highlightedPersonSlug]);
+
+  const [expanded, setExpanded] = useState(level < 3 || containsHighlighted);
   const hasChildren = position.children && position.children.length > 0;
 
-  const bgColor = side === 'union' ? 'bg-blue-50 border-blue-200' : 'bg-gray-50 border-gray-300';
+  // Auto-expand when highlighted person is a descendant
+  useEffect(() => {
+    if (containsHighlighted && !expanded) {
+      setExpanded(true);
+    }
+  }, [containsHighlighted, expanded]);
+
+  const bgColor = isHighlighted
+    ? side === 'union' ? 'bg-blue-200 border-blue-400 ring-2 ring-blue-400' : 'bg-yellow-100 border-yellow-400 ring-2 ring-yellow-400'
+    : side === 'union' ? 'bg-blue-50 border-blue-200' : 'bg-gray-50 border-gray-300';
   const hoverColor = side === 'union' ? 'hover:bg-blue-100' : 'hover:bg-gray-100';
   const titleColor = side === 'union' ? 'text-blue-700' : 'text-gray-700';
 
@@ -37,6 +61,7 @@ function OrgNode({ position, level, onPersonClick, side }: OrgNodeProps) {
     <div className="relative">
       {/* Node */}
       <div
+        id={isHighlighted ? 'highlighted-person' : undefined}
         className={`flex items-center gap-2 p-2 rounded-lg border ${bgColor} ${
           position.personSlug ? `cursor-pointer ${hoverColor}` : ''
         }`}
@@ -87,6 +112,7 @@ function OrgNode({ position, level, onPersonClick, side }: OrgNodeProps) {
               level={level + 1}
               onPersonClick={onPersonClick}
               side={side}
+              highlightedPersonSlug={highlightedPersonSlug}
             />
           ))}
         </div>
@@ -95,17 +121,42 @@ function OrgNode({ position, level, onPersonClick, side }: OrgNodeProps) {
   );
 }
 
-export default function OrgChart({ side, initialDate, onPersonClick, onDateChange, onClose }: OrgChartProps) {
+export default function OrgChart({ side, initialDate, highlightedPersonSlug, onPersonClick, onDateChange, onClose }: OrgChartProps) {
+  const hierarchy = getHierarchy(side);
+
+  // Find the date to start at - if highlighting a person, jump to their first appearance
+  const startDate = useMemo(() => {
+    if (highlightedPersonSlug) {
+      const firstAppearance = findPersonFirstAppearance(hierarchy.positions, highlightedPersonSlug);
+      if (firstAppearance) {
+        return firstAppearance;
+      }
+    }
+    return initialDate;
+  }, [highlightedPersonSlug, hierarchy.positions, initialDate]);
+
   // Local date state for the org chart timeline
-  const [currentDate, setCurrentDate] = useState(initialDate);
+  const [currentDate, setCurrentDate] = useState(startDate);
+
+  // Scroll to highlighted person after render
+  useEffect(() => {
+    if (highlightedPersonSlug) {
+      // Give time for the tree to expand and render
+      const timer = setTimeout(() => {
+        const el = document.getElementById('highlighted-person');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [highlightedPersonSlug, currentDate]);
 
   // Notify parent of date changes
   const handleDateChange = useCallback((date: string) => {
     setCurrentDate(date);
     onDateChange?.(date);
   }, [onDateChange]);
-
-  const hierarchy = getHierarchy(side);
 
   // Filter to show only positions active at current date
   const activePositions = useMemo(() => {
@@ -167,6 +218,7 @@ export default function OrgChart({ side, initialDate, onPersonClick, onDateChang
                   level={0}
                   onPersonClick={onPersonClick}
                   side={side}
+                  highlightedPersonSlug={highlightedPersonSlug}
                 />
               ))}
             </div>

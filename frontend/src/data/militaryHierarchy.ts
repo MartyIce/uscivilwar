@@ -394,3 +394,39 @@ export function filterByDate(positions: MilitaryPosition[], date: string): Milit
       children: pos.children ? filterByDate(pos.children, date) : undefined,
     }));
 }
+
+/**
+ * Find the earliest date a person appears in the hierarchy.
+ */
+export function findPersonFirstAppearance(positions: MilitaryPosition[], personSlug: string): string | null {
+  let earliestDate: string | null = null;
+
+  function search(pos: MilitaryPosition) {
+    if (pos.personSlug === personSlug) {
+      if (!earliestDate || pos.startDate < earliestDate) {
+        earliestDate = pos.startDate;
+      }
+    }
+    if (pos.children) {
+      pos.children.forEach(search);
+    }
+  }
+
+  positions.forEach(search);
+  return earliestDate;
+}
+
+/**
+ * Check if a person exists anywhere in the hierarchy (at any date).
+ */
+export function personExistsInHierarchy(positions: MilitaryPosition[], personSlug: string): boolean {
+  function search(pos: MilitaryPosition): boolean {
+    if (pos.personSlug === personSlug) return true;
+    if (pos.children) {
+      return pos.children.some(search);
+    }
+    return false;
+  }
+
+  return positions.some(search);
+}

@@ -7,11 +7,12 @@ import FilterSidebar from './components/Filters/FilterSidebar';
 import CommanderSelector from './components/CommanderTracker/CommanderSelector';
 import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
 import BattleDeepView from './components/BattleDeep/BattleDeepView';
+import OrgChart from './components/OrgChart/OrgChart';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useBoundaries } from './hooks/useBoundaries';
 import { useNavigationHistory } from './hooks/useNavigationHistory';
 import { mockArmyMovements } from './mocks/data/movements';
-import type { EventType } from './types';
+import type { EventType, Side } from './types';
 import './App.css';
 
 // All event types for initial filter state
@@ -38,6 +39,8 @@ function App() {
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
   const [deepBattleId, setDeepBattleId] = useState<string | null>(null);
+  const [orgChartSide, setOrgChartSide] = useState<Side | null>(null);
+  const [orgChartHighlightedPerson, setOrgChartHighlightedPerson] = useState<string | undefined>(undefined);
   const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -144,6 +147,29 @@ function App() {
   // Handle person click from event details - show person in detail panel
   const handlePersonClick = useCallback((personName: string) => {
     navHistory.navigate({ type: 'person', personName });
+  }, [navHistory]);
+
+  // Handle side click - show org chart
+  const handleSideClick = useCallback((side: Side, personSlug?: string) => {
+    setOrgChartSide(side);
+    setOrgChartHighlightedPerson(personSlug);
+  }, []);
+
+  // Handle org chart close
+  const handleOrgChartClose = useCallback(() => {
+    setOrgChartSide(null);
+    setOrgChartHighlightedPerson(undefined);
+  }, []);
+
+  // Handle person click from org chart
+  const handleOrgChartPersonClick = useCallback((personSlug: string) => {
+    // Convert slug to name (replace hyphens with spaces and capitalize)
+    const personName = personSlug
+      .split('-')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+    navHistory.navigate({ type: 'person', personName });
+    setOrgChartSide(null);
   }, [navHistory]);
 
   // Auto-play timeline
@@ -349,11 +375,23 @@ function App() {
           onDeepDive={handleDeepDive}
           onPersonClick={handlePersonClick}
           onEventClick={handleEventSelect}
+          onSideClick={handleSideClick}
           canGoBack={navHistory.canGoBack}
           canGoForward={navHistory.canGoForward}
           onGoBack={navHistory.goBack}
           onGoForward={navHistory.goForward}
         />
+
+        {/* Org chart modal */}
+        {orgChartSide && (
+          <OrgChart
+            side={orgChartSide}
+            initialDate={currentDate}
+            highlightedPersonSlug={orgChartHighlightedPerson}
+            onPersonClick={handleOrgChartPersonClick}
+            onClose={handleOrgChartClose}
+          />
+        )}
       </div>
 
       {/* Timeline bar */}
