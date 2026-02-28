@@ -6,38 +6,18 @@ interface HeaderProps {
 export default function Header({ onToggleFilters, showFilters }: HeaderProps) {
   return (
     <header className="bg-slate-800 text-white shadow-lg">
-      <div className="px-4 py-3 flex items-center justify-between">
-        {/* Logo and title */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-blue-500 rounded flex items-center justify-center">
-            <svg
-              className="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1 className="text-xl font-bold">US Civil War</h1>
-            <p className="text-xs text-slate-300">Interactive Historical Map</p>
-          </div>
-        </div>
+      {/* Banner image */}
+      <div className="w-full overflow-hidden bg-slate-900 flex justify-center">
+        <img
+          src="/header-banner.jpg"
+          alt="The American Civil War: A Nation Divided, 1861-1865"
+          className="h-16 sm:h-20 md:h-24 w-auto object-contain"
+        />
+      </div>
 
-        {/* Center: Time period indicator */}
-        <div className="hidden md:flex items-center gap-2 text-sm text-slate-300">
-          <span>1861</span>
-          <div className="w-32 h-1 bg-slate-600 rounded relative">
-            <div className="absolute inset-0 bg-blue-400 rounded" style={{ width: '100%' }} />
-          </div>
-          <span>1865</span>
-        </div>
+      <div className="px-4 py-2 flex items-center justify-between">
+        {/* Left spacer for balance */}
+        <div className="flex-1" />
 
         {/* Right: Controls */}
         <div className="flex items-center gap-2">
