@@ -11,7 +11,7 @@ import OrgChart from './components/OrgChart/OrgChart';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useBoundaries } from './hooks/useBoundaries';
 import { useNavigationHistory } from './hooks/useNavigationHistory';
-import { mockArmyMovements } from './mocks/data/movements';
+import { mockArmyMovements } from './data';
 import type { EventType, Side } from './types';
 import './App.css';
 

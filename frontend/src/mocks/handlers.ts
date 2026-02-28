@@ -1,8 +1,5 @@
 import { http, HttpResponse } from 'msw';
-import { mockEvents } from './data/events';
-import { mockPeople } from './data/people';
-import { mockLocations } from './data/locations';
-import { mockBoundaries } from './data/boundaries';
+import { expandedEvents as mockEvents, mockPeople, mockLocations, mockBoundaries } from '../data';
 
 const API_BASE = '/api/v1';
 

@@ -1,6 +1,6 @@
 import { Polyline, CircleMarker, Tooltip } from 'react-leaflet';
 import type { ArmyMovement } from '../../types';
-import { getArmyPathUpToDate, getArmyPositionAtDate, getCommanderTroopStrength } from '../../mocks/data/movements';
+import { getArmyPathUpToDate, getArmyPositionAtDate, getCommanderTroopStrength } from '../../data';
 
 interface ArmyMovementLayerProps {
   movements: ArmyMovement[];

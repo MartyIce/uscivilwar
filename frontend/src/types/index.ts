@@ -2,7 +2,7 @@
 
 export type Side = 'union' | 'confederate' | 'neutral' | 'border';
 export type EventType = 'battle' | 'siege' | 'raid' | 'skirmish' | 'treaty' | 'election' | 'proclamation' | 'surrender';
-export type LocationType = 'city' | 'battlefield' | 'fort' | 'river' | 'landmark' | 'capital';
+export type LocationType = 'city' | 'battlefield' | 'fort' | 'river' | 'landmark' | 'capital' | 'naval';
 export type PersonRole = 'commander' | 'subordinate' | 'participant' | 'casualty' | 'signatory';
 
 export interface Coordinates {

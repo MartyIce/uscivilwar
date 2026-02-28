@@ -1,6 +1,5 @@
 import { useState, useMemo } from 'react';
-import { expandedPeople } from '../../mocks/data/people-expanded';
-import { getPersonEvents } from '../../mocks/data/event-participants';
+import { expandedPeople, getEventsByCommanderId } from '../../data';
 import type { Side } from '../../types';
 
 interface PeopleBrowserProps {
@@ -109,7 +108,7 @@ export default function PeopleBrowser({ isOpen, onClose, onPersonSelect }: Peopl
         ) : (
           <div className="divide-y divide-gray-100">
             {filteredPeople.map((person) => {
-              const events = getPersonEvents(person.id);
+              const events = getEventsByCommanderId(person.id);
               const isExpanded = expandedPersonId === person.id;
 
               return (

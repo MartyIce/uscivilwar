@@ -1,4 +1,4 @@
-import { availableCommanders } from '../../mocks/data/movements';
+import { availableCommanders } from '../../data';
 
 interface CommanderSelectorProps {
   selectedCommanders: string[];
