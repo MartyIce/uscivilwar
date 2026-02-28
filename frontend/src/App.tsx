@@ -402,6 +402,7 @@ function App() {
           <PeopleBrowser
             isOpen={showPeopleBrowser}
             onClose={() => setShowPeopleBrowser(false)}
+            onPersonSelect={handlePersonClick}
           />
         </div>
 

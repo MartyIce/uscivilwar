@@ -6,11 +6,12 @@ import type { Side } from '../../types';
 interface PeopleBrowserProps {
   isOpen: boolean;
   onClose: () => void;
+  onPersonSelect?: (name: string) => void;
 }
 
 type FilterSide = 'all' | Side;
 
-export default function PeopleBrowser({ isOpen, onClose }: PeopleBrowserProps) {
+export default function PeopleBrowser({ isOpen, onClose, onPersonSelect }: PeopleBrowserProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterSide, setFilterSide] = useState<FilterSide>('all');
   const [expandedPersonId, setExpandedPersonId] = useState<number | null>(null);
@@ -126,9 +127,15 @@ export default function PeopleBrowser({ isOpen, onClose }: PeopleBrowserProps) {
                       />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2">
-                          <span className="font-medium text-gray-900 truncate">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onPersonSelect?.(person.name);
+                            }}
+                            className="font-medium text-blue-600 hover:text-blue-800 hover:underline truncate text-left"
+                          >
                             {person.name}
-                          </span>
+                          </button>
                           {events.length > 0 && (
                             <span className="text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">
                               {events.length} battles
