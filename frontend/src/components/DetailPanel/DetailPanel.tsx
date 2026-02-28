@@ -1,30 +1,18 @@
-import type { CivilWarEvent, Person, Side } from '../../types';
+import type { CivilWarEvent } from '../../types';
 import EventDetail from './EventDetail';
-import PersonDetail from './PersonDetail';
-import UnknownPersonDetail from './UnknownPersonDetail';
 
 interface DetailPanelProps {
   selectedEvent: CivilWarEvent | null;
-  selectedPerson: Person | null;
-  selectedPersonName: string | null;
   isLoading: boolean;
   onClose: () => void;
-  onPersonClick: (name: string) => void;
-  onEventClick: (eventId: number) => void;
-  onBackToEvent: () => void;
-  onSideClick?: (side: Side) => void;
+  onDeepDive?: (battleId: string) => void;
 }
 
 export default function DetailPanel({
   selectedEvent,
-  selectedPerson,
-  selectedPersonName,
   isLoading,
   onClose,
-  onPersonClick,
-  onEventClick,
-  onBackToEvent,
-  onSideClick,
+  onDeepDive,
 }: DetailPanelProps) {
   if (isLoading) {
     return (
@@ -32,80 +20,6 @@ export default function DetailPanel({
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
           <p className="mt-4 text-gray-500">Loading...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Show person detail if we have data
-  if (selectedPerson) {
-    return (
-      <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-10 p-1 rounded-full bg-white/80 hover:bg-gray-100 transition-colors"
-          title="Close"
-        >
-          <svg
-            className="w-6 h-6 text-gray-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-
-        {/* Person details */}
-        <div className="flex-1 overflow-y-auto">
-          <PersonDetail
-            person={selectedPerson}
-            onBack={selectedEvent ? onBackToEvent : undefined}
-            onEventClick={onEventClick}
-            onSideClick={onSideClick}
-          />
-        </div>
-      </div>
-    );
-  }
-
-  // Show unknown person view if we have a name but no data
-  if (selectedPersonName && !selectedPerson) {
-    return (
-      <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-10 p-1 rounded-full bg-white/80 hover:bg-gray-100 transition-colors"
-          title="Close"
-        >
-          <svg
-            className="w-6 h-6 text-gray-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-
-        {/* Unknown person details */}
-        <div className="flex-1 overflow-y-auto">
-          <UnknownPersonDetail
-            name={selectedPersonName}
-            onBack={selectedEvent ? onBackToEvent : undefined}
-          />
         </div>
       </div>
     );
@@ -166,7 +80,7 @@ export default function DetailPanel({
 
       {/* Event details */}
       <div className="flex-1 overflow-y-auto">
-        <EventDetail event={selectedEvent} onPersonClick={onPersonClick} />
+        <EventDetail event={selectedEvent} onDeepDive={onDeepDive} />
       </div>
     </div>
   );

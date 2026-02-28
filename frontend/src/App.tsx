@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import Header from './components/Header';
 import MapContainer from './components/Map/MapContainer';
 import DetailPanel from './components/DetailPanel/DetailPanel';
@@ -6,14 +6,11 @@ import TimelineBar from './components/Timeline/TimelineBar';
 import FilterSidebar from './components/Filters/FilterSidebar';
 import CommanderSelector from './components/CommanderTracker/CommanderSelector';
 import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
-import OrgChart from './components/OrgChart/OrgChart';
-import { useEvents } from './hooks/useEvents';
+import BattleDeepView from './components/BattleDeep/BattleDeepView';
+import { useEvents, useEvent } from './hooks/useEvents';
 import { useBoundaries } from './hooks/useBoundaries';
-import { usePeople } from './hooks/usePeople';
-import { useDeepLink } from './hooks/useDeepLink';
-import { slugToDisplayName, personNameToSlug } from './utils/slugs';
 import { mockArmyMovements } from './mocks/data/movements';
-import type { EventType, Side } from './types';
+import type { EventType } from './types';
 import './App.css';
 
 // All event types for initial filter state
@@ -35,23 +32,12 @@ const DEFAULT_DATE_RANGE = {
 };
 
 function App() {
-  // Deep linking for event and person selection (using slugs)
-  const {
-    eventSlug,
-    personSlug,
-    setEventByName,
-    setPersonByName,
-    clearSelection,
-    findEvent,
-    findPerson,
-  } = useDeepLink();
-
   // UI state
   const [showFilters, setShowFilters] = useState(false);
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
-  const [showOrgChart, setShowOrgChart] = useState<Side | null>(null);
-  const [orgChartDate, setOrgChartDate] = useState<string | null>(null); // Remember org chart timeline position
+  const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
+  const [deepBattleId, setDeepBattleId] = useState<string | null>(null);
   const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -67,7 +53,7 @@ function App() {
   const [dateRange, setDateRange] = useState(DEFAULT_DATE_RANGE);
   const [selectedTheater, setSelectedTheater] = useState<string | null>(null);
 
-  // Fetch events data
+  // Fetch data
   const { data: eventsData, isLoading: eventsLoading } = useEvents({
     date_from: dateRange.from,
     date_to: dateRange.to,
@@ -75,51 +61,12 @@ function App() {
     limit: 200,
   });
 
-  // Fetch people data for slug lookup
-  const { data: peopleData, isLoading: peopleLoading } = usePeople({ limit: 200 });
+  const { data: selectedEvent, isLoading: eventLoading } = useEvent(selectedEventId);
 
-  // Use a fixed date for boundaries since they don't change frequently
   const { data: boundariesData } = useBoundaries({
-    date: '1863-01-01',
+    date: currentDate,
     type: 'state',
   });
-
-  // Find selected event and person from loaded data using slugs
-  const selectedEvent = useMemo(() => {
-    if (!eventsData?.data || !eventSlug) return null;
-    return findEvent(eventsData.data);
-  }, [eventsData?.data, eventSlug, findEvent]);
-
-  const selectedPersonBase = useMemo(() => {
-    if (!peopleData?.data || !personSlug) return null;
-    return findPerson(peopleData.data);
-  }, [peopleData?.data, personSlug, findPerson]);
-
-  // Augment selected person with their events from the loaded events data
-  const selectedPerson = useMemo(() => {
-    if (!selectedPersonBase || !eventsData?.data) return selectedPersonBase;
-
-    // Find events where this person was a commander
-    const lastName = selectedPersonBase.name.split(' ').pop() || '';
-    const personEvents = eventsData.data
-      .filter(e =>
-        e.commanders?.union.some(c => c.includes(lastName)) ||
-        e.commanders?.confederate.some(c => c.includes(lastName))
-      )
-      .map(e => ({
-        event_id: e.id,
-        event_name: e.name,
-        date: e.date_start,
-        role: 'commander' as const,
-        unit_commanded: null,
-      }))
-      .sort((a, b) => a.date.localeCompare(b.date));
-
-    return {
-      ...selectedPersonBase,
-      events: personEvents,
-    };
-  }, [selectedPersonBase, eventsData?.data]);
 
   // Filter events by type and current date (rolling window)
   const filteredEvents = useMemo(() => {
@@ -167,36 +114,25 @@ function App() {
     setSelectedTheater(null);
   }, []);
 
-  // Handle event selection (receives event ID, looks up name)
+  // Handle event selection
   const handleEventSelect = useCallback((eventId: number) => {
-    const event = eventsData?.data?.find(e => e.id === eventId);
-    if (event) {
-      setEventByName(event.name);
-    }
-  }, [eventsData?.data, setEventByName]);
+    setSelectedEventId(eventId);
+  }, []);
 
   // Handle detail panel close
   const handleDetailClose = useCallback(() => {
-    clearSelection();
-  }, [clearSelection]);
+    setSelectedEventId(null);
+  }, []);
 
-  // Handle person click from event detail
-  const handlePersonClick = useCallback((name: string) => {
-    setPersonByName(name);
-  }, [setPersonByName]);
+  // Handle deep dive into a battle
+  const handleDeepDive = useCallback((battleId: string) => {
+    setDeepBattleId(battleId);
+  }, []);
 
-  // Handle back to event from person detail
-  const handleBackToEvent = useCallback(() => {
-    setPersonByName(null);
-  }, [setPersonByName]);
-
-  // Handle event click from person detail (receives event ID, looks up name)
-  const handleEventClickFromPerson = useCallback((eventId: number) => {
-    const event = eventsData?.data?.find(e => e.id === eventId);
-    if (event) {
-      setEventByName(event.name);
-    }
-  }, [eventsData?.data, setEventByName]);
+  // Handle closing deep dive view
+  const handleDeepDiveClose = useCallback(() => {
+    setDeepBattleId(null);
+  }, []);
 
   // Auto-play timeline
   useEffect(() => {
@@ -276,42 +212,10 @@ function App() {
     );
   }, []);
 
-  // Handle side click to show org chart
-  const handleSideClick = useCallback((side: Side) => {
-    setShowOrgChart(side);
-  }, []);
-
-  // Handle person click from org chart
-  const handleOrgChartPersonClick = useCallback((personSlug: string) => {
-    // Find the person by slug and navigate to them
-    const person = peopleData?.data?.find(p => personNameToSlug(p.name) === personSlug);
-    if (person) {
-      setPersonByName(person.name);
-      setShowOrgChart(null);
-    }
-  }, [peopleData?.data, setPersonByName]);
-
-  // Track if we've initialized from URL to prevent re-scrolling
-  const initializedFromUrl = useRef(false);
-
-  // Scroll timeline to event date when loading from URL
-  useEffect(() => {
-    if (selectedEvent && !initializedFromUrl.current) {
-      // Set timeline to show the event's date
-      setCurrentDate(selectedEvent.date_start);
-      initializedFromUrl.current = true;
-    }
-  }, [selectedEvent]);
-
-  // Reset the initialization flag when selection is cleared
-  useEffect(() => {
-    if (!eventSlug && !personSlug) {
-      initializedFromUrl.current = false;
-    }
-  }, [eventSlug, personSlug]);
-
-  // Detail panel loading when data is still being fetched
-  const isDetailLoading = (eventSlug && eventsLoading) || (personSlug && peopleLoading);
+  // Show deep battle view if a battle is selected for deep dive
+  if (deepBattleId) {
+    return <BattleDeepView battleId={deepBattleId} onClose={handleDeepDiveClose} />;
+  }
 
   return (
     <div className="h-screen flex flex-col bg-gray-100">
@@ -346,7 +250,7 @@ function App() {
             <MapContainer
               events={filteredEvents}
               boundaries={boundariesData?.boundaries || []}
-              selectedEventId={selectedEvent?.id || null}
+              selectedEventId={selectedEventId}
               onEventSelect={handleEventSelect}
               currentDate={currentDate}
               armyMovements={mockArmyMovements}
@@ -425,28 +329,12 @@ function App() {
 
         {/* Detail panel */}
         <DetailPanel
-          selectedEvent={selectedEvent}
-          selectedPerson={selectedPerson}
-          selectedPersonName={personSlug ? slugToDisplayName(personSlug) : null}
-          isLoading={eventsLoading || peopleLoading || isDetailLoading}
+          selectedEvent={selectedEvent || null}
+          isLoading={eventLoading}
           onClose={handleDetailClose}
-          onPersonClick={handlePersonClick}
-          onEventClick={handleEventClickFromPerson}
-          onBackToEvent={handleBackToEvent}
-          onSideClick={handleSideClick}
+          onDeepDive={handleDeepDive}
         />
       </div>
-
-      {/* Org Chart Modal */}
-      {showOrgChart && (
-        <OrgChart
-          side={showOrgChart}
-          initialDate={orgChartDate || currentDate}
-          onPersonClick={handleOrgChartPersonClick}
-          onDateChange={setOrgChartDate}
-          onClose={() => setShowOrgChart(null)}
-        />
-      )}
 
       {/* Timeline bar */}
       <TimelineBar
@@ -459,6 +347,7 @@ function App() {
         onPlayToggle={handlePlayToggle}
         onNextEvent={handleNextEvent}
         onPrevEvent={handlePrevEvent}
+        onEventSelect={handleEventSelect}
       />
     </div>
   );
