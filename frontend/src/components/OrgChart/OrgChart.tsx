@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import type { Side } from '../../types';
 import {
   getHierarchy,
@@ -8,7 +8,7 @@ import {
 
 interface OrgChartProps {
   side: Side;
-  currentDate: string;
+  initialDate: string;
   onPersonClick?: (personSlug: string) => void;
   onClose: () => void;
 }
@@ -19,6 +19,10 @@ interface OrgNodeProps {
   onPersonClick?: (personSlug: string) => void;
   side: Side;
 }
+
+// Civil War date range
+const WAR_START = new Date('1861-04-12').getTime();
+const WAR_END = new Date('1865-04-09').getTime();
 
 function OrgNode({ position, level, onPersonClick, side }: OrgNodeProps) {
   const [expanded, setExpanded] = useState(level < 3);
@@ -90,7 +94,10 @@ function OrgNode({ position, level, onPersonClick, side }: OrgNodeProps) {
   );
 }
 
-export default function OrgChart({ side, currentDate, onPersonClick, onClose }: OrgChartProps) {
+export default function OrgChart({ side, initialDate, onPersonClick, onClose }: OrgChartProps) {
+  // Local date state for the org chart timeline
+  const [currentDate, setCurrentDate] = useState(initialDate);
+
   const hierarchy = getHierarchy(side);
 
   // Filter to show only positions active at current date
@@ -100,6 +107,7 @@ export default function OrgChart({ side, currentDate, onPersonClick, onClose }: 
 
   const sideName = side === 'union' ? 'Union' : 'Confederate';
   const headerBg = side === 'union' ? 'bg-blue-600' : 'bg-gray-700';
+  const sliderColor = side === 'union' ? 'accent-blue-600' : 'accent-gray-600';
 
   // Format date for display
   const formattedDate = new Date(currentDate).toLocaleDateString('en-US', {
@@ -107,6 +115,20 @@ export default function OrgChart({ side, currentDate, onPersonClick, onClose }: 
     month: 'long',
     day: 'numeric',
   });
+
+  // Convert date to slider value (0-100)
+  const dateToSlider = useCallback((dateStr: string) => {
+    const date = new Date(dateStr).getTime();
+    return ((date - WAR_START) / (WAR_END - WAR_START)) * 100;
+  }, []);
+
+  // Convert slider value to date
+  const sliderToDate = useCallback((value: number) => {
+    const timestamp = WAR_START + (value / 100) * (WAR_END - WAR_START);
+    return new Date(timestamp).toISOString().split('T')[0];
+  }, []);
+
+  const sliderValue = dateToSlider(currentDate);
 
   return (
     <div className="fixed inset-0 z-[2000] flex items-center justify-center bg-black/50">
@@ -127,11 +149,6 @@ export default function OrgChart({ side, currentDate, onPersonClick, onClose }: 
           </button>
         </div>
 
-        {/* Timeline hint */}
-        <div className="px-6 py-3 bg-amber-50 border-b border-amber-100 text-sm text-amber-800">
-          <span className="font-medium">Tip:</span> Use the timeline below the map to see how command changed over time.
-        </div>
-
         {/* Tree view */}
         <div className="flex-1 overflow-y-auto p-6">
           {activePositions.length > 0 ? (
@@ -149,13 +166,39 @@ export default function OrgChart({ side, currentDate, onPersonClick, onClose }: 
           ) : (
             <div className="text-center text-gray-500 py-8">
               <p>No command structure data available for this date.</p>
-              <p className="text-sm mt-2">Try adjusting the timeline to a date during the war (1861-1865).</p>
+              <p className="text-sm mt-2">Try adjusting the timeline to a date during the war.</p>
             </div>
           )}
         </div>
 
+        {/* Timeline slider */}
+        <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-gray-500 whitespace-nowrap">Apr 1861</span>
+            <div className="flex-1 relative">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={sliderValue}
+                onChange={(e) => setCurrentDate(sliderToDate(parseFloat(e.target.value)))}
+                className={`w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer ${sliderColor}`}
+              />
+              {/* Year markers */}
+              <div className="absolute -bottom-4 left-0 right-0 flex justify-between text-[10px] text-gray-400">
+                <span>1861</span>
+                <span>1862</span>
+                <span>1863</span>
+                <span>1864</span>
+                <span>1865</span>
+              </div>
+            </div>
+            <span className="text-xs text-gray-500 whitespace-nowrap">Apr 1865</span>
+          </div>
+        </div>
+
         {/* Legend */}
-        <div className="px-6 py-3 bg-gray-50 border-t border-gray-200 rounded-b-xl">
+        <div className="px-6 py-3 bg-gray-100 border-t border-gray-200 rounded-b-xl">
           <div className="flex items-center gap-4 text-xs text-gray-500">
             <span className="flex items-center gap-1">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

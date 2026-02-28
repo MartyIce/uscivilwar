@@ -440,7 +440,7 @@ function App() {
       {showOrgChart && (
         <OrgChart
           side={showOrgChart}
-          currentDate={currentDate}
+          initialDate={currentDate}
           onPersonClick={handleOrgChartPersonClick}
           onClose={() => setShowOrgChart(null)}
         />
