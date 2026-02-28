@@ -212,6 +212,12 @@ function App() {
     );
   }, []);
 
+  // Handle person click from People browser
+  const handlePersonClick = useCallback((name: string) => {
+    console.log('Person selected:', name);
+    // TODO: Integrate with person detail panel
+  }, []);
+
   // Show deep battle view if a battle is selected for deep dive
   if (deepBattleId) {
     return <BattleDeepView battleId={deepBattleId} onClose={handleDeepDiveClose} />;
