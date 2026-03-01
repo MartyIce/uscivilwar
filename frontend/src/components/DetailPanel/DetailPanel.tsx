@@ -109,6 +109,67 @@ export default function DetailPanel({
   // Fetch person data when a person name is selected
   const { data: selectedPerson, isLoading: personLoading } = usePersonByName(selectedPersonName);
 
+  // Show state detail if a state is selected (prioritize over event loading)
+  if (selectedStateName) {
+    const state = getStateByName(selectedStateName);
+    if (state) {
+      // Handler to find battle by name and navigate to it
+      const handleBattleClick = (battleName: string) => {
+        // Try to find the event by matching the name
+        const event = expandedEvents.find(e =>
+          e.name.toLowerCase().includes(battleName.toLowerCase()) ||
+          battleName.toLowerCase().includes(e.name.replace('Battle of ', '').replace('Siege of ', '').toLowerCase())
+        );
+        if (event && onEventClick) {
+          onEventClick(event.id);
+        }
+      };
+
+      return (
+        <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
+          {/* Navigation header */}
+          <NavigationHeader
+            canGoBack={canGoBack}
+            canGoForward={canGoForward}
+            onGoBack={onGoBack}
+            onGoForward={onGoForward}
+            onClose={onClose}
+          />
+
+          {/* State details */}
+          <div className="flex-1 overflow-y-auto">
+            <StateDetail state={state} onBattleClick={handleBattleClick} />
+          </div>
+        </div>
+      );
+    }
+  }
+
+  // Show city detail if a city is selected (prioritize over event loading)
+  if (selectedCityName) {
+    const city = getCityByName(selectedCityName);
+    if (city) {
+      return (
+        <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
+          {/* Navigation header */}
+          <NavigationHeader
+            canGoBack={canGoBack}
+            canGoForward={canGoForward}
+            onGoBack={onGoBack}
+            onGoForward={onGoForward}
+            onClose={onClose}
+          />
+
+          {/* City details */}
+          <div className="flex-1 overflow-y-auto">
+            <CityDetail city={city} />
+          </div>
+        </div>
+      );
+    }
+  }
+
+  // Show loading only for person/event fetches (not for state/city which are sync)
   if (isLoading || personLoading) {
     return (
       <div className="w-96 bg-white border-l border-gray-200 flex items-center justify-center">
@@ -174,66 +235,6 @@ export default function DetailPanel({
         </div>
       </div>
     );
-  }
-
-  // Show city detail if a city is selected
-  if (selectedCityName) {
-    const city = getCityByName(selectedCityName);
-    if (city) {
-      return (
-        <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
-          {/* Navigation header */}
-          <NavigationHeader
-            canGoBack={canGoBack}
-            canGoForward={canGoForward}
-            onGoBack={onGoBack}
-            onGoForward={onGoForward}
-            onClose={onClose}
-          />
-
-          {/* City details */}
-          <div className="flex-1 overflow-y-auto">
-            <CityDetail city={city} />
-          </div>
-        </div>
-      );
-    }
-  }
-
-  // Show state detail if a state is selected
-  if (selectedStateName) {
-    const state = getStateByName(selectedStateName);
-    if (state) {
-      // Handler to find battle by name and navigate to it
-      const handleBattleClick = (battleName: string) => {
-        // Try to find the event by matching the name
-        const event = expandedEvents.find(e =>
-          e.name.toLowerCase().includes(battleName.toLowerCase()) ||
-          battleName.toLowerCase().includes(e.name.replace('Battle of ', '').replace('Siege of ', '').toLowerCase())
-        );
-        if (event && onEventClick) {
-          onEventClick(event.id);
-        }
-      };
-
-      return (
-        <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
-          {/* Navigation header */}
-          <NavigationHeader
-            canGoBack={canGoBack}
-            canGoForward={canGoForward}
-            onGoBack={onGoBack}
-            onGoForward={onGoForward}
-            onClose={onClose}
-          />
-
-          {/* State details */}
-          <div className="flex-1 overflow-y-auto">
-            <StateDetail state={state} onBattleClick={handleBattleClick} />
-          </div>
-        </div>
-      );
-    }
   }
 
   if (!selectedEvent) {

@@ -89,6 +89,9 @@ function App() {
       // Filter by type
       if (!selectedTypes.includes(event.type)) return false;
 
+      // Always include the selected event so it stays visible on the map
+      if (event.id === selectedEventId) return true;
+
       // Filter by current date window (show events within last 6 months)
       const eventDate = event.date_end || event.date_start;
       if (eventDate > currentDate) return false; // Event hasn't happened yet
@@ -99,7 +102,7 @@ function App() {
 
       return true;
     });
-  }, [eventsData?.data, selectedTypes, currentDate]);
+  }, [eventsData?.data, selectedTypes, currentDate, selectedEventId]);
 
   // All events for the timeline (not filtered by current date)
   const allEvents = useMemo(() => {
@@ -300,6 +303,7 @@ function App() {
           ) : (
             <MapContainer
               events={filteredEvents}
+              allEvents={allEvents}
               boundaries={stateBoundaries}
               selectedEventId={selectedEventId}
               onEventSelect={handleEventSelect}

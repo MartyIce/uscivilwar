@@ -17,45 +17,50 @@ export interface NavigationHistory {
 }
 
 export function useNavigationHistory(): NavigationHistory {
-  // History stack and current position
-  const [history, setHistory] = useState<HistoryItem[]>([]);
-  const [currentIndex, setCurrentIndex] = useState(-1);
+  // Combined state to ensure atomic updates (fixes race condition when clicking rapidly)
+  const [state, setState] = useState<{ history: HistoryItem[]; index: number }>({
+    history: [],
+    index: -1,
+  });
 
   const current = useMemo(() => {
-    if (currentIndex >= 0 && currentIndex < history.length) {
-      return history[currentIndex];
+    if (state.index >= 0 && state.index < state.history.length) {
+      return state.history[state.index];
     }
     return null;
-  }, [history, currentIndex]);
+  }, [state.history, state.index]);
 
-  const canGoBack = currentIndex > 0;
-  const canGoForward = currentIndex < history.length - 1;
+  const canGoBack = state.index > 0;
+  const canGoForward = state.index < state.history.length - 1;
 
   const navigate = useCallback((item: HistoryItem) => {
-    setHistory((prev) => {
+    setState((prev) => ({
       // Clear forward history and add new item
-      const newHistory = prev.slice(0, currentIndex + 1);
-      newHistory.push(item);
-      return newHistory;
-    });
-    setCurrentIndex((prev) => prev + 1);
-  }, [currentIndex]);
+      history: [...prev.history.slice(0, prev.index + 1), item],
+      index: prev.index + 1,
+    }));
+  }, []);
 
   const goBack = useCallback(() => {
-    if (canGoBack) {
-      setCurrentIndex((prev) => prev - 1);
-    }
-  }, [canGoBack]);
+    setState((prev) => {
+      if (prev.index > 0) {
+        return { ...prev, index: prev.index - 1 };
+      }
+      return prev;
+    });
+  }, []);
 
   const goForward = useCallback(() => {
-    if (canGoForward) {
-      setCurrentIndex((prev) => prev + 1);
-    }
-  }, [canGoForward]);
+    setState((prev) => {
+      if (prev.index < prev.history.length - 1) {
+        return { ...prev, index: prev.index + 1 };
+      }
+      return prev;
+    });
+  }, []);
 
   const clear = useCallback(() => {
-    setHistory([]);
-    setCurrentIndex(-1);
+    setState({ history: [], index: -1 });
   }, []);
 
   return {

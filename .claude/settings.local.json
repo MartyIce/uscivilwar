@@ -33,7 +33,22 @@
       "Bash(git stash:*)",
       "Bash(npx tsc:*)",
       "Bash(xargs:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "Bash(git worktree remove:*)",
+      "Bash(git branch:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx vite build:*)",
+      "Bash(git worktree add:*)",
+      "Bash(./scripts/setup-worktree.sh:*)",
+      "Bash(node -e:*)",
+      "Bash(node:*)",
+      "Bash(sips:*)",
+      "Bash(vercel)",
+      "Bash(vercel:*)",
+      "Bash(kill:*)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "vercel"
+  ]
 }

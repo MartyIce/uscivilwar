@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 interface EventMarkersProps {
   events: CivilWarEvent[];
+  allEvents: CivilWarEvent[]; // All events for panning lookup (not filtered by date)
   selectedEventId: number | null;
   onEventSelect: (eventId: number) => void;
 }
@@ -42,13 +43,20 @@ function getEventIcon(type: EventType): string {
 function createMarkerIcon(event: CivilWarEvent, isSelected: boolean): DivIcon {
   const color = getMarkerColor(event.result);
   const icon = getEventIcon(event.type);
-  const size = isSelected ? 36 : 28;
-  const fontSize = isSelected ? 16 : 12;
+  const size = isSelected ? 40 : 28;
+  const fontSize = isSelected ? 18 : 12;
 
   // Pulse animation for selected markers (keyframes defined in App.css)
-  const pulseAnimation = isSelected
-    ? `animation: marker-pulse 1.5s ease-in-out 3;`
-    : '';
+  const selectedStyles = isSelected
+    ? `
+        animation: marker-pulse 1s ease-in-out infinite;
+        border: 3px solid #1d4ed8;
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.6), 0 4px 8px rgba(0,0,0,0.3);
+      `
+    : `
+        border: 2px solid #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      `;
 
   return new DivIcon({
     html: `
@@ -56,7 +64,6 @@ function createMarkerIcon(event: CivilWarEvent, isSelected: boolean): DivIcon {
         width: ${size}px;
         height: ${size}px;
         background-color: ${color};
-        border: 2px solid ${isSelected ? '#000' : '#fff'};
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -64,10 +71,8 @@ function createMarkerIcon(event: CivilWarEvent, isSelected: boolean): DivIcon {
         color: white;
         font-weight: bold;
         font-size: ${fontSize}px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        ${isSelected ? 'transform: scale(1.2);' : ''}
-        ${pulseAnimation}
-        transition: transform 0.2s;
+        ${selectedStyles}
+        transition: all 0.3s ease;
         pointer-events: none;
       ">
         ${icon}
@@ -101,6 +106,7 @@ const LABEL_ZOOM_THRESHOLD = 7;
 
 export default function EventMarkers({
   events,
+  allEvents,
   selectedEventId,
   onEventSelect,
 }: EventMarkersProps) {
@@ -116,7 +122,8 @@ export default function EventMarkers({
     (event) => event.location?.coordinates
   );
 
-  const selectedEvent = events.find((e) => e.id === selectedEventId);
+  // Use allEvents for panning lookup so we can pan to events not in the filtered view
+  const selectedEvent = allEvents.find((e) => e.id === selectedEventId);
   const showLabels = zoom >= LABEL_ZOOM_THRESHOLD;
 
   return (

@@ -30,6 +30,14 @@ cd backend/db/scripts
 ./seed_mock_data.sh
 ```
 
+### Worktrees
+**Always use the setup script** to create worktrees (sets up independent ports, installs deps):
+```bash
+./scripts/setup-worktree.sh <branch-name> <port-offset>
+# Example: ./scripts/setup-worktree.sh my-feature 5  → frontend:5178, backend:8005
+```
+Do NOT use `git worktree add` directly.
+
 ## Architecture
 
 ### Stack Overview

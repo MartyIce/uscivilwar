@@ -17,10 +17,12 @@ const queryClient = new QueryClient({
 
 // Function to render the app
 async function enableMocking() {
-  // Enable MSW only if VITE_USE_MOCK_API is true (or not set in dev mode)
-  const useMockApi = import.meta.env.VITE_USE_MOCK_API !== 'false';
+  // Enable MSW if VITE_USE_MOCK_API is explicitly 'true', or if in dev mode and not explicitly 'false'
+  const useMockApi =
+    import.meta.env.VITE_USE_MOCK_API === 'true' ||
+    (import.meta.env.DEV && import.meta.env.VITE_USE_MOCK_API !== 'false');
 
-  if (import.meta.env.DEV && useMockApi) {
+  if (useMockApi) {
     const { worker } = await import('./mocks/browser');
 
     // Start the worker with options

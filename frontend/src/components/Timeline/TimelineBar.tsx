@@ -1,4 +1,4 @@
-import { useRef, useEffect, useMemo } from 'react';
+import { useRef, useEffect, useMemo, useState, useCallback } from 'react';
 import TimelineSlider from './TimelineSlider';
 import type { CivilWarEvent } from '../../types';
 
@@ -15,6 +15,16 @@ interface TimelineBarProps {
   onEventSelect?: (eventId: number) => void;
 }
 
+// Format date for display (hoisted - no component dependencies)
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
 export default function TimelineBar({
   startYear,
   endYear,
@@ -27,24 +37,48 @@ export default function TimelineBar({
   onPrevEvent,
   onEventSelect,
 }: TimelineBarProps) {
-  // Format date for display
-  const formatDate = (dateStr: string): string => {
-    const date = new Date(dateStr);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-  };
 
   const battleListRef = useRef<HTMLDivElement>(null);
 
+  // Scroll state for arrow buttons (combined to avoid double renders)
+  const [scrollState, setScrollState] = useState({ left: false, right: false });
+  const rafRef = useRef(0);
+
+  // Check scroll position to show/hide arrows (throttled via rAF)
+  const updateScrollIndicators = useCallback(() => {
+    cancelAnimationFrame(rafRef.current);
+    rafRef.current = requestAnimationFrame(() => {
+      const el = battleListRef.current;
+      if (el) {
+        setScrollState({
+          left: el.scrollLeft > 0,
+          right: el.scrollLeft < el.scrollWidth - el.clientWidth - 1,
+        });
+      }
+    });
+  }, []);
+
+  // Scroll left/right by a fixed amount
+  const scrollBy = useCallback((direction: 'left' | 'right') => {
+    const el = battleListRef.current;
+    if (el) {
+      const scrollAmount = 200;
+      el.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  }, []);
+
   // Calculate events by year for the density indicator
-  const eventsByYear: Record<number, number> = {};
-  events.forEach((event) => {
-    const year = parseInt(event.date_start.substring(0, 4));
-    eventsByYear[year] = (eventsByYear[year] || 0) + 1;
-  });
+  const eventsByYear = useMemo(() => {
+    const byYear: Record<number, number> = {};
+    events.forEach((event) => {
+      const year = parseInt(event.date_start.substring(0, 4));
+      byYear[year] = (byYear[year] || 0) + 1;
+    });
+    return byYear;
+  }, [events]);
 
   // Get top 20 battles sorted chronologically (only high-significance battles)
   const topBattles = useMemo(() => {
@@ -59,6 +93,19 @@ export default function TimelineBar({
       })
       .slice(0, 20);
   }, [events]);
+
+  // Update scroll indicators on mount and when battles change
+  useEffect(() => {
+    updateScrollIndicators();
+    const el = battleListRef.current;
+    if (el) {
+      el.addEventListener('scroll', updateScrollIndicators);
+      return () => {
+        el.removeEventListener('scroll', updateScrollIndicators);
+        cancelAnimationFrame(rafRef.current);
+      };
+    }
+  }, [topBattles, updateScrollIndicators]);
 
   // Find the index of the battle nearest to current date
   const nearestBattleIndex = useMemo(() => {
@@ -222,43 +269,86 @@ export default function TimelineBar({
       <div className="px-4 pb-2">
         <div className="flex items-center gap-2">
           <span className="text-xs text-gray-500 whitespace-nowrap">Major Battles:</span>
-          <div
-            ref={battleListRef}
-            className="flex-1 overflow-x-auto scrollbar-hide"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            <div className="flex gap-1.5 pb-1">
-              {topBattles.map((battle, idx) => {
-                const inWindow = isInWindow(battle.date_start);
-                const isNearest = idx === nearestBattleIndex;
-                const isPast = new Date(battle.date_start) <= new Date(currentDate);
 
-                return (
-                  <button
-                    key={battle.id}
-                    onClick={() => handleBattleClick(battle)}
-                    className={`
-                      px-2.5 py-1 rounded text-xs whitespace-nowrap transition-all
-                      ${isNearest
-                        ? 'bg-blue-500 text-white ring-2 ring-blue-300'
-                        : inWindow
-                        ? 'bg-blue-100 text-blue-800 hover:bg-blue-200'
-                        : isPast
-                        ? 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                        : 'bg-gray-50 text-gray-400 hover:bg-gray-100'
-                      }
-                    `}
-                    title={`${battle.name} - ${battle.date_start}${battle.result ? ` (${battle.result})` : ''}`}
-                  >
-                    {battle.name.replace('Battle of ', '').replace('Siege of ', '')}
-                    <span className="ml-1 opacity-60">
-                      {battle.date_start.substring(0, 4)}
-                    </span>
-                  </button>
-                );
-              })}
+          {/* Left scroll arrow */}
+          <button
+            onClick={() => scrollBy('left')}
+            className={`p-1 rounded transition-all ${
+              scrollState.left
+                ? 'text-gray-600 hover:bg-gray-200 hover:text-gray-900'
+                : 'text-gray-300 cursor-default'
+            }`}
+            disabled={!scrollState.left}
+            title="Scroll left"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div className="flex-1 relative overflow-hidden">
+            {/* Left fade indicator */}
+            {scrollState.left && (
+              <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            )}
+            {/* Right fade indicator */}
+            {scrollState.right && (
+              <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            )}
+            <div
+              ref={battleListRef}
+              className="overflow-x-auto scrollbar-hide"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              <div className="flex gap-1.5 pb-1">
+                {topBattles.map((battle, idx) => {
+                  const inWindow = isInWindow(battle.date_start);
+                  const isNearest = idx === nearestBattleIndex;
+                  const isPast = new Date(battle.date_start) <= new Date(currentDate);
+
+                  return (
+                    <button
+                      key={battle.id}
+                      onClick={() => handleBattleClick(battle)}
+                      className={`
+                        px-2.5 py-1 rounded text-xs whitespace-nowrap transition-all
+                        ${isNearest
+                          ? 'bg-blue-500 text-white ring-2 ring-blue-300'
+                          : inWindow
+                          ? 'bg-blue-100 text-blue-800 hover:bg-blue-200'
+                          : isPast
+                          ? 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                          : 'bg-gray-50 text-gray-400 hover:bg-gray-100'
+                        }
+                      `}
+                      title={`${battle.name} - ${battle.date_start}${battle.result ? ` (${battle.result})` : ''}`}
+                    >
+                      {battle.name.replace('Battle of ', '').replace('Siege of ', '')}
+                      <span className="ml-1 opacity-60">
+                        {battle.date_start.substring(0, 4)}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
+
+          {/* Right scroll arrow */}
+          <button
+            onClick={() => scrollBy('right')}
+            className={`p-1 rounded transition-all ${
+              scrollState.right
+                ? 'text-gray-600 hover:bg-gray-200 hover:text-gray-900'
+                : 'text-gray-300 cursor-default'
+            }`}
+            disabled={!scrollState.right}
+            title="Scroll right"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>

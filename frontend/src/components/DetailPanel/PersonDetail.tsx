@@ -1,19 +1,11 @@
 import { useState, useEffect } from 'react';
 import type { Person, Side } from '../../types';
+import { personNameToSlug } from '../../utils/slugs';
 
 interface PersonDetailProps {
   person: Person;
   onEventClick?: (eventId: number) => void;
   onSideClick?: (side: Side, personSlug?: string) => void;
-}
-
-// Convert name to slug format (e.g., "Ulysses S. Grant" -> "ulysses_grant")
-function nameToSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[.']/g, '') // Remove periods and apostrophes
-    .replace(/\s+/g, '_') // Replace spaces with underscores
-    .replace(/_+/g, '_'); // Collapse multiple underscores
 }
 
 // Format date for display
@@ -90,7 +82,7 @@ export default function PersonDetail({ person, onEventClick, onSideClick }: Pers
           <div className="flex flex-wrap gap-2 mt-2">
             {person.side && (
               <button
-                onClick={() => onSideClick?.(person.side as Side, nameToSlug(person.name))}
+                onClick={() => onSideClick?.(person.side as Side, personNameToSlug(person.name))}
                 className={`px-2 py-1 text-xs font-medium rounded ${getSideBadgeColor(person.side)} hover:ring-2 hover:ring-offset-1 ${
                   person.side === 'union' ? 'hover:ring-blue-400' : 'hover:ring-gray-400'
                 } transition-all cursor-pointer flex items-center gap-1`}

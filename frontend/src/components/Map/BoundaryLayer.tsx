@@ -1,7 +1,7 @@
 import { GeoJSON } from 'react-leaflet';
 import type { PathOptions } from 'leaflet';
 import type { Boundary, Side } from '../../types';
-import { useMemo } from 'react';
+import { useMemo, useRef, useEffect } from 'react';
 
 interface BoundaryLayerProps {
   boundaries: Boundary[];
@@ -46,6 +46,26 @@ function getBoundaryStyle(side: Side | null, isSelected: boolean): PathOptions {
 }
 
 export default function BoundaryLayer({ boundaries, onStateClick, selectedStateName }: BoundaryLayerProps) {
+  // Use ref for selectedStateName so event handlers always get current value
+  // without requiring GeoJSON remount (which causes visual artifacts)
+  const selectedStateRef = useRef(selectedStateName);
+  const geoJsonRef = useRef<L.GeoJSON | null>(null);
+
+  // Keep ref in sync with prop
+  useEffect(() => {
+    selectedStateRef.current = selectedStateName;
+    // Update styles on all layers when selection changes
+    if (geoJsonRef.current) {
+      geoJsonRef.current.eachLayer((layer: L.Layer) => {
+        const geoLayer = layer as L.Path & { feature?: GeoJSON.Feature };
+        if (geoLayer.feature?.properties?.name) {
+          const isSelected = geoLayer.feature.properties.name === selectedStateName;
+          geoLayer.setStyle(getBoundaryStyle(geoLayer.feature.properties.side as Side | null, isSelected));
+        }
+      });
+    }
+  }, [selectedStateName]);
+
   // Create a GeoJSON FeatureCollection from boundaries
   const geoJsonData = useMemo(() => {
     const features = boundaries
@@ -69,7 +89,7 @@ export default function BoundaryLayer({ boundaries, onStateClick, selectedStateN
   // Style each feature based on its properties and selection state
   const style = (feature: GeoJSON.Feature | undefined) => {
     if (!feature?.properties) return getBoundaryStyle(null, false);
-    const isSelected = feature.properties.name === selectedStateName;
+    const isSelected = feature.properties.name === selectedStateRef.current;
     return getBoundaryStyle(feature.properties.side as Side | null, isSelected);
   };
 
@@ -87,7 +107,8 @@ export default function BoundaryLayer({ boundaries, onStateClick, selectedStateN
         },
         mouseout: (e) => {
           const target = e.target;
-          const isSelected = feature.properties?.name === selectedStateName;
+          // Use ref to get current selected state
+          const isSelected = feature.properties?.name === selectedStateRef.current;
           target.setStyle(getBoundaryStyle(feature.properties?.side as Side | null, isSelected));
         },
         click: () => {
@@ -110,13 +131,14 @@ export default function BoundaryLayer({ boundaries, onStateClick, selectedStateN
     return null;
   }
 
-  // Use a stable key based on the data content and selection
-  // This prevents unmount/remount flashing when dragging the timeline
-  const dataKey = `${boundaries.map(b => b.id).join(',')}-${selectedStateName || ''}`;
+  // Stable key based only on boundary data, NOT selection state
+  // This prevents unmount/remount flashing when selecting states
+  const dataKey = boundaries.map(b => b.id).join(',');
 
   return (
     <GeoJSON
       key={dataKey}
+      ref={geoJsonRef}
       data={geoJsonData}
       style={style}
       onEachFeature={onEachFeature}
