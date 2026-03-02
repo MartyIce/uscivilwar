@@ -1,11 +1,11 @@
 import { Marker, Tooltip, useMap, useMapEvents } from 'react-leaflet';
 import { DivIcon } from 'leaflet';
 import type { CivilWarEvent, EventType } from '../../types';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface EventMarkersProps {
   events: CivilWarEvent[];
-  allEvents: CivilWarEvent[]; // All events for panning lookup (not filtered by date)
+  selectedEvent?: CivilWarEvent | null;
   selectedEventId: number | null;
   onEventSelect: (eventId: number) => void;
 }
@@ -106,7 +106,7 @@ const LABEL_ZOOM_THRESHOLD = 7;
 
 export default function EventMarkers({
   events,
-  allEvents,
+  selectedEvent,
   selectedEventId,
   onEventSelect,
 }: EventMarkersProps) {
@@ -122,13 +122,38 @@ export default function EventMarkers({
     (event) => event.location?.coordinates
   );
 
-  // Use allEvents for panning lookup so we can pan to events not in the filtered view
-  const selectedEvent = allEvents.find((e) => e.id === selectedEventId);
+  // Cache DivIcon instances to avoid re-creating them on every render.
+  // Leaflet checks reference equality, so new instances cause unnecessary DOM updates.
+  const iconCacheRef = useRef(new Map<string, DivIcon>());
+
+  // Prune stale cache entries when the event list changes
+  useEffect(() => {
+    const validIds = new Set(events.map(e => e.id));
+    const cache = iconCacheRef.current;
+    for (const key of cache.keys()) {
+      const eventId = parseInt(key.split('-')[0]);
+      if (!validIds.has(eventId)) {
+        cache.delete(key);
+      }
+    }
+  }, [events]);
+
+  function getCachedIcon(event: CivilWarEvent, isSelected: boolean): DivIcon {
+    const key = `${event.id}-${isSelected}`;
+    const cache = iconCacheRef.current;
+    let icon = cache.get(key);
+    if (!icon) {
+      icon = createMarkerIcon(event, isSelected);
+      cache.set(key, icon);
+    }
+    return icon;
+  }
+
   const showLabels = zoom >= LABEL_ZOOM_THRESHOLD;
 
   return (
     <>
-      <MapPanner event={selectedEvent} />
+      <MapPanner event={selectedEvent ?? undefined} />
       {eventsWithCoordinates.map((event) => {
         const { lat, lng } = event.location!.coordinates!;
         const isSelected = event.id === selectedEventId;
@@ -139,7 +164,7 @@ export default function EventMarkers({
           <Marker
             key={event.id}
             position={[lat, lng]}
-            icon={createMarkerIcon(event, isSelected)}
+            icon={getCachedIcon(event, isSelected)}
             eventHandlers={{
               click: () => onEventSelect(event.id),
             }}

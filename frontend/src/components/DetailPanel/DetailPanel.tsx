@@ -1,77 +1,11 @@
 import type { CivilWarEvent, Side } from '../../types';
 import { usePersonByName } from '../../hooks/usePeople';
+import { useCityByName, useStateByName, useBattleLookup } from '../../hooks/useReferenceData';
 import EventDetail from './EventDetail';
 import PersonDetail from './PersonDetail';
 import CityDetail from './CityDetail';
 import StateDetail from './StateDetail';
-import { getCityByName } from '../../mocks/data/cities';
-import { getStateByName } from '../../mocks/data/states';
-import { expandedEvents } from '../../mocks/data/events-expanded';
-
-// Navigation header with back/forward buttons
-function NavigationHeader({
-  canGoBack,
-  canGoForward,
-  onGoBack,
-  onGoForward,
-  onClose,
-}: {
-  canGoBack?: boolean;
-  canGoForward?: boolean;
-  onGoBack?: () => void;
-  onGoForward?: () => void;
-  onClose: () => void;
-}) {
-  const hasHistory = canGoBack || canGoForward;
-
-  return (
-    <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200 bg-gray-50">
-      <div className="flex items-center gap-1">
-        {hasHistory && (
-          <>
-            <button
-              onClick={onGoBack}
-              disabled={!canGoBack}
-              className={`p-1.5 rounded transition-colors ${
-                canGoBack
-                  ? 'text-gray-600 hover:bg-gray-200 hover:text-gray-900'
-                  : 'text-gray-300 cursor-not-allowed'
-              }`}
-              title="Go back"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
-              onClick={onGoForward}
-              disabled={!canGoForward}
-              className={`p-1.5 rounded transition-colors ${
-                canGoForward
-                  ? 'text-gray-600 hover:bg-gray-200 hover:text-gray-900'
-                  : 'text-gray-300 cursor-not-allowed'
-              }`}
-              title="Go forward"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </>
-        )}
-      </div>
-      <button
-        onClick={onClose}
-        className="p-1.5 rounded text-gray-500 hover:bg-gray-200 hover:text-gray-900 transition-colors"
-        title="Close"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-  );
-}
+import DetailPanelShell from './DetailPanelShell';
 
 interface DetailPanelProps {
   selectedEvent: CivilWarEvent | null;
@@ -106,67 +40,38 @@ export default function DetailPanel({
   onGoBack,
   onGoForward,
 }: DetailPanelProps) {
-  // Fetch person data when a person name is selected
+  // All hooks called unconditionally before any early returns
   const { data: selectedPerson, isLoading: personLoading } = usePersonByName(selectedPersonName);
+  const city = useCityByName(selectedCityName);
+  const state = useStateByName(selectedStateName);
+  const findBattle = useBattleLookup();
+
+  // Shared shell props
+  const shellProps = { canGoBack, canGoForward, onGoBack, onGoForward, onClose };
 
   // Show state detail if a state is selected (prioritize over event loading)
-  if (selectedStateName) {
-    const state = getStateByName(selectedStateName);
-    if (state) {
-      // Handler to find battle by name and navigate to it
-      const handleBattleClick = (battleName: string) => {
-        // Try to find the event by matching the name
-        const event = expandedEvents.find(e =>
-          e.name.toLowerCase().includes(battleName.toLowerCase()) ||
-          battleName.toLowerCase().includes(e.name.replace('Battle of ', '').replace('Siege of ', '').toLowerCase())
-        );
-        if (event && onEventClick) {
-          onEventClick(event.id);
-        }
-      };
+  if (selectedStateName && state) {
+    const handleBattleClick = (battleName: string) => {
+      const event = findBattle(battleName);
+      if (event && onEventClick) {
+        onEventClick(event.id);
+      }
+    };
 
-      return (
-        <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
-          {/* Navigation header */}
-          <NavigationHeader
-            canGoBack={canGoBack}
-            canGoForward={canGoForward}
-            onGoBack={onGoBack}
-            onGoForward={onGoForward}
-            onClose={onClose}
-          />
-
-          {/* State details */}
-          <div className="flex-1 overflow-y-auto">
-            <StateDetail state={state} onBattleClick={handleBattleClick} />
-          </div>
-        </div>
-      );
-    }
+    return (
+      <DetailPanelShell {...shellProps}>
+        <StateDetail state={state} onBattleClick={handleBattleClick} />
+      </DetailPanelShell>
+    );
   }
 
   // Show city detail if a city is selected (prioritize over event loading)
-  if (selectedCityName) {
-    const city = getCityByName(selectedCityName);
-    if (city) {
-      return (
-        <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
-          {/* Navigation header */}
-          <NavigationHeader
-            canGoBack={canGoBack}
-            canGoForward={canGoForward}
-            onGoBack={onGoBack}
-            onGoForward={onGoForward}
-            onClose={onClose}
-          />
-
-          {/* City details */}
-          <div className="flex-1 overflow-y-auto">
-            <CityDetail city={city} />
-          </div>
-        </div>
-      );
-    }
+  if (selectedCityName && city) {
+    return (
+      <DetailPanelShell {...shellProps}>
+        <CityDetail city={city} />
+      </DetailPanelShell>
+    );
   }
 
   // Show loading only for person/event fetches (not for state/city which are sync)
@@ -184,42 +89,20 @@ export default function DetailPanel({
   // Show person detail if a person is selected and found
   if (selectedPersonName && selectedPerson) {
     return (
-      <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
-        {/* Navigation header */}
-        <NavigationHeader
-          canGoBack={canGoBack}
-          canGoForward={canGoForward}
-          onGoBack={onGoBack}
-          onGoForward={onGoForward}
-          onClose={onClose}
+      <DetailPanelShell {...shellProps}>
+        <PersonDetail
+          person={selectedPerson}
+          onEventClick={onEventClick}
+          onSideClick={onSideClick}
         />
-
-        {/* Person details */}
-        <div className="flex-1 overflow-y-auto">
-          <PersonDetail
-            person={selectedPerson}
-            onEventClick={onEventClick}
-            onSideClick={onSideClick}
-          />
-        </div>
-      </div>
+      </DetailPanelShell>
     );
   }
 
   // Show "person not found" if person was selected but not in database
   if (selectedPersonName && !selectedPerson) {
     return (
-      <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
-        {/* Navigation header */}
-        <NavigationHeader
-          canGoBack={canGoBack}
-          canGoForward={canGoForward}
-          onGoBack={onGoBack}
-          onGoForward={onGoForward}
-          onClose={onClose}
-        />
-
-        {/* Person not found message */}
+      <DetailPanelShell {...shellProps}>
         <div className="flex-1 flex items-center justify-center p-8 text-center">
           <div>
             <div className="w-20 h-20 mx-auto bg-gray-200 rounded-full flex items-center justify-center mb-4">
@@ -233,7 +116,7 @@ export default function DetailPanel({
             </p>
           </div>
         </div>
-      </div>
+      </DetailPanelShell>
     );
   }
 
@@ -268,20 +151,8 @@ export default function DetailPanel({
   }
 
   return (
-    <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
-      {/* Navigation header */}
-      <NavigationHeader
-        canGoBack={canGoBack}
-        canGoForward={canGoForward}
-        onGoBack={onGoBack}
-        onGoForward={onGoForward}
-        onClose={onClose}
-      />
-
-      {/* Event details */}
-      <div className="flex-1 overflow-y-auto">
-        <EventDetail event={selectedEvent} onDeepDive={onDeepDive} onPersonClick={onPersonClick} />
-      </div>
-    </div>
+    <DetailPanelShell {...shellProps}>
+      <EventDetail event={selectedEvent} onDeepDive={onDeepDive} onPersonClick={onPersonClick} />
+    </DetailPanelShell>
   );
 }

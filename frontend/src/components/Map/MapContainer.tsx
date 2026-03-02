@@ -8,7 +8,7 @@ import type { CivilWarEvent, Boundary, ArmyMovement } from '../../types';
 
 interface MapContainerProps {
   events: CivilWarEvent[];
-  allEvents?: CivilWarEvent[]; // All events for panning lookup (not filtered by date)
+  selectedEvent?: CivilWarEvent | null;
   boundaries: Boundary[];
   selectedEventId: number | null;
   onEventSelect: (eventId: number) => void;
@@ -29,7 +29,7 @@ const DEFAULT_ZOOM = 4;
 
 export default function MapContainer({
   events,
-  allEvents,
+  selectedEvent,
   boundaries,
   selectedEventId,
   onEventSelect,
@@ -86,7 +86,7 @@ export default function MapContainer({
       {/* Event markers */}
       <EventMarkers
         events={events}
-        allEvents={allEvents || events}
+        selectedEvent={selectedEvent}
         selectedEventId={selectedEventId}
         onEventSelect={onEventSelect}
       />

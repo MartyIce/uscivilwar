@@ -49,18 +49,24 @@ export default function BoundaryLayer({ boundaries, onStateClick, selectedStateN
   // Use ref for selectedStateName so event handlers always get current value
   // without requiring GeoJSON remount (which causes visual artifacts)
   const selectedStateRef = useRef(selectedStateName);
+  const prevSelectedRef = useRef<string | null | undefined>(undefined);
   const geoJsonRef = useRef<L.GeoJSON | null>(null);
 
-  // Keep ref in sync with prop
+  // Keep ref in sync with prop, only restyle the two affected layers
   useEffect(() => {
+    const prevSelected = prevSelectedRef.current;
     selectedStateRef.current = selectedStateName;
-    // Update styles on all layers when selection changes
-    if (geoJsonRef.current) {
+    prevSelectedRef.current = selectedStateName;
+
+    if (geoJsonRef.current && prevSelected !== selectedStateName) {
       geoJsonRef.current.eachLayer((layer: L.Layer) => {
         const geoLayer = layer as L.Path & { feature?: GeoJSON.Feature };
-        if (geoLayer.feature?.properties?.name) {
-          const isSelected = geoLayer.feature.properties.name === selectedStateName;
-          geoLayer.setStyle(getBoundaryStyle(geoLayer.feature.properties.side as Side | null, isSelected));
+        const props = geoLayer.feature?.properties;
+        if (!props?.name) return;
+        // Only update the previously selected and newly selected layers
+        if (props.name === prevSelected || props.name === selectedStateName) {
+          const isSelected = props.name === selectedStateName;
+          geoLayer.setStyle(getBoundaryStyle(props.side as Side | null, isSelected));
         }
       });
     }

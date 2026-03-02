@@ -303,7 +303,7 @@ function App() {
           ) : (
             <MapContainer
               events={filteredEvents}
-              allEvents={allEvents}
+              selectedEvent={selectedEvent}
               boundaries={stateBoundaries}
               selectedEventId={selectedEventId}
               onEventSelect={handleEventSelect}
