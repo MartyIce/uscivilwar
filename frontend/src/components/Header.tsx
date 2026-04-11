@@ -13,7 +13,7 @@ export default function Header({ onToggleFilters, showFilters }: HeaderProps) {
       {/* Banner image */}
       <div className="w-full overflow-hidden bg-slate-900 flex justify-center">
         <img
-          src="/header-banner.jpg"
+          src={`${import.meta.env.BASE_URL}header-banner.jpg`}
           alt="The American Civil War: A Nation Divided, 1861-1865"
           className="h-16 sm:h-20 md:h-24 w-auto object-contain"
         />
