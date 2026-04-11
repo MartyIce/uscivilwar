@@ -255,13 +255,6 @@ export default function TimelineBar({
               onDateChange={onDateChange}
             />
           </div>
-
-          {/* Year labels */}
-          <div className="flex gap-4 text-sm text-gray-500">
-            <span>{startYear}</span>
-            <span>-</span>
-            <span>{endYear}</span>
-          </div>
         </div>
       </div>
 
