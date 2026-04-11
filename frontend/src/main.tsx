@@ -27,6 +27,9 @@ async function enableMocking() {
 
     // Start the worker with options
     return worker.start({
+      serviceWorker: {
+        url: `${import.meta.env.BASE_URL}mockServiceWorker.js`,
+      },
       onUnhandledRequest: 'bypass', // Don't warn about unhandled requests
     });
   }
