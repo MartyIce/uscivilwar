@@ -21,11 +21,10 @@ interface MapContainerProps {
   selectedCityName?: string | null;
   onStateClick?: (stateName: string) => void;
   selectedStateName?: string | null;
+  /** Initial map view (from the topic config) */
+  center: LatLngExpression;
+  zoom: number;
 }
-
-// Center of continental US
-const US_CENTER: LatLngExpression = [39, -98];
-const DEFAULT_ZOOM = 4;
 
 export default function MapContainer({
   events,
@@ -42,11 +41,13 @@ export default function MapContainer({
   selectedCityName,
   onStateClick,
   selectedStateName,
+  center,
+  zoom,
 }: MapContainerProps) {
   return (
     <LeafletMapContainer
-      center={US_CENTER}
-      zoom={DEFAULT_ZOOM}
+      center={center}
+      zoom={zoom}
       className="h-full w-full"
       zoomControl={false}
       minZoom={3}

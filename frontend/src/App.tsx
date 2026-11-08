@@ -11,7 +11,8 @@ import BattleDeepView from './components/BattleDeep/BattleDeepView';
 import OrgChart from './components/OrgChart/OrgChart';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useNavigationHistory } from './hooks/useNavigationHistory';
-import { armyMovements, stateBoundaries, expandedPeople } from './data';
+import { armyMovements, expandedPeople } from './data';
+import type { TopicConfig } from './topics';
 import { hasBattleDeepData } from './hooks/useBattleDeep';
 import { eventNameToSlug, personNameToSlug, personMatchesSlug, slugToDisplayName } from './utils/slugs';
 import { parseUrlState, buildSearch, hasSelection, type UrlState } from './utils/urlState';
@@ -30,15 +31,13 @@ const ALL_EVENT_TYPES: EventType[] = [
   'election',
 ];
 
-// Default date range for the Civil War
-const DEFAULT_DATE_RANGE = {
-  from: '1861-01-01',
-  to: '1865-12-31',
-};
+interface AppProps {
+  topic: TopicConfig;
+  topics: TopicConfig[];
+  onTopicChange: (id: string) => void;
+}
 
-const DEFAULT_START_DATE = '1861-04-12';
-
-function App() {
+function App({ topic, topics, onTopicChange }: AppProps) {
   // UI state
   const [showFilters, setShowFilters] = useState(false);
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
@@ -51,7 +50,7 @@ function App() {
   );
   const [orgChartSide, setOrgChartSide] = useState<Side | null>(initialUrl.org ?? null);
   const [orgChartHighlightedPerson, setOrgChartHighlightedPerson] = useState<string | undefined>(undefined);
-  const [currentDate, setCurrentDate] = useState(initialUrl.date ?? DEFAULT_START_DATE); // Start at Fort Sumter
+  const [currentDate, setCurrentDate] = useState(initialUrl.date ?? topic.startDate);
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Navigation history for detail panel
@@ -73,7 +72,7 @@ function App() {
 
   // Filter state
   const [selectedTypes, setSelectedTypes] = useState<EventType[]>(ALL_EVENT_TYPES);
-  const [dateRange, setDateRange] = useState(DEFAULT_DATE_RANGE);
+  const [dateRange, setDateRange] = useState(topic.dateRange);
   const [selectedTheater, setSelectedTheater] = useState<string | null>(null);
 
   // Fetch data
@@ -131,9 +130,9 @@ function App() {
   // Handle filter reset
   const handleFilterReset = useCallback(() => {
     setSelectedTypes(ALL_EVENT_TYPES);
-    setDateRange(DEFAULT_DATE_RANGE);
+    setDateRange(topic.dateRange);
     setSelectedTheater(null);
-  }, []);
+  }, [topic.dateRange]);
 
   // Handle event selection (from map or person detail)
   const handleEventSelect = useCallback((eventId: number) => {
@@ -174,7 +173,7 @@ function App() {
     [eventsData?.data, handleEventSelect, navHistory]
   );
 
-  // First load: apply the URL, or select Fort Sumter when the URL selects nothing.
+  // First load: apply the URL, or select the topic's default event when the URL selects nothing.
   // Waits for events when it needs them; URL syncing starts once this has run.
   const [urlReady, setUrlReady] = useState(false);
   useEffect(() => {
@@ -183,13 +182,15 @@ function App() {
     if ((initialUrl.event || useDefault) && !eventsData?.data?.length) return;
 
     if (useDefault) {
-      const sumter = eventsData?.data?.find((e) => e.name.includes('Fort Sumter'));
-      if (sumter) handleEventSelect(sumter.id);
+      const defaultEvent = topic.defaultEventSlug
+        ? eventsData?.data?.find((e) => eventNameToSlug(e.name) === topic.defaultEventSlug)
+        : undefined;
+      if (defaultEvent) handleEventSelect(defaultEvent.id);
     } else {
       applyUrlSelection(initialUrl);
     }
     setUrlReady(true);
-  }, [urlReady, initialUrl, eventsData?.data, handleEventSelect, applyUrlSelection]);
+  }, [urlReady, initialUrl, topic.defaultEventSlug, eventsData?.data, handleEventSelect, applyUrlSelection]);
 
   // Current selection as URL state
   const selectedEventSlug = useMemo(() => {
@@ -222,7 +223,7 @@ function App() {
 
     const selectionSearch = buildSearch(selectionUrlState);
     const date =
-      !hasSelection(selectionUrlState) && currentDate !== DEFAULT_START_DATE
+      !hasSelection(selectionUrlState) && currentDate !== topic.startDate
         ? currentDate
         : undefined;
     const search = buildSearch({ ...selectionUrlState, date });
@@ -231,7 +232,7 @@ function App() {
       return;
     }
 
-    const url = `${window.location.pathname}${search}`;
+    const url = `/${topic.id}${search}`;
     const selectionChanged =
       lastSelectionSearch.current !== null && selectionSearch !== lastSelectionSearch.current;
     lastSelectionSearch.current = selectionSearch;
@@ -242,7 +243,7 @@ function App() {
     // Date-only change (e.g. autoplay): debounce so browsers don't throttle replaceState
     const timer = setTimeout(() => window.history.replaceState(null, '', url), 400);
     return () => clearTimeout(timer);
-  }, [urlReady, selectionUrlState, selectedEventId, selectedEventSlug, currentDate]);
+  }, [urlReady, topic.id, topic.startDate, selectionUrlState, selectedEventId, selectedEventSlug, currentDate]);
 
   // Browser back/forward: re-apply the URL to the app state
   useEffect(() => {
@@ -389,7 +390,13 @@ function App() {
   return (
     <div className="h-screen flex flex-col bg-gray-100">
       {/* Header */}
-      <Header onToggleFilters={() => setShowFilters(!showFilters)} showFilters={showFilters} />
+      <Header
+        onToggleFilters={() => setShowFilters(!showFilters)}
+        showFilters={showFilters}
+        topic={topic}
+        topics={topics}
+        onTopicChange={onTopicChange}
+      />
 
       {/* Main content area */}
       <div className="flex-1 flex overflow-hidden">
@@ -399,6 +406,7 @@ function App() {
             selectedTypes={selectedTypes}
             onTypeToggle={handleTypeToggle}
             dateRange={dateRange}
+            fullDateRange={topic.dateRange}
             onDateRangeChange={setDateRange}
             selectedTheater={selectedTheater}
             onTheaterChange={setSelectedTheater}
@@ -419,7 +427,9 @@ function App() {
             <MapContainer
               events={filteredEvents}
               selectedEvent={selectedEvent}
-              boundaries={stateBoundaries}
+              boundaries={topic.boundaries}
+              center={topic.mapView.center}
+              zoom={topic.mapView.zoom}
               selectedEventId={selectedEventId}
               onEventSelect={handleEventSelect}
               currentDate={currentDate}
@@ -582,8 +592,8 @@ function App() {
 
       {/* Timeline bar */}
       <TimelineBar
-        startYear={1861}
-        endYear={1865}
+        startYear={Number(topic.dateRange.from.slice(0, 4))}
+        endYear={Number(topic.dateRange.to.slice(0, 4))}
         currentDate={currentDate}
         onDateChange={setCurrentDate}
         events={allEvents}

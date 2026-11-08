@@ -1,11 +1,22 @@
 import { useState } from 'react';
+import TopicSwitcher from './TopicSwitcher';
+import type { TopicConfig } from '../topics';
 
 interface HeaderProps {
   onToggleFilters: () => void;
   showFilters: boolean;
+  topic: TopicConfig;
+  topics: TopicConfig[];
+  onTopicChange: (id: string) => void;
 }
 
-export default function Header({ onToggleFilters, showFilters }: HeaderProps) {
+export default function Header({
+  onToggleFilters,
+  showFilters,
+  topic,
+  topics,
+  onTopicChange,
+}: HeaderProps) {
   const [showInfoModal, setShowInfoModal] = useState(false);
 
   return (
@@ -13,15 +24,17 @@ export default function Header({ onToggleFilters, showFilters }: HeaderProps) {
       {/* Banner image */}
       <div className="w-full overflow-hidden bg-slate-900 flex justify-center">
         <img
-          src={`${import.meta.env.BASE_URL}header-banner.jpg`}
-          alt="The American Civil War: A Nation Divided, 1861-1865"
+          src={`${import.meta.env.BASE_URL}${topic.bannerUrl}`}
+          alt={topic.bannerAlt}
           className="h-16 sm:h-20 md:h-24 w-auto object-contain"
         />
       </div>
 
       <div className="px-4 py-2 flex items-center justify-between">
-        {/* Left spacer for balance */}
-        <div className="flex-1" />
+        {/* Left: topic switcher (hidden with a single topic) */}
+        <div className="flex-1">
+          <TopicSwitcher topics={topics} currentId={topic.id} onChange={onTopicChange} />
+        </div>
 
         {/* Right: Controls */}
         <div className="flex items-center gap-2">
@@ -93,8 +106,7 @@ export default function Header({ onToggleFilters, showFilters }: HeaderProps) {
 
               <div className="space-y-4 text-sm text-gray-600">
                 <p>
-                  An interactive map exploring the American Civil War (1861-1865).
-                  Navigate through time to see battles, movements, and key figures.
+                  {topic.description}
                 </p>
 
                 <div>

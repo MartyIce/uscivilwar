@@ -4,6 +4,8 @@ interface FilterSidebarProps {
   selectedTypes: EventType[];
   onTypeToggle: (type: EventType) => void;
   dateRange: { from: string; to: string };
+  /** The topic's full date span (the default and the limits for the inputs) */
+  fullDateRange: { from: string; to: string };
   onDateRangeChange: (range: { from: string; to: string }) => void;
   selectedTheater: string | null;
   onTheaterChange: (theater: string | null) => void;
@@ -33,6 +35,7 @@ export default function FilterSidebar({
   selectedTypes,
   onTypeToggle,
   dateRange,
+  fullDateRange,
   onDateRangeChange,
   selectedTheater,
   onTheaterChange,
@@ -40,8 +43,8 @@ export default function FilterSidebar({
 }: FilterSidebarProps) {
   const hasActiveFilters =
     selectedTypes.length < EVENT_TYPES.length ||
-    dateRange.from !== '1861-01-01' ||
-    dateRange.to !== '1865-12-31' ||
+    dateRange.from !== fullDateRange.from ||
+    dateRange.to !== fullDateRange.to ||
     selectedTheater !== null;
 
   return (
@@ -124,8 +127,8 @@ export default function FilterSidebar({
                 onChange={(e) =>
                   onDateRangeChange({ ...dateRange, from: e.target.value })
                 }
-                min="1861-01-01"
-                max="1865-12-31"
+                min={fullDateRange.from}
+                max={fullDateRange.to}
                 className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -137,8 +140,8 @@ export default function FilterSidebar({
                 onChange={(e) =>
                   onDateRangeChange({ ...dateRange, to: e.target.value })
                 }
-                min="1861-01-01"
-                max="1865-12-31"
+                min={fullDateRange.from}
+                max={fullDateRange.to}
                 className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
