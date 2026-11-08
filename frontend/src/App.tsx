@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import Header from './components/Header';
 import MapContainer from './components/Map/MapContainer';
 import DetailPanel from './components/DetailPanel/DetailPanel';
@@ -134,6 +134,17 @@ function App() {
       setCurrentDate(event.date_start);
     }
   }, [navHistory, eventsData?.data]);
+
+  // On first load, select Fort Sumter so it is highlighted and its details show
+  const hasAutoSelectedInitialEvent = useRef(false);
+  useEffect(() => {
+    if (hasAutoSelectedInitialEvent.current || !eventsData?.data?.length) return;
+    const sumter = eventsData.data.find((e) => e.name.includes('Fort Sumter'));
+    if (sumter) {
+      hasAutoSelectedInitialEvent.current = true;
+      handleEventSelect(sumter.id);
+    }
+  }, [eventsData?.data, handleEventSelect]);
 
   // Handle detail panel close
   const handleDetailClose = useCallback(() => {
