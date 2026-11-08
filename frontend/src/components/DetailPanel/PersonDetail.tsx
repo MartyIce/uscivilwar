@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { Person, Side } from '../../types';
 import { personNameToSlug } from '../../utils/slugs';
+import { parseLocalDate } from '../../utils/dates';
 
 interface PersonDetailProps {
   person: Person;
@@ -11,7 +12,7 @@ interface PersonDetailProps {
 // Format date for display
 function formatDate(dateStr: string | null): string {
   if (!dateStr) return 'Unknown';
-  const date = new Date(dateStr);
+  const date = parseLocalDate(dateStr);
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',

@@ -1,4 +1,5 @@
 import type { StateData } from '../../mocks/data/states';
+import { parseLocalDate } from '../../utils/dates';
 
 interface StateDetailProps {
   state: StateData;
@@ -22,7 +23,7 @@ function formatNumber(num: number): string {
 
 function formatDate(dateStr: string | undefined): string {
   if (!dateStr) return 'N/A';
-  const date = new Date(dateStr);
+  const date = parseLocalDate(dateStr);
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',

@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import type { CivilWarEvent } from '../../types';
 import { getDeepDiveId } from '../../hooks/useBattleDeep';
 import DeepDiveBadge from '../common/DeepDiveBadge';
+import { parseLocalDate } from '../../utils/dates';
 
 interface BattlesBrowserProps {
   isOpen: boolean;
@@ -21,7 +22,7 @@ function getResultCategory(result: string | null): Exclude<ResultFilter, 'all'> 
 }
 
 function formatDate(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString('en-US', {
+  return parseLocalDate(dateStr).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',

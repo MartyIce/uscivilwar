@@ -1,6 +1,7 @@
 import type { CivilWarEvent, CasualtyStats } from '../../types';
 import { getDeepDiveId } from '../../hooks/useBattleDeep';
 import { useWikipediaImage } from '../../hooks/useWikipediaImage';
+import { parseLocalDate } from '../../utils/dates';
 
 interface EventDetailProps {
   event: CivilWarEvent;
@@ -10,7 +11,7 @@ interface EventDetailProps {
 
 // Format date for display
 function formatDate(dateStr: string): string {
-  const date = new Date(dateStr);
+  const date = parseLocalDate(dateStr);
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',

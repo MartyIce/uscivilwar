@@ -6,6 +6,7 @@ import {
   findPersonFirstAppearance,
   type MilitaryPosition,
 } from '../../data/militaryHierarchy';
+import { parseLocalDate } from '../../utils/dates';
 
 interface OrgChartProps {
   side: Side;
@@ -168,7 +169,7 @@ export default function OrgChart({ side, initialDate, highlightedPersonSlug, onP
   const sliderColor = side === 'union' ? 'accent-blue-600' : 'accent-gray-600';
 
   // Format date for display
-  const formattedDate = new Date(currentDate).toLocaleDateString('en-US', {
+  const formattedDate = parseLocalDate(currentDate).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',

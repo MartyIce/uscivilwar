@@ -3,6 +3,7 @@ import { getDeepDiveId } from '../../hooks/useBattleDeep';
 import DeepDiveBadge from '../common/DeepDiveBadge';
 import TimelineSlider from './TimelineSlider';
 import type { CivilWarEvent } from '../../types';
+import { parseLocalDate } from '../../utils/dates';
 
 interface TimelineBarProps {
   startYear: number;
@@ -19,7 +20,7 @@ interface TimelineBarProps {
 
 // Format date for display (hoisted - no component dependencies)
 function formatDate(dateStr: string): string {
-  const date = new Date(dateStr);
+  const date = parseLocalDate(dateStr);
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
