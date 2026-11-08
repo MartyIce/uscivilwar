@@ -6,6 +6,7 @@ import TimelineBar from './components/Timeline/TimelineBar';
 import FilterSidebar from './components/Filters/FilterSidebar';
 import CommanderSelector from './components/CommanderTracker/CommanderSelector';
 import PeopleBrowser from './components/PeopleBrowser/PeopleBrowser';
+import BattlesBrowser from './components/BattlesBrowser/BattlesBrowser';
 import BattleDeepView from './components/BattleDeep/BattleDeepView';
 import OrgChart from './components/OrgChart/OrgChart';
 import { useEvents, useEvent } from './hooks/useEvents';
@@ -37,6 +38,7 @@ function App() {
   const [showFilters, setShowFilters] = useState(false);
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
+  const [showBattlesBrowser, setShowBattlesBrowser] = useState(false);
   const [deepBattleId, setDeepBattleId] = useState<string | null>(null);
   const [orgChartSide, setOrgChartSide] = useState<Side | null>(null);
   const [orgChartHighlightedPerson, setOrgChartHighlightedPerson] = useState<string | undefined>(undefined);
@@ -383,9 +385,41 @@ function App() {
             onClose={() => setShowCommanderSelector(false)}
           />
 
+          {/* Battles browser button */}
+          <button
+            onClick={() => {
+              setShowBattlesBrowser(!showBattlesBrowser);
+              setShowPeopleBrowser(false);
+            }}
+            className={`absolute top-4 right-32 z-[1000] px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
+              showBattlesBrowser
+                ? 'bg-amber-600 text-white hover:bg-amber-700'
+                : 'bg-white text-gray-700 hover:bg-gray-50'
+            }`}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+            </svg>
+            <span className="text-sm font-medium">Battles</span>
+          </button>
+
+          <BattlesBrowser
+            isOpen={showBattlesBrowser}
+            events={eventsData?.data ?? []}
+            selectedEventId={selectedEventId}
+            onClose={() => setShowBattlesBrowser(false)}
+            onEventSelect={(id) => {
+              handleEventSelect(id);
+              setShowBattlesBrowser(false);
+            }}
+          />
+
           {/* People browser button */}
           <button
-            onClick={() => setShowPeopleBrowser(!showPeopleBrowser)}
+            onClick={() => {
+              setShowPeopleBrowser(!showPeopleBrowser);
+              setShowBattlesBrowser(false);
+            }}
             className={`absolute top-4 right-4 z-[1000] px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
               showPeopleBrowser
                 ? 'bg-amber-600 text-white hover:bg-amber-700'
