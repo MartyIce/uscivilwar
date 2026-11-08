@@ -136,4 +136,21 @@ export function hasBattleDeepData(battleId: string): boolean {
   return battleId in battleRegistry;
 }
 
+// Map event names to deep battle IDs (add more as deep dives are added)
+const eventNameToDeepId: Record<string, string> = {
+  gettysburg: 'gettysburg',
+};
+
+/**
+ * Return the deep-dive battle ID for an event name, or null if the event has
+ * no deep dive data available.
+ */
+export function getDeepDiveId(eventName: string): string | null {
+  const lower = eventName.toLowerCase();
+  for (const [needle, id] of Object.entries(eventNameToDeepId)) {
+    if (lower.includes(needle) && hasBattleDeepData(id)) return id;
+  }
+  return null;
+}
+
 export type { BattleDeepData, TimelineSnapshot };

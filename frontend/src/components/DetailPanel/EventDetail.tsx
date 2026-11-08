@@ -1,34 +1,11 @@
 import type { CivilWarEvent, CasualtyStats } from '../../types';
-import { hasBattleDeepData } from '../../hooks/useBattleDeep';
+import { getDeepDiveId } from '../../hooks/useBattleDeep';
 import { useWikipediaImage } from '../../hooks/useWikipediaImage';
 
 interface EventDetailProps {
   event: CivilWarEvent;
   onDeepDive?: (battleId: string) => void;
   onPersonClick?: (personName: string) => void;
-}
-
-// Map event names to deep battle IDs
-function getBattleDeepId(eventName: string): string | null {
-  const nameToId: Record<string, string> = {
-    'Battle of Gettysburg': 'gettysburg',
-    'Gettysburg': 'gettysburg',
-    // Add more mappings as we add more battles
-  };
-
-  // Check direct mapping first
-  if (nameToId[eventName]) {
-    return nameToId[eventName];
-  }
-
-  // Check if name contains a known battle
-  for (const [name, id] of Object.entries(nameToId)) {
-    if (eventName.toLowerCase().includes(name.toLowerCase())) {
-      return id;
-    }
-  }
-
-  return null;
 }
 
 // Format date for display
@@ -92,8 +69,8 @@ export default function EventDetail({ event, onDeepDive, onPersonClick }: EventD
   const imageUrl = wikipediaImage || event.image_url;
 
   // Check if this battle has deep dive data
-  const deepBattleId = getBattleDeepId(event.name);
-  const hasDeepDive = deepBattleId && hasBattleDeepData(deepBattleId);
+  const deepBattleId = getDeepDiveId(event.name);
+  const hasDeepDive = !!deepBattleId;
 
   return (
     <div className="relative">

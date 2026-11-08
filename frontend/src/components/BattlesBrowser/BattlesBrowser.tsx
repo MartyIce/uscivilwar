@@ -1,5 +1,7 @@
 import { useState, useMemo } from 'react';
 import type { CivilWarEvent } from '../../types';
+import { getDeepDiveId } from '../../hooks/useBattleDeep';
+import DeepDiveBadge from '../common/DeepDiveBadge';
 
 interface BattlesBrowserProps {
   isOpen: boolean;
@@ -156,7 +158,12 @@ export default function BattlesBrowser({
                     }`}
                   />
                   <div className="flex-1 min-w-0">
-                    <div className="font-medium text-blue-600 truncate">{event.name}</div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-medium text-blue-600 truncate">{event.name}</span>
+                      {getDeepDiveId(event.name) && (
+                        <DeepDiveBadge variant="label" className="flex-shrink-0" />
+                      )}
+                    </div>
                     <div className="text-sm text-gray-500">
                       {formatDate(event.date_start)}
                       {event.location &&

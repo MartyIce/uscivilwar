@@ -1,4 +1,6 @@
 import { useRef, useEffect, useMemo, useState, useCallback } from 'react';
+import { getDeepDiveId } from '../../hooks/useBattleDeep';
+import DeepDiveBadge from '../common/DeepDiveBadge';
 import TimelineSlider from './TimelineSlider';
 import type { CivilWarEvent } from '../../types';
 
@@ -314,12 +316,15 @@ export default function TimelineBar({
                           : 'bg-gray-50 text-gray-400 hover:bg-gray-100'
                         }
                       `}
-                      title={`${battle.name} - ${battle.date_start}${battle.result ? ` (${battle.result})` : ''}`}
+                      title={`${battle.name} - ${battle.date_start}${battle.result ? ` (${battle.result})` : ''}${getDeepDiveId(battle.name) ? ' · Deep dive available' : ''}`}
                     >
                       {battle.name.replace('Battle of ', '').replace('Siege of ', '')}
                       <span className="ml-1 opacity-60">
                         {battle.date_start.substring(0, 4)}
                       </span>
+                      {getDeepDiveId(battle.name) && (
+                        <DeepDiveBadge className="ml-1 align-middle text-amber-500" />
+                      )}
                     </button>
                   );
                 })}
