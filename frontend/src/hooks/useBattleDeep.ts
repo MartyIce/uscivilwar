@@ -1,16 +1,45 @@
-import { useState, useMemo, useCallback } from 'react';
-import { gettysburgDeep, type BattleDeepData, type TimelineSnapshot } from '../data/battles/gettysburg-deep';
+import { useState, useEffect, useMemo, useCallback } from 'react';
+import { gettysburgDeep } from '../data/battles/gettysburg-deep';
+import {
+  normalizeLiteBattle,
+  type BattleDeepData,
+  type LiteBattleData,
+  type TimelineSnapshot,
+} from '../data/battles/types';
+import { eventNameToSlug } from '../utils/slugs';
 
-// Registry of deep battle data
+// Full (hand-built) deep battle data, bundled with the app
 const battleRegistry: Record<string, BattleDeepData> = {
   gettysburg: gettysburgDeep,
 };
+
+// Lite battles: src/data/battles/lite/<slug>.json, loaded on demand
+const liteLoaders = import.meta.glob<{ default: LiteBattleData }>('../data/battles/lite/*.json');
+const liteIdToPath: Record<string, string> = Object.fromEntries(
+  Object.keys(liteLoaders).map((path) => [path.match(/([^/]+)\.json$/)![1], path])
+);
 
 /**
  * Hook to access deep battle data and navigate through the timeline
  */
 export function useBattleDeep(battleId: string) {
-  const battle = battleRegistry[battleId];
+  const [lazyBattle, setLazyBattle] = useState<{ id: string; data: BattleDeepData } | null>(null);
+
+  // Lite battles are loaded on demand (each is its own chunk)
+  useEffect(() => {
+    const load = liteLoaders[liteIdToPath[battleId]];
+    if (battleRegistry[battleId] || !load) return;
+    let cancelled = false;
+    load().then((mod) => {
+      if (!cancelled) setLazyBattle({ id: battleId, data: normalizeLiteBattle(mod.default) });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [battleId]);
+
+  const battle =
+    battleRegistry[battleId] ?? (lazyBattle?.id === battleId ? lazyBattle.data : undefined);
 
   const [currentSnapshotIndex, setCurrentSnapshotIndex] = useState(0);
 
@@ -63,6 +92,10 @@ export function useBattleDeep(battleId: string) {
   // Lookup a unit by ID in the order of battle
   const findUnit = useCallback((unitId: string) => {
     if (!battle) return null;
+
+    // Lite battles have a flat unit list
+    const liteUnit = battle.units?.find((u) => u.id === unitId);
+    if (liteUnit) return liteUnit;
 
     // Search through both forces
     for (const side of ['union', 'confederate'] as const) {
@@ -133,24 +166,17 @@ export function useAvailableDeepBattles() {
  * Check if a battle has deep data available
  */
 export function hasBattleDeepData(battleId: string): boolean {
-  return battleId in battleRegistry;
+  return battleId in battleRegistry || battleId in liteIdToPath;
 }
-
-// Map event names to deep battle IDs (add more as deep dives are added)
-const eventNameToDeepId: Record<string, string> = {
-  gettysburg: 'gettysburg',
-};
 
 /**
  * Return the deep-dive battle ID for an event name, or null if the event has
- * no deep dive data available.
+ * no deep dive data. The ID is the event's slug ("Battle of Shiloh" -> "shiloh"),
+ * which is also the lite JSON file name.
  */
 export function getDeepDiveId(eventName: string): string | null {
-  const lower = eventName.toLowerCase();
-  for (const [needle, id] of Object.entries(eventNameToDeepId)) {
-    if (lower.includes(needle) && hasBattleDeepData(id)) return id;
-  }
-  return null;
+  const id = eventNameToSlug(eventName);
+  return hasBattleDeepData(id) ? id : null;
 }
 
 export type { BattleDeepData, TimelineSnapshot };
