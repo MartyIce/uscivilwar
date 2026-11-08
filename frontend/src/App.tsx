@@ -11,7 +11,10 @@ import BattleDeepView from './components/BattleDeep/BattleDeepView';
 import OrgChart from './components/OrgChart/OrgChart';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useNavigationHistory } from './hooks/useNavigationHistory';
-import { armyMovements, stateBoundaries } from './data';
+import { armyMovements, stateBoundaries, expandedPeople } from './data';
+import { hasBattleDeepData } from './hooks/useBattleDeep';
+import { eventNameToSlug, personNameToSlug, personMatchesSlug, slugToDisplayName } from './utils/slugs';
+import { parseUrlState, buildSearch, hasSelection, type UrlState } from './utils/urlState';
 import type { EventType, Side } from './types';
 import './App.css';
 
@@ -33,16 +36,22 @@ const DEFAULT_DATE_RANGE = {
   to: '1865-12-31',
 };
 
+const DEFAULT_START_DATE = '1861-04-12';
+
 function App() {
   // UI state
   const [showFilters, setShowFilters] = useState(false);
   const [showCommanderSelector, setShowCommanderSelector] = useState(false);
   const [showPeopleBrowser, setShowPeopleBrowser] = useState(false);
   const [showBattlesBrowser, setShowBattlesBrowser] = useState(false);
-  const [deepBattleId, setDeepBattleId] = useState<string | null>(null);
-  const [orgChartSide, setOrgChartSide] = useState<Side | null>(null);
+  // Deep link state parsed once from the URL on first load
+  const [initialUrl] = useState(() => parseUrlState(window.location.search));
+  const [deepBattleId, setDeepBattleId] = useState<string | null>(
+    initialUrl.deep && hasBattleDeepData(initialUrl.deep) ? initialUrl.deep : null
+  );
+  const [orgChartSide, setOrgChartSide] = useState<Side | null>(initialUrl.org ?? null);
   const [orgChartHighlightedPerson, setOrgChartHighlightedPerson] = useState<string | undefined>(undefined);
-  const [currentDate, setCurrentDate] = useState('1861-04-12'); // Start at Fort Sumter
+  const [currentDate, setCurrentDate] = useState(initialUrl.date ?? DEFAULT_START_DATE); // Start at Fort Sumter
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Navigation history for detail panel
@@ -137,16 +146,117 @@ function App() {
     }
   }, [navHistory, eventsData?.data]);
 
-  // On first load, select Fort Sumter so it is highlighted and its details show
-  const hasAutoSelectedInitialEvent = useRef(false);
+  // Apply a parsed URL state to the selection (used on first load and on back/forward)
+  const applyUrlSelection = useCallback(
+    (url: UrlState) => {
+      const events = eventsData?.data;
+      if (url.event && events) {
+        const match = events.find((e) => eventNameToSlug(e.name) === url.event);
+        if (match) {
+          handleEventSelect(match.id);
+          return;
+        }
+      }
+      if (url.person) {
+        const person = expandedPeople.find((p) => personMatchesSlug(p.name, url.person!));
+        navHistory.navigate({
+          type: 'person',
+          personName: person?.name ?? slugToDisplayName(url.person),
+        });
+      } else if (url.city) {
+        navHistory.navigate({ type: 'city', cityName: url.city });
+      } else if (url.state) {
+        navHistory.navigate({ type: 'state', stateName: url.state });
+      } else {
+        navHistory.clear();
+      }
+    },
+    [eventsData?.data, handleEventSelect, navHistory]
+  );
+
+  // First load: apply the URL, or select Fort Sumter when the URL selects nothing.
+  // Waits for events when it needs them; URL syncing starts once this has run.
+  const [urlReady, setUrlReady] = useState(false);
   useEffect(() => {
-    if (hasAutoSelectedInitialEvent.current || !eventsData?.data?.length) return;
-    const sumter = eventsData.data.find((e) => e.name.includes('Fort Sumter'));
-    if (sumter) {
-      hasAutoSelectedInitialEvent.current = true;
-      handleEventSelect(sumter.id);
+    if (urlReady) return;
+    const useDefault = !hasSelection(initialUrl) && !initialUrl.date;
+    if ((initialUrl.event || useDefault) && !eventsData?.data?.length) return;
+
+    if (useDefault) {
+      const sumter = eventsData?.data?.find((e) => e.name.includes('Fort Sumter'));
+      if (sumter) handleEventSelect(sumter.id);
+    } else {
+      applyUrlSelection(initialUrl);
     }
-  }, [eventsData?.data, handleEventSelect]);
+    setUrlReady(true);
+  }, [urlReady, initialUrl, eventsData?.data, handleEventSelect, applyUrlSelection]);
+
+  // Current selection as URL state
+  const selectedEventSlug = useMemo(() => {
+    if (selectedEventId === null) return undefined;
+    const name =
+      eventsData?.data?.find((e) => e.id === selectedEventId)?.name ?? selectedEvent?.name;
+    return name ? eventNameToSlug(name) : undefined;
+  }, [selectedEventId, eventsData?.data, selectedEvent?.name]);
+
+  const selectionUrlState = useMemo<UrlState>(
+    () => ({
+      deep: deepBattleId ?? undefined,
+      org:
+        orgChartSide === 'union' || orgChartSide === 'confederate' ? orgChartSide : undefined,
+      event: selectedEventSlug,
+      person: selectedPersonName ? personNameToSlug(selectedPersonName) : undefined,
+      city: selectedCityName ?? undefined,
+      state: selectedStateName ?? undefined,
+    }),
+    [deepBattleId, orgChartSide, selectedEventSlug, selectedPersonName, selectedCityName, selectedStateName]
+  );
+
+  // Keep the URL in sync with state. Selection changes add a history entry so the
+  // browser back button works; date changes only replace the current entry.
+  const lastSelectionSearch = useRef<string | null>(null);
+  useEffect(() => {
+    if (!urlReady) return;
+    // Wait for an event to resolve to its slug before writing the URL
+    if (selectedEventId !== null && !selectedEventSlug) return;
+
+    const selectionSearch = buildSearch(selectionUrlState);
+    const date =
+      !hasSelection(selectionUrlState) && currentDate !== DEFAULT_START_DATE
+        ? currentDate
+        : undefined;
+    const search = buildSearch({ ...selectionUrlState, date });
+    if (search === window.location.search) {
+      lastSelectionSearch.current = selectionSearch;
+      return;
+    }
+
+    const url = `${window.location.pathname}${search}`;
+    const selectionChanged =
+      lastSelectionSearch.current !== null && selectionSearch !== lastSelectionSearch.current;
+    lastSelectionSearch.current = selectionSearch;
+    if (selectionChanged) {
+      window.history.pushState(null, '', url);
+      return;
+    }
+    // Date-only change (e.g. autoplay): debounce so browsers don't throttle replaceState
+    const timer = setTimeout(() => window.history.replaceState(null, '', url), 400);
+    return () => clearTimeout(timer);
+  }, [urlReady, selectionUrlState, selectedEventId, selectedEventSlug, currentDate]);
+
+  // Browser back/forward: re-apply the URL to the app state
+  useEffect(() => {
+    const onPopState = () => {
+      const url = parseUrlState(window.location.search);
+      lastSelectionSearch.current = buildSearch({ ...url, date: undefined });
+      setDeepBattleId(url.deep && hasBattleDeepData(url.deep) ? url.deep : null);
+      setOrgChartSide(url.org ?? null);
+      if (url.date) setCurrentDate(url.date);
+      applyUrlSelection(url);
+    };
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, [applyUrlSelection]);
 
   // Handle detail panel close
   const handleDetailClose = useCallback(() => {
