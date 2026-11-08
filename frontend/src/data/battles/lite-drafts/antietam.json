@@ -1,0 +1,162 @@
+{
+  "id": "antietam",
+  "name": "Battle of Antietam",
+  "description": "The Battle of Antietam was fought on September 17, 1862, near Sharpsburg, Maryland, along Antietam Creek. Major General George B. McClellan's Army of the Potomac fought General Robert E. Lee's Army of Northern Virginia. It remains the bloodiest single day in American history.",
+  "startDate": "1862-09-17",
+  "endDate": "1862-09-17",
+  "location": {
+    "lat": 39.47333,
+    "lng": -77.74472,
+    "bounds": {
+      "north": 39.49,
+      "south": 39.42,
+      "east": -77.72,
+      "west": -77.81
+    }
+  },
+  "result": "union_victory",
+  "significance": "Ended Lee's first invasion of Union territory and gave President Lincoln the political standing to issue the preliminary Emancipation Proclamation on September 22, 1862. The battle was tactically inconclusive.",
+  "forces": {
+    "union": {
+      "commander": "George B. McClellan",
+      "commanderRank": "Major General",
+      "armyName": "Army of the Potomac",
+      "totalStrength": 53632,
+      "casualties": {
+        "killed": 2108,
+        "wounded": 9549,
+        "captured": 753,
+        "missing": 0,
+        "total": 12410
+      },
+      "units": [
+        { "id": "union-hooker-i-corps", "name": "I Corps", "commander": "Joseph Hooker", "type": "corps" },
+        { "id": "union-sumner-ii-corps", "name": "II Corps", "commander": "Edwin V. Sumner", "type": "corps" },
+        { "id": "union-mansfield-xii-corps", "name": "XII Corps", "commander": "Joseph K. F. Mansfield", "type": "corps" },
+        { "id": "union-burnside-ix-corps", "name": "IX Corps", "commander": "Ambrose E. Burnside", "type": "corps" }
+      ]
+    },
+    "confederate": {
+      "commander": "Robert E. Lee",
+      "commanderRank": "General",
+      "armyName": "Army of Northern Virginia",
+      "totalStrength": 30646,
+      "casualties": {
+        "killed": 1546,
+        "wounded": 7752,
+        "captured": 1018,
+        "missing": 0,
+        "total": 10316
+      },
+      "units": [
+        { "id": "confederate-john-r-jones-division", "name": "John R. Jones's Division", "commander": "John R. Jones", "type": "division" },
+        { "id": "confederate-hill-d-h-division", "name": "D. H. Hill's Division", "commander": "D. H. Hill", "type": "division" },
+        { "id": "confederate-d-r-jones-division", "name": "David R. Jones's Division", "commander": "David R. Jones", "type": "division" },
+        { "id": "confederate-a-p-hill-division", "name": "A. P. Hill's Division", "commander": "A. P. Hill", "type": "division" }
+      ]
+    }
+  },
+  "landmarks": [
+    { "id": "dunker-church", "name": "Dunker Church", "type": "church", "lat": 39.475361, "lng": -77.746778, "description": "Whitewashed church on a plateau. Hooker's objective in the morning attack." },
+    { "id": "sunken-road", "name": "Sunken Road (Bloody Lane)", "type": "road", "lat": 39.475, "lng": -77.74444, "description": "About 800 yards long. Confederate center, where heavy fighting took place from about 9:30 a.m. to 1 p.m." },
+    { "id": "burnsides-bridge", "name": "Burnside's Bridge", "type": "bridge", "lat": 39.45056, "lng": -77.73194, "description": "Stone bridge over Antietam Creek, held by Confederate forces in the afternoon." },
+    { "id": "millers-cornfield", "name": "Miller's Cornfield", "type": "field", "lat": 39.47333, "lng": -77.74472, "description": "Site of heavy fighting in the morning. The cornfield changed hands repeatedly." },
+    { "id": "sharpsburg", "name": "Sharpsburg", "type": "town", "lat": 39.45833, "lng": -77.74861, "description": "Town near the Confederate line, close to the Union approach from the south." },
+    { "id": "shepherdstown", "name": "Shepherdstown", "type": "town", "lat": 39.43194, "lng": -77.80472, "description": "Town near Boteler's Ford, the Potomac crossing that was Lee's nearby escape route." },
+    { "id": "antietam-national-battlefield", "name": "Antietam National Battlefield", "type": "other", "lat": 39.47028, "lng": -77.73806, "description": "National park that preserves the battlefield." }
+  ],
+  "timeline": [
+    {
+      "id": "day-0530",
+      "datetime": "1862-09-17T05:30:00",
+      "label": "September 17, 5:30 AM",
+      "title": "Dawn attack in the Cornfield",
+      "description": "Hooker's I Corps attacks at dawn. Jackson's forces hold the ground near Dunker Church.",
+      "positions": [
+        { "unitId": "union-hooker-i-corps", "unitType": "corps", "side": "union", "lat": 39.4735, "lng": -77.7440, "status": "advancing", "movementTo": { "lat": 39.4752, "lng": -77.7465 } },
+        { "unitId": "confederate-john-r-jones-division", "unitType": "division", "side": "confederate", "lat": 39.4748, "lng": -77.7480, "status": "defending" }
+      ],
+      "events": [
+        { "id": "hooker-attack", "time": "1862-09-17T05:30:00", "title": "Hooker attacks at dawn", "description": "Hooker's I Corps attacks down the Hagerstown Turnpike toward Dunker Church.", "type": "combat", "importance": "critical", "location": { "lat": 39.47333, "lng": -77.74472 }, "relatedUnits": ["union-hooker-i-corps", "confederate-john-r-jones-division"] }
+      ]
+    },
+    {
+      "id": "day-0730",
+      "datetime": "1862-09-17T07:30:00",
+      "label": "September 17, 7:30 AM",
+      "title": "Mansfield's corps attacks",
+      "description": "Mansfield's XII Corps attacks toward the West Woods. Greene's division briefly takes ground near Dunker Church.",
+      "positions": [
+        { "unitId": "union-mansfield-xii-corps", "unitType": "corps", "side": "union", "lat": 39.4740, "lng": -77.7450, "status": "advancing", "movementTo": { "lat": 39.4755, "lng": -77.7475 } },
+        { "unitId": "confederate-john-r-jones-division", "unitType": "division", "side": "confederate", "lat": 39.4750, "lng": -77.7490, "status": "defending" }
+      ],
+      "events": []
+    },
+    {
+      "id": "day-0930",
+      "datetime": "1862-09-17T09:30:00",
+      "label": "September 17, 9:30 AM",
+      "title": "Attack on the Sunken Road",
+      "description": "Union divisions of Sumner's II Corps attack D. H. Hill's Confederate division in the Sunken Road.",
+      "positions": [
+        { "unitId": "union-sumner-ii-corps", "unitType": "corps", "side": "union", "lat": 39.4758, "lng": -77.7425, "status": "advancing", "movementTo": { "lat": 39.4752, "lng": -77.7440 } },
+        { "unitId": "confederate-hill-d-h-division", "unitType": "division", "side": "confederate", "lat": 39.4748, "lng": -77.7448, "status": "defending" }
+      ],
+      "events": [
+        { "id": "sunken-road-attack", "time": "1862-09-17T09:30:00", "title": "French attacks the Sunken Road", "description": "French's division attacks D. H. Hill's position in the Sunken Road. The fighting lasts until about 1 p.m.", "type": "combat", "importance": "critical", "location": { "lat": 39.475, "lng": -77.74444 }, "relatedUnits": ["union-sumner-ii-corps", "confederate-hill-d-h-division"] }
+      ]
+    },
+    {
+      "id": "day-1230",
+      "datetime": "1862-09-17T12:30:00",
+      "label": "September 17, 12:30 PM",
+      "title": "Assault on Burnside's Bridge",
+      "description": "Burnside's IX Corps attacks across Antietam Creek. Confederate forces under David R. Jones hold the west bank.",
+      "positions": [
+        { "unitId": "union-burnside-ix-corps", "unitType": "corps", "side": "union", "lat": 39.4515, "lng": -77.7300, "status": "advancing", "movementTo": { "lat": 39.4500, "lng": -77.7340 } },
+        { "unitId": "confederate-d-r-jones-division", "unitType": "division", "side": "confederate", "lat": 39.4500, "lng": -77.7355, "status": "defending" }
+      ],
+      "events": [
+        { "id": "burnsides-bridge-assault", "time": "1862-09-17T12:30:00", "title": "Ferrero's brigade charges the bridge", "description": "Ferrero's brigade charges across Burnside's Bridge. Confederate defenders withdraw in the early afternoon.", "type": "combat", "importance": "critical", "location": { "lat": 39.45056, "lng": -77.73194 }, "relatedUnits": ["union-burnside-ix-corps", "confederate-d-r-jones-division"] }
+      ]
+    },
+    {
+      "id": "day-1300",
+      "datetime": "1862-09-17T13:00:00",
+      "label": "September 17, 1:00 PM",
+      "title": "Sunken Road fighting ends",
+      "description": "After about 3.5 hours of fighting, the Confederate line in the Sunken Road breaks. D. H. Hill's division withdraws.",
+      "positions": [
+        { "unitId": "union-sumner-ii-corps", "unitType": "corps", "side": "union", "lat": 39.4752, "lng": -77.7440, "status": "defending" },
+        { "unitId": "confederate-hill-d-h-division", "unitType": "division", "side": "confederate", "lat": 39.4745, "lng": -77.7460, "status": "retreating" }
+      ],
+      "events": []
+    },
+    {
+      "id": "day-1530",
+      "datetime": "1862-09-17T15:30:00",
+      "label": "September 17, 3:30 PM",
+      "title": "A. P. Hill arrives from Harpers Ferry",
+      "description": "A. P. Hill's division arrives after a long march from Harpers Ferry. Its attack drives back the Union assault near Sharpsburg.",
+      "positions": [
+        { "unitId": "confederate-a-p-hill-division", "unitType": "division", "side": "confederate", "lat": 39.4583, "lng": -77.7486, "status": "arriving" },
+        { "unitId": "union-burnside-ix-corps", "unitType": "corps", "side": "union", "lat": 39.4520, "lng": -77.7310, "status": "defending" }
+      ],
+      "events": [
+        { "id": "hill-arrives", "time": "1862-09-17T15:30:00", "title": "A. P. Hill's division arrives", "description": "A. P. Hill's division arrives from Harpers Ferry and attacks the Union flank.", "type": "movement", "importance": "critical", "location": { "lat": 39.45833, "lng": -77.74861 }, "relatedUnits": ["confederate-a-p-hill-division"] }
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Battle_of_Antietam",
+    "https://www.battlefields.org/learn/civil-war/battles/antietam",
+    "https://en.wikipedia.org/wiki/Bloody_Lane",
+    "https://en.wikipedia.org/wiki/Burnside%27s_Bridge",
+    "https://en.wikipedia.org/wiki/Dunker_Church",
+    "https://en.wikipedia.org/wiki/Miller%27s_Cornfield",
+    "https://en.wikipedia.org/wiki/Sharpsburg,_Maryland",
+    "https://en.wikipedia.org/wiki/Shepherdstown,_West_Virginia",
+    "https://en.wikipedia.org/wiki/Antietam_National_Battlefield"
+  ],
+  "review": "unreviewed"
+}

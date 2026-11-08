@@ -1,0 +1,131 @@
+{
+  "id": "shiloh",
+  "name": "Battle of Shiloh",
+  "description": "The Battle of Shiloh was fought April 6-7, 1862, at Pittsburg Landing on the Tennessee River, in Hardin County, Tennessee. Confederate forces under Albert Sidney Johnston attacked Grant's Army of the Tennessee on April 6 and forced it back toward Pittsburg Landing. Johnston was killed that afternoon. Buell's Army of the Ohio arrived on April 7, and Beauregard, who had succeeded Johnston, withdrew toward Corinth.",
+  "startDate": "1862-04-06",
+  "endDate": "1862-04-07",
+  "location": {
+    "lat": 35.13861,
+    "lng": -88.34222,
+    "bounds": {
+      "north": 35.17,
+      "south": 35.11,
+      "east": -88.30,
+      "west": -88.38
+    }
+  },
+  "result": "union_victory",
+  "significance": "More than 23,000 casualties made it the costliest battle of the war to that date. The losses convinced many Union leaders that the war in the West would not end quickly.",
+  "forces": {
+    "union": {
+      "commander": "Ulysses S. Grant",
+      "commanderRank": "Major General",
+      "armyName": "Army of the Tennessee",
+      "totalStrength": 66812,
+      "casualties": {
+        "killed": 1754,
+        "wounded": 8408,
+        "captured": 2885,
+        "missing": 0,
+        "total": 13047
+      },
+      "units": [
+        { "id": "union-mcclernand-1st", "name": "1st Division", "commander": "John A. McClernand", "type": "division" },
+        { "id": "union-wallace-2nd", "name": "2nd Division", "commander": "W. H. L. Wallace", "type": "division" },
+        { "id": "union-lew-wallace-3rd", "name": "3rd Division", "commander": "Lew Wallace", "type": "division" },
+        { "id": "union-hurlbut-4th", "name": "4th Division", "commander": "Stephen A. Hurlbut", "type": "division" },
+        { "id": "union-sherman-5th", "name": "5th Division", "commander": "William T. Sherman", "type": "division" },
+        { "id": "union-prentiss-6th", "name": "6th Division", "commander": "Benjamin M. Prentiss", "type": "division" },
+        { "id": "union-ohio-mccook-2nd", "name": "2nd Division (Army of the Ohio)", "commander": "Alexander McD. McCook", "type": "division" },
+        { "id": "union-ohio-nelson-4th", "name": "4th Division (Army of the Ohio)", "commander": "William \"Bull\" Nelson", "type": "division" },
+        { "id": "union-ohio-crittenden-5th", "name": "5th Division (Army of the Ohio)", "commander": "Thomas L. Crittenden", "type": "division" },
+        { "id": "union-ohio-wood-6th", "name": "6th Division (Army of the Ohio)", "commander": "Thomas J. Wood", "type": "division" }
+      ]
+    },
+    "confederate": {
+      "commander": "Albert Sidney Johnston",
+      "commanderRank": "General",
+      "armyName": "Army of Mississippi",
+      "totalStrength": 44699,
+      "casualties": {
+        "killed": 1728,
+        "wounded": 8012,
+        "captured": 959,
+        "missing": 0,
+        "total": 10699
+      },
+      "units": [
+        { "id": "confederate-polk-1st", "name": "First Corps", "commander": "Leonidas Polk", "type": "corps" },
+        { "id": "confederate-bragg-2nd", "name": "Second Corps", "commander": "Braxton Bragg", "type": "corps" },
+        { "id": "confederate-hardee-3rd", "name": "Third Corps", "commander": "William J. Hardee", "type": "corps" },
+        { "id": "confederate-breckinridge-reserve", "name": "Reserve Corps", "commander": "John C. Breckinridge", "type": "corps" }
+      ]
+    }
+  },
+  "landmarks": [
+    {
+      "id": "pittsburg-landing",
+      "name": "Pittsburg Landing",
+      "type": "town",
+      "lat": 35.15222,
+      "lng": -88.32278,
+      "description": "Union base on the west bank of the Tennessee River, in Hardin County, Tennessee."
+    }
+  ],
+  "timeline": [
+    {
+      "id": "day2-0400",
+      "datetime": "1862-04-07T04:00:00",
+      "label": "April 7, 4:00 AM",
+      "title": "Buell's army reaches Pittsburg Landing",
+      "description": "The first unit of Buell's Army of the Ohio lands at Pittsburg Landing. The sources do not give the positions of the other units at this hour, so only this unit is placed.",
+      "positions": [
+        {
+          "unitId": "union-ohio-mccook-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.15222,
+          "lng": -88.32278,
+          "status": "arriving"
+        }
+      ],
+      "events": [
+        {
+          "id": "ohio-first-unit-lands",
+          "time": "1862-04-07T04:00:00",
+          "title": "First Army of the Ohio unit lands",
+          "description": "The first unit to land at Pittsburg Landing arrives around 4:00 AM, as Buell's army reaches the battlefield.",
+          "type": "movement",
+          "importance": "major",
+          "location": { "lat": 35.15222, "lng": -88.32278 },
+          "relatedUnits": ["union-ohio-mccook-2nd"]
+        },
+        {
+          "id": "ohio-attack-begins",
+          "time": "1862-04-07T05:00:00",
+          "title": "Buell's attack begins",
+          "description": "Buell's attack begins at 5:00 AM with Nelson's three brigades.",
+          "type": "combat",
+          "importance": "major",
+          "relatedUnits": ["union-ohio-nelson-4th"]
+        },
+        {
+          "id": "confederate-withdrawal",
+          "time": "1862-04-07T15:00:00",
+          "title": "Beauregard retreats toward Corinth",
+          "description": "At about 3:00 PM, Beauregard, outnumbered and with heavy casualties, retreats toward Corinth.",
+          "type": "movement",
+          "importance": "critical"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Battle_of_Shiloh",
+    "https://www.battlefields.org/learn/civil-war/battles/shiloh",
+    "https://www.nps.gov/shil/learn/historyculture/index.htm",
+    "https://en.wikipedia.org/wiki/Pittsburg_Landing,_Tennessee",
+    "https://en.wikipedia.org/wiki/Shiloh_National_Military_Park"
+  ],
+  "review": "unreviewed"
+}

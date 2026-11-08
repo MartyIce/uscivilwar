@@ -1,0 +1,255 @@
+{
+  "id": "first_battle_of_bull_run",
+  "name": "First Battle of Bull Run",
+  "description": "The First Battle of Bull Run was fought on July 21, 1861, along Bull Run near Manassas Junction, Virginia. Union forces under Irvin McDowell attacked the Confederate army of P. G. T. Beauregard. Confederate reinforcements under Joseph E. Johnston arrived by rail, and the Union army retreated in disorder.",
+  "startDate": "1861-07-21",
+  "endDate": "1861-07-21",
+  "location": {
+    "lat": 38.815,
+    "lng": -77.5225,
+    "bounds": {
+      "north": 38.83,
+      "south": 38.745,
+      "east": -77.445,
+      "west": -77.545
+    }
+  },
+  "result": "confederate_victory",
+  "significance": "The first major battle of the American Civil War. It ended hopes of a quick war and showed that the war would be far more brutal than many had expected.",
+  "forces": {
+    "union": {
+      "commander": "Irvin McDowell",
+      "commanderRank": "Brigadier General",
+      "armyName": "Army of Northeastern Virginia",
+      "totalStrength": 35732,
+      "casualties": {
+        "killed": 481,
+        "wounded": 1011,
+        "captured": 0,
+        "missing": 1216,
+        "total": 2708
+      },
+      "units": [
+        { "id": "union-tyler-div", "name": "1st Division", "commander": "Daniel Tyler", "type": "division" },
+        { "id": "union-hunter-div", "name": "2nd Division", "commander": "David Hunter", "type": "division" },
+        { "id": "union-heintzelman-div", "name": "3rd Division", "commander": "Samuel Heintzelman", "type": "division" },
+        { "id": "union-burnside-brig", "name": "Burnside's Brigade", "commander": "Ambrose E. Burnside", "type": "brigade" },
+        { "id": "union-howard-brig", "name": "Howard's Brigade", "commander": "Oliver O. Howard", "type": "brigade" }
+      ]
+    },
+    "confederate": {
+      "commander": "P. G. T. Beauregard",
+      "commanderRank": "Brigadier General",
+      "armyName": "Army of the Potomac (Confederate)",
+      "totalStrength": 32000,
+      "casualties": {
+        "killed": 387,
+        "wounded": 1582,
+        "captured": 0,
+        "missing": 13,
+        "total": 1982
+      },
+      "units": [
+        { "id": "conf-evans-brig", "name": "Evans's Brigade", "commander": "Nathan G. Evans", "type": "brigade" },
+        { "id": "conf-jackson-brig", "name": "Jackson's Brigade", "commander": "Thomas J. Jackson", "type": "brigade" },
+        { "id": "conf-bee-brig", "name": "Bee's Brigade", "commander": "Barnard E. Bee", "type": "brigade" },
+        { "id": "conf-bartow-brig", "name": "Bartow's Brigade", "commander": "Francis S. Bartow", "type": "brigade" },
+        { "id": "conf-kirbysmith-brig", "name": "Kirby Smith's Brigade", "commander": "Edmund Kirby Smith", "type": "brigade" }
+      ]
+    }
+  },
+  "landmarks": [
+    {
+      "id": "henry-house-hill",
+      "name": "Henry House Hill",
+      "type": "hill",
+      "lat": 38.81472,
+      "lng": -77.52278,
+      "description": "Confederate line held here in the afternoon. Jackson's men stood firm on the hill."
+    },
+    {
+      "id": "stone-bridge",
+      "name": "Stone Bridge",
+      "type": "bridge",
+      "lat": 38.82417,
+      "lng": -77.50361,
+      "description": "Crossing on the Warrenton Turnpike. Tyler's division reached it about 6 a.m."
+    },
+    {
+      "id": "blackburns-ford",
+      "name": "Blackburn's Ford",
+      "type": "ford",
+      "lat": 38.80304,
+      "lng": -77.44939,
+      "description": "Site of the July 18 skirmish that checked the Union advance. East of the main battlefield."
+    },
+    {
+      "id": "manassas-junction",
+      "name": "Manassas Junction",
+      "type": "town",
+      "lat": 38.75139,
+      "lng": -77.47639,
+      "description": "Rail junction that the Confederate army held. Johnston's brigades arrived here by rail."
+    }
+  ],
+  "timeline": [
+    {
+      "id": "day1-0600",
+      "datetime": "1861-07-21T06:00:00",
+      "label": "July 21, 6:00 AM",
+      "title": "Union flank column moves",
+      "description": "Tyler's division reaches Stone Bridge. Union diversionary attacks begin there while the flanking column marches toward Sudley Springs Ford.",
+      "positions": [
+        { "unitId": "union-tyler-div", "unitType": "division", "side": "union", "lat": 38.82417, "lng": -77.50361, "status": "arriving" }
+      ],
+      "events": [
+        {
+          "id": "day1-0530-first-shot",
+          "time": "1861-07-21T05:30:00",
+          "title": "First shot near Stone Bridge",
+          "description": "Union artillery fires the first shot from near Stone Bridge.",
+          "type": "combat",
+          "importance": "minor",
+          "location": { "lat": 38.82417, "lng": -77.50361 },
+          "relatedUnits": ["union-tyler-div"]
+        }
+      ]
+    },
+    {
+      "id": "day1-1000",
+      "datetime": "1861-07-21T10:00:00",
+      "label": "July 21, 10:00 AM",
+      "title": "Fighting on Matthews Hill",
+      "description": "Union troops advance from Stone Bridge. Burnside's brigade attacks Confederates on Matthews Hill.",
+      "positions": [
+        { "unitId": "union-tyler-div", "unitType": "division", "side": "union", "lat": 38.82417, "lng": -77.50361, "status": "advancing" }
+      ],
+      "events": [
+        {
+          "id": "day1-1000-sherman-advance",
+          "time": "1861-07-21T10:00:00",
+          "title": "Advance from Stone Bridge",
+          "description": "Units of Tyler's division advance from Stone Bridge.",
+          "type": "movement",
+          "importance": "major",
+          "location": { "lat": 38.82417, "lng": -77.50361 },
+          "relatedUnits": ["union-tyler-div"]
+        },
+        {
+          "id": "day1-1000-matthews-hill",
+          "time": "1861-07-21T10:00:00",
+          "title": "Attack on Matthews Hill",
+          "description": "Burnside's brigade attacks Evans's Confederates on Matthews Hill. After about two hours, the Confederates fall back toward Henry Hill.",
+          "type": "combat",
+          "importance": "major",
+          "relatedUnits": ["union-burnside-brig", "conf-evans-brig"]
+        }
+      ]
+    },
+    {
+      "id": "day1-1200",
+      "datetime": "1861-07-21T12:00:00",
+      "label": "July 21, 12:00 PM",
+      "title": "Jackson reaches Henry Hill",
+      "description": "Jackson's brigade arrives on Henry House Hill in support of the Confederate line.",
+      "positions": [
+        { "unitId": "conf-jackson-brig", "unitType": "brigade", "side": "confederate", "lat": 38.81472, "lng": -77.52278, "status": "arriving" }
+      ],
+      "events": [
+        {
+          "id": "day1-1200-jackson-arrives",
+          "time": "1861-07-21T12:00:00",
+          "title": "Jackson arrives",
+          "description": "Jackson's brigade arrives in support on Henry House Hill.",
+          "type": "movement",
+          "importance": "critical",
+          "location": { "lat": 38.81472, "lng": -77.52278 },
+          "relatedUnits": ["conf-jackson-brig"]
+        }
+      ]
+    },
+    {
+      "id": "day1-1500",
+      "datetime": "1861-07-21T15:00:00",
+      "label": "July 21, 3:00 PM",
+      "title": "Griffin's guns overrun",
+      "description": "Confederate troops overrun Griffin's guns on the western slope of Henry Hill. Jackson's brigade counterattacks.",
+      "positions": [
+        { "unitId": "conf-jackson-brig", "unitType": "brigade", "side": "confederate", "lat": 38.81472, "lng": -77.52278, "status": "defending" }
+      ],
+      "events": [
+        {
+          "id": "day1-1500-griffin-guns",
+          "time": "1861-07-21T15:00:00",
+          "title": "Griffin's guns overrun",
+          "description": "Griffin's advanced guns are captured on Henry Hill. Ricketts' guns change hands three times.",
+          "type": "combat",
+          "importance": "critical",
+          "location": { "lat": 38.81472, "lng": -77.52278 },
+          "relatedUnits": ["conf-jackson-brig"]
+        }
+      ]
+    },
+    {
+      "id": "day1-1600",
+      "datetime": "1861-07-21T16:00:00",
+      "label": "July 21, 4:00 PM",
+      "title": "Union troops driven off Henry Hill",
+      "description": "The last Union troops are pushed off Henry House Hill. Confederate forces push Howard's brigade back at Chinn Ridge.",
+      "positions": [
+        { "unitId": "conf-jackson-brig", "unitType": "brigade", "side": "confederate", "lat": 38.81472, "lng": -77.52278, "status": "defending" }
+      ],
+      "events": [
+        {
+          "id": "day1-1600-henry-hill-cleared",
+          "time": "1861-07-21T16:00:00",
+          "title": "Henry Hill cleared",
+          "description": "The last Union troops are pushed off Henry House Hill.",
+          "type": "combat",
+          "importance": "critical",
+          "location": { "lat": 38.81472, "lng": -77.52278 },
+          "relatedUnits": ["conf-jackson-brig"]
+        },
+        {
+          "id": "day1-1600-chinn-ridge",
+          "time": "1861-07-21T16:00:00",
+          "title": "Howard's brigade pushed back",
+          "description": "Confederate attacks by Early and Kirby Smith push Howard's brigade back on Chinn Ridge.",
+          "type": "combat",
+          "importance": "major",
+          "relatedUnits": ["union-howard-brig", "conf-kirbysmith-brig"]
+        }
+      ]
+    },
+    {
+      "id": "day1-1700",
+      "datetime": "1861-07-21T17:00:00",
+      "label": "July 21, 5:00 PM",
+      "title": "Union army breaks up",
+      "description": "The Union army is disintegrating. Its retreat turns into a rout across Bull Run.",
+      "positions": [
+        { "unitId": "conf-jackson-brig", "unitType": "brigade", "side": "confederate", "lat": 38.81472, "lng": -77.52278, "status": "defending" }
+      ],
+      "events": [
+        {
+          "id": "day1-1700-rout",
+          "time": "1861-07-21T17:00:00",
+          "title": "Union retreat becomes a rout",
+          "description": "The Union army begins to withdraw, and the retreat turns into a rout across Bull Run.",
+          "type": "movement",
+          "importance": "critical",
+          "location": { "lat": 38.81472, "lng": -77.52278 }
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/First_Battle_of_Bull_Run",
+    "https://www.nps.gov/mana/learn/historyculture/first-manassas.htm",
+    "https://en.wikipedia.org/wiki/Henry_House_Hill",
+    "https://en.wikipedia.org/wiki/Stone_Bridge_(Manassas)",
+    "https://en.wikipedia.org/wiki/Blackburn%27s_Ford",
+    "https://en.wikipedia.org/wiki/Manassas_Junction,_Virginia"
+  ],
+  "review": "unreviewed"
+}
