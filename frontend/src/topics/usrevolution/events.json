@@ -1,0 +1,1211 @@
+[
+  {
+    "name": "Battles of Lexington and Concord",
+    "type": "battle",
+    "date_start": "1775-04-19",
+    "date_end": "1775-04-19",
+    "description": "The Battles of Lexington and Concord on April 19, 1775, were the first major military actions between the British Army and Patriot militias from British America's Thirteen Colonies during the American Revolutionary War. The opposing forces fought day-long running battles in Middlesex County in the Province of Massachusetts Bay, in the towns of Lexington, Concord, Lincoln, Menotomy , and Cambridge.",
+    "campaign": null,
+    "theater": "Northern",
+    "result": "American victory",
+    "significance": 5,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battles_of_Lexington_and_Concord",
+    "image_url": null,
+    "location": {
+      "name": "Lexington and Concord",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 42.44944,
+        "lng": -71.23083
+      },
+      "state": "Massachusetts",
+      "id": 1
+    },
+    "commanders": {
+      "union": [
+        "John Parker",
+        "James Barrett",
+        "John Buttrick"
+      ],
+      "confederate": [
+        "Francis Smith",
+        "John Pitcairn",
+        "Hugh Percy"
+      ]
+    },
+    "id": 1
+  },
+  {
+    "name": "Siege of Boston",
+    "type": "siege",
+    "date_start": "1775-04-19",
+    "date_end": "1776-03-17",
+    "description": "The siege of Boston was the opening phase of the American Revolutionary War. In the siege, American patriot militia led by newly-installed Continental Army commander George Washington prevented the British Army, which was garrisoned in Boston, from moving by land.",
+    "campaign": null,
+    "theater": "Northern",
+    "result": "American victory",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Siege_of_Boston",
+    "image_url": null,
+    "location": {
+      "name": "Boston",
+      "type": "city",
+      "coordinates": {
+        "lat": 42.36333,
+        "lng": -71.05778
+      },
+      "state": "Massachusetts",
+      "id": 2
+    },
+    "commanders": {
+      "union": [
+        "George Washington",
+        "Artemas Ward",
+        "Henry Knox"
+      ],
+      "confederate": [
+        "Thomas Gage",
+        "Sir William Howe",
+        "Sir Henry Clinton"
+      ]
+    },
+    "id": 2
+  },
+  {
+    "name": "Capture of Fort Ticonderoga",
+    "type": "raid",
+    "date_start": "1775-05-10",
+    "date_end": "1775-05-10",
+    "description": "The capture of Fort Ticonderoga occurred during the American Revolutionary War on May 10, 1775, when a small force of Green Mountain Boys led by Ethan Allen and Colonel Benedict Arnold surprised and captured the fort's small British garrison. The cannons and other armaments at Fort Ticonderoga were later transported to Boston by Colonel Henry Knox in the noble train of artillery and used to fortify Dorchester Heights and break the standoff at the siege of Boston.",
+    "campaign": null,
+    "theater": "Northern",
+    "result": "American victory",
+    "significance": 3,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Capture_of_Fort_Ticonderoga",
+    "image_url": null,
+    "location": {
+      "name": "Fort Ticonderoga",
+      "type": "fort",
+      "coordinates": {
+        "lat": 43.84139,
+        "lng": -73.38806
+      },
+      "state": "New York",
+      "id": 3
+    },
+    "commanders": {
+      "union": [
+        "Ethan Allen",
+        "Benedict Arnold"
+      ],
+      "confederate": [
+        "William Delaplace"
+      ]
+    },
+    "id": 3
+  },
+  {
+    "name": "Battle of Bunker Hill",
+    "type": "battle",
+    "date_start": "1775-06-17",
+    "date_end": "1775-06-17",
+    "description": "The Battle of Bunker Hill was fought on June 17, 1775, during the siege of Boston in the first campaign of the American Revolutionary War. The battle is named after Bunker Hill in Charlestown, Massachusetts, which was peripherally involved.",
+    "campaign": null,
+    "theater": "Northern",
+    "result": "British victory",
+    "significance": 5,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Bunker_Hill",
+    "image_url": null,
+    "location": {
+      "name": "Bunker Hill",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 42.37639,
+        "lng": -71.06083
+      },
+      "state": "Massachusetts",
+      "id": 4
+    },
+    "commanders": {
+      "union": [
+        "William Prescott",
+        "Israel Putnam",
+        "Joseph Warren"
+      ],
+      "confederate": [
+        "William Howe",
+        "Thomas Gage",
+        "Sir Robert Pigot"
+      ]
+    },
+    "id": 4
+  },
+  {
+    "name": "Battle of Quebec",
+    "type": "battle",
+    "date_start": "1775-12-31",
+    "date_end": "1775-12-31",
+    "description": "The Battle of Quebec was fought on December 31, 1775, between American Continental Army forces and the British defenders of Quebec City as part of the invasion of Quebec of the American Revolutionary War. The battle was the first major defeat of the war for the Americans, and it came with heavy losses.",
+    "campaign": null,
+    "theater": "Northern",
+    "result": "British victory",
+    "significance": 3,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Quebec_(1775)",
+    "image_url": null,
+    "location": {
+      "name": "Quebec",
+      "type": "city",
+      "coordinates": {
+        "lat": 46.815,
+        "lng": -71.20222
+      },
+      "state": "Quebec",
+      "id": 5
+    },
+    "commanders": {
+      "union": [
+        "Richard Montgomery",
+        "Benedict Arnold",
+        "Daniel Morgan"
+      ],
+      "confederate": [
+        "Guy Carleton",
+        "Allan Maclean",
+        "John Hamilton"
+      ]
+    },
+    "id": 5
+  },
+  {
+    "name": "Battle of Moore's Creek Bridge",
+    "type": "battle",
+    "date_start": "1776-02-27",
+    "date_end": "1776-02-27",
+    "description": "The Battle of Moore's Creek Bridge was a minor conflict of the American Revolutionary War fought near Wilmington , North Carolina, on February 27, 1776. The victory of the North Carolina Provincial Congress' militia force over British governor Josiah Martin's and Tristan Worsley's reinforcements at Moore's was a turning point in the war; American independence was declared less than five months later.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "American victory",
+    "significance": 2,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Moore%27s_Creek_Bridge",
+    "image_url": null,
+    "location": {
+      "name": "Moore's Creek Bridge",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 34.45778,
+        "lng": -78.10972
+      },
+      "state": "North Carolina",
+      "id": 6
+    },
+    "commanders": {
+      "union": [
+        "James Moore",
+        "Richard Caswell",
+        "Alexander Lillington"
+      ],
+      "confederate": [
+        "Donald MacDonald",
+        "Donald MacLeod",
+        "John Campbell"
+      ]
+    },
+    "id": 6
+  },
+  {
+    "name": "Battle of Sullivan's Island",
+    "type": "battle",
+    "date_start": "1776-06-28",
+    "date_end": "1776-06-28",
+    "description": "The Battle of Sullivan's Island was fought on June 28, 1776, at Sullivan's Island, South Carolina during the Southern theater of the American Revolutionary War. Taking place near Charles Town, it was fought as part of the first British attempt to capture the city from American forces during the war.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "American victory",
+    "significance": 3,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Sullivan%27s_Island",
+    "image_url": null,
+    "location": {
+      "name": "Sullivan's Island",
+      "type": "fort",
+      "coordinates": {
+        "lat": 32.759,
+        "lng": -79.8579
+      },
+      "state": "South Carolina",
+      "id": 7
+    },
+    "commanders": {
+      "union": [
+        "Charles Lee",
+        "William Moultrie",
+        "Francis Marion"
+      ],
+      "confederate": [
+        "Henry Clinton",
+        "Sir Peter Parker"
+      ]
+    },
+    "id": 7
+  },
+  {
+    "name": "Battle of Long Island",
+    "type": "battle",
+    "date_start": "1776-08-27",
+    "date_end": "1776-08-30",
+    "description": "The Battle of Long Island, also known as the Battle of Brooklyn and the Battle of Brooklyn Heights, was an action of the American Revolutionary War fought on August 27, 1776, at and near the western edge of Long Island in present-day Brooklyn. The British defeated the Continental Army and gained access to the strategically important Port of New York, which they held for the rest of the war.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "British victory",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Long_Island",
+    "image_url": null,
+    "location": {
+      "name": "Long Island",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 40.666,
+        "lng": -73.966
+      },
+      "state": "New York",
+      "id": 8
+    },
+    "commanders": {
+      "union": [
+        "George Washington",
+        "Israel Putnam",
+        "William Alexander"
+      ],
+      "confederate": [
+        "William Howe",
+        "Charles Cornwallis",
+        "Henry Clinton"
+      ]
+    },
+    "id": 8
+  },
+  {
+    "name": "Battle of Harlem Heights",
+    "type": "battle",
+    "date_start": "1776-09-16",
+    "date_end": "1776-09-16",
+    "description": "The Battle of Harlem Heights was fought on September 16, 1776, in the Harlem Heights, Manhattan, during the New York and New Jersey campaign of the American Revolutionary War. A force of just under 1,800 American troops under General George Washington engaged a force of just under 1,600 British troops under Brigadier-general Alexander Leslie.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "American victory",
+    "significance": 2,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Harlem_Heights",
+    "image_url": null,
+    "location": {
+      "name": "Harlem Heights",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 40.81194,
+        "lng": -73.96361
+      },
+      "state": "New York",
+      "id": 9
+    },
+    "commanders": {
+      "union": [
+        "George Washington",
+        "Thomas Knowlton",
+        "Nathanael Greene"
+      ],
+      "confederate": [
+        "Alexander Leslie",
+        "William Howe"
+      ]
+    },
+    "id": 9
+  },
+  {
+    "name": "Battle of Valcour Island",
+    "type": "battle",
+    "date_start": "1776-10-11",
+    "date_end": "1776-10-11",
+    "description": "The Battle of Valcour Island, also known as the Battle of Valcour Bay, was a naval engagement that took place on October 11, 1776, on Lake Champlain. The main action took place in Valcour Bay, a narrow strait between the New York mainland and Valcour Island.",
+    "campaign": null,
+    "theater": "Northern",
+    "result": "British victory",
+    "significance": 2,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Valcour_Island",
+    "image_url": null,
+    "location": {
+      "name": "Valcour Island",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 44.61056,
+        "lng": -73.43028
+      },
+      "state": "New York",
+      "id": 10
+    },
+    "commanders": {
+      "union": [
+        "Benedict Arnold"
+      ],
+      "confederate": [
+        "Guy Carleton",
+        "Thomas Pringle"
+      ]
+    },
+    "id": 10
+  },
+  {
+    "name": "Battle of White Plains",
+    "type": "battle",
+    "date_start": "1776-10-28",
+    "date_end": "1776-10-28",
+    "description": "The Battle of White Plains took place during the New York and New Jersey campaign of the American Revolutionary War on October 28, 1776, near White Plains, New York. Following the retreat of George Washington's Continental Army northward from New York City, British General William Howe landed troops in Westchester County, intending to cut off Washington's escape route.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "British victory",
+    "significance": 2,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_White_Plains",
+    "image_url": null,
+    "location": {
+      "name": "White Plains",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 41.03,
+        "lng": -73.78
+      },
+      "state": "New York",
+      "id": 11
+    },
+    "commanders": {
+      "union": [
+        "George Washington",
+        "Alexander Hamilton",
+        "Alexander McDougall"
+      ],
+      "confederate": [
+        "William Howe",
+        "Alexander Leslie",
+        "Johann Rall"
+      ]
+    },
+    "id": 11
+  },
+  {
+    "name": "Battle of Fort Washington",
+    "type": "battle",
+    "date_start": "1776-11-16",
+    "date_end": "1776-11-16",
+    "description": "The Battle of Fort Washington was fought in New York on November 16, 1776, during the American Revolutionary War between the United States and Great Britain. It was a British victory that gained the surrender of the remnant of the garrison of Fort Washington near the north end of Manhattan.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "British victory",
+    "significance": 3,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Fort_Washington",
+    "image_url": null,
+    "location": {
+      "name": "Fort Washington",
+      "type": "fort",
+      "coordinates": {
+        "lat": 40.85278,
+        "lng": -73.93806
+      },
+      "state": "New York",
+      "id": 12
+    },
+    "commanders": {
+      "union": [
+        "Robert Magaw",
+        "George Washington",
+        "Nathanael Greene"
+      ],
+      "confederate": [
+        "William Howe",
+        "Hugh Percy",
+        "Wilhelm Knyphausen"
+      ]
+    },
+    "id": 12
+  },
+  {
+    "name": "Battle of Trenton",
+    "type": "battle",
+    "date_start": "1776-12-26",
+    "date_end": "1776-12-26",
+    "description": "The Battle of Trenton was a short but pivotal American Revolutionary War battle on the morning of December 26, 1776, in Trenton, New Jersey. After General George Washington's crossing of the Delaware River north of Trenton the previous night, Washington led the main body of the Continental Army against Hessian auxiliaries garrisoned at Trenton.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "American victory",
+    "significance": 5,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Trenton",
+    "image_url": null,
+    "location": {
+      "name": "Trenton",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 40.22583,
+        "lng": -74.76472
+      },
+      "state": "New Jersey",
+      "id": 13
+    },
+    "commanders": {
+      "union": [
+        "George Washington",
+        "Nathanael Greene",
+        "John Sullivan"
+      ],
+      "confederate": [
+        "Johann Rall"
+      ]
+    },
+    "id": 13
+  },
+  {
+    "name": "Second Battle of Trenton",
+    "type": "battle",
+    "date_start": "1777-01-02",
+    "date_end": "1777-01-02",
+    "description": "The Battle of the Assunpink Creek, also known as the Second Battle of Trenton, was a battle between American and British troops that took place in and around Trenton, New Jersey, on January 2, 1777, during the American Revolutionary War, and resulted in an American victory. Following the victory at the Battle of Trenton early in the morning of December 26, 1776, General George Washington of the Continental Army and his war council expected a strong British counterattack.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "American victory",
+    "significance": 2,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_the_Assunpink_Creek",
+    "image_url": null,
+    "location": {
+      "name": "Trenton",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 40.21806,
+        "lng": -74.76417
+      },
+      "state": "New Jersey",
+      "id": 14
+    },
+    "commanders": {
+      "union": [
+        "George Washington"
+      ],
+      "confederate": [
+        "Charles Cornwallis"
+      ]
+    },
+    "id": 14
+  },
+  {
+    "name": "Battle of Princeton",
+    "type": "battle",
+    "date_start": "1777-01-03",
+    "date_end": "1777-01-03",
+    "description": "The Battle of Princeton was a battle of the American Revolutionary War, fought near Princeton, New Jersey on January 3, 1777, and ending in a small victory for the Colonials. General Lord Cornwallis had left 1,400 British troops under the command of Lieutenant Colonel Charles Mawhood in Princeton.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "American victory",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Princeton",
+    "image_url": null,
+    "location": {
+      "name": "Princeton",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 40.33,
+        "lng": -74.675
+      },
+      "state": "New Jersey",
+      "id": 15
+    },
+    "commanders": {
+      "union": [
+        "George Washington",
+        "Hugh Mercer",
+        "Alexander Hamilton"
+      ],
+      "confederate": [
+        "Charles Mawhood",
+        "Charles Cornwallis"
+      ]
+    },
+    "id": 15
+  },
+  {
+    "name": "Battle of Oriskany",
+    "type": "battle",
+    "date_start": "1777-08-06",
+    "date_end": "1777-08-06",
+    "description": "The Battle of Oriskany was a major engagement of the Saratoga campaign during the American Revolutionary War. On August 6, 1777, an American column of Tryon County militia and Oneidas marching to relieve the siege of Fort Stanwix was ambushed by a contingent of Britain's Indigenous allies and Loyalists.",
+    "campaign": null,
+    "theater": "Northern",
+    "result": "British victory",
+    "significance": 2,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Oriskany",
+    "image_url": null,
+    "location": {
+      "name": "Oriskany",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 43.17722,
+        "lng": -75.36944
+      },
+      "state": "New York",
+      "id": 16
+    },
+    "commanders": {
+      "union": [
+        "Nicholas Herkimer",
+        "Peter Gansevoort",
+        "Louis Cook"
+      ],
+      "confederate": [
+        "Sir John Johnson",
+        "John Butler",
+        "Joseph Brant"
+      ]
+    },
+    "id": 16
+  },
+  {
+    "name": "Battle of Bennington",
+    "type": "battle",
+    "date_start": "1777-08-16",
+    "date_end": "1777-08-16",
+    "description": "The Battle of Bennington was fought on August 16, 1777, in Walloomsac, New York during the Saratoga campaign of the American Revolutionary War. Taking place approximately 10 miles from its namesake, Bennington, Vermont, the battle was fought between an American force of 2,000–2,500 men under Brigadier General John Stark and Lieutenant Colonel Seth Warner and a mostly Hessian and Loyalist force of 1,350–1,450 men under Lieutenant-colonel Friedrich Baum and Lieutenant-colonel Heinrich von Breymann.",
+    "campaign": null,
+    "theater": "Northern",
+    "result": "American victory",
+    "significance": 3,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Bennington",
+    "image_url": null,
+    "location": {
+      "name": "Bennington",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 42.93861,
+        "lng": -73.30444
+      },
+      "state": "New York",
+      "id": 17
+    },
+    "commanders": {
+      "union": [
+        "John Stark",
+        "Seth Warner"
+      ],
+      "confederate": [
+        "Friedrich Baum",
+        "Heinrich von Breymann"
+      ]
+    },
+    "id": 17
+  },
+  {
+    "name": "Battle of Brandywine",
+    "type": "battle",
+    "date_start": "1777-09-11",
+    "date_end": "1777-09-11",
+    "description": "The Battle of Brandywine, also known as the Battle of Brandywine Creek, was fought between the American Continental Army of General George Washington and the British Army of General Sir William Howe on September 11, 1777, as part of the American Revolutionary War . The forces met near Chadds Ford, Pennsylvania.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "British victory",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Brandywine",
+    "image_url": null,
+    "location": {
+      "name": "Brandywine",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 39.872,
+        "lng": -75.59
+      },
+      "state": "Pennsylvania",
+      "id": 18
+    },
+    "commanders": {
+      "union": [
+        "George Washington",
+        "Marquis de Lafayette",
+        "Nathanael Greene"
+      ],
+      "confederate": [
+        "William Howe",
+        "Charles Cornwallis",
+        "Wilhelm Knyphausen"
+      ]
+    },
+    "id": 18
+  },
+  {
+    "name": "Battles of Saratoga",
+    "type": "battle",
+    "date_start": "1777-09-19",
+    "date_end": "1777-10-07",
+    "description": "The Battles of Saratoga were fought September 19 and October 7, 1777 over the same ground by the American Continental Army and the British Army near Saratoga, New York during the American Revolutionary War. The second battle ended with a decisive American victory, and the surrender of the British army there.",
+    "campaign": null,
+    "theater": "Northern",
+    "result": "American victory",
+    "significance": 5,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battles_of_Saratoga",
+    "image_url": null,
+    "location": {
+      "name": "Saratoga",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 42.99889,
+        "lng": -73.6375
+      },
+      "state": "New York",
+      "id": 19
+    },
+    "commanders": {
+      "union": [
+        "Horatio Gates",
+        "Benedict Arnold",
+        "Benjamin Lincoln"
+      ],
+      "confederate": [
+        "John Burgoyne",
+        "Simon Fraser",
+        "William Phillips"
+      ]
+    },
+    "id": 19
+  },
+  {
+    "name": "Battle of Germantown",
+    "type": "battle",
+    "date_start": "1777-10-04",
+    "date_end": "1777-10-04",
+    "description": "The Battle of Germantown was a major engagement in the Philadelphia campaign of the American Revolutionary War. It was fought on October 4, 1777, at Germantown, Pennsylvania, between the British Army led by General Sir William Howe and the American Continental Army under General George Washington.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "British victory",
+    "significance": 3,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Germantown",
+    "image_url": null,
+    "location": {
+      "name": "Germantown",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 40.043,
+        "lng": -75.181
+      },
+      "state": "Pennsylvania",
+      "id": 20
+    },
+    "commanders": {
+      "union": [
+        "George Washington"
+      ],
+      "confederate": [
+        "Sir William Howe",
+        "Charles Cornwallis",
+        "Wilhelm Knyphausen"
+      ]
+    },
+    "id": 20
+  },
+  {
+    "name": "Battle of Monmouth",
+    "type": "battle",
+    "date_start": "1778-06-28",
+    "date_end": "1778-06-28",
+    "description": "The Battle of Monmouth, also known as the Battle of Monmouth Court House, was fought near the Village of Monmouth Court House in modern-day Freehold Borough, New Jersey and Manalapan, on June 28, 1778, during the American Revolutionary War. It pitted the Continental Army, commanded by General George Washington, against the British Army in North America, commanded by General Sir Henry Clinton.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "Inconclusive",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Monmouth",
+    "image_url": null,
+    "location": {
+      "name": "Monmouth",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 40.25634,
+        "lng": -74.3209
+      },
+      "state": "New Jersey",
+      "id": 21
+    },
+    "commanders": {
+      "union": [
+        "George Washington",
+        "Charles Lee"
+      ],
+      "confederate": [
+        "Sir Henry Clinton"
+      ]
+    },
+    "id": 21
+  },
+  {
+    "name": "Battle of Rhode Island",
+    "type": "battle",
+    "date_start": "1778-08-29",
+    "date_end": "1778-08-29",
+    "description": "The Battle of Rhode Island took place on August 29, 1778. Continental Army and militia forces commanded by Major-General John Sullivan had been on Aquidneck Island besieging British forces occupying Newport, Rhode Island.",
+    "campaign": null,
+    "theater": "Northern",
+    "result": "Inconclusive",
+    "significance": 2,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Rhode_Island",
+    "image_url": null,
+    "location": {
+      "name": "Rhode Island",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 41.6,
+        "lng": -71.25
+      },
+      "state": "Rhode Island",
+      "id": 22
+    },
+    "commanders": {
+      "union": [
+        "John Sullivan",
+        "Nathanael Greene",
+        "Christopher Greene"
+      ],
+      "confederate": [
+        "Sir Robert Pigot",
+        "Francis Smith",
+        "Richard Prescott"
+      ]
+    },
+    "id": 22
+  },
+  {
+    "name": "Battle of Kettle Creek",
+    "type": "battle",
+    "date_start": "1779-02-14",
+    "date_end": "1779-02-14",
+    "description": "The Battle of Kettle Creek was the first major victory for Patriots in the back country of Georgia during the American Revolutionary War that took place on February 14, 1779. It was fought in Wilkes County about eleven miles from present-day Washington, Georgia.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "American victory",
+    "significance": 2,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Kettle_Creek",
+    "image_url": null,
+    "location": {
+      "name": "Kettle Creek",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 33.6908,
+        "lng": -82.886
+      },
+      "state": "Georgia",
+      "id": 23
+    },
+    "commanders": {
+      "union": [
+        "Andrew Pickens",
+        "John Dooly",
+        "Elijah Clarke"
+      ],
+      "confederate": [
+        "John Boyd"
+      ]
+    },
+    "id": 23
+  },
+  {
+    "name": "Battle of Stony Point",
+    "type": "battle",
+    "date_start": "1779-07-16",
+    "date_end": "1779-07-16",
+    "description": "The Battle of Stony Point took place on July 16, 1779, during the American Revolutionary War. In a well-planned and -executed nighttime attack, a highly trained select group of George Washington's Continental Army troops under the command of Brigadier General \"Mad Anthony\" Wayne defeated British troops in a quick and daring assault on their outpost in Stony Point, New York, located in present day Rockland County, approximately 30 mi north of New York City.",
+    "campaign": null,
+    "theater": "Middle",
+    "result": "American victory",
+    "significance": 3,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Stony_Point",
+    "image_url": null,
+    "location": {
+      "name": "Stony Point",
+      "type": "fort",
+      "coordinates": {
+        "lat": 41.241,
+        "lng": -73.974
+      },
+      "state": "New York",
+      "id": 24
+    },
+    "commanders": {
+      "union": [
+        "Anthony Wayne"
+      ],
+      "confederate": [
+        "Henry Johnson"
+      ]
+    },
+    "id": 24
+  },
+  {
+    "name": "Siege of Savannah",
+    "type": "siege",
+    "date_start": "1779-09-16",
+    "date_end": "1779-10-18",
+    "description": "The siege of Savannah or the second battle of Savannah was an encounter of the American Revolutionary War in 1779. The year before, the city of Savannah, Georgia, had been captured by a British expeditionary corps under Lieutenant-Colonel Archibald Campbell.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "British victory",
+    "significance": 3,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Siege_of_Savannah_(1779)",
+    "image_url": null,
+    "location": {
+      "name": "Savannah",
+      "type": "city",
+      "coordinates": {
+        "lat": 32.08111,
+        "lng": -81.09111
+      },
+      "state": "Georgia",
+      "id": 25
+    },
+    "commanders": {
+      "union": [
+        "Benjamin Lincoln",
+        "Lachlan McIntosh",
+        "Casimir Pulaski"
+      ],
+      "confederate": [
+        "Augustine Prevost",
+        "John Maitland"
+      ]
+    },
+    "id": 25
+  },
+  {
+    "name": "Siege of Charleston",
+    "type": "siege",
+    "date_start": "1780-03-29",
+    "date_end": "1780-05-12",
+    "description": "The siege of Charleston was a major engagement and major British victory in the American Revolutionary War, fought in the environs of Charles Town , between March 29 and May 12, 1780. The British, following the collapse of their northern strategy in late 1777 and their withdrawal from Philadelphia in 1778, shifted their focus to the North American Southern Colonies.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "British victory",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Siege_of_Charleston",
+    "image_url": null,
+    "location": {
+      "name": "Charleston",
+      "type": "city",
+      "coordinates": {
+        "lat": 32.79417,
+        "lng": -79.94194
+      },
+      "state": "South Carolina",
+      "id": 26
+    },
+    "commanders": {
+      "union": [
+        "Benjamin Lincoln",
+        "William Moultrie",
+        "William Woodford"
+      ],
+      "confederate": [
+        "Sir Henry Clinton",
+        "Charles Cornwallis",
+        "Alexander Leslie"
+      ]
+    },
+    "id": 26
+  },
+  {
+    "name": "Battle of Camden",
+    "type": "battle",
+    "date_start": "1780-08-16",
+    "date_end": "1780-08-16",
+    "description": "The Battle of Camden, also known as the Battle of Camden Court House, was fought on August 16, 1780, as part of the Southern theater of the American Revolutionary War. A British army of 2,100 regulars and militia under Lieutenant-general Lord Cornwallis engaged an American army of 4,000 regulars and militia under Major General Horatio Gates four miles north of Camden, South Carolina.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "British victory",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Camden",
+    "image_url": null,
+    "location": {
+      "name": "Camden",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 34.36455,
+        "lng": -80.6139
+      },
+      "state": "South Carolina",
+      "id": 27
+    },
+    "commanders": {
+      "union": [
+        "Horatio Gates",
+        "Johann de Kalb",
+        "Marquis de La Rouërie"
+      ],
+      "confederate": [
+        "Lord Cornwallis",
+        "Lord Rawdon"
+      ]
+    },
+    "id": 27
+  },
+  {
+    "name": "Battle of Kings Mountain",
+    "type": "battle",
+    "date_start": "1780-10-07",
+    "date_end": "1780-10-07",
+    "description": "The Battle of Kings Mountain was fought on October 7, 1780, in South Carolina during the Southern theater of the American Revolutionary War. Fought almost entirely between Patriot and Loyalist troops, the battle resulted in a decisive Patriot victory.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "American victory",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Kings_Mountain",
+    "image_url": null,
+    "location": {
+      "name": "Kings Mountain",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 35.1425,
+        "lng": -81.38056
+      },
+      "state": "South Carolina",
+      "id": 28
+    },
+    "commanders": {
+      "union": [
+        "William Campbell",
+        "Benjamin Cleveland",
+        "Isaac Shelby"
+      ],
+      "confederate": [
+        "Patrick Ferguson",
+        "Abraham de Peyster"
+      ]
+    },
+    "id": 28
+  },
+  {
+    "name": "Battle of Cowpens",
+    "type": "battle",
+    "date_start": "1781-01-17",
+    "date_end": "1781-01-17",
+    "description": "The Battle of Cowpens was a military engagement of the American Revolutionary War fought on January 17, 1781, near the town of Cowpens, South Carolina. An American army of nearly 2,000 regulars and militia under Brigadier general Daniel Morgan defeated a force of about 1,000 British and Loyalist troops commanded by Lieutenant-colonel Banastre Tarleton.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "American victory",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Cowpens",
+    "image_url": null,
+    "location": {
+      "name": "Cowpens",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 35.13683,
+        "lng": -81.816
+      },
+      "state": "South Carolina",
+      "id": 29
+    },
+    "commanders": {
+      "union": [
+        "Daniel Morgan"
+      ],
+      "confederate": [
+        "Banastre Tarleton"
+      ]
+    },
+    "id": 29
+  },
+  {
+    "name": "Battle of Guilford Court House",
+    "type": "battle",
+    "date_start": "1781-03-15",
+    "date_end": "1781-03-15",
+    "description": "The Battle of Guilford Court House was fought on 15 March 1781 during the American Revolutionary War, near Greensboro, North Carolina. A 2,100-man British force under the command of Lieutenant General Charles Cornwallis defeated Major General Nathanael Greene's 4,500 Americans.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "British victory",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House",
+    "image_url": null,
+    "location": {
+      "name": "Guilford Court House",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 36.132,
+        "lng": -79.844
+      },
+      "state": "North Carolina",
+      "id": 30
+    },
+    "commanders": {
+      "union": [
+        "Nathanael Greene"
+      ],
+      "confederate": [
+        "Charles Cornwallis",
+        "Banastre Tarleton",
+        "Charles O'Hara"
+      ]
+    },
+    "id": 30
+  },
+  {
+    "name": "Battle of Hobkirk's Hill",
+    "type": "battle",
+    "date_start": "1781-04-25",
+    "date_end": "1781-04-25",
+    "description": "The Battle of Hobkirk's Hill was fought on April 25, 1781, near Camden, South Carolina, as part of the Southern theater of the American Revolutionary War. 1,550 American regulars and militia under Major General Nathanael Greene occupying Hobkirk's Hill, north of Camden, were attacked by a British force of 900 regulars and militia under Lieutenant-colonel Lord Rawdon. After a fierce clash, Greene retreated, leaving Rawdon's force in possession of the hill.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "British victory",
+    "significance": 2,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Hobkirk%27s_Hill",
+    "image_url": null,
+    "location": {
+      "name": "Hobkirk's Hill",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 34.27444,
+        "lng": -80.60722
+      },
+      "state": "South Carolina",
+      "id": 31
+    },
+    "commanders": {
+      "union": [
+        "Nathanael Greene"
+      ],
+      "confederate": [
+        "Lord Rawdon"
+      ]
+    },
+    "id": 31
+  },
+  {
+    "name": "Battle of the Chesapeake",
+    "type": "battle",
+    "date_start": "1781-09-05",
+    "date_end": "1781-09-05",
+    "description": "The Battle of the Chesapeake, also known as the Battle of the Virginia Capes or simply the Battle of the Capes, was a fleet action which took place near the mouth of the Chesapeake Bay on 5 September 1781 during the American Revolutionary War. It was fought between a British fleet led by Rear-Admiral of the Red Sir Thomas Graves and a French fleet under Lieutenant général des armées navales François Joseph Paul de Grasse.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "Franco-American victory",
+    "significance": 4,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_the_Chesapeake",
+    "image_url": null,
+    "location": {
+      "name": "the Chesapeake",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 36.9675,
+        "lng": -75.53917
+      },
+      "state": "Virginia",
+      "id": 32
+    },
+    "commanders": {
+      "union": [
+        "Comte de Grasse"
+      ],
+      "confederate": [
+        "Sir Thomas Graves"
+      ]
+    },
+    "id": 32
+  },
+  {
+    "name": "Battle of Eutaw Springs",
+    "type": "battle",
+    "date_start": "1781-09-08",
+    "date_end": "1781-09-08",
+    "description": "The Battle of Eutaw Springs was fought on September 8, 1781 during the American Revolutionary War. It was the last major engagement of the conflict to be fought in the Carolinas.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "Inconclusive",
+    "significance": 3,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Eutaw_Springs",
+    "image_url": null,
+    "location": {
+      "name": "Eutaw Springs",
+      "type": "battlefield",
+      "coordinates": {
+        "lat": 33.4,
+        "lng": -80.35
+      },
+      "state": "South Carolina",
+      "id": 33
+    },
+    "commanders": {
+      "union": [
+        "Nathanael Greene"
+      ],
+      "confederate": [
+        "Alexander Stewart"
+      ]
+    },
+    "id": 33
+  },
+  {
+    "name": "Siege of Yorktown",
+    "type": "siege",
+    "date_start": "1781-09-28",
+    "date_end": "1781-10-19",
+    "description": "The Siege of Yorktown, also known as the Battle of Yorktown and the surrender at Yorktown, took place in 1781 and was the final major land engagement of the American Revolutionary War. It was won decisively by the Continental Army, led by George Washington, with support from the Marquis de Lafayette and French Army troops, led by Comte de Rochambeau, and a French Navy force commanded by the Comte de Grasse, making the British Army commanded by British Lieutenant General Charles Cornwallis surrender.",
+    "campaign": null,
+    "theater": "Southern",
+    "result": "Franco-American victory",
+    "significance": 5,
+    "cwsac_id": null,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Siege_of_Yorktown",
+    "image_url": null,
+    "location": {
+      "name": "Yorktown",
+      "type": "city",
+      "coordinates": {
+        "lat": 37.23083,
+        "lng": -76.5025
+      },
+      "state": "Virginia",
+      "id": 34
+    },
+    "commanders": {
+      "union": [
+        "George Washington",
+        "Benjamin Lincoln",
+        "Henry Knox"
+      ],
+      "confederate": [
+        "Charles Cornwallis",
+        "Charles O'Hara",
+        "Banastre Tarleton"
+      ]
+    },
+    "id": 34
+  }
+]

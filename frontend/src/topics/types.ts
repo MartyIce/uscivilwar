@@ -30,6 +30,8 @@ export interface TopicConfig {
    * the world that is. (Static for now; per-topic datasets can load lazily.)
    */
   boundaries: Boundary[];
+  /** Theaters for the filter sidebar (matches the `theater` field of events) */
+  theaters: { value: string; label: string }[];
   /** Which optional parts of the UI have data for this topic */
   features: {
     /** People browser and person details */

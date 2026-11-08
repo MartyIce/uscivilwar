@@ -13,5 +13,12 @@ export const usCivilWar: TopicConfig = {
   defaultEventSlug: 'fort_sumter',
   mapView: { center: [39, -98], zoom: 4 },
   boundaries: stateBoundaries,
+  theaters: [
+    { value: 'Eastern', label: 'Eastern Theater' },
+    { value: 'Western', label: 'Western Theater' },
+    { value: 'Trans-Mississippi', label: 'Trans-Mississippi' },
+    { value: 'Lower Seaboard', label: 'Lower Seaboard' },
+    { value: 'Pacific Coast', label: 'Pacific Coast' },
+  ],
   features: { people: true, armyTracking: true, cities: true },
 };

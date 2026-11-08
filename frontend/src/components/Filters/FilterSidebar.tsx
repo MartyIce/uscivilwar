@@ -6,6 +6,8 @@ interface FilterSidebarProps {
   dateRange: { from: string; to: string };
   /** The topic's full date span (the default and the limits for the inputs) */
   fullDateRange: { from: string; to: string };
+  /** Theaters to offer in the filter */
+  theaters: { value: string; label: string }[];
   onDateRangeChange: (range: { from: string; to: string }) => void;
   selectedTheater: string | null;
   onTheaterChange: (theater: string | null) => void;
@@ -23,19 +25,13 @@ const EVENT_TYPES: { value: EventType; label: string; color: string }[] = [
   { value: 'election', label: 'Elections', color: 'bg-pink-500' },
 ];
 
-const THEATERS = [
-  { value: 'Eastern', label: 'Eastern Theater' },
-  { value: 'Western', label: 'Western Theater' },
-  { value: 'Trans-Mississippi', label: 'Trans-Mississippi' },
-  { value: 'Lower Seaboard', label: 'Lower Seaboard' },
-  { value: 'Pacific Coast', label: 'Pacific Coast' },
-];
 
 export default function FilterSidebar({
   selectedTypes,
   onTypeToggle,
   dateRange,
   fullDateRange,
+  theaters: THEATERS,
   onDateRangeChange,
   selectedTheater,
   onTheaterChange,

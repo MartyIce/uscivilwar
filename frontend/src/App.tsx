@@ -407,6 +407,7 @@ function App({ topic, topics, onTopicChange }: AppProps) {
             onTypeToggle={handleTypeToggle}
             dateRange={dateRange}
             fullDateRange={topic.dateRange}
+            theaters={topic.theaters}
             onDateRangeChange={setDateRange}
             selectedTheater={selectedTheater}
             onTheaterChange={setSelectedTheater}

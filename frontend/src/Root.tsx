@@ -39,6 +39,10 @@ export default function Root() {
   const topic = getTopic(topicId) ?? topics[0];
   // Tell the API client which topic's data to request (set before App renders)
   setApiTopic(topic.id);
+
+  useEffect(() => {
+    document.title = topic.title;
+  }, [topic.title]);
   // key remounts App so all per-topic state starts fresh
   return <App key={topic.id} topic={topic} topics={topics} onTopicChange={changeTopic} />;
 }

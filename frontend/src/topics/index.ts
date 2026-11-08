@@ -1,10 +1,11 @@
 import { usCivilWar } from './uscivilwar';
+import { usRevolution } from './usrevolution';
 import type { TopicConfig } from './types';
 
 export type { TopicConfig } from './types';
 
 /** All topics, in switcher order. The first is the default. */
-export const topics: TopicConfig[] = [usCivilWar];
+export const topics: TopicConfig[] = [usCivilWar, usRevolution];
 
 export const DEFAULT_TOPIC_ID = topics[0].id;
 

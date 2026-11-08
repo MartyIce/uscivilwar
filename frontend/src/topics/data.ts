@@ -1,4 +1,5 @@
 import { expandedEvents } from '../data';
+import usRevolutionEvents from './usrevolution/events.json';
 
 /** The event shape the mock API serves (same as the Civil War data) */
 export type TopicEvent = (typeof expandedEvents)[number];
@@ -9,6 +10,7 @@ export type TopicEvent = (typeof expandedEvents)[number];
  */
 export const topicEvents: Record<string, TopicEvent[]> = {
   uscivilwar: expandedEvents,
+  usrevolution: usRevolutionEvents as unknown as TopicEvent[],
 };
 
 export const DEFAULT_API_TOPIC = 'uscivilwar';
