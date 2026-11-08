@@ -21,6 +21,17 @@ function getResultCategory(result: string | null): Exclude<ResultFilter, 'all'> 
   return 'other';
 }
 
+const ORDINAL = /^(first|second|third)\s+/i;
+const NAME_PREFIX = /^(the\s+)?(battles?|siege|raid|capture|fall|burning|sinking|engagement|action|affair|skirmish)\s+(of|at|on|for)\s+/i;
+
+// Sort key that ignores prefixes ("Battle of Gettysburg" -> "Gettysburg") and
+// keeps ordinals as a suffix ("First Battle of Bull Run" -> "Bull Run first")
+function sortKey(name: string): string {
+  const ordinal = name.match(ORDINAL)?.[1].toLowerCase();
+  const rest = name.replace(ORDINAL, '').replace(NAME_PREFIX, '').trim();
+  return ordinal ? `${rest} ${ordinal}` : rest;
+}
+
 function formatDate(dateStr: string): string {
   return parseLocalDate(dateStr).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -45,10 +56,12 @@ export default function BattlesBrowser({
   const [searchTerm, setSearchTerm] = useState('');
   const [filterResult, setFilterResult] = useState<ResultFilter>('all');
 
+  // Alphabetical by name, ignoring prefixes like "Battle of" so "Battle of
+  // Gettysburg" sorts under G
   const sortedEvents = useMemo(
     () =>
       [...events].sort(
-        (a, b) => a.date_start.localeCompare(b.date_start) || a.id - b.id
+        (a, b) => sortKey(a.name).localeCompare(sortKey(b.name)) || a.id - b.id
       ),
     [events]
   );
