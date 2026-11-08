@@ -2,7 +2,7 @@
 
 A deep dive is one JSON file: `frontend/src/data/battles/lite/<slug>.json`.
 
-- `<slug>` is the slug of the event name in the app. "Battle of Shiloh" -> `shiloh`, "First Battle of Bull Run" -> `first_bull_run`. Slug rules are in `frontend/src/utils/slugs.ts`. The file name and the `id` field must match.
+- `<slug>` is the slug of the event name in the app. "Battle of Shiloh" -> `shiloh`, "First Battle of Bull Run" -> `first_battle_of_bull_run`. Only prefixes like "Battle of" and "Siege of" are dropped. Do not guess: run `cd frontend && npx tsx -e "import {eventNameToSlug as s} from './src/utils/slugs'; console.log(s('<event name>'))"`. The file name and the `id` field must match.
 - The TypeScript type is `LiteBattleData` in `frontend/src/data/battles/types.ts`. That file is the source of truth for field names and allowed values.
 - A hand-built full example is `frontend/src/data/battles/gettysburg-deep.ts`. Match its tone and level of detail, but NOT its regiment-level order of battle. Lite files list only the units that appear on the map (corps/division level).
 - Validate with `cd frontend && npm run validate:battles -- <slug>`. The file must pass with 0 errors.
