@@ -230,43 +230,35 @@ function App() {
     setIsPlaying((prev) => !prev);
   }, [isPlaying, currentDate, dateRange]);
 
-  // Handle jump to next event
-  const handleNextEvent = useCallback(() => {
-    if (!allEvents.length) return;
+  // Step to the next/previous event: select it so the map pans and highlights it
+  const stepEvent = useCallback(
+    (direction: 1 | -1) => {
+      if (!allEvents.length) return;
 
-    // Find the next event after the current date
-    const sortedEvents = [...allEvents].sort((a, b) =>
-      a.date_start.localeCompare(b.date_start)
-    );
+      const sorted = [...allEvents].sort(
+        (a, b) => a.date_start.localeCompare(b.date_start) || a.id - b.id
+      );
 
-    const nextEvent = sortedEvents.find(
-      (event) => event.date_start > currentDate
-    );
+      const selectedIndex = sorted.findIndex((e) => e.id === selectedEventId);
+      let target: (typeof sorted)[number] | undefined;
+      if (selectedIndex !== -1) {
+        target = sorted[selectedIndex + direction];
+      } else if (direction === 1) {
+        target = sorted.find((e) => e.date_start > currentDate);
+      } else {
+        target = [...sorted].reverse().find((e) => e.date_start < currentDate);
+      }
 
-    if (nextEvent) {
-      setCurrentDate(nextEvent.date_start);
-      setIsPlaying(false);
-    }
-  }, [allEvents, currentDate]);
+      if (target) {
+        handleEventSelect(target.id);
+        setIsPlaying(false);
+      }
+    },
+    [allEvents, currentDate, selectedEventId, handleEventSelect]
+  );
 
-  // Handle jump to previous event
-  const handlePrevEvent = useCallback(() => {
-    if (!allEvents.length) return;
-
-    // Find the previous event before the current date
-    const sortedEvents = [...allEvents].sort((a, b) =>
-      b.date_start.localeCompare(a.date_start)
-    );
-
-    const prevEvent = sortedEvents.find(
-      (event) => event.date_start < currentDate
-    );
-
-    if (prevEvent) {
-      setCurrentDate(prevEvent.date_start);
-      setIsPlaying(false);
-    }
-  }, [allEvents, currentDate]);
+  const handleNextEvent = useCallback(() => stepEvent(1), [stepEvent]);
+  const handlePrevEvent = useCallback(() => stepEvent(-1), [stepEvent]);
 
   // Handle commander toggle for army tracking
   const handleCommanderToggle = useCallback((commander: string) => {
