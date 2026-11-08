@@ -13,8 +13,18 @@ const API_BASE = import.meta.env.VITE_API_URL
   ? `${import.meta.env.VITE_API_URL}/api/v1`
   : '/api/v1';
 
+// The topic whose data the API should return. Set by the app when the topic changes.
+let apiTopic = 'uscivilwar';
+export function setApiTopic(topicId: string): void {
+  apiTopic = topicId;
+}
+export function getApiTopic(): string {
+  return apiTopic;
+}
+
 // Generic fetch wrapper with error handling
-async function fetchJson<T>(url: string, options?: RequestInit): Promise<T> {
+async function fetchJson<T>(rawUrl: string, options?: RequestInit): Promise<T> {
+  const url = `${rawUrl}${rawUrl.includes('?') ? '&' : '?'}topic=${encodeURIComponent(apiTopic)}`;
   const response = await fetch(url, {
     ...options,
     headers: {

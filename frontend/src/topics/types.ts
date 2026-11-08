@@ -11,9 +11,10 @@ export interface TopicConfig {
   id: string;
   /** Short display name for the switcher */
   name: string;
-  /** Header banner image, relative to the app's base URL */
-  bannerUrl: string;
-  bannerAlt: string;
+  /** Header banner image, relative to the app's base URL. Omit for a text header. */
+  bannerUrl?: string;
+  /** Title shown in the header (and as the banner's alt text) */
+  title: string;
   /** Text for the info dialog */
   description: string;
   /** Full time span of the topic; the timeline and date filters use this */
@@ -29,4 +30,13 @@ export interface TopicConfig {
    * the world that is. (Static for now; per-topic datasets can load lazily.)
    */
   boundaries: Boundary[];
+  /** Which optional parts of the UI have data for this topic */
+  features: {
+    /** People browser and person details */
+    people: boolean;
+    /** "Track Armies" and troop strength */
+    armyTracking: boolean;
+    /** Major cities layer */
+    cities: boolean;
+  };
 }

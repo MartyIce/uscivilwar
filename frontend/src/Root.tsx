@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import App from './App';
 import { topics, getTopic, DEFAULT_TOPIC_ID } from './topics';
+import { setApiTopic } from './api/client';
 
 /** The topic for a URL path: the first path segment, or the default topic. */
 function topicIdFromPath(pathname: string): string {
@@ -36,6 +37,8 @@ export default function Root() {
   }, []);
 
   const topic = getTopic(topicId) ?? topics[0];
+  // Tell the API client which topic's data to request (set before App renders)
+  setApiTopic(topic.id);
   // key remounts App so all per-topic state starts fresh
   return <App key={topic.id} topic={topic} topics={topics} onTopicChange={changeTopic} />;
 }

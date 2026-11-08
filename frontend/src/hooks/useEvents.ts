@@ -1,10 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
+import { getApiTopic } from '../api/client';
 import { eventsApi } from '../api/client';
 import type { EventQueryParams } from '../types';
 
 // Query keys for cache management
 export const eventKeys = {
-  all: ['events'] as const,
+  get all() {
+    return ['events', getApiTopic()] as const;
+  },
   lists: () => [...eventKeys.all, 'list'] as const,
   list: (params: EventQueryParams) => [...eventKeys.lists(), params] as const,
   details: () => [...eventKeys.all, 'detail'] as const,

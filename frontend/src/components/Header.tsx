@@ -21,13 +21,19 @@ export default function Header({
 
   return (
     <header className="bg-slate-800 text-white shadow-lg">
-      {/* Banner image */}
+      {/* Banner image, or a text title when the topic has no banner */}
       <div className="w-full overflow-hidden bg-slate-900 flex justify-center">
-        <img
-          src={`${import.meta.env.BASE_URL}${topic.bannerUrl}`}
-          alt={topic.bannerAlt}
-          className="h-16 sm:h-20 md:h-24 w-auto object-contain"
-        />
+        {topic.bannerUrl ? (
+          <img
+            src={`${import.meta.env.BASE_URL}${topic.bannerUrl}`}
+            alt={topic.title}
+            className="h-16 sm:h-20 md:h-24 w-auto object-contain"
+          />
+        ) : (
+          <h1 className="h-16 sm:h-20 md:h-24 flex items-center px-4 text-xl sm:text-2xl md:text-3xl font-bold tracking-wide text-slate-100 text-center">
+            {topic.title}
+          </h1>
+        )}
       </div>
 
       <div className="px-4 py-2 flex items-center justify-between">

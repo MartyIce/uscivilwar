@@ -1,10 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
+import { getApiTopic } from '../api/client';
 import { boundariesApi } from '../api/client';
 import type { BoundaryQueryParams } from '../types';
 
 // Query keys for cache management
 export const boundaryKeys = {
-  all: ['boundaries'] as const,
+  get all() {
+    return ['boundaries', getApiTopic()] as const;
+  },
   byDate: (params: BoundaryQueryParams) => [...boundaryKeys.all, params] as const,
   timeline: () => [...boundaryKeys.all, 'timeline'] as const,
 };

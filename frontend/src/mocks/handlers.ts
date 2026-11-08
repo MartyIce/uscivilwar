@@ -1,5 +1,6 @@
 import { http, HttpResponse } from 'msw';
 import { expandedEvents, allPeople, locations as allLocations, stateBoundaries } from '../data';
+import { getTopicEvents } from '../topics/data';
 
 const API_BASE = '/api/v1';
 
@@ -15,7 +16,7 @@ export const handlers = [
     const theater = url.searchParams.get('theater');
     const minSignificance = url.searchParams.get('min_significance');
 
-    let filteredEvents = [...expandedEvents];
+    let filteredEvents = [...getTopicEvents(url.searchParams.get('topic'))];
 
     // Apply filters
     if (type) {
@@ -57,7 +58,7 @@ export const handlers = [
     const dateFrom = url.searchParams.get('date_from') || '1861-01-01';
     const dateTo = url.searchParams.get('date_to') || '1865-12-31';
 
-    const timelineEvents = expandedEvents.filter(e =>
+    const timelineEvents = getTopicEvents(url.searchParams.get('topic')).filter(e =>
       e.date_start >= dateFrom && e.date_start <= dateTo
     );
 
@@ -78,17 +79,17 @@ export const handlers = [
     });
   }),
 
-  http.get(`${API_BASE}/events/:id`, ({ params }) => {
-    const event = expandedEvents.find(e => e.id === parseInt(params.id as string));
+  http.get(`${API_BASE}/events/:id`, ({ params, request }) => {
+    const event = getTopicEvents(new URL(request.url).searchParams.get('topic')).find(e => e.id === parseInt(params.id as string));
     if (!event) {
       return new HttpResponse(null, { status: 404 });
     }
     return HttpResponse.json(event);
   }),
 
-  http.get(`${API_BASE}/events/:id/participants`, ({ params }) => {
+  http.get(`${API_BASE}/events/:id/participants`, ({ params, request }) => {
     const eventId = parseInt(params.id as string);
-    const event = expandedEvents.find(e => e.id === eventId);
+    const event = getTopicEvents(new URL(request.url).searchParams.get('topic')).find(e => e.id === eventId);
 
     if (!event) {
       return new HttpResponse(null, { status: 404 });

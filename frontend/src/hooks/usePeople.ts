@@ -1,9 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
+import { getApiTopic } from '../api/client';
 import { peopleApi } from '../api/client';
 
 // Query keys for cache management
 export const peopleKeys = {
-  all: ['people'] as const,
+  get all() {
+    return ['people', getApiTopic()] as const;
+  },
   lists: () => [...peopleKeys.all, 'list'] as const,
   list: (params: { limit?: number; offset?: number; side?: 'union' | 'confederate' }) =>
     [...peopleKeys.lists(), params] as const,

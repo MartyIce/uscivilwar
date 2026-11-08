@@ -5,7 +5,7 @@ export const usCivilWar: TopicConfig = {
   id: 'uscivilwar',
   name: 'American Civil War',
   bannerUrl: 'header-banner.jpg',
-  bannerAlt: 'The American Civil War: A Nation Divided, 1861-1865',
+  title: 'The American Civil War: A Nation Divided, 1861-1865',
   description:
     'An interactive map exploring the American Civil War (1861-1865). Navigate through time to see battles, movements, and key figures.',
   dateRange: { from: '1861-01-01', to: '1865-12-31' },
@@ -13,4 +13,5 @@ export const usCivilWar: TopicConfig = {
   defaultEventSlug: 'fort_sumter',
   mapView: { center: [39, -98], zoom: 4 },
   boundaries: stateBoundaries,
+  features: { people: true, armyTracking: true, cities: true },
 };

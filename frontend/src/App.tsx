@@ -433,10 +433,10 @@ function App({ topic, topics, onTopicChange }: AppProps) {
               selectedEventId={selectedEventId}
               onEventSelect={handleEventSelect}
               currentDate={currentDate}
-              armyMovements={armyMovements}
-              selectedCommanders={selectedCommanders}
+              armyMovements={topic.features.armyTracking ? armyMovements : []}
+              selectedCommanders={topic.features.armyTracking ? selectedCommanders : []}
               showTroopStrength={showTroopStrength}
-              showCities={showCities}
+              showCities={topic.features.cities && showCities}
               onCityClick={handleCityClick}
               selectedCityName={selectedCityName}
               onStateClick={handleStateClick}
@@ -446,6 +446,8 @@ function App({ topic, topics, onTopicChange }: AppProps) {
 
           {/* Army movement tracking button */}
           <div className="absolute top-4 left-4 z-[1000] flex items-center gap-2">
+            {topic.features.armyTracking && (
+              <>
             <button
               onClick={() => setShowCommanderSelector(!showCommanderSelector)}
               className={`px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
@@ -479,8 +481,11 @@ function App({ topic, topics, onTopicChange }: AppProps) {
                 <span className="text-sm font-medium">Troop #</span>
               </button>
             )}
+              </>
+            )}
 
             {/* Cities toggle */}
+            {topic.features.cities && (
             <button
               onClick={() => setShowCities(!showCities)}
               className={`px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
@@ -495,15 +500,18 @@ function App({ topic, topics, onTopicChange }: AppProps) {
               </svg>
               <span className="text-sm font-medium">Cities</span>
             </button>
+            )}
           </div>
 
           {/* Commander selector panel */}
+          {topic.features.armyTracking && (
           <CommanderSelector
             selectedCommanders={selectedCommanders}
             onToggleCommander={handleCommanderToggle}
             isOpen={showCommanderSelector}
             onClose={() => setShowCommanderSelector(false)}
           />
+          )}
 
           {/* Battles browser button */}
           <button
@@ -511,7 +519,7 @@ function App({ topic, topics, onTopicChange }: AppProps) {
               setShowBattlesBrowser(!showBattlesBrowser);
               setShowPeopleBrowser(false);
             }}
-            className={`absolute top-4 right-32 z-[1000] px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
+            className={`absolute top-4 ${topic.features.people ? 'right-32' : 'right-4'} z-[1000] px-3 py-2 rounded-lg shadow-md flex items-center gap-2 transition-colors ${
               showBattlesBrowser
                 ? 'bg-amber-600 text-white hover:bg-amber-700'
                 : 'bg-white text-gray-700 hover:bg-gray-50'
@@ -534,6 +542,8 @@ function App({ topic, topics, onTopicChange }: AppProps) {
             }}
           />
 
+          {topic.features.people && (
+            <>
           {/* People browser button */}
           <button
             onClick={() => {
@@ -558,6 +568,8 @@ function App({ topic, topics, onTopicChange }: AppProps) {
             onClose={() => setShowPeopleBrowser(false)}
             onPersonSelect={handlePersonClick}
           />
+            </>
+          )}
         </div>
 
         {/* Detail panel */}
