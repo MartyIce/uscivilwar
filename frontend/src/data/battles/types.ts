@@ -193,6 +193,10 @@ export interface LiteForce {
 
 export interface LiteBattleData extends Omit<BattleDeepData, 'forces' | 'units'> {
   forces: { union: LiteForce; confederate: LiteForce };
+  /** URLs the data was derived from */
+  sources?: string[];
+  /** 'unreviewed' until a human has checked positions on the map */
+  review?: 'unreviewed' | 'reviewed';
 }
 
 /** Convert a lite battle into the full BattleDeepData shape used by the UI. */
