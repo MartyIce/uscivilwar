@@ -1,5 +1,6 @@
 import type { CivilWarEvent, CasualtyStats } from '../../types';
 import { hasBattleDeepData } from '../../hooks/useBattleDeep';
+import { useWikipediaImage } from '../../hooks/useWikipediaImage';
 
 interface EventDetailProps {
   event: CivilWarEvent;
@@ -86,6 +87,10 @@ export default function EventDetail({ event, onDeepDive, onPersonClick }: EventD
       ? `${formatDate(event.date_start)} - ${formatDate(event.date_end)}`
       : formatDate(event.date_start);
 
+  // Prefer the Wikipedia lead image (hotlinked); fall back to the event's own image
+  const { data: wikipediaImage } = useWikipediaImage(event.wikipedia_url);
+  const imageUrl = wikipediaImage || event.image_url;
+
   // Check if this battle has deep dive data
   const deepBattleId = getBattleDeepId(event.name);
   const hasDeepDive = deepBattleId && hasBattleDeepData(deepBattleId);
@@ -93,12 +98,17 @@ export default function EventDetail({ event, onDeepDive, onPersonClick }: EventD
   return (
     <div className="relative">
       {/* Header image */}
-      {event.image_url && (
+      {imageUrl && (
         <div className="h-48 bg-gray-200 overflow-hidden">
           <img
-            src={event.image_url}
+            key={imageUrl}
+            src={imageUrl}
             alt={event.name}
             className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+            onError={(e) => {
+              e.currentTarget.parentElement!.style.display = 'none';
+            }}
           />
         </div>
       )}
