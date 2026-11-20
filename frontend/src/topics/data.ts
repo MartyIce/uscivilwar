@@ -1,9 +1,10 @@
-import { expandedEvents, expandedPeople, getEventsByCommanderId } from '../data';
+import { expandedEvents, expandedPeople, getEventsByCommanderId, armyMovements, availableCommanders } from '../data';
 import { majorCities, type CityData } from '../mocks/data/cities';
-import type { Person } from '../types';
+import type { Person, ArmyMovement, Side } from '../types';
 import usRevolutionEvents from './usrevolution/events.json';
 import usRevolutionPeople from './usrevolution/people.json';
 import usRevolutionCities from './usrevolution/cities.json';
+import usRevolutionMovements from './usrevolution/movements.json';
 
 /** The event shape the mock API serves (same as the Civil War data) */
 export type TopicEvent = (typeof expandedEvents)[number];
@@ -58,4 +59,28 @@ export function getPersonTopicEvents(topicId: string | null, person: Person): To
   return getTopicEvents(topicId).filter((e) =>
     [...(e.commanders?.union ?? []), ...(e.commanders?.confederate ?? [])].some((c) => personMatchesName(person, c))
   );
+}
+
+/** Army movements for each topic (the map's Track Armies layer) */
+export const topicMovements: Record<string, ArmyMovement[]> = {
+  uscivilwar: armyMovements,
+  usrevolution: usRevolutionMovements as unknown as ArmyMovement[],
+};
+
+export function getTopicMovements(topicId: string | null): ArmyMovement[] {
+  return topicMovements[topicId ?? DEFAULT_API_TOPIC] ?? [];
+}
+
+export interface TrackableCommander {
+  name: string;
+  side: Side;
+  color: string;
+}
+
+/** Commanders whose movements can be tracked in a topic */
+export function getTopicCommanders(topicId: string | null): TrackableCommander[] {
+  if ((topicId ?? DEFAULT_API_TOPIC) === 'uscivilwar') {
+    return availableCommanders.map((c) => ({ name: c.name, side: c.side, color: c.color }));
+  }
+  return getTopicMovements(topicId).map((m) => ({ name: m.commander, side: m.side, color: m.color }));
 }

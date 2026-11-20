@@ -11,9 +11,8 @@ import BattleDeepView from './components/BattleDeep/BattleDeepView';
 import OrgChart from './components/OrgChart/OrgChart';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useNavigationHistory } from './hooks/useNavigationHistory';
-import { armyMovements } from './data';
 import type { TopicConfig } from './topics';
-import { getTopicCities, getTopicPeople } from './topics/data';
+import { getTopicCities, getTopicCommanders, getTopicMovements, getTopicPeople } from './topics/data';
 import { hasBattleDeepData } from './hooks/useBattleDeep';
 import { eventNameToSlug, personNameToSlug, personMatchesSlug, slugToDisplayName } from './utils/slugs';
 import { parseUrlState, buildSearch, hasSelection, type UrlState } from './utils/urlState';
@@ -64,10 +63,9 @@ function App({ topic, topics, onTopicChange }: AppProps) {
   const selectedStateName = navHistory.current?.type === 'state' ? navHistory.current.stateName : null;
 
   // Army movement tracking - default to showing Lee and Grant
-  const [selectedCommanders, setSelectedCommanders] = useState<string[]>([
-    'Robert E. Lee',
-    'Ulysses S. Grant',
-  ]);
+  const [selectedCommanders, setSelectedCommanders] = useState<string[]>(
+    topic.defaultCommanders ?? []
+  );
   const [showTroopStrength, setShowTroopStrength] = useState(false);
   const [showCities, setShowCities] = useState(true);
 
@@ -437,7 +435,7 @@ function App({ topic, topics, onTopicChange }: AppProps) {
               selectedEventId={selectedEventId}
               onEventSelect={handleEventSelect}
               currentDate={currentDate}
-              armyMovements={topic.features.armyTracking ? armyMovements : []}
+              armyMovements={topic.features.armyTracking ? getTopicMovements(topic.id) : []}
               selectedCommanders={topic.features.armyTracking ? selectedCommanders : []}
               showTroopStrength={showTroopStrength}
               showCities={topic.features.cities && showCities}
@@ -511,6 +509,8 @@ function App({ topic, topics, onTopicChange }: AppProps) {
           {/* Commander selector panel */}
           {topic.features.armyTracking && (
           <CommanderSelector
+            commanders={getTopicCommanders(topic.id)}
+            groupBySide={topic.id === 'uscivilwar'}
             selectedCommanders={selectedCommanders}
             onToggleCommander={handleCommanderToggle}
             isOpen={showCommanderSelector}

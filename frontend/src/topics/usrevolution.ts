@@ -24,6 +24,7 @@ export const usRevolution: TopicConfig = {
   dateRange: { from: '1775-01-01', to: '1783-12-31' },
   startDate: '1775-04-19',
   defaultEventSlug: 'battles_of_lexington_and_concord',
+  defaultCommanders: ['George Washington', 'Charles Cornwallis'],
   mapView: { center: [39.5, -76.5], zoom: 5 },
   boundaries,
   theaters: [
@@ -31,5 +32,5 @@ export const usRevolution: TopicConfig = {
     { value: 'Middle', label: 'Middle Colonies' },
     { value: 'Southern', label: 'Southern Theater' },
   ],
-  features: { people: true, armyTracking: false, cities: true },
+  features: { people: true, armyTracking: true, cities: true },
 };

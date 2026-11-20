@@ -11,6 +11,7 @@ export const usCivilWar: TopicConfig = {
   dateRange: { from: '1861-01-01', to: '1865-12-31' },
   startDate: '1861-04-12',
   defaultEventSlug: 'fort_sumter',
+  defaultCommanders: ['Robert E. Lee', 'Ulysses S. Grant'],
   mapView: { center: [39, -98], zoom: 4 },
   boundaries: stateBoundaries,
   theaters: [

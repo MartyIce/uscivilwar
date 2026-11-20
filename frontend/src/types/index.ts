@@ -164,6 +164,8 @@ export interface ArmyMovement {
   commander: string; // Primary commander name
   side: Side;
   color: string; // For visualization
+  /** Peak approximate strength; used by topics whose movements are data files */
+  troop_strength?: number;
   waypoints: ArmyWaypoint[];
 }
 

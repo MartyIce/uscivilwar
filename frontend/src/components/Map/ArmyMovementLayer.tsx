@@ -51,7 +51,7 @@ export default function ArmyMovementLayer({
       {visibleMovements.map((movement) => {
         const path = getArmyPathUpToDate(movement, currentDate);
         const currentPosition = getArmyPositionAtDate(movement, currentDate);
-        const troopStrength = getCommanderTroopStrength(movement.commander);
+        const troopStrength = movement.troop_strength ?? getCommanderTroopStrength(movement.commander);
         const radius = getMarkerRadius(troopStrength, showTroopStrength);
         const fillOpacity = getMarkerOpacity(troopStrength, showTroopStrength);
 

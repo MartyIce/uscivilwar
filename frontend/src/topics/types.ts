@@ -23,6 +23,8 @@ export interface TopicConfig {
   startDate: string;
   /** Slug of the event to select on first load (see utils/slugs) */
   defaultEventSlug?: string;
+  /** Commanders whose movements are tracked on load (when features.armyTracking is on) */
+  defaultCommanders?: string[];
   /** Initial map view */
   mapView: { center: LatLngExpression; zoom: number };
   /**
