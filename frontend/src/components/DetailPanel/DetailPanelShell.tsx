@@ -82,7 +82,7 @@ export default function DetailPanelShell({
   onClose,
 }: DetailPanelShellProps) {
   return (
-    <div className="w-96 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
+    <div className="w-1/2 shrink-0 bg-white border-l border-gray-200 flex flex-col overflow-hidden">
       <NavigationHeader
         canGoBack={canGoBack}
         canGoForward={canGoForward}

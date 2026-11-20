@@ -77,7 +77,7 @@ export default function DetailPanel({
   // Show loading only for person/event fetches (not for state/city which are sync)
   if (isLoading || personLoading) {
     return (
-      <div className="w-96 bg-white border-l border-gray-200 flex items-center justify-center">
+      <div className="w-1/2 shrink-0 bg-white border-l border-gray-200 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
           <p className="mt-4 text-gray-500">Loading...</p>
@@ -122,7 +122,7 @@ export default function DetailPanel({
 
   if (!selectedEvent) {
     return (
-      <div className="w-96 bg-white border-l border-gray-200 flex flex-col">
+      <div className="w-1/2 shrink-0 bg-white border-l border-gray-200 flex flex-col">
         <div className="flex-1 flex items-center justify-center p-8 text-center">
           <div>
             <svg

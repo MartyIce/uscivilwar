@@ -416,7 +416,7 @@ function App({ topic, topics, onTopicChange }: AppProps) {
         )}
 
         {/* Map area */}
-        <div className="flex-1 relative">
+        <div className="flex-1 min-w-0 relative">
           {eventsLoading ? (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
               <div className="text-center">
