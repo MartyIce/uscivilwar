@@ -31,5 +31,5 @@ export const usRevolution: TopicConfig = {
     { value: 'Middle', label: 'Middle Colonies' },
     { value: 'Southern', label: 'Southern Theater' },
   ],
-  features: { people: false, armyTracking: false, cities: false },
+  features: { people: true, armyTracking: false, cities: true },
 };

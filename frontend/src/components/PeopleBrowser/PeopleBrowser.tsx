@@ -1,8 +1,10 @@
 import { useState, useMemo } from 'react';
-import { expandedPeople, getEventsByCommanderId } from '../../data';
+import { getTopicPeople, getPersonTopicEvents } from '../../topics/data';
 import type { Side } from '../../types';
 
 interface PeopleBrowserProps {
+  /** Topic whose people are listed */
+  topicId: string;
   isOpen: boolean;
   onClose: () => void;
   onPersonSelect?: (name: string) => void;
@@ -10,7 +12,8 @@ interface PeopleBrowserProps {
 
 type FilterSide = 'all' | Side;
 
-export default function PeopleBrowser({ isOpen, onClose, onPersonSelect }: PeopleBrowserProps) {
+export default function PeopleBrowser({ topicId, isOpen, onClose, onPersonSelect }: PeopleBrowserProps) {
+  const expandedPeople = useMemo(() => getTopicPeople(topicId), [topicId]);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterSide, setFilterSide] = useState<FilterSide>('all');
   const [expandedPersonId, setExpandedPersonId] = useState<number | null>(null);
@@ -32,10 +35,12 @@ export default function PeopleBrowser({ isOpen, onClose, onPersonSelect }: Peopl
         return true;
       })
       .sort((a, b) => a.name.localeCompare(b.name));
-  }, [searchTerm, filterSide]);
+  }, [expandedPeople, searchTerm, filterSide]);
 
   const unionCount = expandedPeople.filter((p) => p.side === 'union').length;
   const confederateCount = expandedPeople.filter((p) => p.side === 'confederate').length;
+  // Topics without sides (side is null for everyone) get no side tabs
+  const hasSides = unionCount + confederateCount > 0;
 
   if (!isOpen) return null;
 
@@ -65,6 +70,7 @@ export default function PeopleBrowser({ isOpen, onClose, onPersonSelect }: Peopl
         />
 
         {/* Side filter tabs */}
+        {hasSides && (
         <div className="flex gap-1 mt-3">
           <button
             onClick={() => setFilterSide('all')}
@@ -97,6 +103,7 @@ export default function PeopleBrowser({ isOpen, onClose, onPersonSelect }: Peopl
             Confederate ({confederateCount})
           </button>
         </div>
+        )}
       </div>
 
       {/* People list */}
@@ -108,7 +115,7 @@ export default function PeopleBrowser({ isOpen, onClose, onPersonSelect }: Peopl
         ) : (
           <div className="divide-y divide-gray-100">
             {filteredPeople.map((person) => {
-              const events = getEventsByCommanderId(person.id);
+              const events = getPersonTopicEvents(topicId, person);
               const isExpanded = expandedPersonId === person.id;
 
               return (
@@ -121,7 +128,7 @@ export default function PeopleBrowser({ isOpen, onClose, onPersonSelect }: Peopl
                       {/* Side indicator */}
                       <div
                         className={`w-1 h-12 rounded-full flex-shrink-0 ${
-                          person.side === 'union' ? 'bg-blue-500' : 'bg-gray-500'
+                          person.side === 'union' ? 'bg-blue-500' : person.side === 'confederate' ? 'bg-gray-500' : 'bg-slate-400'
                         }`}
                       />
                       <div className="flex-1 min-w-0">

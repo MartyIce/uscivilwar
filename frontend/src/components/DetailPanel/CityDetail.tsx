@@ -4,7 +4,7 @@ interface CityDetailProps {
   city: CityData;
 }
 
-function getSideBadgeStyle(side: 'union' | 'confederate' | 'border'): string {
+function getSideBadgeStyle(side: 'union' | 'confederate' | 'border' | null): string {
   switch (side) {
     case 'union':
       return 'bg-blue-100 text-blue-800';
@@ -12,6 +12,8 @@ function getSideBadgeStyle(side: 'union' | 'confederate' | 'border'): string {
       return 'bg-gray-200 text-gray-800';
     case 'border':
       return 'bg-amber-100 text-amber-800';
+    default:
+      return 'bg-gray-100 text-gray-700';
   }
 }
 
@@ -43,12 +45,14 @@ export default function CityDetail({ city }: CityDetailProps) {
           )}
 
           <div className="flex flex-wrap gap-2 mt-2">
-            <span className={`px-2 py-1 text-xs font-medium rounded ${getSideBadgeStyle(city.side)}`}>
-              {city.side === 'union' ? 'Union' : city.side === 'confederate' ? 'Confederate' : 'Border State'}
-            </span>
-            {city.population_1860 && (
+            {city.side && (
+              <span className={`px-2 py-1 text-xs font-medium rounded ${getSideBadgeStyle(city.side)}`}>
+                {city.side === 'union' ? 'Union' : city.side === 'confederate' ? 'Confederate' : 'Border State'}
+              </span>
+            )}
+            {(city.population ?? city.population_1860) && (
               <span className="px-2 py-1 text-xs font-medium rounded bg-purple-100 text-purple-800">
-                Pop. {formatPopulation(city.population_1860)} (1860)
+                Pop. {formatPopulation(city.population ?? city.population_1860)} ({city.population_year ?? 1860})
               </span>
             )}
           </div>

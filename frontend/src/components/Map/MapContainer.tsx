@@ -4,6 +4,7 @@ import EventMarkers from './EventMarkers';
 import BoundaryLayer from './BoundaryLayer';
 import ArmyMovementLayer from './ArmyMovementLayer';
 import CityMarkers from './CityMarkers';
+import type { CityData } from '../../mocks/data/cities';
 import type { CivilWarEvent, Boundary, ArmyMovement } from '../../types';
 
 interface MapContainerProps {
@@ -17,6 +18,8 @@ interface MapContainerProps {
   selectedCommanders?: string[];
   showTroopStrength?: boolean;
   showCities?: boolean;
+  /** Cities for the current topic */
+  cities?: CityData[];
   onCityClick?: (cityName: string) => void;
   selectedCityName?: string | null;
   onStateClick?: (stateName: string) => void;
@@ -37,6 +40,7 @@ export default function MapContainer({
   selectedCommanders = [],
   showTroopStrength = false,
   showCities = true,
+  cities = [],
   onCityClick,
   selectedCityName,
   onStateClick,
@@ -79,6 +83,7 @@ export default function MapContainer({
       {/* City markers */}
       {showCities && onCityClick && (
         <CityMarkers
+          cities={cities}
           onCityClick={onCityClick}
           selectedCityName={selectedCityName || null}
         />

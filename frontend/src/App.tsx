@@ -11,8 +11,9 @@ import BattleDeepView from './components/BattleDeep/BattleDeepView';
 import OrgChart from './components/OrgChart/OrgChart';
 import { useEvents, useEvent } from './hooks/useEvents';
 import { useNavigationHistory } from './hooks/useNavigationHistory';
-import { armyMovements, expandedPeople } from './data';
+import { armyMovements } from './data';
 import type { TopicConfig } from './topics';
+import { getTopicCities, getTopicPeople } from './topics/data';
 import { hasBattleDeepData } from './hooks/useBattleDeep';
 import { eventNameToSlug, personNameToSlug, personMatchesSlug, slugToDisplayName } from './utils/slugs';
 import { parseUrlState, buildSearch, hasSelection, type UrlState } from './utils/urlState';
@@ -157,7 +158,9 @@ function App({ topic, topics, onTopicChange }: AppProps) {
         }
       }
       if (url.person) {
-        const person = expandedPeople.find((p) => personMatchesSlug(p.name, url.person!));
+        const person = getTopicPeople(topic.id).find((p) =>
+          [p.name, ...(p.aliases ?? [])].some((n) => personMatchesSlug(n, url.person!))
+        );
         navHistory.navigate({
           type: 'person',
           personName: person?.name ?? slugToDisplayName(url.person),
@@ -170,7 +173,7 @@ function App({ topic, topics, onTopicChange }: AppProps) {
         navHistory.clear();
       }
     },
-    [eventsData?.data, handleEventSelect, navHistory]
+    [eventsData?.data, handleEventSelect, navHistory, topic.id]
   );
 
   // First load: apply the URL, or select the topic's default event when the URL selects nothing.
@@ -438,6 +441,7 @@ function App({ topic, topics, onTopicChange }: AppProps) {
               selectedCommanders={topic.features.armyTracking ? selectedCommanders : []}
               showTroopStrength={showTroopStrength}
               showCities={topic.features.cities && showCities}
+              cities={getTopicCities(topic.id)}
               onCityClick={handleCityClick}
               selectedCityName={selectedCityName}
               onStateClick={handleStateClick}
@@ -565,6 +569,7 @@ function App({ topic, topics, onTopicChange }: AppProps) {
 
           {/* People browser panel */}
           <PeopleBrowser
+            topicId={topic.id}
             isOpen={showPeopleBrowser}
             onClose={() => setShowPeopleBrowser(false)}
             onPersonSelect={handlePersonClick}

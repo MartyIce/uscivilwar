@@ -1,6 +1,6 @@
 import { http, HttpResponse } from 'msw';
 import { expandedEvents, allPeople, locations as allLocations, stateBoundaries } from '../data';
-import { getTopicEvents } from '../topics/data';
+import { getTopicEvents, getTopicPeople, getPersonTopicEvents, personMatchesName } from '../topics/data';
 
 const API_BASE = '/api/v1';
 
@@ -89,20 +89,28 @@ export const handlers = [
 
   http.get(`${API_BASE}/events/:id/participants`, ({ params, request }) => {
     const eventId = parseInt(params.id as string);
-    const event = getTopicEvents(new URL(request.url).searchParams.get('topic')).find(e => e.id === eventId);
+    const topicId = new URL(request.url).searchParams.get('topic');
+    const event = getTopicEvents(topicId).find(e => e.id === eventId);
 
     if (!event) {
       return new HttpResponse(null, { status: 404 });
     }
 
+    // Civil War: match by last name (existing behavior). Other topics: exact name or alias.
+    const topicPeople = getTopicPeople(topicId);
+    const findPerson = (name: string) =>
+      topicId && topicId !== 'uscivilwar'
+        ? topicPeople.find(p => personMatchesName(p, name))
+        : allPeople.find(p => p.name.includes(name.split(' ').pop() || ''));
+
     // Return commanders as participants
     const participants = {
       union: event.commanders?.union.map(name => {
-        const person = allPeople.find(p => p.name.includes(name.split(' ').pop() || ''));
+        const person = findPerson(name);
         return person || { name, side: 'union', role: 'commander' };
       }) || [],
       confederate: event.commanders?.confederate.map(name => {
-        const person = allPeople.find(p => p.name.includes(name.split(' ').pop() || ''));
+        const person = findPerson(name);
         return person || { name, side: 'confederate', role: 'commander' };
       }) || []
     };
@@ -145,8 +153,9 @@ export const handlers = [
     const limit = parseInt(url.searchParams.get('limit') || '50');
     const offset = parseInt(url.searchParams.get('offset') || '0');
     const side = url.searchParams.get('side');
+    const topicId = url.searchParams.get('topic');
 
-    let people = [...allPeople];
+    let people = [...getTopicPeople(topicId)];
 
     if (side) {
       people = people.filter(p => p.side === side);
@@ -166,18 +175,21 @@ export const handlers = [
     });
   }),
 
-  http.get(`${API_BASE}/people/:id`, ({ params }) => {
-    const person = allPeople.find(p => p.id === parseInt(params.id as string));
+  http.get(`${API_BASE}/people/:id`, ({ params, request }) => {
+    const topicId = new URL(request.url).searchParams.get('topic');
+    const person = getTopicPeople(topicId).find(p => p.id === parseInt(params.id as string));
     if (!person) {
       return new HttpResponse(null, { status: 404 });
     }
 
-    // Add events this person participated in
-    const personEvents = expandedEvents
-      .filter(e =>
+    // Add events this person participated in. The Civil War keeps its last-name
+    // matching; other topics match exact names and aliases (many share surnames).
+    const personEvents = (topicId && topicId !== 'uscivilwar'
+      ? getPersonTopicEvents(topicId, person)
+      : expandedEvents.filter(e =>
         e.commanders?.union.some(c => c.includes(person.name.split(' ').pop() || '')) ||
         e.commanders?.confederate.some(c => c.includes(person.name.split(' ').pop() || ''))
-      )
+      ))
       .map(e => ({
         event_id: e.id,
         event_name: e.name,
@@ -193,16 +205,19 @@ export const handlers = [
     });
   }),
 
-  http.get(`${API_BASE}/people/:id/events`, ({ params }) => {
-    const person = allPeople.find(p => p.id === parseInt(params.id as string));
+  http.get(`${API_BASE}/people/:id/events`, ({ params, request }) => {
+    const topicId = new URL(request.url).searchParams.get('topic');
+    const person = getTopicPeople(topicId).find(p => p.id === parseInt(params.id as string));
     if (!person) {
       return new HttpResponse(null, { status: 404 });
     }
 
-    const personEventsList = expandedEvents.filter(e =>
-      e.commanders?.union.some(c => c.includes(person.name.split(' ').pop() || '')) ||
-      e.commanders?.confederate.some(c => c.includes(person.name.split(' ').pop() || ''))
-    );
+    const personEventsList = topicId && topicId !== 'uscivilwar'
+      ? getPersonTopicEvents(topicId, person)
+      : expandedEvents.filter(e =>
+        e.commanders?.union.some(c => c.includes(person.name.split(' ').pop() || '')) ||
+        e.commanders?.confederate.some(c => c.includes(person.name.split(' ').pop() || ''))
+      );
 
     return HttpResponse.json({
       data: personEventsList,

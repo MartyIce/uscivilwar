@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { getApiTopic } from '../api/client';
 import { peopleApi } from '../api/client';
+import { personMatchesName } from '../topics/data';
 
 // Query keys for cache management
 export const peopleKeys = {
@@ -60,7 +61,11 @@ export function usePersonByName(name: string | null) {
   });
 
   // Find the person whose name matches
-  const person = name && allPeople?.data
+  const exact = name && allPeople?.data
+    ? allPeople.data.find((p) => personMatchesName(p, name))
+    : null;
+  // Loose last-name matching is a Civil War convenience; other topics have many shared surnames
+  const person = exact ?? (name && allPeople?.data && getApiTopic() === 'uscivilwar'
     ? allPeople.data.find((p) => {
         const searchName = name.toLowerCase();
         const personName = p.name.toLowerCase();
@@ -84,7 +89,7 @@ export function usePersonByName(name: string | null) {
 
         return false;
       })
-    : null;
+    : null);
 
   // If we found a person, fetch their full details with events
   const detailQuery = useQuery({

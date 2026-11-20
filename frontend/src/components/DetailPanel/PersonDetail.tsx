@@ -12,6 +12,7 @@ interface PersonDetailProps {
 // Format date for display
 function formatDate(dateStr: string | null): string {
   if (!dateStr) return 'Unknown';
+  if (/^\d{4}$/.test(dateStr)) return dateStr; // year-only (precision of the source)
   const date = parseLocalDate(dateStr);
   return date.toLocaleDateString('en-US', {
     year: 'numeric',

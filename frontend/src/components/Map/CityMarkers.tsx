@@ -1,14 +1,15 @@
 import { Marker, Tooltip } from 'react-leaflet';
 import { DivIcon } from 'leaflet';
-import { majorCities, type CityData } from '../../mocks/data/cities';
+import type { CityData } from '../../mocks/data/cities';
 
 interface CityMarkersProps {
+  cities: CityData[];
   onCityClick: (cityName: string) => void;
   selectedCityName: string | null;
 }
 
 // Get marker color based on side
-function getMarkerColor(side: 'union' | 'confederate' | 'border'): string {
+function getMarkerColor(side: 'union' | 'confederate' | 'border' | null): string {
   switch (side) {
     case 'union':
       return '#3b82f6'; // blue
@@ -16,6 +17,8 @@ function getMarkerColor(side: 'union' | 'confederate' | 'border'): string {
       return '#6b7280'; // gray
     case 'border':
       return '#f59e0b'; // amber
+    default:
+      return '#475569'; // slate: topics without sides
   }
 }
 
@@ -53,10 +56,10 @@ function createCityIcon(city: CityData, isSelected: boolean): DivIcon {
   });
 }
 
-export default function CityMarkers({ onCityClick, selectedCityName }: CityMarkersProps) {
+export default function CityMarkers({ cities, onCityClick, selectedCityName }: CityMarkersProps) {
   return (
     <>
-      {majorCities.map((city) => {
+      {cities.map((city) => {
         const isSelected = city.name === selectedCityName;
 
         return (

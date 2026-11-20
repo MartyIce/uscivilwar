@@ -1,0 +1,328 @@
+[
+ {
+  "id": 1,
+  "name": "Boston",
+  "state": "Massachusetts",
+  "coordinates": {
+   "lat": 42.3603,
+   "lng": -71.0578
+  },
+  "side": null,
+  "population": 18320,
+  "population_year": 1790,
+  "population_1860": null,
+  "description": "Boston is the capital and most populous city of the U.S. state of Massachusetts. It serves as a cultural and financial center of New England, a region of the Northeastern United States.",
+  "wartime_role": "Center of colonial resistance and the first major theater of the war. The British garrison was besieged here from April 1775 until it evacuated.",
+  "key_events": [
+   "Boston Tea Party (December 1773)",
+   "Siege of Boston (April 1775 to March 1776)",
+   "British evacuation (March 17, 1776)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/ISH_WC_Boston4.jpg/330px-ISH_WC_Boston4.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 2,
+  "name": "New York",
+  "state": "New York",
+  "coordinates": {
+   "lat": 40.7128,
+   "lng": -74.0061
+  },
+  "side": null,
+  "population": 33131,
+  "population_year": 1790,
+  "population_1860": null,
+  "description": "New York, often called New York City , is the most populous city in the United States. It is located at the southern tip of New York State on New York Harbor, one of the world's largest natural harbors.",
+  "wartime_role": "The largest port in the colonies. The British army held it from September 1776 to November 1783 and used it as their main base in North America.",
+  "key_events": [
+   "Battle of Long Island (August 1776)",
+   "British occupation begins (September 1776)",
+   "British evacuation (November 25, 1783)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/330px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 3,
+  "name": "Philadelphia",
+  "state": "Pennsylvania",
+  "coordinates": {
+   "lat": 39.9528,
+   "lng": -75.1636
+  },
+  "side": null,
+  "population": 28522,
+  "population_year": 1790,
+  "population_1860": null,
+  "description": "Philadelphia, colloquially referred to as Philly, is the most populous city in the U.S. state of Pennsylvania and the sixth-most populous city in the United States. Its population was 1.60 million at the 2020 census and estimated at 1.57 million in 2025.",
+  "wartime_role": "Seat of the Continental Congress and the largest city in the colonies. The British occupied it for nine months during the winter of 1777 to 1778.",
+  "key_events": [
+   "Declaration of Independence adopted (July 4, 1776)",
+   "British occupation (September 1777 to June 1778)",
+   "Continental Army winter at nearby Valley Forge (1777 to 1778)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Philadelphia_skyline_20240528_%28cropped_2-1%29.jpg/330px-Philadelphia_skyline_20240528_%28cropped_2-1%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 4,
+  "name": "Charleston",
+  "state": "South Carolina",
+  "coordinates": {
+   "lat": 32.8139,
+   "lng": -79.9319
+  },
+  "side": null,
+  "population": 16359,
+  "population_year": 1790,
+  "population_1860": null,
+  "description": "Charleston is the most populous city in the U.S. state of South Carolina. The city lies just south of the geographical midpoint of South Carolina's coastline on Charleston Harbor, an inlet of the Atlantic Ocean formed by the confluence of the Ashley, Cooper, and Wando rivers.",
+  "wartime_role": "The main port of the southern colonies. Its fall in 1780 was one of the largest American defeats of the war.",
+  "key_events": [
+   "Battle of Sullivan's Island (June 1776)",
+   "Siege of Charleston (March to May 1780)",
+   "British evacuation (December 1782)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/East_Battery_Street_Charleston_Aug2010.jpg/330px-East_Battery_Street_Charleston_Aug2010.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 5,
+  "name": "Savannah",
+  "state": "Georgia",
+  "coordinates": {
+   "lat": 32.0811,
+   "lng": -81.0911
+  },
+  "side": null,
+  "population": null,
+  "population_year": null,
+  "population_1860": null,
+  "description": "Savannah is a city in and the county seat of Chatham County, Georgia, United States. Established in 1733 on the Savannah River, it is the oldest city in the state, and was the capital of the colonial Province of Georgia and later the first state capital of Georgia.",
+  "wartime_role": "Georgia's capital and port. The British captured it in 1778 and held it until 1782.",
+  "key_events": [
+   "British capture (December 29, 1778)",
+   "Franco-American siege fails (October 1779)",
+   "British evacuation (July 1782)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Savannah.tif/lossy-page1-330px-Savannah.tif.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 6,
+  "name": "Yorktown",
+  "state": "Virginia",
+  "coordinates": {
+   "lat": 37.2344,
+   "lng": -76.5097
+  },
+  "side": null,
+  "population": null,
+  "population_year": null,
+  "population_1860": null,
+  "description": "Yorktown is a town in York County, Virginia, United States. It is the county seat of York County, one of the eight original shires formed in colonial Virginia in 1682.",
+  "wartime_role": "A small tobacco port on the York River. General Cornwallis's army was trapped here, and its surrender effectively ended major fighting.",
+  "key_events": [
+   "Siege of Yorktown (September 28 to October 19, 1781)",
+   "Cornwallis surrenders (October 19, 1781)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Yorktown_customhouse.jpg/330px-Yorktown_customhouse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 7,
+  "name": "Williamsburg",
+  "state": "Virginia",
+  "coordinates": {
+   "lat": 37.2708,
+   "lng": -76.7069
+  },
+  "side": null,
+  "population": null,
+  "population_year": null,
+  "population_1860": null,
+  "description": "Williamsburg is an independent city in the U.S. state of Virginia. It had a population of 15,425 at the 2020 census.",
+  "wartime_role": "Capital of colonial and revolutionary Virginia until the government moved to Richmond in 1780.",
+  "key_events": [
+   "Gunpowder Incident (April 1775)",
+   "Virginia Convention instructs for independence (May 1776)",
+   "Capital moves to Richmond (1780)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/The_Governor%27s_Palace_--_Williamsburg_%28VA%29_September_2012.jpg/330px-The_Governor%27s_Palace_--_Williamsburg_%28VA%29_September_2012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 8,
+  "name": "Trenton",
+  "state": "New Jersey",
+  "coordinates": {
+   "lat": 40.2203,
+   "lng": -74.7658
+  },
+  "side": null,
+  "population": null,
+  "population_year": null,
+  "population_1860": null,
+  "description": "Trenton is the capital city of the U.S. state of New Jersey and the county seat of Mercer County. It was the capital of the United States from November 1 until December 24, 1784.",
+  "wartime_role": "Site of Washington's surprise attack on the Hessian garrison after his army crossed the Delaware River.",
+  "key_events": [
+   "Washington crosses the Delaware (December 25 to 26, 1776)",
+   "Battle of Trenton (December 26, 1776)",
+   "Second Battle of Trenton (January 2, 1777)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Trenton%2C_New_Jersey_%28cropped%29.jpg/330px-Trenton%2C_New_Jersey_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 9,
+  "name": "Newport",
+  "state": "Rhode Island",
+  "coordinates": {
+   "lat": 41.4917,
+   "lng": -71.3119
+  },
+  "side": null,
+  "population": 6716,
+  "population_year": 1790,
+  "population_1860": null,
+  "description": "Newport is a seaside city on Aquidneck Island in Rhode Island, United States. It is located in Narragansett Bay, approximately 33 miles southeast of Providence, 20 miles south of Fall River, Massachusetts, 74 miles south of Boston, and 180 miles northeast of New York City.",
+  "wartime_role": "A major port. The British occupied it from late 1776 to 1779, and a French army landed here in 1780.",
+  "key_events": [
+   "British occupation (December 1776 to October 1779)",
+   "Battle of Rhode Island (August 1778)",
+   "French army under Rochambeau arrives (July 1780)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Newport_Rhode_Island_Aerial_View.jpg/330px-Newport_Rhode_Island_Aerial_View.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 10,
+  "name": "Albany",
+  "state": "New York",
+  "coordinates": {
+   "lat": 42.6525,
+   "lng": -73.7572
+  },
+  "side": null,
+  "population": null,
+  "population_year": null,
+  "population_1860": null,
+  "description": "Albany is the capital city of the U.S. state of New York. It is also the county seat of, and the most populous city in Albany County.",
+  "wartime_role": "The northern base for the Saratoga campaign and the gateway to the Hudson River valley.",
+  "key_events": [
+   "Staging area for the Saratoga campaign (1777)",
+   "Burgoyne's army surrenders nearby at Saratoga (October 17, 1777)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Albany%2C_New_York.jpg/330px-Albany%2C_New_York.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 11,
+  "name": "Baltimore",
+  "state": "Maryland",
+  "coordinates": {
+   "lat": 39.2894,
+   "lng": -76.6153
+  },
+  "side": null,
+  "population": 13503,
+  "population_year": 1790,
+  "population_1860": null,
+  "description": "Baltimore, also known as Baltimore City is the most populous city in the U.S. state of Maryland. It is the 30th-most-populous U.S. city, with a population of 585,708 at the 2020 census and estimated at 569,997 in 2025; the Baltimore metropolitan area, at 2.86 million residents, is the 22nd-largest metropolitan area in the nation.",
+  "wartime_role": "A growing port. Congress met here for several months after leaving Philadelphia.",
+  "key_events": [
+   "Continental Congress meets in Baltimore (December 1776 to March 1777)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Fell%27s_Point_Aerial_2022.jpg/330px-Fell%27s_Point_Aerial_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 12,
+  "name": "Annapolis",
+  "state": "Maryland",
+  "coordinates": {
+   "lat": 38.9731,
+   "lng": -76.5011
+  },
+  "side": null,
+  "population": null,
+  "population_year": null,
+  "population_1860": null,
+  "description": "Annapolis is the capital of the U.S. state of Maryland. It is the county seat of Anne Arundel County and its only incorporated city.",
+  "wartime_role": "Maryland's capital, where the Continental Congress met when the war ended.",
+  "key_events": [
+   "Washington resigns his commission (December 23, 1783)",
+   "Congress ratifies the Treaty of Paris here (January 14, 1784)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Some_Annapolis_commercial_strip.jpg/330px-Some_Annapolis_commercial_strip.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 13,
+  "name": "Quebec",
+  "state": "Canada",
+  "coordinates": {
+   "lat": 46.8139,
+   "lng": -71.2081
+  },
+  "side": null,
+  "population": null,
+  "population_year": null,
+  "population_1860": null,
+  "description": "Quebec City is the capital city of the Canadian province of Quebec. As of 2026, the city has a population of 595,190 and the Quebec City census metropolitan area had a population of 839,311 in 2021.",
+  "wartime_role": "The capital of British Canada. An American attack here ended in defeat.",
+  "key_events": [
+   "Montgomery and Arnold attack the city (December 31, 1775)",
+   "Richard Montgomery killed in the assault"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Quebec_City_in_September_2026.jpg/330px-Quebec_City_in_September_2026.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 14,
+  "name": "Montreal",
+  "state": "Canada",
+  "coordinates": {
+   "lat": 45.5089,
+   "lng": -73.5542
+  },
+  "side": null,
+  "population": null,
+  "population_year": null,
+  "population_1860": null,
+  "description": "Montreal is the largest city in the province of Quebec, the second-largest in Canada, and the eighth-largest in North America. Founded in 1642 as Ville-Marie, or \"City of Mary\", it now takes its name from Mount Royal, the triple-peaked mountain around which the early settlement was built.",
+  "wartime_role": "An American army captured the city in 1775 and left in 1776 when the invasion of Canada failed.",
+  "key_events": [
+   "Captured by Montgomery (November 1775)",
+   "American withdrawal (June 1776)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Montreal%2C_Quebec_skyline.jpg/330px-Montreal%2C_Quebec_skyline.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 15,
+  "name": "Camden",
+  "state": "South Carolina",
+  "coordinates": {
+   "lat": 34.2472,
+   "lng": -80.625
+  },
+  "side": null,
+  "population": null,
+  "population_year": null,
+  "population_1860": null,
+  "description": "Camden is the largest city in and the county seat of Kershaw County, South Carolina, United States. The population was 7,788 in the 2020 census, and the 2022 population estimate is 8,213.",
+  "wartime_role": "A British inland post and supply base in the southern campaign.",
+  "key_events": [
+   "Battle of Camden (August 16, 1780)",
+   "Battle of Hobkirk's Hill (April 25, 1781)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Camden%2C_SC_City_Hall.jpg/330px-Camden%2C_SC_City_Hall.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ {
+  "id": 16,
+  "name": "Wilmington",
+  "state": "North Carolina",
+  "coordinates": {
+   "lat": 34.21,
+   "lng": -77.8867
+  },
+  "side": null,
+  "population": null,
+  "population_year": null,
+  "population_1860": null,
+  "description": "Wilmington is a port city in New Hanover County, North Carolina, United States. With a population of 115,451 as of the 2020 census, it is the eighth-most populous city in the state.",
+  "wartime_role": "A North Carolina port. Cornwallis's army rested here after the Battle of Guilford Court House.",
+  "key_events": [
+   "British occupation (January 1781 to November 1781)"
+  ],
+  "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/BRIDGE_2024-05-07_Cape_Fear_Memorial_Bridge_Press_Conf-831-155_%28cropped%29.jpg/330px-BRIDGE_2024-05-07_Cape_Fear_Memorial_Bridge_Press_Conf-831-155_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ }
+]

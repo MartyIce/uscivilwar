@@ -4,8 +4,12 @@ export interface CityData {
   name: string;
   state: string | null;
   coordinates: { lat: number; lng: number };
-  side: 'union' | 'confederate' | 'border';
+  /** null for topics without sides */
+  side: 'union' | 'confederate' | 'border' | null;
   population_1860: number | null;
+  /** Population for topics other than the Civil War, with its census year */
+  population?: number | null;
+  population_year?: number | null;
   description: string;
   wartime_role: string;
   key_events: string[];

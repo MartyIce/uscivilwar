@@ -1,4 +1,6 @@
-import { getCityByName, type CityData } from '../mocks/data/cities';
+import type { CityData } from '../mocks/data/cities';
+import { getApiTopic } from '../api/client';
+import { getTopicCities } from '../topics/data';
 import { getStateByName, type StateData } from '../mocks/data/states';
 import { expandedEvents } from '../mocks/data/events-expanded';
 import type { CivilWarEvent } from '../types';
@@ -9,7 +11,8 @@ import type { CivilWarEvent } from '../types';
  */
 export function useCityByName(name: string | null): CityData | undefined {
   if (!name) return undefined;
-  return getCityByName(name);
+  const lower = name.toLowerCase();
+  return getTopicCities(getApiTopic()).find((c) => c.name.toLowerCase() === lower);
 }
 
 /**

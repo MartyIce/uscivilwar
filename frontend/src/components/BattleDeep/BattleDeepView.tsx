@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import { useBattleDeep } from '../../hooks/useBattleDeep';
 import BattleTimeline from './BattleTimeline';
 import BattleMap from './BattleMap';
+import { parseLocalDate } from '../../utils/dates';
 import BattleEventList from './BattleEventList';
 import type { BattleEvent } from '../../data/battles/gettysburg-deep';
 
@@ -61,13 +62,14 @@ export default function BattleDeepView({ battleId, onClose }: BattleDeepViewProp
 
   // Format date range for display
   const formatDateRange = (start: string, end: string): string => {
-    const startDate = new Date(start);
-    const endDate = new Date(end);
+    const startDate = parseLocalDate(start);
+    const endDate = parseLocalDate(end);
     const options: Intl.DateTimeFormatOptions = {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
     };
+    if (start === end) return startDate.toLocaleDateString('en-US', options);
     return `${startDate.toLocaleDateString('en-US', options)} - ${endDate.toLocaleDateString(
       'en-US',
       options

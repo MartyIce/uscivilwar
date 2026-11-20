@@ -75,6 +75,8 @@ export interface Person {
   wikipedia_url: string | null;
   events?: PersonEvent[];
   units_commanded?: string[];
+  /** Other names the person appears under in event commander lists */
+  aliases?: string[];
 }
 
 export interface PersonEvent {
