@@ -1,0 +1,131 @@
+{
+ "id": "tarleton",
+ "commander": "Banastre Tarleton",
+ "name": "British Legion (with attached regulars at Cowpens)",
+ "troop_strength": 1158,
+ "troop_source": "https://en.wikipedia.org/wiki/Battle_of_Cowpens : \"Nearly half of his men, 481 out of 1,158, were Loyalists.\" (his force at Cowpens, Jan 1781; Waxhaws May 1780 was 149 mounted per https://en.wikipedia.org/wiki/Banastre_Tarleton).",
+ "rows": [
+  {
+   "date": "1776-12-13",
+   "kind": "pl",
+   "ref": "Basking Ridge, New Jersey",
+   "label": "Basking Ridge (captures Gen. Charles Lee)",
+   "source": "https://en.wikipedia.org/wiki/Banastre_Tarleton",
+   "quote": "Tarleton surrounded a house in Basking Ridge"
+  },
+  {
+   "date": "1780-04-14",
+   "kind": "pl",
+   "ref": "Battle of Monck's Corner",
+   "label": "Monck's Corner (surprises Huger)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Monck%27s_Corner",
+   "quote": "On the evening of 13 April, Tarleton intercepted a letter",
+   "note": "Battle fought 3 am on 14 April per the same article; Tarleton commanded the British Legion in the attack."
+  },
+  {
+   "date": "1780-05-06",
+   "kind": "pl",
+   "ref": "Battle of Lenud's Ferry",
+   "label": "Lenud's Ferry (scatters White's cavalry)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Monck%27s_Corner",
+   "quote": "again scattered by Tarleton at Lenud's Ferry on 6 May"
+  },
+  {
+   "date": "1780-05-28",
+   "kind": "pl",
+   "ref": "Camden, South Carolina",
+   "label": "Camden (starts pursuit of Buford)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Waxhaws",
+   "quote": "Tarleton reached Camden late on May 28",
+   "note": "Commanded a detachment of about 270 men and a 3-pounder sent by Cornwallis on May 27."
+  },
+  {
+   "date": "1780-05-29",
+   "kind": "pl",
+   "ref": "Battle of Waxhaws",
+   "label": "Waxhaws (defeats Buford)",
+   "source": "https://en.wikipedia.org/wiki/Banastre_Tarleton",
+   "quote": "On 29 May 1780, Colonel Tarleton, with a force of 149 mounted soldiers"
+  },
+  {
+   "date": "1780-08-16",
+   "kind": "ev",
+   "ref": 27,
+   "label": "Battle of Camden (Legion cavalry pursuit)",
+   "source": "https://en.wikipedia.org/wiki/Banastre_Tarleton",
+   "quote": "Tarleton's cavalry delivered the coup de grace",
+   "note": "Article describes his cavalry/Legion; Tarleton led the Legion in the pursuit and is quoted on the battle. Battle date from events.json and Battle of Camden article."
+  },
+  {
+   "date": "1780-08-18",
+   "kind": "pl",
+   "ref": "Battle of Fishing Creek",
+   "label": "Fishing Creek (surprises Sumter)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Fishing_Creek",
+   "quote": "British forces under Banastre Tarleton surprised the militia company",
+   "note": "Left the main army Aug 17 and crossed the Catawba the next morning with about 350 men."
+  },
+  {
+   "date": "1780-11-20",
+   "kind": "pl",
+   "ref": "Battle of Blackstock's Farm",
+   "label": "Blackstock's Farm (repulsed by Sumter)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Blackstock%27s_Farm",
+   "quote": "Tarleton personally dismounted and carried the badly wounded Major Money",
+   "note": "Battle date November 20, 1780 from the same article."
+  },
+  {
+   "date": "1781-01-17",
+   "kind": "ev",
+   "ref": 29,
+   "label": "Battle of Cowpens (defeated by Morgan)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Cowpens",
+   "quote": "At 2:00 a.m. on January 17 Tarleton roused his troops"
+  },
+  {
+   "date": "1781-02-01",
+   "kind": "pl",
+   "ref": "Battle of Cowan's Ford",
+   "label": "Cowan's Ford / Torrence's Tavern (crosses the Catawba)",
+   "source": "https://en.wikipedia.org/wiki/Banastre_Tarleton",
+   "quote": "successful in a skirmish at Torrence's Tavern",
+   "note": "Date given in the parenthetical 'Cowan's Ford Skirmish, 1 February 1781'. The skirmish at Torrence's Tavern was a separate action from the main crossing; Tarleton is placed in the area, not at the ford itself."
+  },
+  {
+   "date": "1781-03-15",
+   "kind": "ev",
+   "ref": 30,
+   "label": "Battle of Guilford Court House (wounded)",
+   "source": "https://en.wikipedia.org/wiki/Banastre_Tarleton",
+   "quote": "took part in the Battle of Guilford Courthouse in March 1781",
+   "note": "Day 15 March from events.json and the Battle of Guilford Court House article; the Tarleton article gives only the month and says he lost two fingers there."
+  },
+  {
+   "date": "1781-06-04",
+   "kind": "pl",
+   "ref": "Charlottesville, Virginia",
+   "label": "Charlottesville raid (to capture Jefferson and Assembly)",
+   "source": "https://en.wikipedia.org/wiki/Jack_Jouett",
+   "quote": "Around dawn, Tarleton reached the plantations of Castle Hill",
+   "note": "Article says Tarleton left Cornwallis's camp June 3 and arrived around dawn; June 4 date from the Charlottesville, Virginia article (Jouett's warning on June 4, 1781). Castle Hill is near Charlottesville."
+  },
+  {
+   "date": "1781-10-04",
+   "kind": "pl",
+   "ref": "Gloucester Point, Virginia",
+   "label": "Gloucester Point (skirmish with Lauzun's Legion)",
+   "source": "https://en.wikipedia.org/wiki/Banastre_Tarleton",
+   "quote": "skirmished at Gloucester Point. Tarleton was unhorsed",
+   "note": "Cornwallis instructed him to hold Gloucester Point during the siege of Yorktown."
+  },
+  {
+   "date": "1781-10-19",
+   "kind": "pl",
+   "ref": "Gloucester Point, Virginia",
+   "label": "Gloucester Point (garrison surrenders)",
+   "source": "https://en.wikipedia.org/wiki/Banastre_Tarleton",
+   "quote": "The British surrendered Gloucester Point to the French and Americans",
+   "note": "Date 19 October from the Siege of Yorktown article (troops at Gloucester also surrendered). Tarleton article says he held Gloucester Point; no source places him there by name on this exact day."
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "id": "rochambeau",
+ "commander": "Comte de Rochambeau",
+ "name": "French Expeditionary Army (Expédition Particulière)",
+ "troop_strength": 7800,
+ "troop_source": "https://en.wikipedia.org/wiki/Siege_of_Yorktown : \"army of 7,800 Frenchmen, 3,100 militia, and 8,000 Continentals\" (Yorktown, late Sept 1781; includes troops from de Grasse's fleet). At Newport: https://en.wikipedia.org/wiki/Newport,_Rhode_Island : \"an army of 450 officers and 5,300 men\" (July 1780); https://en.wikipedia.org/wiki/Exp%C3%A9dition_Particuli%C3%A8re : \"it numbered up to 5,500 troops\".",
+ "rows": [
+  {
+   "date": "1780-07-10",
+   "kind": "pl",
+   "ref": "Newport, Rhode Island",
+   "label": "Newport (lands with the army)",
+   "source": "https://en.wikipedia.org/wiki/Jean-Baptiste_Donatien_de_Vimeur,_comte_de_Rochambeau",
+   "quote": "He landed at Newport, Rhode Island, on 10 July",
+   "note": "Other sources (Expédition Particulière article, NPS timeline) give July 11 for the fleet's arrival; July 10 per the Rochambeau and Newport articles."
+  },
+  {
+   "date": "1781-05-23",
+   "kind": "pl",
+   "ref": "Wethersfield, Connecticut",
+   "label": "Wethersfield conference with Washington",
+   "source": "https://en.wikipedia.org/wiki/Yorktown_campaign",
+   "quote": "On May 23 and 24, Washington and Rochambeau held a conference at Wethersfield",
+   "note": "Joseph Webb House article calls it a five-day conference; Yorktown campaign article dates it May 23-24."
+  },
+  {
+   "date": "1781-06-10",
+   "kind": "pl",
+   "ref": "Newport, Rhode Island",
+   "label": "Leaves Newport with his staff",
+   "source": "https://en.wikipedia.org/wiki/Washington%E2%80%93Rochambeau_Revolutionary_Route",
+   "quote": "Rochambeau and his general staff left Newport on June 10, 1781"
+  },
+  {
+   "date": "1781-06-11",
+   "kind": "pl",
+   "ref": "Providence, Rhode Island",
+   "label": "Providence (army assembles, review June 16)",
+   "source": "https://en.wikipedia.org/wiki/Washington%E2%80%93Rochambeau_Revolutionary_Route",
+   "quote": "arriving at Providence the following day"
+  },
+  {
+   "date": "1781-06-18",
+   "kind": "pl",
+   "ref": "Coventry, Rhode Island",
+   "label": "Waterman Tavern, Coventry (first division)",
+   "source": "https://en.wikipedia.org/wiki/Washington%E2%80%93Rochambeau_Revolutionary_Route",
+   "quote": "Rochambeau left with the first division (the Bourbonnais Regiment)",
+   "note": "Evening of June 18 at Waterman Tavern per same article."
+  },
+  {
+   "date": "1781-06-26",
+   "kind": "pl",
+   "ref": "Southington, Connecticut",
+   "label": "Asa Barnes Tavern, Southington",
+   "source": "https://en.wikipedia.org/wiki/Washington%E2%80%93Rochambeau_Revolutionary_Route",
+   "quote": "Rochambeau and his officers stayed at the Asa Barnes Tavern",
+   "note": "Date is the army's eighth camp (June 26) in the same article; first division, with which he marched, arrived that day."
+  },
+  {
+   "date": "1781-06-27",
+   "kind": "pl",
+   "ref": "Middlebury, Connecticut",
+   "label": "Israel Bronson Tavern, Middlebury",
+   "source": "https://en.wikipedia.org/wiki/Washington%E2%80%93Rochambeau_Revolutionary_Route",
+   "quote": "Rochambeau and his officers were entertained at the Israel Bronson Tavern",
+   "note": "First division stayed the night of June 27 at Breakneck Hill per same article."
+  },
+  {
+   "date": "1781-07-06",
+   "kind": "pl",
+   "ref": "Greenburgh, New York",
+   "label": "Odell farm HQ, Philipsburg camp (Greenburgh)",
+   "source": "https://en.wikipedia.org/wiki/Jean-Baptiste_Donatien_de_Vimeur,_comte_de_Rochambeau",
+   "quote": "The Odell farm served as Rochambeau's headquarters from 6 July to 18 August 1781.",
+   "note": "Headquarters stayed at the Philipsburg camp until the army left in late August."
+  },
+  {
+   "date": "1781-09-05",
+   "kind": "pl",
+   "ref": "Chester, Pennsylvania",
+   "label": "Meets Washington at Chester",
+   "source": "https://en.wikipedia.org/wiki/Washington%E2%80%93Rochambeau_Revolutionary_Route",
+   "quote": "They met at Chester, Pennsylvania, where Washington shared the news",
+   "note": "Article says both left Philadelphia 'by September 5'; Rochambeau went by boat on the Delaware. Date approximate (+/-1 day)."
+  },
+  {
+   "date": "1781-09-10",
+   "kind": "pl",
+   "ref": "Mount Vernon",
+   "label": "Mount Vernon (day after Washington)",
+   "source": "https://en.wikipedia.org/wiki/Washington%E2%80%93Rochambeau_Revolutionary_Route",
+   "quote": "Rochambeau and his staff arrived the following day",
+   "note": "Washington arrived Sept 9 per the same article."
+  },
+  {
+   "date": "1781-09-14",
+   "kind": "pl",
+   "ref": "Williamsburg, Virginia",
+   "label": "Williamsburg (arrives with Washington)",
+   "source": "https://en.wikipedia.org/wiki/Washington%E2%80%93Rochambeau_Revolutionary_Route",
+   "quote": "arrived in Williamsburg, Virginia, on September 14",
+   "note": "Both commanders; Siege of Yorktown article also gives Sept 14 for Washington."
+  },
+  {
+   "date": "1781-10-19",
+   "kind": "ev",
+   "ref": 34,
+   "label": "Siege of Yorktown (surrender, British offer sword to him first)",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Yorktown",
+   "quote": "O'Hara first attempted to surrender to Rochambeau",
+   "note": "Rochambeau is also a signatory of the articles of capitulation signed Oct 19. No source fetched places him personally at Yorktown on Sept 28; only the surrender day is stated."
+  },
+  {
+   "date": "1782-12-07",
+   "kind": "pl",
+   "ref": "Newburgh, New York",
+   "label": "Newburgh HQ, last meeting with Washington",
+   "source": "https://en.wikipedia.org/wiki/Washington%27s_Headquarters_State_Historic_Site",
+   "quote": "The Count de Rochambeau, who arrived here this morning",
+   "note": "Quote is Washington's letter of Dec 7, 1782; Rochambeau was returning to Philadelphia to sail for France."
+  }
+ ]
+}

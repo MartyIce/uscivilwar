@@ -856,6 +856,89 @@
   ]
  },
  {
+  "id": "gates",
+  "commander": "Horatio Gates",
+  "name": "Northern Army (Saratoga); Southern Army (Camden)",
+  "side": "union",
+  "color": "#0284c7",
+  "troop_strength": 12000,
+  "active_until": "1783-04-14",
+  "waypoints": [
+   {
+    "date": "1777-08-19",
+    "coordinates": {
+     "lat": 42.9667,
+     "lng": -73.6833
+    },
+    "location_name": "Stillwater (assumes command of Northern Department army)"
+   },
+   {
+    "date": "1777-09-19",
+    "coordinates": {
+     "lat": 42.99889,
+     "lng": -73.6375
+    },
+    "location_name": "Freeman's Farm (Saratoga)",
+    "is_battle": true,
+    "event_id": 19
+   },
+   {
+    "date": "1777-10-07",
+    "coordinates": {
+     "lat": 42.99889,
+     "lng": -73.6375
+    },
+    "location_name": "Bemis Heights (Saratoga)",
+    "is_battle": true,
+    "event_id": 19
+   },
+   {
+    "date": "1777-10-17",
+    "coordinates": {
+     "lat": 43.1008,
+     "lng": -73.5814
+    },
+    "location_name": "Schuylerville (Burgoyne surrenders)"
+   },
+   {
+    "date": "1780-08-16",
+    "coordinates": {
+     "lat": 34.36455,
+     "lng": -80.6139
+    },
+    "location_name": "Camden",
+    "is_battle": true,
+    "event_id": 27,
+    "gap_before": true
+   },
+   {
+    "date": "1780-08-16",
+    "coordinates": {
+     "lat": 35.2272,
+     "lng": -80.8431
+    },
+    "location_name": "Charlotte (flees after Camden, same evening)"
+   },
+   {
+    "date": "1780-08-19",
+    "coordinates": {
+     "lat": 36.08,
+     "lng": -79.1108
+    },
+    "location_name": "Hillsborough (reports defeat to Congress)"
+   },
+   {
+    "date": "1783-03-15",
+    "coordinates": {
+     "lat": 41.5,
+     "lng": -74.01
+    },
+    "location_name": "Newburgh army camp (Newburgh meeting of officers)",
+    "gap_before": true
+   }
+  ]
+ },
+ {
   "id": "greene",
   "commander": "Nathanael Greene",
   "name": "Southern Army (Southern Department, Continental Army)",
@@ -966,7 +1049,8 @@
      "lat": 40.7101,
      "lng": -74.3069
     },
-    "location_name": "Springfield, NJ (blocks Knyphausen)"
+    "location_name": "Springfield, NJ (blocks Knyphausen)",
+    "gap_before": true
    },
    {
     "date": "1780-12-03",
@@ -1100,7 +1184,8 @@
      "lat": 32.8998,
      "lng": -80.1365
     },
-    "location_name": "Camp at Middleton Place (west of Ashley River)"
+    "location_name": "Camp at Middleton Place (west of Ashley River)",
+    "gap_before": true
    },
    {
     "date": "1782-12-14",
@@ -1284,6 +1369,542 @@
      "lng": -75.1636
     },
     "location_name": "Philadelphia (departs for England)"
+   }
+  ]
+ },
+ {
+  "id": "lafayette",
+  "commander": "Marquis de Lafayette",
+  "name": "Lafayette's Virginia force (Continental light infantry, Wayne's Pennsylvania Line and militia)",
+  "side": "union",
+  "color": "#0d9488",
+  "troop_strength": 4500,
+  "active_until": "1782-01-17",
+  "waypoints": [
+   {
+    "date": "1777-06-13",
+    "coordinates": {
+     "lat": 33.3744,
+     "lng": -79.2939
+    },
+    "location_name": "Landing near Georgetown, SC (North Island)"
+   },
+   {
+    "date": "1777-08-05",
+    "coordinates": {
+     "lat": 39.9528,
+     "lng": -75.1636
+    },
+    "location_name": "Philadelphia (meets Washington)"
+   },
+   {
+    "date": "1777-09-11",
+    "coordinates": {
+     "lat": 39.872,
+     "lng": -75.59
+    },
+    "location_name": "Battle of Brandywine (wounded)",
+    "is_battle": true,
+    "event_id": 18
+   },
+   {
+    "date": "1777-11-24",
+    "coordinates": {
+     "lat": 39.8917,
+     "lng": -75.1167
+    },
+    "location_name": "Skirmish at Gloucester, NJ"
+   },
+   {
+    "date": "1778-05-18",
+    "coordinates": {
+     "lat": 40.0969,
+     "lng": -75.4389
+    },
+    "location_name": "Leaves Valley Forge for Barren Hill"
+   },
+   {
+    "date": "1778-05-20",
+    "coordinates": {
+     "lat": 40.0872,
+     "lng": -75.2631
+    },
+    "location_name": "Barren Hill (escapes British encirclement)"
+   },
+   {
+    "date": "1778-06-27",
+    "coordinates": {
+     "lat": 40.2961,
+     "lng": -74.3596
+    },
+    "location_name": "Englishtown (advance force before Monmouth)"
+   },
+   {
+    "date": "1778-06-28",
+    "coordinates": {
+     "lat": 40.25634,
+     "lng": -74.3209
+    },
+    "location_name": "Battle of Monmouth",
+    "is_battle": true,
+    "event_id": 21
+   },
+   {
+    "date": "1778-07-29",
+    "coordinates": {
+     "lat": 41.3615,
+     "lng": -71.4814
+    },
+    "location_name": "Rhode Island expedition (Estaing off Point Judith)"
+   },
+   {
+    "date": "1780-04-27",
+    "coordinates": {
+     "lat": 42.3603,
+     "lng": -71.0578
+    },
+    "location_name": "Boston (returns from France on the Hermione)",
+    "gap_before": true
+   },
+   {
+    "date": "1780-05-10",
+    "coordinates": {
+     "lat": 40.7966,
+     "lng": -74.4773
+    },
+    "location_name": "Morristown (reunion with Washington)"
+   },
+   {
+    "date": "1781-02-20",
+    "coordinates": {
+     "lat": 41.2833,
+     "lng": -73.9167
+    },
+    "location_name": "Peekskill (sets out for Virginia)"
+   },
+   {
+    "date": "1781-03-03",
+    "coordinates": {
+     "lat": 39.6078,
+     "lng": -75.8297
+    },
+    "location_name": "Head of Elk (his force arrives)"
+   },
+   {
+    "date": "1781-03-14",
+    "coordinates": {
+     "lat": 37.2344,
+     "lng": -76.5097
+    },
+    "location_name": "Yorktown (inspects situation with Steuben)"
+   },
+   {
+    "date": "1781-05-24",
+    "coordinates": {
+     "lat": 37.5408,
+     "lng": -77.4367
+    },
+    "location_name": "Richmond (withdraws as Cornwallis advances)"
+   },
+   {
+    "date": "1781-07-06",
+    "coordinates": {
+     "lat": 37.2575,
+     "lng": -76.8031
+    },
+    "location_name": "Battle of Green Spring (Jamestown)"
+   },
+   {
+    "date": "1781-10-14",
+    "coordinates": {
+     "lat": 37.23083,
+     "lng": -76.5025
+    },
+    "location_name": "Siege of Yorktown (assault on the redoubts)",
+    "is_battle": true,
+    "event_id": 34
+   },
+   {
+    "date": "1781-12-18",
+    "coordinates": {
+     "lat": 42.3603,
+     "lng": -71.0578
+    },
+    "location_name": "Boston (sails for France)"
+   }
+  ]
+ },
+ {
+  "id": "morgan",
+  "commander": "Daniel Morgan",
+  "name": "Morgan's light corps (Southern Army detachment)",
+  "side": "union",
+  "color": "#65a30d",
+  "troop_strength": 1900,
+  "active_until": "1781-03-12",
+  "waypoints": [
+   {
+    "date": "1775-07-14",
+    "coordinates": {
+     "lat": 39.1833,
+     "lng": -78.1667
+    },
+    "location_name": "Winchester (rifle company assembles)"
+   },
+   {
+    "date": "1775-08-06",
+    "coordinates": {
+     "lat": 42.3736,
+     "lng": -71.1106
+    },
+    "location_name": "Arrives at the siege of Boston (Cambridge)"
+   },
+   {
+    "date": "1775-09-25",
+    "coordinates": {
+     "lat": 44.3164,
+     "lng": -69.7711
+    },
+    "location_name": "Fort Western, Kennebec (expedition departs)"
+   },
+   {
+    "date": "1775-11-09",
+    "coordinates": {
+     "lat": 46.7581,
+     "lng": -71.2403
+    },
+    "location_name": "Pointe-Lévi, opposite Quebec"
+   },
+   {
+    "date": "1775-12-31",
+    "coordinates": {
+     "lat": 46.815,
+     "lng": -71.20222
+    },
+    "location_name": "Battle of Quebec (captured)",
+    "is_battle": true,
+    "event_id": 5
+   },
+   {
+    "date": "1777-09-19",
+    "coordinates": {
+     "lat": 42.99889,
+     "lng": -73.6375
+    },
+    "location_name": "Saratoga: Freeman's Farm",
+    "is_battle": true,
+    "event_id": 19,
+    "gap_before": true
+   },
+   {
+    "date": "1777-10-07",
+    "coordinates": {
+     "lat": 42.99889,
+     "lng": -73.6375
+    },
+    "location_name": "Saratoga: Bemis Heights",
+    "is_battle": true,
+    "event_id": 19
+   },
+   {
+    "date": "1779-06-30",
+    "coordinates": {
+     "lat": 39.1833,
+     "lng": -78.1667
+    },
+    "location_name": "Resigns, returns home to Winchester",
+    "gap_before": true
+   },
+   {
+    "date": "1780-10-02",
+    "coordinates": {
+     "lat": 36.08,
+     "lng": -79.1108
+    },
+    "location_name": "Hillsborough: given command of light infantry",
+    "gap_before": true
+   },
+   {
+    "date": "1780-12-03",
+    "coordinates": {
+     "lat": 35.2272,
+     "lng": -80.8431
+    },
+    "location_name": "Charlotte: meets Greene"
+   },
+   {
+    "date": "1780-12-25",
+    "coordinates": {
+     "lat": 34.8397,
+     "lng": -81.4578
+    },
+    "location_name": "Pacolet River camp"
+   },
+   {
+    "date": "1781-01-17",
+    "coordinates": {
+     "lat": 35.13683,
+     "lng": -81.816
+    },
+    "location_name": "Battle of Cowpens",
+    "is_battle": true,
+    "event_id": 29
+   },
+   {
+    "date": "1781-02-10",
+    "coordinates": {
+     "lat": 39.1833,
+     "lng": -78.1667
+    },
+    "location_name": "Returns to his Virginia farm (leaves the army)"
+   }
+  ]
+ },
+ {
+  "id": "rochambeau",
+  "commander": "Comte de Rochambeau",
+  "name": "French Expeditionary Army (Expédition Particulière)",
+  "side": "union",
+  "color": "#059669",
+  "troop_strength": 7800,
+  "active_until": "1783-01-06",
+  "waypoints": [
+   {
+    "date": "1780-07-10",
+    "coordinates": {
+     "lat": 41.4917,
+     "lng": -71.3119
+    },
+    "location_name": "Newport (lands with the army)"
+   },
+   {
+    "date": "1781-05-23",
+    "coordinates": {
+     "lat": 41.7142,
+     "lng": -72.6525
+    },
+    "location_name": "Wethersfield conference with Washington"
+   },
+   {
+    "date": "1781-06-10",
+    "coordinates": {
+     "lat": 41.4917,
+     "lng": -71.3119
+    },
+    "location_name": "Leaves Newport with his staff"
+   },
+   {
+    "date": "1781-06-11",
+    "coordinates": {
+     "lat": 41.8236,
+     "lng": -71.4222
+    },
+    "location_name": "Providence (army assembles, review June 16)"
+   },
+   {
+    "date": "1781-06-18",
+    "coordinates": {
+     "lat": 41.6939,
+     "lng": -71.5958
+    },
+    "location_name": "Waterman Tavern, Coventry (first division)"
+   },
+   {
+    "date": "1781-06-26",
+    "coordinates": {
+     "lat": 41.605,
+     "lng": -72.8792
+    },
+    "location_name": "Asa Barnes Tavern, Southington"
+   },
+   {
+    "date": "1781-06-27",
+    "coordinates": {
+     "lat": 41.5275,
+     "lng": -73.1233
+    },
+    "location_name": "Israel Bronson Tavern, Middlebury"
+   },
+   {
+    "date": "1781-07-06",
+    "coordinates": {
+     "lat": 41.0319,
+     "lng": -73.8331
+    },
+    "location_name": "Odell farm HQ, Philipsburg camp (Greenburgh)"
+   },
+   {
+    "date": "1781-09-05",
+    "coordinates": {
+     "lat": 39.8472,
+     "lng": -75.3728
+    },
+    "location_name": "Meets Washington at Chester"
+   },
+   {
+    "date": "1781-09-10",
+    "coordinates": {
+     "lat": 38.708,
+     "lng": -77.0861
+    },
+    "location_name": "Mount Vernon (day after Washington)"
+   },
+   {
+    "date": "1781-09-14",
+    "coordinates": {
+     "lat": 37.2708,
+     "lng": -76.7069
+    },
+    "location_name": "Williamsburg (arrives with Washington)"
+   },
+   {
+    "date": "1781-10-19",
+    "coordinates": {
+     "lat": 37.23083,
+     "lng": -76.5025
+    },
+    "location_name": "Siege of Yorktown (surrender, British offer sword to him first)",
+    "is_battle": true,
+    "event_id": 34
+   },
+   {
+    "date": "1782-12-07",
+    "coordinates": {
+     "lat": 41.5,
+     "lng": -74.01
+    },
+    "location_name": "Newburgh HQ, last meeting with Washington",
+    "gap_before": true
+   }
+  ]
+ },
+ {
+  "id": "tarleton",
+  "commander": "Banastre Tarleton",
+  "name": "British Legion (with attached regulars at Cowpens)",
+  "side": "confederate",
+  "color": "#dc2626",
+  "troop_strength": 1158,
+  "active_until": "1781-11-18",
+  "waypoints": [
+   {
+    "date": "1776-12-13",
+    "coordinates": {
+     "lat": 40.7062,
+     "lng": -74.5493
+    },
+    "location_name": "Basking Ridge (captures Gen. Charles Lee)"
+   },
+   {
+    "date": "1780-04-14",
+    "coordinates": {
+     "lat": 33.1967,
+     "lng": -80.0067
+    },
+    "location_name": "Monck's Corner (surprises Huger)",
+    "gap_before": true
+   },
+   {
+    "date": "1780-05-06",
+    "coordinates": {
+     "lat": 33.3047,
+     "lng": -79.6751
+    },
+    "location_name": "Lenud's Ferry (scatters White's cavalry)"
+   },
+   {
+    "date": "1780-05-28",
+    "coordinates": {
+     "lat": 34.2472,
+     "lng": -80.625
+    },
+    "location_name": "Camden (starts pursuit of Buford)"
+   },
+   {
+    "date": "1780-05-29",
+    "coordinates": {
+     "lat": 34.742,
+     "lng": -80.6258
+    },
+    "location_name": "Waxhaws (defeats Buford)"
+   },
+   {
+    "date": "1780-08-16",
+    "coordinates": {
+     "lat": 34.36455,
+     "lng": -80.6139
+    },
+    "location_name": "Battle of Camden (Legion cavalry pursuit)",
+    "is_battle": true,
+    "event_id": 27
+   },
+   {
+    "date": "1780-08-18",
+    "coordinates": {
+     "lat": 34.635,
+     "lng": -80.9058
+    },
+    "location_name": "Fishing Creek (surprises Sumter)"
+   },
+   {
+    "date": "1780-11-20",
+    "coordinates": {
+     "lat": 34.6793,
+     "lng": -81.8124
+    },
+    "location_name": "Blackstock's Farm (repulsed by Sumter)"
+   },
+   {
+    "date": "1781-01-17",
+    "coordinates": {
+     "lat": 35.13683,
+     "lng": -81.816
+    },
+    "location_name": "Battle of Cowpens (defeated by Morgan)",
+    "is_battle": true,
+    "event_id": 29
+   },
+   {
+    "date": "1781-02-01",
+    "coordinates": {
+     "lat": 35.4283,
+     "lng": -80.9519
+    },
+    "location_name": "Cowan's Ford / Torrence's Tavern (crosses the Catawba)"
+   },
+   {
+    "date": "1781-03-15",
+    "coordinates": {
+     "lat": 36.132,
+     "lng": -79.844
+    },
+    "location_name": "Battle of Guilford Court House (wounded)",
+    "is_battle": true,
+    "event_id": 30
+   },
+   {
+    "date": "1781-06-04",
+    "coordinates": {
+     "lat": 38.0299,
+     "lng": -78.479
+    },
+    "location_name": "Charlottesville raid (to capture Jefferson and Assembly)"
+   },
+   {
+    "date": "1781-10-04",
+    "coordinates": {
+     "lat": 37.27,
+     "lng": -76.4986
+    },
+    "location_name": "Gloucester Point (skirmish with Lauzun's Legion)"
+   },
+   {
+    "date": "1781-10-19",
+    "coordinates": {
+     "lat": 37.27,
+     "lng": -76.4986
+    },
+    "location_name": "Gloucester Point (garrison surrenders)"
    }
   ]
  }

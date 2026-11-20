@@ -28,6 +28,7 @@ COMMANDERS = [
         "side": "union",  # placeholder side key: American (see events.json)
         "color": "#1d4ed8",
         "troop_strength": 19000,
+        "hide_gaps": False,  # headquarters were known throughout; the marker stays on the last known place
         "itinerary": [
             # (date, kind, ref, label)
             ("1775-06-15", "pl", "Philadelphia", "Philadelphia (appointed commander-in-chief)"),
@@ -72,6 +73,7 @@ COMMANDERS = [
         "side": "confederate",  # placeholder side key: British (see events.json)
         "color": "#b91c1c",
         "troop_strength": 7800,
+        "hide_gaps": False,
         "itinerary": [
             ("1776-08-27", "ev", 8, "Battle of Long Island"),
             ("1776-11-20", "pl", "Fort Lee, New Jersey", "Fort Lee"),
@@ -110,6 +112,12 @@ EXTRA_STYLE = {  # id -> (placeholder side key, map colour)
     "howe": ("confederate", "#ef4444"),
     "clinton": ("confederate", "#f97316"),
     "burgoyne": ("confederate", "#be123c"),
+    "rochambeau": ("union", "#059669"),  # French; allied with the American side
+    "gates": ("union", "#0284c7"),
+    "arnold": ("union", "#7c3aed"),  # American until Sept 1780, then British; one colour throughout
+    "lafayette": ("union", "#0d9488"),
+    "morgan": ("union", "#65a30d"),
+    "tarleton": ("confederate", "#dc2626"),
 }
 
 
@@ -176,15 +184,19 @@ def main():
             last = date
             if kind == "ev":
                 ev = events[ref]
-                waypoints.append({
+                wp = {
                     "date": date, "coordinates": ev["location"]["coordinates"],
                     "location_name": label, "is_battle": True, "event_id": ref,
-                })
+                }
             else:
-                waypoints.append({"date": date, "coordinates": coords[ref], "location_name": label})
+                wp = {"date": date, "coordinates": coords[ref], "location_name": label}
+            # More than a year between waypoints: no known position in between (hide the marker)
+            if c.get("hide_gaps", True) and waypoints and (datetime.date.fromisoformat(date) - datetime.date.fromisoformat(waypoints[-1]["date"])).days > 365:
+                wp["gap_before"] = True
+            waypoints.append(wp)
         # The marker stays 30 days after the last sourced waypoint, then disappears
         last_dt = datetime.date.fromisoformat(waypoints[-1]["date"]) + datetime.timedelta(days=30)
-        out.append({k: v for k, v in c.items() if k != "itinerary"} | {"active_until": last_dt.isoformat(), "waypoints": waypoints})
+        out.append({k: v for k, v in c.items() if k not in ("itinerary", "hide_gaps")} | {"active_until": last_dt.isoformat(), "waypoints": waypoints})
         print(f"{c['commander']}: {len(waypoints)} waypoints, {waypoints[0]['date']} to {waypoints[-1]['date']}")
 
     OUT.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")

@@ -1,0 +1,122 @@
+{
+ "id": "morgan",
+ "commander": "Daniel Morgan",
+ "name": "Morgan's light corps (Southern Army detachment)",
+ "troop_strength": 1900,
+ "troop_source": "https://en.wikipedia.org/wiki/Battle_of_Cowpens : \"closer to 1,900\" (Babits estimate; Morgan's own report said about 800). Same article: \"He had 600 men\" when he headed west Dec 21 1780.",
+ "rows": [
+  {
+   "date": "1775-07-14",
+   "kind": "pl",
+   "ref": "Winchester, Virginia",
+   "label": "Winchester (rifle company assembles)",
+   "source": "https://en.wikipedia.org/wiki/Daniel_Morgan",
+   "quote": "assembled them at Winchester on July 14"
+  },
+  {
+   "date": "1775-08-06",
+   "kind": "pl",
+   "ref": "Cambridge, Massachusetts",
+   "label": "Arrives at the siege of Boston (Cambridge)",
+   "source": "https://en.wikipedia.org/wiki/Daniel_Morgan",
+   "quote": "arriving on August 6, 1775",
+   "note": "Article says he arrived at Boston; the Cambridge camp is the siege lines. The 96-man rifle company marched about 600 miles in 21 days."
+  },
+  {
+   "date": "1775-09-25",
+   "kind": "pl",
+   "ref": "Fort Western",
+   "label": "Fort Western, Kennebec (expedition departs)",
+   "source": "https://en.wikipedia.org/wiki/Daniel_Morgan",
+   "quote": "set out from Fort Western on September 25, with Morgan leading the advance party"
+  },
+  {
+   "date": "1775-11-09",
+   "kind": "pl",
+   "ref": "Lévis, Quebec",
+   "label": "Pointe-Lévi, opposite Quebec",
+   "source": "https://en.wikipedia.org/wiki/Arnold%27s_expedition_to_Quebec",
+   "quote": "On November 9 the expedition finally reached the Saint Lawrence at Pointe-Levi",
+   "note": "Article names the expedition, not Morgan, on this date. He led the vanguard of the main body, so he was with it; less sure."
+  },
+  {
+   "date": "1775-12-31",
+   "kind": "ev",
+   "ref": 5,
+   "label": "Battle of Quebec (captured)",
+   "source": "https://en.wikipedia.org/wiki/Daniel_Morgan",
+   "quote": "Morgan took command of the force, and he successfully overcame the first rampart",
+   "note": "Captured after being trapped in the city; prisoner until exchanged January 1777."
+  },
+  {
+   "date": "1777-09-19",
+   "kind": "ev",
+   "ref": 19,
+   "label": "Saratoga: Freeman's Farm",
+   "source": "https://en.wikipedia.org/wiki/Daniel_Morgan",
+   "quote": "On September 19, at Freeman's Farm, they ran into the advance"
+  },
+  {
+   "date": "1777-10-07",
+   "kind": "ev",
+   "ref": 19,
+   "label": "Saratoga: Bemis Heights",
+   "source": "https://en.wikipedia.org/wiki/Daniel_Morgan",
+   "quote": "Morgan was assigned command of the left (or western) flank",
+   "note": "Date given as Oct. 7 in the same article."
+  },
+  {
+   "date": "1779-06-30",
+   "kind": "pl",
+   "ref": "Winchester, Virginia",
+   "label": "Resigns, returns home to Winchester",
+   "source": "https://en.wikipedia.org/wiki/Daniel_Morgan",
+   "quote": "allowed to resign on June 30, 1779, and returned home to Winchester",
+   "note": "Resignation date; arrival home date not stated."
+  },
+  {
+   "date": "1780-10-02",
+   "kind": "pl",
+   "ref": "Hillsborough, North Carolina",
+   "label": "Hillsborough: given command of light infantry",
+   "source": "https://en.wikipedia.org/wiki/Daniel_Morgan",
+   "quote": "given command of the light infantry corps on Oct. 2",
+   "note": "Article says he met Gates at Hillsborough and received command on Oct. 2; the meeting itself is undated."
+  },
+  {
+   "date": "1780-12-03",
+   "kind": "pl",
+   "ref": "Charlotte, North Carolina",
+   "label": "Charlotte: meets Greene",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Cowpens",
+   "quote": "Brigadier General Daniel Morgan reported for duty to Greene's headquarters at Charlotte"
+  },
+  {
+   "date": "1780-12-25",
+   "kind": "pl",
+   "ref": "Pacolet River",
+   "label": "Pacolet River camp",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Cowpens",
+   "quote": "By Christmas Day, Morgan had reached the Pacolet.",
+   "note": "Left Charlotte area heading west on Dec 21 with about 600 men."
+  },
+  {
+   "date": "1781-01-17",
+   "kind": "ev",
+   "ref": 29,
+   "label": "Battle of Cowpens",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Cowpens",
+   "quote": "Morgan decided to stand and fight rather than continue to retreat",
+   "note": "Quote is from the Cowpens article about the night of Jan 16 at Hannah's Cowpens; battle date Jan 17 from same article."
+  },
+  {
+   "date": "1781-02-10",
+   "kind": "pl",
+   "ref": "Winchester, Virginia",
+   "label": "Returns to his Virginia farm (leaves the army)",
+   "source": "https://en.wikipedia.org/wiki/Daniel_Morgan",
+   "quote": "on February 10, he returned to his Virginia farm",
+   "note": "Farm was in Frederick County near Winchester. Article does not describe the retreat to the Catawba, so no rows for it."
+  }
+ ]
+}

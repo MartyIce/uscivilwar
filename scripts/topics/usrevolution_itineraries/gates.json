@@ -1,0 +1,80 @@
+{
+ "id": "gates",
+ "commander": "Horatio Gates",
+ "name": "Northern Army (Saratoga); Southern Army (Camden)",
+ "troop_strength": 12000,
+ "troop_source": "https://en.wikipedia.org/wiki/Battles_of_Saratoga : \"the effective colonial force was about 12,000 men\" (Saratoga, Oct 1777; Saratoga_campaign says \"over 15,000\" with militia). Southern Army: https://en.wikipedia.org/wiki/Battle_of_Camden : \"an American army of 4,000 regulars and militia under Major General Horatio Gates\".",
+ "rows": [
+  {
+   "date": "1777-08-19",
+   "kind": "pl",
+   "ref": "Stillwater, New York",
+   "label": "Stillwater (assumes command of Northern Department army)",
+   "source": "https://en.wikipedia.org/wiki/Battles_of_Saratoga",
+   "quote": "On August 19, Major General Horatio Gates assumed command from Schuyler",
+   "note": "Source places the army camp south of Stillwater near the Mohawk mouth; Stillwater is the nearest titled place. Gates article gives the same date; Congress had named him on Aug 4."
+  },
+  {
+   "date": "1777-09-19",
+   "kind": "ev",
+   "ref": 19,
+   "label": "Freeman's Farm (Saratoga)",
+   "source": "https://en.wikipedia.org/wiki/Battles_of_Saratoga",
+   "quote": "assumed command himself of the right",
+   "note": "Gates directed the battle from the Bemis Heights fortifications (right wing), not Freeman's Farm itself. Event 19 also covers 1777-10-07."
+  },
+  {
+   "date": "1777-10-07",
+   "kind": "ev",
+   "ref": 19,
+   "label": "Bemis Heights (Saratoga)",
+   "source": "https://en.wikipedia.org/wiki/Battles_of_Saratoga",
+   "quote": "assumed command of the American left",
+   "note": "Gates commanded from the Bemis Heights lines after relieving Arnold."
+  },
+  {
+   "date": "1777-10-17",
+   "kind": "pl",
+   "ref": "Schuylerville, New York",
+   "label": "Schuylerville (Burgoyne surrenders)",
+   "source": "https://en.wikipedia.org/wiki/Battles_of_Saratoga",
+   "quote": "Burgoyne surrendered his army and tendered his sword to Gates",
+   "note": "Surrender site is about half a mile south of Schuylerville (Horatio_Gates article)."
+  },
+  {
+   "date": "1780-08-16",
+   "kind": "ev",
+   "ref": 27,
+   "label": "Camden",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Camden",
+   "quote": "Gates and staff stayed behind the reserve force"
+  },
+  {
+   "date": "1780-08-16",
+   "kind": "pl",
+   "ref": "Charlotte, North Carolina",
+   "label": "Charlotte (flees after Camden, same evening)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Camden",
+   "quote": "had taken refuge 60 miles (97 km) away in Charlotte",
+   "note": "Same date as the battle; the source says he arrived by that evening."
+  },
+  {
+   "date": "1780-08-19",
+   "kind": "pl",
+   "ref": "Hillsborough, North Carolina",
+   "label": "Hillsborough (reports defeat to Congress)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Camden",
+   "quote": "he arrived at Hillsborough on August 19",
+   "note": "Report to Congress written Aug 20 per same source."
+  },
+  {
+   "date": "1783-03-15",
+   "kind": "pl",
+   "ref": "Newburgh, New York",
+   "label": "Newburgh army camp (Newburgh meeting of officers)",
+   "source": "https://en.wikipedia.org/wiki/Newburgh_Conspiracy",
+   "quote": "After Gates opened the meeting, Washington entered the building",
+   "note": "The Temple was at the army camp at New Windsor, by Newburgh; Newburgh is the place the article names."
+  }
+ ]
+}

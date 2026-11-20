@@ -1,0 +1,169 @@
+{
+ "id": "lafayette",
+ "commander": "Marquis de Lafayette",
+ "name": "Lafayette's Virginia force (Continental light infantry, Wayne's Pennsylvania Line and militia)",
+ "troop_strength": 4500,
+ "troop_source": "https://en.wikipedia.org/wiki/Yorktown_campaign : \"Lafayette, his force grown to about 4,500\" (June 1781, after Wayne's 800 and Campbell's 1,000 militia joined). Earlier: https://en.wikipedia.org/wiki/Battle_of_Barren_Hill : \"left the Valley Forge camp with 2,400 troops\" (May 1778); Virginia detachment began at \"about 1,200\" (Feb 1781).",
+ "rows": [
+  {
+   "date": "1777-06-13",
+   "kind": "pl",
+   "ref": "Georgetown, South Carolina",
+   "label": "Landing near Georgetown, SC (North Island)",
+   "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
+   "quote": "landed on North Island near Georgetown, South Carolina on June 13, 1777",
+   "note": "North Island is a barrier island off Georgetown; the pin is the town."
+  },
+  {
+   "date": "1777-08-05",
+   "kind": "pl",
+   "ref": "Philadelphia",
+   "label": "Philadelphia (meets Washington)",
+   "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
+   "quote": "Lafayette met him at a dinner on August 5, 1777",
+   "note": "Article says Washington came to Philadelphia to brief Congress; Congress commissioned Lafayette a major general on July 31, 1777."
+  },
+  {
+   "date": "1777-09-11",
+   "kind": "ev",
+   "ref": 18,
+   "label": "Battle of Brandywine (wounded)",
+   "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
+   "quote": "Lafayette first saw combat at the Battle of Brandywine near Chadds Ford",
+   "note": "Joined Sullivan's division, rallied Conway's brigade, shot in the leg."
+  },
+  {
+   "date": "1777-11-24",
+   "kind": "pl",
+   "ref": "Gloucester City, New Jersey",
+   "label": "Skirmish at Gloucester, NJ",
+   "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
+   "quote": "defeated a numerically superior Hessian force in Gloucester, on November 24, 1777",
+   "note": "Led 300 soldiers; article says only 'Gloucester', taken as Gloucester City NJ (Delaware River, opposite Philadelphia)."
+  },
+  {
+   "date": "1778-05-18",
+   "kind": "pl",
+   "ref": "Valley Forge",
+   "label": "Leaves Valley Forge for Barren Hill",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Barren_Hill",
+   "quote": "On May 18, Lafayette left the Valley Forge camp with 2,400 troops",
+   "note": "Marquis de Lafayette article gives 2200 men; Barren Hill article gives 2,400."
+  },
+  {
+   "date": "1778-05-20",
+   "kind": "pl",
+   "ref": "Barren Hill, Pennsylvania",
+   "label": "Barren Hill (escapes British encirclement)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Barren_Hill",
+   "quote": "Lafayette calmed his retreating force and slipped away with relatively few casualties",
+   "note": "Battle date May 20 from same article; he took up position there on May 18."
+  },
+  {
+   "date": "1778-06-27",
+   "kind": "pl",
+   "ref": "Englishtown, New Jersey",
+   "label": "Englishtown (advance force before Monmouth)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Monmouth",
+   "quote": "By June 27, Lafayette was safely back in the fold",
+   "note": "Quote continues 'with what was now Lee's vanguard of some 4,500 troops at Englishtown'."
+  },
+  {
+   "date": "1778-06-28",
+   "kind": "ev",
+   "ref": 21,
+   "label": "Battle of Monmouth",
+   "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
+   "quote": "Lafayette sent a message to Washington to urge him to the front",
+   "note": "Marquis article puts him on the field June 28; Monmouth article also describes part of his force retreating that morning."
+  },
+  {
+   "date": "1778-07-29",
+   "kind": "pl",
+   "ref": "Point Judith",
+   "label": "Rhode Island expedition (Estaing off Point Judith)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Rhode_Island",
+   "quote": "immediately met with Generals Greene and Lafayette",
+   "note": "Estaing arrived off Point Judith July 29 and met Greene and Lafayette; meeting place not stated; Point Judith pin is approximate (Newport area). Lafayette led about 3000 men per the Marquis article. Battle of Rhode Island (Aug 29) omitted: he was sent to Boston and the article does not place him in the fighting."
+  },
+  {
+   "date": "1780-04-27",
+   "kind": "pl",
+   "ref": "Boston",
+   "label": "Boston (returns from France on the Hermione)",
+   "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
+   "quote": "arriving in Boston on April 27, 1780",
+   "note": "Arrived aboard the frigate Hermione."
+  },
+  {
+   "date": "1780-05-10",
+   "kind": "pl",
+   "ref": "Morristown, New Jersey",
+   "label": "Morristown (reunion with Washington)",
+   "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
+   "quote": "on May 10, 1780, had a joyous reunion with Washington at Morristown, New Jersey"
+  },
+  {
+   "date": "1781-02-20",
+   "kind": "pl",
+   "ref": "Peekskill, New York",
+   "label": "Peekskill (sets out for Virginia)",
+   "source": "https://en.wikipedia.org/wiki/Yorktown_campaign",
+   "quote": "Lafayette, who left Peekskill, New York the same day",
+   "note": "Same day as Congress authorised the Virginia detachment (Feb 20); about 1,200 light infantry."
+  },
+  {
+   "date": "1781-03-03",
+   "kind": "pl",
+   "ref": "Elkton, Maryland",
+   "label": "Head of Elk (his force arrives)",
+   "source": "https://en.wikipedia.org/wiki/Yorktown_campaign",
+   "quote": "Lafayette's force reached Head of Elk",
+   "note": "Article says his force; he commanded the expedition. Head of Elk is present-day Elkton, MD."
+  },
+  {
+   "date": "1781-03-14",
+   "kind": "pl",
+   "ref": "Yorktown, Virginia",
+   "label": "Yorktown (inspects situation with Steuben)",
+   "source": "https://en.wikipedia.org/wiki/Yorktown_campaign",
+   "quote": "Lafayette traveled south, reaching Yorktown on March 14",
+   "note": "He went ahead from Annapolis while his troops awaited transport."
+  },
+  {
+   "date": "1781-05-24",
+   "kind": "pl",
+   "ref": "Richmond, Virginia",
+   "label": "Richmond (withdraws as Cornwallis advances)",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Yorktown",
+   "quote": "On May 24, he set out after Lafayette, who withdrew from Richmond",
+   "note": "Yorktown campaign article: Cornwallis reached Petersburg May 19, prompting Lafayette to retreat to Richmond. Exact arrival date not stated (late April per general accounts, unsourced here), so only this date is used."
+  },
+  {
+   "date": "1781-07-06",
+   "kind": "pl",
+   "ref": "Green Spring Plantation",
+   "label": "Battle of Green Spring (Jamestown)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Green_Spring",
+   "quote": "When Lafayette came up with his main force",
+   "note": "Lafayette was present and was unhorsed during the retreat; Wayne led the advance. No event id exists for this battle."
+  },
+  {
+   "date": "1781-10-14",
+   "kind": "ev",
+   "ref": 34,
+   "label": "Siege of Yorktown (assault on the redoubts)",
+   "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
+   "quote": "Lafayette's 400 men on the American right took Redoubt 9",
+   "note": "Sources disagree on the redoubt: the Siege of Yorktown article says a French column took No. 9 and Hamilton took No. 10. Row marks Lafayette's presence in the siege lines only."
+  },
+  {
+   "date": "1781-12-18",
+   "kind": "pl",
+   "ref": "Boston",
+   "label": "Boston (sails for France)",
+   "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
+   "quote": "Lafayette left Boston for France on December 18, 1781"
+  }
+ ]
+}

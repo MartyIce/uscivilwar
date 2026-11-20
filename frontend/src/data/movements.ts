@@ -467,6 +467,9 @@ export function getArmyPositionAtDate(
   // If date is before all waypoints, return null
   if (!before) return null;
 
+  // No sourced position between these two waypoints: show nothing instead of a slow drift
+  if (after?.gap_before) return null;
+
   // If date is after all waypoints or no waypoint after, return last known position
   if (!after) {
     return {

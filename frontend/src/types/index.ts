@@ -156,6 +156,8 @@ export interface ArmyWaypoint {
   location_name?: string;
   is_battle?: boolean;
   event_id?: number;
+  /** No position is known between the previous waypoint and this one (a gap of a year or more) */
+  gap_before?: boolean;
 }
 
 export interface ArmyMovement {
