@@ -506,6 +506,266 @@
   ]
  },
  {
+  "id": "arnold",
+  "commander": "Benedict Arnold",
+  "name": "Arnold's expeditions: Quebec 1775; British raiding force in Virginia and Connecticut 1780-81",
+  "side": "union",
+  "color": "#7c3aed",
+  "troop_strength": 1700,
+  "active_until": "1782-01-07",
+  "waypoints": [
+   {
+    "date": "1775-05-10",
+    "coordinates": {
+     "lat": 43.84139,
+     "lng": -73.38806
+    },
+    "location_name": "Capture of Fort Ticonderoga",
+    "is_battle": true,
+    "event_id": 3
+   },
+   {
+    "date": "1775-05-18",
+    "coordinates": {
+     "lat": 45.3167,
+     "lng": -73.2667
+    },
+    "location_name": "Fort Saint-Jean raid (captures sloop)"
+   },
+   {
+    "date": "1775-09-15",
+    "coordinates": {
+     "lat": 42.8125,
+     "lng": -70.8778
+    },
+    "location_name": "Newburyport (embarks Quebec expedition)"
+   },
+   {
+    "date": "1775-09-22",
+    "coordinates": {
+     "lat": 44.1911,
+     "lng": -69.7922
+    },
+    "location_name": "Gardinerston, Kennebec River"
+   },
+   {
+    "date": "1775-09-23",
+    "coordinates": {
+     "lat": 44.3164,
+     "lng": -69.7711
+    },
+    "location_name": "Fort Western (Augusta)"
+   },
+   {
+    "date": "1775-10-02",
+    "coordinates": {
+     "lat": 44.7267,
+     "lng": -69.8089
+    },
+    "location_name": "Norridgewock Falls"
+   },
+   {
+    "date": "1775-11-09",
+    "coordinates": {
+     "lat": 46.7581,
+     "lng": -71.2403
+    },
+    "location_name": "Pointe-Levi, opposite Quebec"
+   },
+   {
+    "date": "1775-11-14",
+    "coordinates": {
+     "lat": 46.7997,
+     "lng": -71.2208
+    },
+    "location_name": "Plains of Abraham, before Quebec"
+   },
+   {
+    "date": "1775-11-19",
+    "coordinates": {
+     "lat": 46.7,
+     "lng": -71.5833
+    },
+    "location_name": "Pointe-aux-Trembles (waits for Montgomery)"
+   },
+   {
+    "date": "1775-12-31",
+    "coordinates": {
+     "lat": 46.815,
+     "lng": -71.20222
+    },
+    "location_name": "Battle of Quebec",
+    "is_battle": true,
+    "event_id": 5
+   },
+   {
+    "date": "1776-06-15",
+    "coordinates": {
+     "lat": 45.5089,
+     "lng": -73.5542
+    },
+    "location_name": "Montreal (abandoned ahead of Carleton)"
+   },
+   {
+    "date": "1776-06-17",
+    "coordinates": {
+     "lat": 45.3167,
+     "lng": -73.2667
+    },
+    "location_name": "Saint-Jean (rear guard of the retreat)"
+   },
+   {
+    "date": "1776-09-30",
+    "coordinates": {
+     "lat": 44.6217,
+     "lng": -73.4172
+    },
+    "location_name": "Valcour Island (takes up position)"
+   },
+   {
+    "date": "1776-10-11",
+    "coordinates": {
+     "lat": 44.61056,
+     "lng": -73.43028
+    },
+    "location_name": "Battle of Valcour Island",
+    "is_battle": true,
+    "event_id": 10
+   },
+   {
+    "date": "1777-04-26",
+    "coordinates": {
+     "lat": 41.3083,
+     "lng": -72.925
+    },
+    "location_name": "New Haven (learns of the Danbury raid)"
+   },
+   {
+    "date": "1777-04-27",
+    "coordinates": {
+     "lat": 41.3053,
+     "lng": -73.5014
+    },
+    "location_name": "Battle of Ridgefield"
+   },
+   {
+    "date": "1777-07-24",
+    "coordinates": {
+     "lat": 43.2683,
+     "lng": -73.5847
+    },
+    "location_name": "Fort Edward (joins Schuyler)"
+   },
+   {
+    "date": "1777-08-20",
+    "coordinates": {
+     "lat": 43.0292,
+     "lng": -74.99
+    },
+    "location_name": "Fort Dayton (Stanwix relief column)"
+   },
+   {
+    "date": "1777-08-23",
+    "coordinates": {
+     "lat": 43.2106,
+     "lng": -75.4553
+    },
+    "location_name": "Fort Stanwix (siege lifted)"
+   },
+   {
+    "date": "1777-10-07",
+    "coordinates": {
+     "lat": 42.99889,
+     "lng": -73.6375
+    },
+    "location_name": "Battle of Bemis Heights (Saratoga)",
+    "is_battle": true,
+    "event_id": 19
+   },
+   {
+    "date": "1780-06-16",
+    "coordinates": {
+     "lat": 41.395,
+     "lng": -73.955
+    },
+    "location_name": "West Point (inspects the post)",
+    "gap_before": true
+   },
+   {
+    "date": "1780-08-03",
+    "coordinates": {
+     "lat": 41.395,
+     "lng": -73.955
+    },
+    "location_name": "West Point (takes command)"
+   },
+   {
+    "date": "1780-09-22",
+    "coordinates": {
+     "lat": 41.2133,
+     "lng": -73.9885
+    },
+    "location_name": "Stony Point / Smith house (meets André)"
+   },
+   {
+    "date": "1780-09-24",
+    "coordinates": {
+     "lat": 41.395,
+     "lng": -73.955
+    },
+    "location_name": "West Point HQ: flees by barge to HMS Vulture"
+   },
+   {
+    "date": "1781-01-04",
+    "coordinates": {
+     "lat": 37.3111,
+     "lng": -77.1494
+    },
+    "location_name": "Westover, James River (Richmond raid)"
+   },
+   {
+    "date": "1781-01-05",
+    "coordinates": {
+     "lat": 37.5408,
+     "lng": -77.4367
+    },
+    "location_name": "Richmond (captured)"
+   },
+   {
+    "date": "1781-01-19",
+    "coordinates": {
+     "lat": 36.8344,
+     "lng": -76.3417
+    },
+    "location_name": "Portsmouth (fortifies base)"
+   },
+   {
+    "date": "1781-04-29",
+    "coordinates": {
+     "lat": 37.5211,
+     "lng": -77.4442
+    },
+    "location_name": "Manchester, across from Richmond (with Phillips)"
+   },
+   {
+    "date": "1781-09-06",
+    "coordinates": {
+     "lat": 41.3556,
+     "lng": -72.0994
+    },
+    "location_name": "New London (burned; Groton Heights)"
+   },
+   {
+    "date": "1781-12-08",
+    "coordinates": {
+     "lat": 40.7128,
+     "lng": -74.0061
+    },
+    "location_name": "New York City (sails for England)"
+   }
+  ]
+ },
+ {
   "id": "burgoyne",
   "commander": "John Burgoyne",
   "name": "Army from Canada (Burgoyne's Northern Army)",

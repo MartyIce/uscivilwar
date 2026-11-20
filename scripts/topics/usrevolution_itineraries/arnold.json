@@ -1,0 +1,267 @@
+{
+ "id": "arnold",
+ "commander": "Benedict Arnold",
+ "name": "Arnold's expeditions: Quebec 1775; British raiding force in Virginia and Connecticut 1780-81",
+ "troop_strength": 1700,
+ "troop_source": "https://en.wikipedia.org/wiki/Battle_of_Groton_Heights : \"numbering about 1,700 men\" (New London raid, Sept 1781). Also https://en.wikipedia.org/wiki/Arnold%27s_expedition_to_Quebec : \"led a force of 1,100 Continental Army troops\" (Quebec, Sept 1775; about 600 reached the St. Lawrence). And https://en.wikipedia.org/wiki/Battle_of_Blandford : \"dispatched Brigadier General Benedict Arnold ... with 1,600 men to Virginia\" (Dec 1780).",
+ "rows": [
+  {
+   "date": "1775-05-10",
+   "kind": "ev",
+   "ref": 3,
+   "label": "Capture of Fort Ticonderoga",
+   "source": "https://en.wikipedia.org/wiki/Capture_of_Fort_Ticonderoga",
+   "quote": "Green Mountain Boys led by Ethan Allen and Colonel Benedict Arnold"
+  },
+  {
+   "date": "1775-05-18",
+   "kind": "pl",
+   "ref": "Saint-Jean-sur-Richelieu",
+   "label": "Fort Saint-Jean raid (captures sloop)",
+   "source": "https://en.wikipedia.org/wiki/Capture_of_Fort_Ticonderoga",
+   "quote": "Arnold and 50 men raided Fort Saint-Jean",
+   "note": "Article says the raid came 'seven days later' than the May 11 Crown Point capture, so May 18; the same article says Arnold rowed in on the night after May 17. Pin is the town where Fort Saint-Jean stood."
+  },
+  {
+   "date": "1775-09-15",
+   "kind": "pl",
+   "ref": "Newburyport, Massachusetts",
+   "label": "Newburyport (embarks Quebec expedition)",
+   "source": "https://en.wikipedia.org/wiki/Arnold%27s_expedition_to_Quebec",
+   "quote": "Arnold rode from Cambridge to Newburyport on September 15",
+   "note": "Expedition itself left Cambridge Sept 11-13; no source row found that places Arnold himself in Cambridge on a stated date."
+  },
+  {
+   "date": "1775-09-22",
+   "kind": "pl",
+   "ref": "Gardiner, Maine",
+   "label": "Gardinerston, Kennebec River",
+   "source": "https://en.wikipedia.org/wiki/Arnold%27s_expedition_to_Quebec",
+   "quote": "Arriving in Gardinerston on the 22nd",
+   "note": "Sentence is about the expedition; the next sentences say Arnold inspected the bateaux at Colburn's house there."
+  },
+  {
+   "date": "1775-09-23",
+   "kind": "pl",
+   "ref": "Fort Western",
+   "label": "Fort Western (Augusta)",
+   "source": "https://en.wikipedia.org/wiki/Arnold%27s_expedition_to_Quebec",
+   "quote": "Arnold and most of the force had reached Fort Western by September 23"
+  },
+  {
+   "date": "1775-10-02",
+   "kind": "pl",
+   "ref": "Norridgewock, Maine",
+   "label": "Norridgewock Falls",
+   "source": "https://en.wikipedia.org/wiki/Arnold%27s_expedition_to_Quebec",
+   "quote": "location of the last settlements on the Kennebec, on October 2"
+  },
+  {
+   "date": "1775-11-09",
+   "kind": "pl",
+   "ref": "Lévis",
+   "label": "Pointe-Levi, opposite Quebec",
+   "source": "https://en.wikipedia.org/wiki/Arnold%27s_expedition_to_Quebec",
+   "quote": "On November 9 the expedition finally reached the Saint Lawrence at Pointe-Levi",
+   "note": "Sentence is about the expedition; the following sentence has Arnold at Pointe-Levi learning of the intercepted letters."
+  },
+  {
+   "date": "1775-11-14",
+   "kind": "pl",
+   "ref": "Plains of Abraham",
+   "label": "Plains of Abraham, before Quebec",
+   "source": "https://en.wikipedia.org/wiki/Arnold%27s_expedition_to_Quebec",
+   "quote": "Arnold and his troops finally reached the Plains of Abraham on November 14"
+  },
+  {
+   "date": "1775-11-19",
+   "kind": "pl",
+   "ref": "Neuville, Quebec",
+   "label": "Pointe-aux-Trembles (waits for Montgomery)",
+   "source": "https://en.wikipedia.org/wiki/Arnold%27s_expedition_to_Quebec",
+   "quote": "Arnold decided on November 19 to withdraw to Pointe-aux-Trembles",
+   "note": "Pointe-aux-Trembles is the historic name of Neuville, Quebec (the Wikipedia title 'Pointe-aux-Trembles' resolves to the Montreal district, which is wrong). Withdrawal decided Nov 19; arrival date at the place not stated."
+  },
+  {
+   "date": "1775-12-31",
+   "kind": "ev",
+   "ref": 5,
+   "label": "Battle of Quebec",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Quebec_(1775)",
+   "quote": "Arnold received a deep wound in the leg from a musket ball"
+  },
+  {
+   "date": "1776-06-15",
+   "kind": "pl",
+   "ref": "Montreal",
+   "label": "Montreal (abandoned ahead of Carleton)",
+   "source": "https://en.wikipedia.org/wiki/Invasion_of_Canada_(1775)",
+   "quote": "Arnold and the American forces garrisoned around Montreal had abandoned the city",
+   "note": "Article gives June 15 for the messenger's warning and says Arnold left within four hours; exit could fall on June 15 or 16."
+  },
+  {
+   "date": "1776-06-17",
+   "kind": "pl",
+   "ref": "Saint-Jean-sur-Richelieu",
+   "label": "Saint-Jean (rear guard of the retreat)",
+   "source": "https://en.wikipedia.org/wiki/Invasion_of_Canada_(1775)",
+   "quote": "Arnold's troops caught up with the main army near St. Jean on the 17th",
+   "note": "Date from this article. The Benedict Arnold article (James Wilkinson) says Arnold was the last person to leave Saint-Jean, so he accompanied the troops."
+  },
+  {
+   "date": "1776-09-30",
+   "kind": "pl",
+   "ref": "Valcour Island",
+   "label": "Valcour Island (takes up position)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Valcour_Island",
+   "quote": "Arnold retreated to the shelter of Valcour Island"
+  },
+  {
+   "date": "1776-10-11",
+   "kind": "ev",
+   "ref": 10,
+   "label": "Battle of Valcour Island",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Valcour_Island",
+   "quote": "Arnold drew the British fleet to a position he had carefully chosen",
+   "note": "Arnold commanded from the galley Congress."
+  },
+  {
+   "date": "1777-04-26",
+   "kind": "pl",
+   "ref": "New Haven, Connecticut",
+   "label": "New Haven (learns of the Danbury raid)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Ridgefield",
+   "quote": "Arnold were in New Haven when messengers reached them on April 26"
+  },
+  {
+   "date": "1777-04-27",
+   "kind": "pl",
+   "ref": "Ridgefield, Connecticut",
+   "label": "Battle of Ridgefield",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Ridgefield",
+   "quote": "several hundred militia under Arnold's command confronted the British"
+  },
+  {
+   "date": "1777-07-24",
+   "kind": "pl",
+   "ref": "Fort Edward (village), New York",
+   "label": "Fort Edward (joins Schuyler)",
+   "source": "https://en.wikipedia.org/wiki/Benedict_Arnold",
+   "quote": "Arnold arrived in Schuyler's camp at Fort Edward, New York, on July 24"
+  },
+  {
+   "date": "1777-08-20",
+   "kind": "pl",
+   "ref": "Fort Dayton",
+   "label": "Fort Dayton (Stanwix relief column)",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Fort_Stanwix",
+   "quote": "Arnold, Willett and 700 Continental Army regulars had arrived at Fort Dayton"
+  },
+  {
+   "date": "1777-08-23",
+   "kind": "pl",
+   "ref": "Fort Stanwix",
+   "label": "Fort Stanwix (siege lifted)",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Fort_Stanwix",
+   "quote": "Pushing on, they reached the fort that evening",
+   "note": "'They' is Arnold's column; sentence before says Arnold advanced toward the fort on August 23. St. Leger had broken camp Aug 22."
+  },
+  {
+   "date": "1777-10-07",
+   "kind": "ev",
+   "ref": 19,
+   "label": "Battle of Bemis Heights (Saratoga)",
+   "source": "https://en.wikipedia.org/wiki/Battles_of_Saratoga",
+   "quote": "He led the charge of Learned's men through the gap",
+   "note": "Second battle only. Sources dispute whether Arnold was on the field on Sept 19 (Luzader vs Martin), so no row for that date. Arnold's leg was broken in this fight."
+  },
+  {
+   "date": "1780-06-16",
+   "kind": "pl",
+   "ref": "West Point, New York",
+   "label": "West Point (inspects the post)",
+   "source": "https://en.wikipedia.org/wiki/Benedict_Arnold",
+   "quote": "On June 16, Arnold inspected West Point while on his way home"
+  },
+  {
+   "date": "1780-08-03",
+   "kind": "pl",
+   "ref": "West Point, New York",
+   "label": "West Point (takes command)",
+   "source": "https://en.wikipedia.org/wiki/Benedict_Arnold",
+   "quote": "On August 3, 1780, Arnold obtained command of West Point",
+   "note": "Wikipedia 'Joshua Hett Smith House' says he was installed as commander on Aug 3 (met Washington July 31). His HQ was the Robinson House on the east bank."
+  },
+  {
+   "date": "1780-09-22",
+   "kind": "pl",
+   "ref": "Joshua Hett Smith House",
+   "label": "Stony Point / Smith house (meets André)",
+   "source": "https://en.wikipedia.org/wiki/John_Andr%C3%A9",
+   "quote": "The two men conferred in the woods below Stony Point, New York",
+   "note": "Meeting ran to dawn Sept 22; they then rode to Smith's house at West Haverstraw. The Benedict Arnold article says Sept 21 at the Smith House; this row uses the John André and Joshua Hett Smith House articles (before dawn Sept 22)."
+  },
+  {
+   "date": "1780-09-24",
+   "kind": "pl",
+   "ref": "West Point, New York",
+   "label": "West Point HQ: flees by barge to HMS Vulture",
+   "source": "https://en.wikipedia.org/wiki/Benedict_Arnold",
+   "quote": "Arnold learned of André's capture on the morning of September 24",
+   "note": "Flight started Sept 24 from his HQ (Robinson House, east bank across from West Point). Arrival in New York City is not dated in the fetched sources (brief said Sept 25), so no New York row."
+  },
+  {
+   "date": "1781-01-04",
+   "kind": "pl",
+   "ref": "Westover Plantation",
+   "label": "Westover, James River (Richmond raid)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Blandford",
+   "quote": "Arnold sailed up the James River and landed his force at Westover",
+   "note": "Date is 4 January 1781 (Blandford article)."
+  },
+  {
+   "date": "1781-01-05",
+   "kind": "pl",
+   "ref": "Richmond, Virginia",
+   "label": "Richmond (captured)",
+   "source": "https://en.wikipedia.org/wiki/Raid_on_Richmond",
+   "quote": "Arnold's forces marched triumphantly into the city",
+   "note": "Raid on Richmond article: 'the following day' after Jan 4 camp at Westover; Blandford article agrees (raided Richmond the next day). Article says he stayed one day."
+  },
+  {
+   "date": "1781-01-19",
+   "kind": "pl",
+   "ref": "Portsmouth, Virginia",
+   "label": "Portsmouth (fortifies base)",
+   "source": "https://en.wikipedia.org/wiki/Raid_on_Richmond",
+   "quote": "Arnold's weary troops reached Portsmouth",
+   "note": "LESS SURE: the Raid on Richmond article also says Phillips arrived Jan 19, which contradicts Blandford article (reinforcements late March). Blandford article only says Arnold returned to Portsmouth after the raid and fortified it."
+  },
+  {
+   "date": "1781-04-29",
+   "kind": "pl",
+   "ref": "Manchester, Richmond, Virginia",
+   "label": "Manchester, across from Richmond (with Phillips)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Blandford",
+   "quote": "just across the river from Richmond, which they reached on 29 April",
+   "note": "Phillips commanded; the article says 'Phillips' and Arnold's pursuit' reached Manchester."
+  },
+  {
+   "date": "1781-09-06",
+   "kind": "pl",
+   "ref": "New London, Connecticut",
+   "label": "New London (burned; Groton Heights)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Groton_Heights",
+   "quote": "The 800-man detachment that Arnold led in New London",
+   "note": "Battle date Sept 6 (Groton article); the Benedict Arnold article says Sept 4 for the burning. Arnold led the New London division; Eyre assaulted Fort Griswold."
+  },
+  {
+   "date": "1781-12-08",
+   "kind": "pl",
+   "ref": "New York City",
+   "label": "New York City (sails for England)",
+   "source": "https://en.wikipedia.org/wiki/Benedict_Arnold",
+   "quote": "On December 8, 1781, Arnold and his family left New York for England"
+  }
+ ]
+}
