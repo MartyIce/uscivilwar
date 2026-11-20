@@ -55,6 +55,7 @@ export default function BattlesBrowser({
 }: BattlesBrowserProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterResult, setFilterResult] = useState<ResultFilter>('all');
+  const [deepDiveOnly, setDeepDiveOnly] = useState(false);
 
   // Alphabetical by name, ignoring prefixes like "Battle of" so "Battle of
   // Gettysburg" sorts under G
@@ -72,6 +73,7 @@ export default function BattlesBrowser({
       if (filterResult !== 'all' && getResultCategory(event.result) !== filterResult) {
         return false;
       }
+      if (deepDiveOnly && !getDeepDiveId(event.name)) return false;
       if (!search) return true;
       return (
         event.name.toLowerCase().includes(search) ||
@@ -83,7 +85,12 @@ export default function BattlesBrowser({
         event.date_start.includes(search)
       );
     });
-  }, [sortedEvents, searchTerm, filterResult]);
+  }, [sortedEvents, searchTerm, filterResult, deepDiveOnly]);
+
+  const deepDiveCount = useMemo(
+    () => events.filter((e) => getDeepDiveId(e.name)).length,
+    [events]
+  );
 
   const counts = useMemo(() => {
     const c = { union: 0, confederate: 0, other: 0 };
@@ -148,6 +155,19 @@ export default function BattlesBrowser({
             Other ({counts.other})
           </button>
         </div>
+
+        {deepDiveCount > 0 && (
+          <label className="flex items-center gap-2 mt-3 text-sm text-gray-700 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={deepDiveOnly}
+              onChange={(e) => setDeepDiveOnly(e.target.checked)}
+              className="rounded border-gray-300"
+            />
+            <DeepDiveBadge variant="icon" />
+            Deep dive only ({deepDiveCount})
+          </label>
+        )}
       </div>
 
       <div className="flex-1 overflow-y-auto">

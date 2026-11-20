@@ -1,0 +1,1486 @@
+{
+  "id": "first_battle_of_bull_run",
+  "name": "First Battle of Bull Run",
+  "description": "Fought July 21, 1861, along Bull Run near Manassas Junction, Virginia. Union forces under Irvin McDowell turned the Confederate left at Sudley Ford but were stopped on Henry House Hill by Jackson's brigade and Confederate reinforcements from the Shenandoah Valley. A Confederate counterattack ended in a Union rout toward Centreville.",
+  "startDate": "1861-07-21",
+  "endDate": "1861-07-21",
+  "location": {
+    "lat": 38.8225,
+    "lng": -77.5,
+    "bounds": {
+      "north": 38.86,
+      "south": 38.745,
+      "east": -77.42,
+      "west": -77.55
+    }
+  },
+  "result": "confederate_victory",
+  "significance": "The first major land battle of the Civil War. It ended hopes of a short war and gave Jackson the nickname Stonewall.",
+  "forces": {
+    "union": {
+      "commander": "Irvin McDowell",
+      "commanderRank": "Brigadier General",
+      "armyName": "Army of Northeastern Virginia",
+      "totalStrength": 35732,
+      "casualties": {
+        "killed": 481,
+        "wounded": 1011,
+        "captured": 1216,
+        "missing": 0,
+        "total": 2708
+      },
+      "units": [
+        {
+          "id": "union-tyler-div",
+          "name": "1st Division",
+          "commander": "Brig. Gen. Daniel Tyler",
+          "type": "division"
+        },
+        {
+          "id": "union-hunter-div",
+          "name": "2nd Division",
+          "commander": "Col. David Hunter (wounded); then Col. Andrew Porter",
+          "type": "division"
+        },
+        {
+          "id": "union-heintzelman-div",
+          "name": "3rd Division",
+          "commander": "Col. Samuel P. Heintzelman (wounded)",
+          "type": "division"
+        },
+        {
+          "id": "union-runyon-div",
+          "name": "4th (Reserve) Division",
+          "commander": "Brig. Gen. Theodore Runyon",
+          "type": "division"
+        },
+        {
+          "id": "union-miles-div",
+          "name": "5th Division",
+          "commander": "Col. Dixon S. Miles",
+          "type": "division"
+        },
+        {
+          "id": "union-keyes-brig",
+          "name": "Tyler's 1st Brigade",
+          "commander": "Col. Erasmus D. Keyes",
+          "type": "brigade"
+        },
+        {
+          "id": "union-schenck-brig",
+          "name": "Tyler's 2nd Brigade",
+          "commander": "Brig. Gen. Robert C. Schenck",
+          "type": "brigade"
+        },
+        {
+          "id": "union-sherman-brig",
+          "name": "Tyler's 3rd Brigade",
+          "commander": "Col. William T. Sherman",
+          "type": "brigade"
+        },
+        {
+          "id": "union-richardson-brig",
+          "name": "Tyler's 4th Brigade",
+          "commander": "Col. Israel B. Richardson",
+          "type": "brigade"
+        },
+        {
+          "id": "union-porter-brig",
+          "name": "Hunter's 1st Brigade",
+          "commander": "Col. Andrew Porter",
+          "type": "brigade"
+        },
+        {
+          "id": "union-burnside-brig",
+          "name": "Hunter's 2nd Brigade",
+          "commander": "Col. Ambrose E. Burnside",
+          "type": "brigade"
+        },
+        {
+          "id": "union-franklin-brig",
+          "name": "Heintzelman's 1st Brigade",
+          "commander": "Col. William B. Franklin",
+          "type": "brigade"
+        },
+        {
+          "id": "union-willcox-brig",
+          "name": "Heintzelman's 2nd Brigade",
+          "commander": "Col. Orlando B. Willcox (wounded and captured); then Col. J. H. Hobart Ward",
+          "type": "brigade"
+        },
+        {
+          "id": "union-howard-brig",
+          "name": "Heintzelman's 3rd Brigade",
+          "commander": "Col. Oliver O. Howard",
+          "type": "brigade"
+        },
+        {
+          "id": "union-blenker-brig",
+          "name": "Miles's 1st Brigade",
+          "commander": "Col. Louis Blenker",
+          "type": "brigade"
+        },
+        {
+          "id": "union-davies-brig",
+          "name": "Miles's 2nd Brigade",
+          "commander": "Col. Thomas A. Davies",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ricketts-bty",
+          "name": "Ricketts's Battery (Battery I, 1st U.S. Artillery)",
+          "commander": "Capt. James B. Ricketts",
+          "type": "regiment"
+        },
+        {
+          "id": "union-griffin-bty",
+          "name": "Griffin's Battery (Battery D, 5th U.S. Artillery)",
+          "commander": "Capt. Charles Griffin",
+          "type": "regiment"
+        }
+      ]
+    },
+    "confederate": {
+      "commander": "P. G. T. Beauregard",
+      "commanderRank": "Brigadier General",
+      "armyName": "Army of the Potomac (Beauregard) and Army of the Shenandoah (Johnston)",
+      "totalStrength": 32000,
+      "casualties": {
+        "killed": 387,
+        "wounded": 1582,
+        "captured": 13,
+        "missing": 0,
+        "total": 1982
+      },
+      "units": [
+        {
+          "id": "conf-bonham-brig",
+          "name": "Army of the Potomac, 1st Brigade",
+          "commander": "Brig. Gen. Milledge L. Bonham",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-ewell-brig",
+          "name": "Army of the Potomac, 2nd Brigade",
+          "commander": "Brig. Gen. Richard S. Ewell",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-djones-brig",
+          "name": "Army of the Potomac, 3rd Brigade",
+          "commander": "Brig. Gen. David R. Jones",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-longstreet-brig",
+          "name": "Army of the Potomac, 4th Brigade",
+          "commander": "Brig. Gen. James Longstreet",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-cocke-brig",
+          "name": "Army of the Potomac, 5th Brigade",
+          "commander": "Col. Philip St. George Cocke",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-early-brig",
+          "name": "Army of the Potomac, 6th Brigade",
+          "commander": "Col. Jubal A. Early",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-evans-brig",
+          "name": "Army of the Potomac, 7th (Demi) Brigade",
+          "commander": "Col. Nathan G. Evans",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-holmes-brig",
+          "name": "Army of the Potomac, Reserve Brigade",
+          "commander": "Brig. Gen. Theophilus H. Holmes",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-jackson-brig",
+          "name": "Army of the Shenandoah, 1st Brigade",
+          "commander": "Brig. Gen. Thomas J. Jackson (wounded)",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-bartow-brig",
+          "name": "Army of the Shenandoah, 2nd Brigade",
+          "commander": "Col. Francis S. Bartow (killed); then Col. Lucius J. Gartrell",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-bee-brig",
+          "name": "Army of the Shenandoah, 3rd Brigade",
+          "commander": "Brig. Gen. Barnard E. Bee Jr. (mortally wounded); then Col. States Rights Gist",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-kirbysmith-brig",
+          "name": "Army of the Shenandoah, 4th Brigade",
+          "commander": "Brig. Gen. Edmund Kirby Smith (wounded); Col. Arnold Elzey commanding",
+          "type": "brigade"
+        },
+        {
+          "id": "conf-hampton-legion",
+          "name": "Hampton's Legion",
+          "commander": "Col. Wade Hampton",
+          "type": "regiment"
+        },
+        {
+          "id": "conf-stuart-cav",
+          "name": "1st Virginia Cavalry",
+          "commander": "Col. J. E. B. Stuart",
+          "type": "regiment"
+        }
+      ]
+    }
+  },
+  "landmarks": [
+    {
+      "id": "stone-bridge",
+      "name": "Stone Bridge",
+      "type": "bridge",
+      "lat": 38.82417,
+      "lng": -77.50361,
+      "description": "Carried the Warrenton Turnpike over Bull Run. Coordinates from Wikipedia. Tyler's division demonstrated here while the flanking column marched upstream."
+    },
+    {
+      "id": "sudley-ford",
+      "name": "Sudley Ford",
+      "type": "ford",
+      "lat": 38.848,
+      "lng": -77.52,
+      "description": "Ford where Hunter's and Heintzelman's divisions crossed Bull Run on the flanking march. Position estimated from the narrative."
+    },
+    {
+      "id": "sudley-springs",
+      "name": "Sudley Springs",
+      "type": "town",
+      "lat": 38.842,
+      "lng": -77.531,
+      "description": "Hamlet and church near the ford on the Sudley road. Position estimated."
+    },
+    {
+      "id": "matthews-hill",
+      "name": "Matthews Hill",
+      "type": "hill",
+      "lat": 38.8225,
+      "lng": -77.5245,
+      "description": "Rise north of the Warrenton Turnpike where Evans, Bee and Bartow met the Union attack in the morning. Position estimated; NPS places it off Sudley Road."
+    },
+    {
+      "id": "henry-house-hill",
+      "name": "Henry House Hill",
+      "type": "hill",
+      "lat": 38.81472,
+      "lng": -77.52278,
+      "description": "Plateau where the Confederate line re-formed around Jackson's brigade. Coordinates from Wikipedia."
+    },
+    {
+      "id": "henry-house",
+      "name": "Henry House",
+      "type": "farm",
+      "lat": 38.814,
+      "lng": -77.5222,
+      "description": "Home of Judith Henry on the hilltop. Position estimated from the hill coordinates."
+    },
+    {
+      "id": "robinson-house",
+      "name": "Robinson House",
+      "type": "farm",
+      "lat": 38.811,
+      "lng": -77.5265,
+      "description": "Farmhouse south-west of Henry House Hill. Position estimated; NPS says it lies on the Henry Hill Loop Trail."
+    },
+    {
+      "id": "chinn-ridge",
+      "name": "Chinn Ridge",
+      "type": "ridge",
+      "lat": 38.8095,
+      "lng": -77.533,
+      "description": "Ridge west of Henry House Hill where Howard's brigade was driven back by Early and Elzey. Position estimated."
+    },
+    {
+      "id": "youngs-branch",
+      "name": "Young's Branch",
+      "type": "creek",
+      "lat": 38.8135,
+      "lng": -77.5265,
+      "description": "Small stream between Matthews Hill and Henry House Hill. Position estimated."
+    },
+    {
+      "id": "warrenton-turnpike",
+      "name": "Warrenton Turnpike",
+      "type": "road",
+      "lat": 38.8215,
+      "lng": -77.5135,
+      "description": "Main road from Centreville across Stone Bridge toward Henry Hill. Point estimated between the bridge and the Stone House."
+    },
+    {
+      "id": "cub-run-bridge",
+      "name": "Cub Run bridge",
+      "type": "bridge",
+      "lat": 38.8335,
+      "lng": -77.458,
+      "description": "Turnpike bridge where an overturned wagon caused panic in the Union retreat. Position estimated."
+    },
+    {
+      "id": "centreville",
+      "name": "Centreville",
+      "type": "town",
+      "lat": 38.8404,
+      "lng": -77.4289,
+      "description": "Union staging area and the destination of the retreat. Approximate village position."
+    },
+    {
+      "id": "blackburns-ford",
+      "name": "Blackburn's Ford",
+      "type": "ford",
+      "lat": 38.80304,
+      "lng": -77.44939,
+      "description": "Site of the July 18 skirmish. Coordinates from Wikipedia."
+    },
+    {
+      "id": "mitchells-ford",
+      "name": "Mitchell's Ford",
+      "type": "ford",
+      "lat": 38.8105,
+      "lng": -77.465,
+      "description": "Ford where Bonham's brigade held the Confederate center. Position estimated."
+    },
+    {
+      "id": "manassas-junction",
+      "name": "Manassas Junction",
+      "type": "town",
+      "lat": 38.75139,
+      "lng": -77.47639,
+      "description": "Rail junction where Johnston's army arrived. Coordinates are those of Manassas city (Wikipedia)."
+    },
+    {
+      "id": "bull-run",
+      "name": "Bull Run",
+      "type": "river",
+      "lat": 38.825,
+      "lng": -77.503,
+      "description": "Stream forming the Confederate defensive line. Point estimated near Stone Bridge."
+    }
+  ],
+  "timeline": [
+    {
+      "id": "0230-flank-march",
+      "datetime": "1861-07-21T02:30:00",
+      "label": "July 21, 2:30 AM",
+      "title": "McDowell's flank march begins",
+      "description": "Hunter's and Heintzelman's divisions, about 12,000 men, leave Centreville to turn the Confederate left by way of Sudley Springs. Tyler's division advances along the turnpike toward Stone Bridge.",
+      "positions": [
+        {
+          "unitId": "union-hunter-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.8395,
+          "lng": -77.442,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.844,
+            "lng": -77.49
+          }
+        },
+        {
+          "unitId": "union-heintzelman-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.839,
+          "lng": -77.45,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.844,
+            "lng": -77.49
+          }
+        },
+        {
+          "unitId": "union-tyler-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.834,
+          "lng": -77.456,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.8235,
+            "lng": -77.5045
+          }
+        },
+        {
+          "unitId": "conf-evans-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8235,
+          "lng": -77.5045,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-bonham-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8105,
+          "lng": -77.465,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-longstreet-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.80304,
+          "lng": -77.44939,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "flank-march-departs",
+          "time": "1861-07-21T02:30:00",
+          "title": "Flanking divisions depart Centreville",
+          "description": "Hunter and Heintzelman leave Centreville on a long detour north-west. Poor approach roads delay the march.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 38.8404,
+            "lng": -77.4289
+          },
+          "relatedUnits": [
+            "union-hunter-div",
+            "union-heintzelman-div"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0600-stone-bridge",
+      "datetime": "1861-07-21T06:00:00",
+      "label": "July 21, 6:00 AM",
+      "title": "Tyler at the Stone Bridge",
+      "description": "Tyler's division reaches Stone Bridge and demonstrates against Evans's small force. About 5:15 AM Richardson's brigade fired artillery across Mitchell's Ford.",
+      "positions": [
+        {
+          "unitId": "union-tyler-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.826,
+          "lng": -77.501,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-richardson-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8105,
+          "lng": -77.465,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-evans-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8235,
+          "lng": -77.5045,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-bonham-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8105,
+          "lng": -77.465,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "richardson-shells-mitchells",
+          "time": "1861-07-21T05:15:00",
+          "title": "Richardson fires across Mitchell's Ford",
+          "description": "Some shells hit Beauregard's headquarters, showing that his planned attack had been preempted.",
+          "type": "combat",
+          "importance": "minor",
+          "location": {
+            "lat": 38.8105,
+            "lng": -77.465
+          },
+          "relatedUnits": [
+            "union-richardson-brig",
+            "conf-bonham-brig"
+          ]
+        },
+        {
+          "id": "tyler-at-stone-bridge",
+          "time": "1861-07-21T06:00:00",
+          "title": "Tyler reaches Stone Bridge",
+          "description": "Tyler's division of about 8,000 men arrives at Stone Bridge around 6 AM.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 38.8235,
+            "lng": -77.5045
+          },
+          "relatedUnits": [
+            "union-tyler-div",
+            "conf-evans-brig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0930-sudley-ford",
+      "datetime": "1861-07-21T09:30:00",
+      "label": "July 21, 9:30 AM",
+      "title": "Union columns ford Bull Run at Sudley",
+      "description": "The flanking divisions begin fording Bull Run at Sudley Springs. Evans, warned by a signal, shifts about 900 men to Matthews Hill. Bee and Bartow reinforce him, bringing the force to about 2,800.",
+      "positions": [
+        {
+          "unitId": "union-hunter-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.848,
+          "lng": -77.52,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.833,
+            "lng": -77.526
+          }
+        },
+        {
+          "unitId": "union-heintzelman-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.853,
+          "lng": -77.517,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.848,
+            "lng": -77.52
+          }
+        },
+        {
+          "unitId": "union-tyler-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.826,
+          "lng": -77.501,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-evans-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8225,
+          "lng": -77.5245,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-bee-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.818,
+          "lng": -77.524,
+          "status": "arriving",
+          "movementTo": {
+            "lat": 38.8225,
+            "lng": -77.5245
+          }
+        },
+        {
+          "unitId": "conf-bartow-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.817,
+          "lng": -77.52,
+          "status": "arriving",
+          "movementTo": {
+            "lat": 38.8225,
+            "lng": -77.5245
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "sudley-ford-crossing",
+          "time": "1861-07-21T09:30:00",
+          "title": "Fording at Sudley Springs",
+          "description": "Union divisions begin crossing Bull Run, delayed by poor approach roads.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 38.848,
+            "lng": -77.52
+          },
+          "relatedUnits": [
+            "union-hunter-div",
+            "union-heintzelman-div"
+          ]
+        },
+        {
+          "id": "evans-to-matthews-hill",
+          "time": "1861-07-21T09:30:00",
+          "title": "Evans shifts to Matthews Hill",
+          "description": "After Alexander's signal warning, Evans moves about 900 men to face the Union column. Time approximate: the source gives no exact time.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 38.8225,
+            "lng": -77.5245
+          },
+          "relatedUnits": [
+            "conf-evans-brig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1000-matthews-hill",
+      "datetime": "1861-07-21T10:00:00",
+      "label": "July 21, 10:00 AM",
+      "title": "Fighting on Matthews Hill",
+      "description": "Burnside's brigade at the head of Hunter's division attacks the Confederates on Matthews Hill. Around this time Sherman leaves Stone Bridge, crosses an unguarded ford and strikes the Confederate right flank.",
+      "positions": [
+        {
+          "unitId": "union-burnside-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.83,
+          "lng": -77.525,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.8225,
+            "lng": -77.5245
+          }
+        },
+        {
+          "unitId": "union-hunter-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.832,
+          "lng": -77.526,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.8225,
+            "lng": -77.5245
+          }
+        },
+        {
+          "unitId": "union-heintzelman-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.84,
+          "lng": -77.524,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-sherman-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.825,
+          "lng": -77.5,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.8225,
+            "lng": -77.5245
+          }
+        },
+        {
+          "unitId": "conf-evans-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.823,
+          "lng": -77.523,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-bee-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8215,
+          "lng": -77.5255,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-bartow-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.821,
+          "lng": -77.5225,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "matthews-hill-attack",
+          "time": "1861-07-21T10:00:00",
+          "title": "Attack on Matthews Hill",
+          "description": "Union forces strike the 2,800 Confederates of Evans, Bee and Bartow. Positions are estimated.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 38.8225,
+            "lng": -77.5245
+          },
+          "relatedUnits": [
+            "union-burnside-brig",
+            "conf-evans-brig",
+            "conf-bee-brig",
+            "conf-bartow-brig"
+          ]
+        },
+        {
+          "id": "sherman-crosses",
+          "time": "1861-07-21T10:00:00",
+          "title": "Sherman crosses Bull Run",
+          "description": "Sherman moves from Stone Bridge, crosses an unguarded ford and hits the Confederate right flank.",
+          "type": "combat",
+          "importance": "major",
+          "relatedUnits": [
+            "union-sherman-brig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1130-collapse",
+      "datetime": "1861-07-21T11:30:00",
+      "label": "July 21, 11:30 AM",
+      "title": "Confederate line collapses toward Henry Hill",
+      "description": "Shortly after 11:30 AM the Confederate line collapses under the attacks of Sherman, Burnside and Sykes. The survivors retreat across the turnpike and Young's Branch to Henry House Hill.",
+      "positions": [
+        {
+          "unitId": "conf-evans-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8225,
+          "lng": -77.5245,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          }
+        },
+        {
+          "unitId": "conf-bee-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8205,
+          "lng": -77.5255,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          }
+        },
+        {
+          "unitId": "conf-bartow-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.82,
+          "lng": -77.5225,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          }
+        },
+        {
+          "unitId": "union-burnside-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8225,
+          "lng": -77.5245,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.818,
+            "lng": -77.525
+          }
+        },
+        {
+          "unitId": "union-sherman-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8215,
+          "lng": -77.52,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.818,
+            "lng": -77.523
+          }
+        },
+        {
+          "unitId": "union-porter-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.825,
+          "lng": -77.526,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.8225,
+            "lng": -77.5245
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "confederate-line-collapses",
+          "time": "1861-07-21T11:30:00",
+          "title": "Confederate left collapses",
+          "description": "The Confederate line breaks and retreats to Henry House Hill. Hunter is wounded and Porter takes over the division.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 38.8225,
+            "lng": -77.5245
+          },
+          "relatedUnits": [
+            "conf-evans-brig",
+            "conf-bee-brig",
+            "conf-bartow-brig",
+            "union-burnside-brig",
+            "union-sherman-brig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1200-jackson-arrives",
+      "datetime": "1861-07-21T12:00:00",
+      "label": "July 21, 12:00 PM",
+      "title": "Jackson takes position on Henry Hill",
+      "description": "Around noon Jackson's brigade arrives, along with Hampton's Legion and Stuart's cavalry. Jackson posts his regiments on the reverse slope and assembles 13 guns on the crest. Bee and Bartow rally behind him.",
+      "positions": [
+        {
+          "unitId": "conf-jackson-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.814,
+          "lng": -77.524,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-hampton-legion",
+          "unitType": "regiment",
+          "side": "confederate",
+          "lat": 38.812,
+          "lng": -77.526,
+          "status": "arriving"
+        },
+        {
+          "unitId": "conf-stuart-cav",
+          "unitType": "regiment",
+          "side": "confederate",
+          "lat": 38.811,
+          "lng": -77.52,
+          "status": "arriving"
+        },
+        {
+          "unitId": "conf-bee-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8135,
+          "lng": -77.5265,
+          "status": "reserve"
+        },
+        {
+          "unitId": "conf-bartow-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8125,
+          "lng": -77.524,
+          "status": "reserve"
+        },
+        {
+          "unitId": "conf-evans-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8165,
+          "lng": -77.525,
+          "status": "reserve"
+        },
+        {
+          "unitId": "union-burnside-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8185,
+          "lng": -77.5255,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-sherman-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.819,
+          "lng": -77.5215,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "jackson-arrives",
+          "time": "1861-07-21T12:00:00",
+          "title": "Jackson's brigade arrives",
+          "description": "Jackson forms on the reverse slope of Henry House Hill with 13 guns on the crest.",
+          "type": "movement",
+          "importance": "critical",
+          "location": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          },
+          "relatedUnits": [
+            "conf-jackson-brig",
+            "conf-hampton-legion",
+            "conf-stuart-cav"
+          ]
+        },
+        {
+          "id": "stone-wall",
+          "time": "1861-07-21T12:00:00",
+          "title": "Bee: 'There stands Jackson like a stone wall'",
+          "description": "Bee rallies his men on Jackson's line, and the nickname follows. Bee is mortally wounded and dies the next day. Bartow is killed. Time approximate: the source gives no exact time.",
+          "type": "command",
+          "importance": "critical",
+          "location": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          },
+          "relatedUnits": [
+            "conf-bee-brig",
+            "conf-bartow-brig",
+            "conf-jackson-brig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1300-artillery-duel",
+      "datetime": "1861-07-21T13:00:00",
+      "label": "July 21, early afternoon",
+      "title": "Union batteries move onto Henry Hill",
+      "description": "In the early afternoon Ricketts's and Griffin's batteries, 11 guns in all, duel Jackson's 13 guns at about 300 yards. Time shown (1:00 PM) is approximate.",
+      "positions": [
+        {
+          "unitId": "union-ricketts-bty",
+          "unitType": "regiment",
+          "side": "union",
+          "lat": 38.8155,
+          "lng": -77.524,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-griffin-bty",
+          "unitType": "regiment",
+          "side": "union",
+          "lat": 38.815,
+          "lng": -77.5215,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-franklin-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.818,
+          "lng": -77.521,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          }
+        },
+        {
+          "unitId": "union-willcox-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8185,
+          "lng": -77.523,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          }
+        },
+        {
+          "unitId": "union-heintzelman-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.819,
+          "lng": -77.522,
+          "status": "advancing"
+        },
+        {
+          "unitId": "conf-jackson-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.814,
+          "lng": -77.5245,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-bee-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.813,
+          "lng": -77.5265,
+          "status": "defending"
+        },
+        {
+          "unitId": "conf-bartow-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8125,
+          "lng": -77.5245,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "artillery-duel",
+          "time": "1861-07-21T13:00:00",
+          "title": "Artillery duel on the crest",
+          "description": "Union guns and Jackson's guns trade fire at close range.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          },
+          "relatedUnits": [
+            "union-ricketts-bty",
+            "union-griffin-bty",
+            "conf-jackson-brig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1500-guns-overrun",
+      "datetime": "1861-07-21T15:00:00",
+      "label": "July 21, 3:00 PM",
+      "title": "Griffin's guns overrun and Ricketts's guns lost",
+      "description": "About 3 PM the 33rd Virginia overruns two of Griffin's guns. Stuart's cavalry hits the 11th New York. Jackson's regiments capture Ricketts's guns, which change hands several times.",
+      "positions": [
+        {
+          "unitId": "conf-jackson-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8145,
+          "lng": -77.5235,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          }
+        },
+        {
+          "unitId": "conf-stuart-cav",
+          "unitType": "regiment",
+          "side": "confederate",
+          "lat": 38.816,
+          "lng": -77.519,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-ricketts-bty",
+          "unitType": "regiment",
+          "side": "union",
+          "lat": 38.815,
+          "lng": -77.5245,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-griffin-bty",
+          "unitType": "regiment",
+          "side": "union",
+          "lat": 38.8152,
+          "lng": -77.5225,
+          "status": "retreating"
+        },
+        {
+          "unitId": "union-franklin-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8165,
+          "lng": -77.5225,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-willcox-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.817,
+          "lng": -77.524,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "griffin-overrun",
+          "time": "1861-07-21T15:00:00",
+          "title": "Griffin's guns overrun",
+          "description": "The 33rd Virginia overruns two of Griffin's guns.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          },
+          "relatedUnits": [
+            "union-griffin-bty",
+            "conf-jackson-brig"
+          ]
+        },
+        {
+          "id": "ricketts-guns-captured",
+          "time": "1861-07-21T15:00:00",
+          "title": "Ricketts's guns change hands",
+          "description": "Jackson's regiments capture Ricketts's guns, which change hands several times.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          },
+          "relatedUnits": [
+            "union-ricketts-bty",
+            "conf-jackson-brig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1600-chinn-ridge",
+      "datetime": "1861-07-21T16:00:00",
+      "label": "July 21, 4:00 PM",
+      "title": "Counterattack: Early and Kirby Smith strike Chinn Ridge",
+      "description": "About 4 PM two regiments from Cocke's brigade drive the last Union troops off Henry House Hill. Early's brigade and Kirby Smith's brigade, under Elzey after Smith was wounded, crush Howard's brigade on Chinn Ridge.",
+      "positions": [
+        {
+          "unitId": "conf-cocke-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8165,
+          "lng": -77.5195,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          }
+        },
+        {
+          "unitId": "conf-early-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.807,
+          "lng": -77.529,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 38.8095,
+            "lng": -77.533
+          }
+        },
+        {
+          "unitId": "conf-kirbysmith-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8075,
+          "lng": -77.533,
+          "status": "arriving",
+          "movementTo": {
+            "lat": 38.8095,
+            "lng": -77.533
+          }
+        },
+        {
+          "unitId": "conf-jackson-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.814,
+          "lng": -77.524,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-howard-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8095,
+          "lng": -77.533,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 38.815,
+            "lng": -77.529
+          }
+        },
+        {
+          "unitId": "union-heintzelman-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.817,
+          "lng": -77.523,
+          "status": "retreating"
+        },
+        {
+          "unitId": "union-franklin-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8185,
+          "lng": -77.521,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 38.8225,
+            "lng": -77.5245
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "henry-hill-cleared",
+          "time": "1861-07-21T16:00:00",
+          "title": "Henry House Hill cleared",
+          "description": "Two regiments from Cocke's brigade drive the last Union troops off the hill.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 38.8147,
+            "lng": -77.5228
+          },
+          "relatedUnits": [
+            "conf-cocke-brig"
+          ]
+        },
+        {
+          "id": "chinn-ridge-crushed",
+          "time": "1861-07-21T16:00:00",
+          "title": "Howard crushed on Chinn Ridge",
+          "description": "Early's brigade and Kirby Smith's brigade (under Elzey) crush Howard's brigade.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 38.8095,
+            "lng": -77.533
+          },
+          "relatedUnits": [
+            "conf-early-brig",
+            "conf-kirbysmith-brig",
+            "union-howard-brig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1700-retreat",
+      "datetime": "1861-07-21T17:00:00",
+      "label": "July 21, 5:00 PM",
+      "title": "Union lines disintegrate",
+      "description": "About 5 PM Union lines break everywhere and the mass retreat heads for Centreville. Porter's regulars briefly hold the crossroads as a rear guard.",
+      "positions": [
+        {
+          "unitId": "union-hunter-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.8225,
+          "lng": -77.516,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 38.8215,
+            "lng": -77.5
+          }
+        },
+        {
+          "unitId": "union-heintzelman-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.82,
+          "lng": -77.519,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 38.8215,
+            "lng": -77.5
+          }
+        },
+        {
+          "unitId": "union-burnside-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8225,
+          "lng": -77.513,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 38.828,
+            "lng": -77.49
+          }
+        },
+        {
+          "unitId": "union-sherman-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8225,
+          "lng": -77.51,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 38.828,
+            "lng": -77.49
+          }
+        },
+        {
+          "unitId": "union-howard-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.815,
+          "lng": -77.525,
+          "status": "routing"
+        },
+        {
+          "unitId": "conf-jackson-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.817,
+          "lng": -77.523,
+          "status": "advancing"
+        },
+        {
+          "unitId": "conf-early-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.815,
+          "lng": -77.528,
+          "status": "advancing"
+        },
+        {
+          "unitId": "conf-kirbysmith-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.812,
+          "lng": -77.53,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "union-line-disintegrates",
+          "time": "1861-07-21T17:00:00",
+          "title": "Retreat begins",
+          "description": "Union lines disintegrate and the retreat toward Centreville begins.",
+          "type": "movement",
+          "importance": "critical",
+          "relatedUnits": [
+            "union-hunter-div",
+            "union-heintzelman-div"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1800-cub-run",
+      "datetime": "1861-07-21T18:00:00",
+      "label": "July 21, evening",
+      "title": "Rout across Cub Run to Centreville",
+      "description": "The retreat crosses Cub Run. A wagon overturns on the bridge and causes panic. Troops abandon arms and equipment, and civilians block the roads to Washington. Time shown is approximate: the source gives no exact time.",
+      "positions": [
+        {
+          "unitId": "union-hunter-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.8335,
+          "lng": -77.464,
+          "status": "routing",
+          "movementTo": {
+            "lat": 38.8404,
+            "lng": -77.4289
+          }
+        },
+        {
+          "unitId": "union-heintzelman-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.8338,
+          "lng": -77.46,
+          "status": "routing",
+          "movementTo": {
+            "lat": 38.8404,
+            "lng": -77.4289
+          }
+        },
+        {
+          "unitId": "union-tyler-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.833,
+          "lng": -77.454,
+          "status": "routing",
+          "movementTo": {
+            "lat": 38.8404,
+            "lng": -77.4289
+          }
+        },
+        {
+          "unitId": "union-blenker-brig",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 38.8395,
+          "lng": -77.43,
+          "status": "reserve"
+        },
+        {
+          "unitId": "union-miles-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 38.839,
+          "lng": -77.429,
+          "status": "reserve"
+        },
+        {
+          "unitId": "conf-jackson-brig",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 38.8185,
+          "lng": -77.512,
+          "status": "advancing"
+        },
+        {
+          "unitId": "conf-stuart-cav",
+          "unitType": "regiment",
+          "side": "confederate",
+          "lat": 38.825,
+          "lng": -77.5,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "cub-run-panic",
+          "time": "1861-07-21T18:00:00",
+          "title": "Panic at Cub Run bridge",
+          "description": "An overturned wagon on the bridge triggers panic and troops abandon equipment.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 38.8335,
+            "lng": -77.458
+          },
+          "relatedUnits": [
+            "union-hunter-div",
+            "union-heintzelman-div",
+            "union-tyler-div"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/First_Battle_of_Bull_Run",
+    "https://en.wikipedia.org/wiki/First_Battle_of_Bull_Run_order_of_battle:_Union",
+    "https://en.wikipedia.org/wiki/First_Battle_of_Bull_Run_order_of_battle:_Confederate",
+    "https://en.wikipedia.org/wiki/Stone_Bridge_(Manassas)",
+    "https://en.wikipedia.org/wiki/Henry_House_Hill",
+    "https://en.wikipedia.org/wiki/Blackburn%27s_Ford",
+    "https://en.wikipedia.org/wiki/Manassas,_Virginia",
+    "https://en.wikipedia.org/wiki/Manassas_National_Battlefield_Park"
+  ],
+  "review": "unreviewed"
+}

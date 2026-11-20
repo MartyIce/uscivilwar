@@ -1,0 +1,2429 @@
+{
+  "id": "shiloh",
+  "name": "Battle of Shiloh",
+  "description": "The Battle of Shiloh was fought April 6-7, 1862, at Pittsburg Landing on the Tennessee River in Hardin County, Tennessee. Confederate forces under Albert Sidney Johnston attacked Grant's Army of the Tennessee on April 6 and pushed it back toward the river. Johnston was killed that afternoon and Beauregard took command. Buell's Army of the Ohio and Lew Wallace's division arrived that night. Grant counterattacked on April 7, and Beauregard withdrew toward Corinth.",
+  "startDate": "1862-04-06",
+  "endDate": "1862-04-07",
+  "location": {
+    "lat": 35.13861,
+    "lng": -88.34222,
+    "bounds": {
+      "north": 35.24,
+      "south": 35.1,
+      "east": -88.29,
+      "west": -88.41
+    }
+  },
+  "result": "union_victory",
+  "significance": "With about 23,700 casualties it was the bloodiest battle of the war to that point. It ended Confederate hopes of stopping the Union advance into Mississippi, and Union forces occupied Corinth on May 30.",
+  "forces": {
+    "union": {
+      "commander": "Ulysses S. Grant",
+      "commanderRank": "Major General",
+      "armyName": "Army of the Tennessee (with Buell's Army of the Ohio from the evening of April 6)",
+      "totalStrength": 66812,
+      "casualties": {
+        "killed": 1754,
+        "wounded": 8408,
+        "captured": 2885,
+        "missing": 0,
+        "total": 13047
+      },
+      "units": [
+        {
+          "id": "union-mcclernand-1st",
+          "name": "1st Division",
+          "commander": "John A. McClernand",
+          "type": "division"
+        },
+        {
+          "id": "union-hare-1st-1st",
+          "name": "1st Brigade, 1st Division",
+          "commander": "Col Abraham M. Hare, then Col Marcellus M. Crocker",
+          "type": "brigade"
+        },
+        {
+          "id": "union-marsh-1st-2nd",
+          "name": "2nd Brigade, 1st Division",
+          "commander": "Col C. Carroll Marsh",
+          "type": "brigade"
+        },
+        {
+          "id": "union-raith-1st-3rd",
+          "name": "3rd Brigade, 1st Division",
+          "commander": "Col Julius Raith, then Ltc Enos P. Wood",
+          "type": "brigade"
+        },
+        {
+          "id": "union-wallace-2nd",
+          "name": "2nd Division",
+          "commander": "W. H. L. Wallace, then Col James M. Tuttle",
+          "type": "division"
+        },
+        {
+          "id": "union-tuttle-2nd-1st",
+          "name": "1st Brigade, 2nd Division",
+          "commander": "Col James M. Tuttle, then Ltc James Baker",
+          "type": "brigade"
+        },
+        {
+          "id": "union-mcarthur-2nd-2nd",
+          "name": "2nd Brigade, 2nd Division",
+          "commander": "John McArthur, then Col Thomas Morton",
+          "type": "brigade"
+        },
+        {
+          "id": "union-sweeny-2nd-3rd",
+          "name": "3rd Brigade, 2nd Division",
+          "commander": "Col Thomas W. Sweeny, then Col Silas D. Baldwin",
+          "type": "brigade"
+        },
+        {
+          "id": "union-lew-wallace-3rd",
+          "name": "3rd Division",
+          "commander": "Lew Wallace",
+          "type": "division"
+        },
+        {
+          "id": "union-msmith-3rd-1st",
+          "name": "1st Brigade, 3rd Division",
+          "commander": "Col Morgan L. Smith",
+          "type": "brigade"
+        },
+        {
+          "id": "union-thayer-3rd-2nd",
+          "name": "2nd Brigade, 3rd Division",
+          "commander": "Col John M. Thayer",
+          "type": "brigade"
+        },
+        {
+          "id": "union-whittlesey-3rd-3rd",
+          "name": "3rd Brigade, 3rd Division",
+          "commander": "Col Charles Whittlesey",
+          "type": "brigade"
+        },
+        {
+          "id": "union-hurlbut-4th",
+          "name": "4th Division",
+          "commander": "Stephen A. Hurlbut",
+          "type": "division"
+        },
+        {
+          "id": "union-williams-4th-1st",
+          "name": "1st Brigade, 4th Division",
+          "commander": "Col Nelson G. Williams, then Col Isaac C. Pugh",
+          "type": "brigade"
+        },
+        {
+          "id": "union-veatch-4th-2nd",
+          "name": "2nd Brigade, 4th Division",
+          "commander": "Col James C. Veatch",
+          "type": "brigade"
+        },
+        {
+          "id": "union-lauman-4th-3rd",
+          "name": "3rd Brigade, 4th Division",
+          "commander": "Jacob G. Lauman",
+          "type": "brigade"
+        },
+        {
+          "id": "union-sherman-5th",
+          "name": "5th Division",
+          "commander": "William T. Sherman",
+          "type": "division"
+        },
+        {
+          "id": "union-mcdowell-5th-1st",
+          "name": "1st Brigade, 5th Division",
+          "commander": "Col John A. McDowell",
+          "type": "brigade"
+        },
+        {
+          "id": "union-stuart-5th-2nd",
+          "name": "2nd Brigade, 5th Division",
+          "commander": "Col David Stuart, then Ltc Oscar Malmborg, then Col Thomas Kilby Smith",
+          "type": "brigade"
+        },
+        {
+          "id": "union-hildebrand-5th-3rd",
+          "name": "3rd Brigade, 5th Division",
+          "commander": "Col Jesse Hildebrand",
+          "type": "brigade"
+        },
+        {
+          "id": "union-buckland-5th-4th",
+          "name": "4th Brigade, 5th Division",
+          "commander": "Col Ralph P. Buckland",
+          "type": "brigade"
+        },
+        {
+          "id": "union-prentiss-6th",
+          "name": "6th Division",
+          "commander": "Benjamin M. Prentiss",
+          "type": "division"
+        },
+        {
+          "id": "union-peabody-6th-1st",
+          "name": "1st Brigade, 6th Division",
+          "commander": "Col Everett Peabody, then Col John L. Doran",
+          "type": "brigade"
+        },
+        {
+          "id": "union-miller-6th-2nd",
+          "name": "2nd Brigade, 6th Division",
+          "commander": "Col Madison Miller",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ohio-mccook-2nd",
+          "name": "2nd Division (Army of the Ohio)",
+          "commander": "Alexander McD. McCook",
+          "type": "division"
+        },
+        {
+          "id": "union-ohio-rousseau-2nd-4th",
+          "name": "4th Brigade, 2nd Division (Army of the Ohio)",
+          "commander": "Lovell H. Rousseau",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ohio-kirk-2nd-5th",
+          "name": "5th Brigade, 2nd Division (Army of the Ohio)",
+          "commander": "Col Edward N. Kirk",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ohio-gibson-2nd-6th",
+          "name": "6th Brigade, 2nd Division (Army of the Ohio)",
+          "commander": "Col William H. Gibson",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ohio-nelson-4th",
+          "name": "4th Division (Army of the Ohio)",
+          "commander": "William \"Bull\" Nelson",
+          "type": "division"
+        },
+        {
+          "id": "union-ohio-ammen-4th-10th",
+          "name": "10th Brigade, 4th Division (Army of the Ohio)",
+          "commander": "Col Jacob Ammen",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ohio-hazen-4th-19th",
+          "name": "19th Brigade, 4th Division (Army of the Ohio)",
+          "commander": "Col William B. Hazen",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ohio-bruce-4th-22nd",
+          "name": "22nd Brigade, 4th Division (Army of the Ohio)",
+          "commander": "Col Sanders D. Bruce",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ohio-crittenden-5th",
+          "name": "5th Division (Army of the Ohio)",
+          "commander": "Thomas L. Crittenden",
+          "type": "division"
+        },
+        {
+          "id": "union-ohio-boyle-5th-11th",
+          "name": "11th Brigade, 5th Division (Army of the Ohio)",
+          "commander": "Jeremiah T. Boyle",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ohio-wsmith-5th-14th",
+          "name": "14th Brigade, 5th Division (Army of the Ohio)",
+          "commander": "Col William S. Smith",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ohio-wood-6th",
+          "name": "6th Division (Army of the Ohio)",
+          "commander": "Thomas J. Wood",
+          "type": "division"
+        },
+        {
+          "id": "union-ohio-garfield-6th-20th",
+          "name": "20th Brigade, 6th Division (Army of the Ohio)",
+          "commander": "James A. Garfield",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ohio-wagner-6th-21st",
+          "name": "21st Brigade, 6th Division (Army of the Ohio)",
+          "commander": "Col George D. Wagner",
+          "type": "brigade"
+        }
+      ]
+    },
+    "confederate": {
+      "commander": "Albert Sidney Johnston",
+      "commanderRank": "General",
+      "armyName": "Army of Mississippi",
+      "totalStrength": 44699,
+      "casualties": {
+        "killed": 1728,
+        "wounded": 8012,
+        "captured": 959,
+        "missing": 0,
+        "total": 10699
+      },
+      "units": [
+        {
+          "id": "confederate-polk-1st",
+          "name": "First Corps",
+          "commander": "Leonidas Polk",
+          "type": "corps"
+        },
+        {
+          "id": "confederate-clark-1st-div",
+          "name": "First Division, First Corps",
+          "commander": "Charles Clark, then Alexander P. Stewart",
+          "type": "division"
+        },
+        {
+          "id": "confederate-cheatham-2nd-div",
+          "name": "Second Division, First Corps",
+          "commander": "Benjamin F. Cheatham, then Bushrod R. Johnson",
+          "type": "division"
+        },
+        {
+          "id": "confederate-bragg-2nd",
+          "name": "Second Corps",
+          "commander": "Braxton Bragg",
+          "type": "corps"
+        },
+        {
+          "id": "confederate-ruggles-div",
+          "name": "First Division, Second Corps",
+          "commander": "Daniel Ruggles",
+          "type": "division"
+        },
+        {
+          "id": "confederate-gibson-ruggles-1st",
+          "name": "1st Brigade, Ruggles's Division",
+          "commander": "Col Randall L. Gibson",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-anderson-ruggles-2nd",
+          "name": "2nd Brigade, Ruggles's Division",
+          "commander": "Patton Anderson",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-pond-ruggles-3rd",
+          "name": "3rd Brigade, Ruggles's Division",
+          "commander": "Col Preston Pond, Jr.",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-withers-div",
+          "name": "Second Division, Second Corps",
+          "commander": "Jones M. Withers",
+          "type": "division"
+        },
+        {
+          "id": "confederate-gladden-withers-1st",
+          "name": "1st Brigade, Withers's Division",
+          "commander": "Adley H. Gladden, then Col Daniel W. Adams, then Col Zach C. Deas",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-chalmers-withers-2nd",
+          "name": "2nd Brigade, Withers's Division",
+          "commander": "James R. Chalmers",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-jackson-withers-3rd",
+          "name": "3rd Brigade, Withers's Division",
+          "commander": "John K. Jackson",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-hardee-3rd",
+          "name": "Third Corps",
+          "commander": "William J. Hardee",
+          "type": "corps"
+        },
+        {
+          "id": "confederate-hindman-3rd-1st",
+          "name": "1st Brigade, Third Corps",
+          "commander": "Thomas C. Hindman, then Col Robert G. Shaver",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-cleburne-3rd-2nd",
+          "name": "2nd Brigade, Third Corps",
+          "commander": "Patrick Cleburne",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-wood-3rd-3rd",
+          "name": "3rd Brigade, Third Corps",
+          "commander": "Sterling A. M. Wood, then Col William K. Patterson",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-breckinridge-reserve",
+          "name": "Reserve Corps",
+          "commander": "John C. Breckinridge",
+          "type": "corps"
+        },
+        {
+          "id": "confederate-trabue-res-1st",
+          "name": "1st Brigade, Reserve Corps",
+          "commander": "Col Robert P. Trabue",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-bowen-res-2nd",
+          "name": "2nd Brigade, Reserve Corps",
+          "commander": "John S. Bowen, then Col John D. Martin",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-statham-res-3rd",
+          "name": "3rd Brigade, Reserve Corps",
+          "commander": "Col Walter S. Statham",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-forrest-cav",
+          "name": "Forrest's Tennessee Cavalry Regiment (unattached)",
+          "commander": "Col Nathan B. Forrest",
+          "type": "regiment"
+        }
+      ]
+    }
+  },
+  "landmarks": [
+    {
+      "id": "shiloh-church",
+      "name": "Shiloh Church",
+      "type": "church",
+      "lat": 35.1337,
+      "lng": -88.355,
+      "description": "Log meeting house near the center of the Union camps and the focus of fighting on April 6. The standing church is a replica. Coordinates from OpenStreetMap. On April 7 Breckinridge's rear guard formed here."
+    },
+    {
+      "id": "pittsburg-landing",
+      "name": "Pittsburg Landing",
+      "type": "town",
+      "lat": 35.1522,
+      "lng": -88.3228,
+      "description": "Union base on the west bank of the Tennessee River. Coordinates from Wikipedia."
+    },
+    {
+      "id": "hornets-nest",
+      "name": "Hornets' Nest",
+      "type": "woods",
+      "lat": 35.1378,
+      "lng": -88.338,
+      "description": "Dense oak thicket where Prentiss and W.H.L. Wallace made a long stand on April 6. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "sunken-road",
+      "name": "Sunken Road",
+      "type": "road",
+      "lat": 35.1356,
+      "lng": -88.3377,
+      "description": "Farm road used as the Union line by Prentiss's and Wallace's men. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "peach-orchard",
+      "name": "Peach Orchard",
+      "type": "field",
+      "lat": 35.1323,
+      "lng": -88.3315,
+      "description": "Orchard on the Union left that Confederate brigades attacked on April 6. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "bloody-pond",
+      "name": "Bloody Pond",
+      "type": "other",
+      "lat": 35.1334,
+      "lng": -88.3321,
+      "description": "Small pond near the Peach Orchard. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "water-oaks-pond",
+      "name": "Water Oaks Pond",
+      "type": "other",
+      "lat": 35.1384,
+      "lng": -88.3505,
+      "description": "Pond where a Confederate counterattack was repelled on April 7. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "review-field",
+      "name": "Review Field",
+      "type": "field",
+      "lat": 35.1354,
+      "lng": -88.346,
+      "description": "Open field near the Hamburg-Purdy Road. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "cloud-field",
+      "name": "Cloud Field",
+      "type": "field",
+      "lat": 35.1414,
+      "lng": -88.331,
+      "description": "Field east of the Hornets' Nest. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "jones-field",
+      "name": "Jones Field",
+      "type": "field",
+      "lat": 35.1483,
+      "lng": -88.3465,
+      "description": "Field where McClernand and McDowell were pushed back about 1:00 PM on April 6. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "fraley-field",
+      "name": "Fraley Field",
+      "type": "field",
+      "lat": 35.1221,
+      "lng": -88.3618,
+      "description": "Site of the first skirmish at about 5:00 AM on April 6. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "seay-field",
+      "name": "Seay Field",
+      "type": "field",
+      "lat": 35.1196,
+      "lng": -88.3557,
+      "description": "Field where the Confederate advance was delayed on the morning of April 6. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "davis-wheat-field",
+      "name": "Davis Wheat Field",
+      "type": "field",
+      "lat": 35.1309,
+      "lng": -88.3383,
+      "description": "Field near the Peach Orchard. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "owl-creek",
+      "name": "Owl Creek",
+      "type": "creek",
+      "lat": 35.1379,
+      "lng": -88.4068,
+      "description": "Creek on the Union right flank, west of the camps. A point on the creek, Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "lick-creek",
+      "name": "Lick Creek",
+      "type": "creek",
+      "lat": 35.1263,
+      "lng": -88.3201,
+      "description": "Creek on the Union left flank. A point on the creek, Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "tilghman-branch",
+      "name": "Tilghman Branch",
+      "type": "creek",
+      "lat": 35.149,
+      "lng": -88.3418,
+      "description": "Stream also called Glover Branch, north of the Hornets' Nest. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "dill-branch",
+      "name": "Dill Branch",
+      "type": "creek",
+      "lat": 35.1452,
+      "lng": -88.3223,
+      "description": "Ravine west of Pittsburg Landing at the Union last line. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "corinth-road",
+      "name": "Corinth Road (Eastern)",
+      "type": "road",
+      "lat": 35.1353,
+      "lng": -88.3383,
+      "description": "Road from Pittsburg Landing toward Corinth. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "hamburg-purdy-road",
+      "name": "Hamburg-Purdy Road",
+      "type": "road",
+      "lat": 35.1335,
+      "lng": -88.3443,
+      "description": "Road that crossed the Corinth road west of the Hornets' Nest. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "savannah-road",
+      "name": "Hamburg-Savannah Road",
+      "type": "road",
+      "lat": 35.1362,
+      "lng": -88.3304,
+      "description": "Road through the Peach Orchard area toward Savannah. Coordinates from OpenStreetMap."
+    },
+    {
+      "id": "crumps-landing",
+      "name": "Crump's Landing",
+      "type": "town",
+      "lat": 35.2311,
+      "lng": -88.3329,
+      "description": "Tennessee River landing downriver where Lew Wallace's division waited. Position is approximate, OpenStreetMap place named Crump, and is about 9 km north of Pittsburg Landing."
+    }
+  ],
+  "timeline": [
+    {
+      "id": "day1-0500",
+      "datetime": "1862-04-06T05:00:00",
+      "label": "April 6, 5:00 AM",
+      "title": "Pickets clash at Fraley Field",
+      "description": "Five of Grant's six divisions are camped between Shiloh Church and the Tennessee River, with no entrenchments. Confederate pickets fire on a Union patrol near Fraley Field. Lew Wallace's division is at Crump's Landing, downriver. All Union camp positions are estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "confederate-hardee-3rd",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.1185,
+          "lng": -88.3665,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.1221,
+            "lng": -88.3618
+          }
+        },
+        {
+          "unitId": "union-prentiss-6th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.125,
+          "lng": -88.3425,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1337,
+          "lng": -88.355,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.145,
+          "lng": -88.3465,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1414,
+          "lng": -88.331,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-wallace-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1465,
+          "lng": -88.3375,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-lew-wallace-3rd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.2311,
+          "lng": -88.3329,
+          "status": "reserve"
+        }
+      ],
+      "events": [
+        {
+          "id": "fraley-skirmish",
+          "time": "1862-04-06T05:00:00",
+          "title": "Skirmish near Fraley Field",
+          "description": "About 5:00 AM Confederate pickets fire on a patrol sent out by Col. Everett Peabody without Prentiss's knowledge. The skirmish lasts over an hour. At about 5:30 AM Johnston orders a general attack.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 35.1221,
+            "lng": -88.3618
+          },
+          "relatedUnits": [
+            "union-peabody-6th-1st",
+            "confederate-hardee-3rd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1-0730",
+      "datetime": "1862-04-06T07:30:00",
+      "label": "April 6, 7:30 AM",
+      "title": "The Confederate line deploys",
+      "description": "The Confederates lose about an hour getting ready and another hour skirmishing at Seay Field. Sherman rides out near Rea Field around 7:00 AM and is slightly wounded, which convinces him he is under attack. Beauregard orders Polk's and Breckinridge's corps forward to the flanks. Confederate positions are estimates.",
+      "positions": [
+        {
+          "unitId": "confederate-hardee-3rd",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.123,
+          "lng": -88.35,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.1354,
+            "lng": -88.346
+          }
+        },
+        {
+          "unitId": "confederate-ruggles-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.1205,
+          "lng": -88.356,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.1337,
+            "lng": -88.355
+          }
+        },
+        {
+          "unitId": "confederate-withers-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.12,
+          "lng": -88.352,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-polk-1st",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.1215,
+          "lng": -88.3585,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-breckinridge-reserve",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.1175,
+          "lng": -88.356,
+          "status": "reserve"
+        },
+        {
+          "unitId": "union-peabody-6th-1st",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 35.125,
+          "lng": -88.3425,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-prentiss-6th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.125,
+          "lng": -88.3425,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1337,
+          "lng": -88.355,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.145,
+          "lng": -88.3465,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1414,
+          "lng": -88.331,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "sherman-rea-field",
+          "time": "1862-04-06T07:00:00",
+          "title": "Sherman is fired on near Rea Field",
+          "description": "Sherman is slightly wounded and an orderly is killed, which convinces him the army is under attack.",
+          "type": "combat",
+          "importance": "minor",
+          "relatedUnits": [
+            "union-sherman-5th"
+          ]
+        },
+        {
+          "id": "beauregard-flanks",
+          "time": "1862-04-06T07:30:00",
+          "title": "Polk and Breckinridge ordered to the flanks",
+          "description": "Beauregard sends the corps of Polk and Breckinridge forward on the flanks, which thins and extends the Confederate line.",
+          "type": "command",
+          "importance": "major",
+          "relatedUnits": [
+            "confederate-polk-1st",
+            "confederate-breckinridge-reserve"
+          ]
+        },
+        {
+          "id": "hurlbut-veatch-sent",
+          "time": "1862-04-06T08:00:00",
+          "title": "Hurlbut sends Veatch to help Sherman",
+          "description": "At 8:00 AM Hurlbut has his three brigades ready and sends Veatch's brigade to support Sherman.",
+          "type": "movement",
+          "importance": "minor",
+          "relatedUnits": [
+            "union-hurlbut-4th",
+            "union-veatch-4th-2nd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1-0900",
+      "datetime": "1862-04-06T09:00:00",
+      "label": "April 6, 9:00 AM",
+      "title": "Prentiss's camp falls; Grant arrives",
+      "description": "By 8:30 AM Peabody's brigade is pushed north and the Confederates occupy his camp. About 9:00 AM they capture Prentiss's camp, and looting slows their pursuit. Grant reaches Pittsburg Landing at about 9:00 AM and orders Lew Wallace forward and Nelson's division over the river. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-prentiss-6th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.125,
+          "lng": -88.3425,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 35.1356,
+            "lng": -88.3377
+          }
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1337,
+          "lng": -88.355,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.145,
+          "lng": -88.3465,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1414,
+          "lng": -88.331,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-wallace-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1465,
+          "lng": -88.3375,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-hardee-3rd",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.126,
+          "lng": -88.345,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-withers-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.1235,
+          "lng": -88.344,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-ruggles-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.13,
+          "lng": -88.352,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "gladden-wounded",
+          "time": "1862-04-06T08:45:00",
+          "title": "Gladden mortally wounded",
+          "description": "Brig. Gen. Adley Gladden of Withers's division is mortally wounded at about 8:45 AM.",
+          "type": "casualty",
+          "importance": "minor",
+          "relatedUnits": [
+            "confederate-gladden-withers-1st"
+          ]
+        },
+        {
+          "id": "prentiss-camp-captured",
+          "time": "1862-04-06T09:00:00",
+          "title": "Prentiss's camp captured",
+          "description": "The Confederates take Prentiss's camp. Looting slows their pursuit.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 35.125,
+            "lng": -88.3425
+          },
+          "relatedUnits": [
+            "union-prentiss-6th"
+          ]
+        },
+        {
+          "id": "grant-arrives",
+          "time": "1862-04-06T09:00:00",
+          "title": "Grant reaches Pittsburg Landing",
+          "description": "Grant arrives about 9:00 AM after hearing the guns from Savannah. He orders Lew Wallace to Pittsburg Landing and Nelson's division to ferry across.",
+          "type": "command",
+          "importance": "major",
+          "location": {
+            "lat": 35.1522,
+            "lng": -88.3228
+          },
+          "relatedUnits": [
+            "union-lew-wallace-3rd",
+            "union-ohio-nelson-4th"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1-1000",
+      "datetime": "1862-04-06T10:00:00",
+      "label": "April 6, 10:00 AM",
+      "title": "Sherman falls back; the Sunken Road line forms",
+      "description": "Shortly after 10:00 AM Sherman's remnants form a new line near the Hamburg-Purdy and Corinth road crossroads. Between 9:30 and 10:30 AM artillery fire is exchanged along the Sunken Road, where Prentiss and W.H.L. Wallace hold. Around 9:40 AM Stuart's brigade on the Union left is shelled and about 20 minutes later attacked. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1355,
+          "lng": -88.344,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.144,
+          "lng": -88.3465,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-prentiss-6th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1356,
+          "lng": -88.3377,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-wallace-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1378,
+          "lng": -88.338,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1414,
+          "lng": -88.331,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-stuart-5th-2nd",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 35.1275,
+          "lng": -88.3235,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-hardee-3rd",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.133,
+          "lng": -88.349,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-polk-1st",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.132,
+          "lng": -88.35,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-ruggles-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.13,
+          "lng": -88.348,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-withers-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.127,
+          "lng": -88.34,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "stuart-attacked",
+          "time": "1862-04-06T09:40:00",
+          "title": "Stuart's brigade attacked",
+          "description": "Stuart's brigade on the Union far left receives artillery fire at about 9:40 AM. Confederate infantry attacks about 20 minutes later.",
+          "type": "combat",
+          "importance": "minor",
+          "location": {
+            "lat": 35.1275,
+            "lng": -88.3235
+          },
+          "relatedUnits": [
+            "union-stuart-5th-2nd"
+          ]
+        },
+        {
+          "id": "sherman-new-line",
+          "time": "1862-04-06T10:00:00",
+          "title": "Sherman forms a new line",
+          "description": "Sherman's remnants form near the Hamburg-Purdy and Pittsburg-Corinth crossroads.",
+          "type": "movement",
+          "importance": "major",
+          "relatedUnits": [
+            "union-sherman-5th"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1-1130",
+      "datetime": "1862-04-06T11:30:00",
+      "label": "April 6, 11:30 AM",
+      "title": "Sherman and McClernand pushed back",
+      "description": "At 11:00 AM the Confederates attack Sherman and McClernand again. By about 11:20 AM they control the Hamburg-Purdy Road and the Union line falls back. Sherman's First Brigade rejoins McClernand. Lew Wallace receives Grant's order about 11:30 AM. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.14,
+          "lng": -88.343,
+          "status": "retreating"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.145,
+          "lng": -88.344,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-prentiss-6th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1356,
+          "lng": -88.3377,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-wallace-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1378,
+          "lng": -88.338,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.136,
+          "lng": -88.333,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-lew-wallace-3rd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.2311,
+          "lng": -88.3329,
+          "status": "reserve"
+        },
+        {
+          "unitId": "confederate-hardee-3rd",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.1345,
+          "lng": -88.344,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-polk-1st",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.137,
+          "lng": -88.347,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-ruggles-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.133,
+          "lng": -88.341,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-withers-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.13,
+          "lng": -88.338,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "hamburg-purdy-lost",
+          "time": "1862-04-06T11:20:00",
+          "title": "Confederates control the Hamburg-Purdy Road",
+          "description": "By 11:20 AM Sherman and McClernand fall back about 200 yards.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 35.1335,
+            "lng": -88.3443
+          },
+          "relatedUnits": [
+            "union-sherman-5th",
+            "union-mcclernand-1st"
+          ]
+        },
+        {
+          "id": "lew-wallace-order",
+          "time": "1862-04-06T11:30:00",
+          "title": "Lew Wallace receives Grant's message",
+          "description": "Lew Wallace gets Grant's order about 11:30 AM and begins moving his division around noon.",
+          "type": "command",
+          "importance": "minor",
+          "location": {
+            "lat": 35.2311,
+            "lng": -88.3329
+          },
+          "relatedUnits": [
+            "union-lew-wallace-3rd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1-1400",
+      "datetime": "1862-04-06T14:00:00",
+      "label": "April 6, 2:00 PM",
+      "title": "Fighting at the Peach Orchard and Hornets' Nest",
+      "description": "Around 2:00 PM Breckinridge attacks McArthur's partial brigade on the Union left, and Statham's brigade attacks Hurlbut's line. Prentiss and W.H.L. Wallace still hold the Sunken Road position. About 1:00 PM a Confederate bayonet charge had pushed McClernand and McDowell back to Jones Field. Lew Wallace is told he is on the wrong road. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-prentiss-6th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1356,
+          "lng": -88.3377,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-wallace-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1378,
+          "lng": -88.338,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1345,
+          "lng": -88.3345,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-mcarthur-2nd-2nd",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 35.1315,
+          "lng": -88.3295,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.148,
+          "lng": -88.342,
+          "status": "retreating"
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.147,
+          "lng": -88.342,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-breckinridge-reserve",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.129,
+          "lng": -88.337,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.1323,
+            "lng": -88.3315
+          }
+        },
+        {
+          "unitId": "confederate-statham-res-3rd",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 35.1305,
+          "lng": -88.335,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-withers-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.133,
+          "lng": -88.34,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-ruggles-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.1345,
+          "lng": -88.343,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-hardee-3rd",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.137,
+          "lng": -88.346,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-polk-1st",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.14,
+          "lng": -88.344,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "jones-field-charge",
+          "time": "1862-04-06T13:00:00",
+          "title": "Bayonet charge at Jones Field",
+          "description": "A Confederate bayonet charge about 1:00 PM pushes McClernand and McDowell back to Jones Field.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 35.1483,
+            "lng": -88.3465
+          },
+          "relatedUnits": [
+            "union-mcclernand-1st",
+            "union-mcdowell-5th-1st"
+          ]
+        },
+        {
+          "id": "lew-wallace-wrong-road",
+          "time": "1862-04-06T14:00:00",
+          "title": "Lew Wallace told he is on the wrong road",
+          "description": "Lew Wallace receives a message at about 2:00 PM saying he is on the wrong road.",
+          "type": "command",
+          "importance": "major",
+          "relatedUnits": [
+            "union-lew-wallace-3rd"
+          ]
+        },
+        {
+          "id": "statham-hurlbut",
+          "time": "1862-04-06T14:00:00",
+          "title": "Statham attacks Hurlbut",
+          "description": "Statham's brigade attacks Hurlbut's line while Breckinridge attacks McArthur on the Union left.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 35.1323,
+            "lng": -88.3315
+          },
+          "relatedUnits": [
+            "confederate-statham-res-3rd",
+            "union-hurlbut-4th",
+            "union-mcarthur-2nd-2nd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1-1430",
+      "datetime": "1862-04-06T14:30:00",
+      "label": "April 6, 2:30 PM",
+      "title": "Johnston is killed",
+      "description": "Albert Sidney Johnston dies at about 2:30 PM from a torn popliteal artery, about 100 yards south of the Bell Farm. Beauregard takes command. Stuart's brigade withdraws about 2:15-2:30 PM and is done fighting for the day. The location of Johnston's death is placed from the Bell Farm and is approximate.",
+      "positions": [
+        {
+          "unitId": "union-prentiss-6th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1356,
+          "lng": -88.3377,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-wallace-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1378,
+          "lng": -88.338,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1345,
+          "lng": -88.3345,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-mcarthur-2nd-2nd",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 35.1315,
+          "lng": -88.3295,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 35.1522,
+            "lng": -88.3228
+          }
+        },
+        {
+          "unitId": "confederate-breckinridge-reserve",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.129,
+          "lng": -88.335,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.1323,
+            "lng": -88.3315
+          }
+        },
+        {
+          "unitId": "confederate-statham-res-3rd",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 35.1315,
+          "lng": -88.3335,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-withers-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.133,
+          "lng": -88.34,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-ruggles-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.1345,
+          "lng": -88.343,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "johnston-dies",
+          "time": "1862-04-06T14:30:00",
+          "title": "Johnston dies on the Confederate right",
+          "description": "Johnston bleeds to death from a torn popliteal artery. Beauregard assumes command.",
+          "type": "casualty",
+          "importance": "critical",
+          "location": {
+            "lat": 35.1261,
+            "lng": -88.327
+          },
+          "relatedUnits": [
+            "confederate-breckinridge-reserve"
+          ]
+        },
+        {
+          "id": "stuart-withdraws",
+          "time": "1862-04-06T14:15:00",
+          "title": "Stuart's brigade withdraws",
+          "description": "Stuart's brigade pulls back about 2:15-2:30 PM and does no more fighting that day.",
+          "type": "movement",
+          "importance": "minor",
+          "location": {
+            "lat": 35.1275,
+            "lng": -88.3235
+          },
+          "relatedUnits": [
+            "union-stuart-5th-2nd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1-1500",
+      "datetime": "1862-04-06T15:00:00",
+      "label": "April 6, 3:00 PM",
+      "title": "Union left falls back; gunboats open fire",
+      "description": "At 2:50 PM USS Tyler (Lt. William Gwin) fires on Confederate batteries near the Union left, and USS Lexington joins about an hour later. McArthur and Hurlbut fall back between 3:00 and 4:00 PM. Around 3:00 PM Grant visits Sherman and finds the Union right in poor condition. At 3:30 PM the Confederates start massing artillery against the Hornets' Nest. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-prentiss-6th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1356,
+          "lng": -88.3377,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-wallace-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1378,
+          "lng": -88.338,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.138,
+          "lng": -88.332,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 35.1414,
+            "lng": -88.331
+          }
+        },
+        {
+          "unitId": "union-mcarthur-2nd-2nd",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 35.14,
+          "lng": -88.329,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 35.1522,
+            "lng": -88.3228
+          }
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.148,
+          "lng": -88.341,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.148,
+          "lng": -88.341,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-breckinridge-reserve",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.133,
+          "lng": -88.332,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-withers-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.1335,
+          "lng": -88.336,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-ruggles-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.135,
+          "lng": -88.342,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "tyler-opens-fire",
+          "time": "1862-04-06T14:50:00",
+          "title": "USS Tyler opens fire",
+          "description": "Lt. William Gwin's USS Tyler fires on Confederate batteries near the Union left. USS Lexington joins about an hour later.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 35.1452,
+            "lng": -88.3223
+          }
+        },
+        {
+          "id": "hornets-nest-artillery",
+          "time": "1862-04-06T15:30:00",
+          "title": "Confederates mass artillery",
+          "description": "The Confederates begin moving guns toward the Hornets' Nest. The battery grows to over 50 guns.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 35.1378,
+            "lng": -88.338
+          }
+        }
+      ]
+    },
+    {
+      "id": "day1-1630",
+      "datetime": "1862-04-06T16:30:00",
+      "label": "April 6, 4:30 PM",
+      "title": "The Hornets' Nest is surrounded",
+      "description": "At 4:00 PM Confederate artillery fires on Wallace and Prentiss in the Hornets' Nest, and by 4:30 PM all batteries are engaged. W.H.L. Wallace is mortally wounded about 4:15 PM while leading his division north. By 4:45 PM most of his division is off the field and Prentiss has about 2,000 men. Sherman and McClernand fall back further about 5:00 PM. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-prentiss-6th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1378,
+          "lng": -88.338,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-wallace-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.142,
+          "lng": -88.336,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 35.1522,
+            "lng": -88.3228
+          }
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1414,
+          "lng": -88.331,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 35.1522,
+            "lng": -88.3228
+          }
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.15,
+          "lng": -88.337,
+          "status": "retreating"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.149,
+          "lng": -88.339,
+          "status": "retreating"
+        },
+        {
+          "unitId": "confederate-ruggles-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.134,
+          "lng": -88.343,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.1378,
+            "lng": -88.338
+          }
+        },
+        {
+          "unitId": "confederate-withers-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.1335,
+          "lng": -88.339,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.1378,
+            "lng": -88.338
+          }
+        },
+        {
+          "unitId": "confederate-breckinridge-reserve",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.137,
+          "lng": -88.331,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-polk-1st",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.143,
+          "lng": -88.344,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-hardee-3rd",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.14,
+          "lng": -88.345,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "ww-wallace-wounded",
+          "time": "1862-04-06T16:15:00",
+          "title": "W.H.L. Wallace mortally wounded",
+          "description": "Brig. Gen. W.H.L. Wallace is mortally wounded while leading his division north.",
+          "type": "casualty",
+          "importance": "major",
+          "location": {
+            "lat": 35.1378,
+            "lng": -88.338
+          },
+          "relatedUnits": [
+            "union-wallace-2nd"
+          ]
+        },
+        {
+          "id": "hornets-nest-shelling",
+          "time": "1862-04-06T16:00:00",
+          "title": "Artillery bombards the Hornets' Nest",
+          "description": "Confederate guns fire on Wallace and Prentiss. All batteries are engaged by 4:30 PM.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 35.1378,
+            "lng": -88.338
+          },
+          "relatedUnits": [
+            "union-prentiss-6th",
+            "union-wallace-2nd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1-1730",
+      "datetime": "1862-04-06T17:30:00",
+      "label": "April 6, 5:30 PM",
+      "title": "Prentiss surrenders",
+      "description": "About 5:30 PM Prentiss and several regiments surrender, with about 2,200 Union soldiers captured. Nelson's division of Buell's army begins arriving at Pittsburg Landing about 5:00 PM. At 5:35 PM USS Tyler begins hitting Chalmers's brigade directly. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-ohio-nelson-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1522,
+          "lng": -88.3228,
+          "status": "arriving"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.147,
+          "lng": -88.3275,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.152,
+          "lng": -88.333,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.15,
+          "lng": -88.334,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-chalmers-withers-2nd",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 35.142,
+          "lng": -88.3275,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.1452,
+            "lng": -88.3223
+          }
+        },
+        {
+          "unitId": "confederate-ruggles-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.1385,
+          "lng": -88.338,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-breckinridge-reserve",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.14,
+          "lng": -88.33,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "prentiss-surrenders",
+          "time": "1862-04-06T17:30:00",
+          "title": "Prentiss surrenders",
+          "description": "Prentiss and several regiments surrender. About 2,200 Union soldiers are captured.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 35.1378,
+            "lng": -88.338
+          },
+          "relatedUnits": [
+            "union-prentiss-6th"
+          ]
+        },
+        {
+          "id": "nelson-arrives",
+          "time": "1862-04-06T17:00:00",
+          "title": "Nelson's division reaches Pittsburg Landing",
+          "description": "The first units of Buell's army arrive about 5:00 PM.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 35.1522,
+            "lng": -88.3228
+          },
+          "relatedUnits": [
+            "union-ohio-nelson-4th"
+          ]
+        },
+        {
+          "id": "tyler-hits-chalmers",
+          "time": "1862-04-06T17:35:00",
+          "title": "USS Tyler hits Chalmers's brigade",
+          "description": "The gunboat fires directly on Chalmers's brigade as it advances near Dill Branch.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 35.1452,
+            "lng": -88.3223
+          },
+          "relatedUnits": [
+            "confederate-chalmers-withers-2nd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1-1800",
+      "datetime": "1862-04-06T18:00:00",
+      "label": "April 6, 6:00 PM",
+      "title": "The last line at Pittsburg Landing",
+      "description": "Shortly after 6:00 PM Beauregard calls off all attacks. The Union holds a final line near Pittsburg Landing with massed artillery and the gunboats Tyler and Lexington firing from the river. During the final assault Lexington fires 32 rounds in 10 minutes. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-ohio-nelson-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.15,
+          "lng": -88.326,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.147,
+          "lng": -88.3275,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.152,
+          "lng": -88.333,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.15,
+          "lng": -88.334,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-chalmers-withers-2nd",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 35.141,
+          "lng": -88.329,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-breckinridge-reserve",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.138,
+          "lng": -88.332,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "attacks-called-off",
+          "time": "1862-04-06T18:00:00",
+          "title": "Beauregard calls off the attacks",
+          "description": "Shortly after 6:00 PM Beauregard halts the Confederate attacks. Lexington fires 32 rounds in 10 minutes during the last assault.",
+          "type": "command",
+          "importance": "critical",
+          "location": {
+            "lat": 35.1452,
+            "lng": -88.3223
+          },
+          "relatedUnits": [
+            "confederate-chalmers-withers-2nd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1-1915",
+      "datetime": "1862-04-06T19:15:00",
+      "label": "April 6, 7:15 PM",
+      "title": "Lew Wallace arrives; Buell's troops reach the landing",
+      "description": "About 5,800 fresh troops of Lew Wallace's division arrive about 7:15 PM and form beside Sherman. Crittenden's division begins arriving about 9:00 PM, and the whole division is at the landing two hours later. Rain begins about 10:00 PM. Gunboats shell the Confederate lines through the night. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-lew-wallace-3rd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.153,
+          "lng": -88.338,
+          "status": "arriving"
+        },
+        {
+          "unitId": "union-ohio-nelson-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.15,
+          "lng": -88.326,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-ohio-crittenden-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1522,
+          "lng": -88.3228,
+          "status": "arriving"
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.152,
+          "lng": -88.333,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-hurlbut-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.147,
+          "lng": -88.3275,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "lew-wallace-arrives",
+          "time": "1862-04-06T19:15:00",
+          "title": "Lew Wallace's division arrives",
+          "description": "About 5,800 fresh troops arrive and take position beside Sherman.",
+          "type": "movement",
+          "importance": "critical",
+          "location": {
+            "lat": 35.153,
+            "lng": -88.338
+          },
+          "relatedUnits": [
+            "union-lew-wallace-3rd"
+          ]
+        },
+        {
+          "id": "crittenden-arrives",
+          "time": "1862-04-06T21:00:00",
+          "title": "Crittenden's division arrives",
+          "description": "The first of Crittenden's division lands about 9:00 PM. The whole division is at the landing two hours later.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 35.1522,
+            "lng": -88.3228
+          },
+          "relatedUnits": [
+            "union-ohio-crittenden-5th"
+          ]
+        },
+        {
+          "id": "lick-em-tomorrow",
+          "time": "1862-04-07T00:00:00",
+          "title": "Grant: Lick 'em tomorrow",
+          "description": "At midnight Sherman finds Grant resting under a tree. Grant replies, Lick 'em tomorrow, though.",
+          "type": "command",
+          "importance": "minor",
+          "relatedUnits": [
+            "union-sherman-5th"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day2-0500",
+      "datetime": "1862-04-07T05:00:00",
+      "label": "April 7, 5:00 AM",
+      "title": "Buell's attack begins",
+      "description": "McCook's division reaches Savannah between midnight and 4:00 AM, and its first unit comes ashore at Pittsburg Landing about 4:00 AM. At 5:00 AM Buell's attack begins with Nelson's three brigades on the east side. A few hours later Crittenden joins Nelson on his right. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-ohio-nelson-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.14,
+          "lng": -88.33,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.138,
+            "lng": -88.332
+          }
+        },
+        {
+          "unitId": "union-ohio-crittenden-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.145,
+          "lng": -88.327,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-ohio-mccook-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1522,
+          "lng": -88.3228,
+          "status": "arriving"
+        },
+        {
+          "unitId": "confederate-breckinridge-reserve",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.133,
+          "lng": -88.333,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-withers-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.1335,
+          "lng": -88.338,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "mccook-first-unit",
+          "time": "1862-04-07T04:00:00",
+          "title": "First of McCook's troops land",
+          "description": "The first unit of McCook's division lands at Pittsburg Landing about 4:00 AM.",
+          "type": "movement",
+          "importance": "minor",
+          "location": {
+            "lat": 35.1522,
+            "lng": -88.3228
+          },
+          "relatedUnits": [
+            "union-ohio-mccook-2nd"
+          ]
+        },
+        {
+          "id": "nelson-attack",
+          "time": "1862-04-07T05:00:00",
+          "title": "Nelson attacks",
+          "description": "Buell's attack begins with Nelson's three brigades. The 47th Tennessee, the only Confederate reinforcement, arrives about 8:00 AM.",
+          "type": "combat",
+          "importance": "major",
+          "relatedUnits": [
+            "union-ohio-nelson-4th"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day2-1030",
+      "datetime": "1862-04-07T10:30:00",
+      "label": "April 7, 10:30 AM",
+      "title": "Grant's counterattack",
+      "description": "Grant's attack begins about 10:30 AM with all four of his divisions advancing. Cleburne's brigade takes heavy losses in an unsuccessful assault. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-lew-wallace-3rd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.149,
+          "lng": -88.342,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.147,
+            "lng": -88.348
+          }
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.145,
+          "lng": -88.34,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.142,
+          "lng": -88.34,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-ohio-nelson-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.138,
+          "lng": -88.334,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-ohio-crittenden-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.137,
+          "lng": -88.338,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-cleburne-3rd-2nd",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 35.144,
+          "lng": -88.345,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-cheatham-2nd-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.138,
+          "lng": -88.345,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "grant-attack",
+          "time": "1862-04-07T10:30:00",
+          "title": "Grant's attack begins",
+          "description": "All four of Grant's divisions advance. Cleburne's brigade suffers heavy losses in an unsuccessful assault.",
+          "type": "combat",
+          "importance": "critical",
+          "relatedUnits": [
+            "union-lew-wallace-3rd",
+            "union-sherman-5th",
+            "union-mcclernand-1st",
+            "confederate-cleburne-3rd-2nd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day2-1200",
+      "datetime": "1862-04-07T12:00:00",
+      "label": "April 7, noon",
+      "title": "Hornets' Nest retaken; Cheatham counterattacks",
+      "description": "About noon both sides briefly withdraw from the Davis Wheat Field area and Buell's army controls the Hornets' Nest. Cheatham's division attacks Sherman and McClernand and drives them about 300 yards north. Shortly after noon Buell attacks again. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-ohio-nelson-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.1378,
+          "lng": -88.338,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-ohio-crittenden-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.138,
+          "lng": -88.341,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.147,
+          "lng": -88.342,
+          "status": "retreating"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.144,
+          "lng": -88.341,
+          "status": "retreating"
+        },
+        {
+          "unitId": "union-lew-wallace-3rd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.149,
+          "lng": -88.344,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-cheatham-2nd-div",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 35.142,
+          "lng": -88.344,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.147,
+            "lng": -88.343
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "hornets-nest-retaken",
+          "time": "1862-04-07T12:00:00",
+          "title": "Buell's army controls the Hornets' Nest",
+          "description": "The Hornets' Nest area is back in Union hands about noon.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 35.1378,
+            "lng": -88.338
+          },
+          "relatedUnits": [
+            "union-ohio-nelson-4th"
+          ]
+        },
+        {
+          "id": "cheatham-counterattack",
+          "time": "1862-04-07T12:00:00",
+          "title": "Cheatham drives Sherman and McClernand back",
+          "description": "Cheatham's division attacks and pushes Sherman and McClernand about 300 yards north.",
+          "type": "combat",
+          "importance": "major",
+          "relatedUnits": [
+            "confederate-cheatham-2nd-div",
+            "union-sherman-5th",
+            "union-mcclernand-1st"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day2-1330",
+      "datetime": "1862-04-07T13:30:00",
+      "label": "April 7, 1:30 PM",
+      "title": "McCook advances; fight near Water Oaks Pond",
+      "description": "About 1:30 PM McCook advances west, putting Bragg's army in front of Lew Wallace, Sherman and McClernand, with McCook on its flank. Lew Wallace resumes the offensive once Sherman and McClernand push back Cheatham. After Bragg falls back south of the Hamburg-Purdy Road, Beauregard counterattacks mostly with Wood's brigade, and McCook repels it near Water Oaks Pond. Union troops cross the Hamburg-Purdy Road about 2:30 PM. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "union-ohio-mccook-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.137,
+          "lng": -88.347,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.1384,
+            "lng": -88.3505
+          }
+        },
+        {
+          "unitId": "union-lew-wallace-3rd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.145,
+          "lng": -88.349,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.142,
+          "lng": -88.346,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-mcclernand-1st",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.14,
+          "lng": -88.344,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-ohio-nelson-4th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.134,
+          "lng": -88.342,
+          "status": "advancing"
+        },
+        {
+          "unitId": "confederate-bragg-2nd",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.134,
+          "lng": -88.352,
+          "status": "retreating"
+        },
+        {
+          "unitId": "confederate-wood-3rd-3rd",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 35.137,
+          "lng": -88.35,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 35.1384,
+            "lng": -88.3505
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "water-oaks-counterattack",
+          "time": "1862-04-07T14:00:00",
+          "title": "Counterattack near Water Oaks Pond",
+          "description": "Beauregard counterattacks with a force mostly of Wood's brigade. McCook regroups near Water Oaks Pond and repels it.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 35.1384,
+            "lng": -88.3505
+          },
+          "relatedUnits": [
+            "confederate-wood-3rd-3rd",
+            "union-ohio-mccook-2nd"
+          ]
+        },
+        {
+          "id": "hamburg-purdy-crossed",
+          "time": "1862-04-07T14:30:00",
+          "title": "Union crosses the Hamburg-Purdy Road",
+          "description": "Union troops cross the Hamburg-Purdy Road about 2:30 PM.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 35.1335,
+            "lng": -88.3443
+          }
+        }
+      ]
+    },
+    {
+      "id": "day2-1500",
+      "datetime": "1862-04-07T15:00:00",
+      "label": "April 7, 3:00 PM",
+      "title": "Beauregard retreats toward Corinth",
+      "description": "Beauregard began preparing to withdraw about 1:00 PM after learning Van Dorn was too far away. About 2:00 PM Breckinridge forms a rear guard near Shiloh Church while batteries there bombard to hide the retreat. The last Confederate artillery leaves about 3:30 PM. Grant and Buell do not pursue. Positions are estimates.",
+      "positions": [
+        {
+          "unitId": "confederate-breckinridge-reserve",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.1345,
+          "lng": -88.3545,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-bragg-2nd",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.126,
+          "lng": -88.3566,
+          "status": "retreating"
+        },
+        {
+          "unitId": "confederate-hardee-3rd",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.128,
+          "lng": -88.36,
+          "status": "retreating"
+        },
+        {
+          "unitId": "confederate-polk-1st",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 35.127,
+          "lng": -88.358,
+          "status": "retreating"
+        },
+        {
+          "unitId": "union-ohio-mccook-2nd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.136,
+          "lng": -88.349,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-sherman-5th",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.139,
+          "lng": -88.348,
+          "status": "advancing"
+        },
+        {
+          "unitId": "union-lew-wallace-3rd",
+          "unitType": "division",
+          "side": "union",
+          "lat": 35.143,
+          "lng": -88.35,
+          "status": "advancing"
+        }
+      ],
+      "events": [
+        {
+          "id": "rear-guard",
+          "time": "1862-04-07T14:00:00",
+          "title": "Breckinridge forms a rear guard",
+          "description": "Breckinridge's corps forms near Shiloh Church. Batteries bombard to make the Union think the army is still there.",
+          "type": "command",
+          "importance": "major",
+          "location": {
+            "lat": 35.1337,
+            "lng": -88.355
+          },
+          "relatedUnits": [
+            "confederate-breckinridge-reserve"
+          ]
+        },
+        {
+          "id": "retreat",
+          "time": "1862-04-07T15:00:00",
+          "title": "Retreat toward Corinth",
+          "description": "Beauregard withdraws toward Corinth. The last Confederate artillery leaves about 3:30 PM.",
+          "type": "movement",
+          "importance": "critical",
+          "location": {
+            "lat": 35.1256,
+            "lng": -88.3566
+          },
+          "relatedUnits": [
+            "confederate-bragg-2nd"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Battle_of_Shiloh",
+    "https://en.wikipedia.org/wiki/Battle_of_Shiloh_order_of_battle:_Union",
+    "https://en.wikipedia.org/wiki/Battle_of_Shiloh_order_of_battle:_Confederate",
+    "https://www.battlefields.org/learn/civil-war/battles/shiloh",
+    "https://www.nps.gov/shil/learn/historyculture/index.htm",
+    "https://en.wikipedia.org/wiki/Pittsburg_Landing,_Tennessee",
+    "https://en.wikipedia.org/wiki/Shiloh_National_Military_Park",
+    "https://www.openstreetmap.org/ (place coordinates for fields, ponds, roads, creeks and church)"
+  ],
+  "review": "unreviewed"
+}

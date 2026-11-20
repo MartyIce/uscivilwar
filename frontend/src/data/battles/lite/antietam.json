@@ -1,0 +1,1473 @@
+{
+  "id": "antietam",
+  "name": "Battle of Antietam",
+  "description": "The Battle of Antietam was fought on September 17, 1862, near Sharpsburg, Maryland, along Antietam Creek. Major General George B. McClellan's Army of the Potomac fought General Robert E. Lee's Army of Northern Virginia. It was the bloodiest single day in American history.",
+  "startDate": "1862-09-17",
+  "endDate": "1862-09-17",
+  "location": {
+    "lat": 39.47333,
+    "lng": -77.74472,
+    "bounds": {
+      "north": 39.49,
+      "south": 39.43,
+      "east": -77.72,
+      "west": -77.81
+    }
+  },
+  "result": "union_victory",
+  "significance": "Ended Lee's first invasion of the North. It gave President Lincoln the standing to issue the preliminary Emancipation Proclamation on September 22, 1862. The battle was tactically inconclusive.",
+  "forces": {
+    "union": {
+      "commander": "George B. McClellan",
+      "commanderRank": "Major General",
+      "armyName": "Army of the Potomac",
+      "totalStrength": 53632,
+      "casualties": {
+        "killed": 2108,
+        "wounded": 9549,
+        "captured": 753,
+        "missing": 0,
+        "total": 12410
+      },
+      "units": [
+        {
+          "id": "union-i-corps",
+          "name": "I Corps",
+          "commander": "Joseph Hooker (wounded); George G. Meade",
+          "type": "corps"
+        },
+        {
+          "id": "union-doubleday",
+          "name": "1st Division, I Corps",
+          "commander": "Abner Doubleday",
+          "type": "division"
+        },
+        {
+          "id": "union-ricketts",
+          "name": "2nd Division, I Corps",
+          "commander": "James B. Ricketts (wounded)",
+          "type": "division"
+        },
+        {
+          "id": "union-meade-pa-reserves",
+          "name": "3rd Division, I Corps (Pennsylvania Reserves)",
+          "commander": "George G. Meade, then Truman Seymour",
+          "type": "division"
+        },
+        {
+          "id": "union-iron-brigade",
+          "name": "4th Brigade (Iron Brigade), 1st Division",
+          "commander": "John Gibbon",
+          "type": "brigade"
+        },
+        {
+          "id": "union-ii-corps",
+          "name": "II Corps",
+          "commander": "Edwin V. Sumner",
+          "type": "corps"
+        },
+        {
+          "id": "union-richardson",
+          "name": "1st Division, II Corps",
+          "commander": "Israel B. Richardson (mortally wounded)",
+          "type": "division",
+          "strength": 4000
+        },
+        {
+          "id": "union-sedgwick",
+          "name": "2nd Division, II Corps",
+          "commander": "John Sedgwick (wounded)",
+          "type": "division"
+        },
+        {
+          "id": "union-french",
+          "name": "3rd Division, II Corps",
+          "commander": "William H. French",
+          "type": "division",
+          "strength": 5700
+        },
+        {
+          "id": "union-caldwell",
+          "name": "1st Brigade, 1st Division, II Corps",
+          "commander": "John C. Caldwell",
+          "type": "brigade"
+        },
+        {
+          "id": "union-meagher-irish",
+          "name": "2nd Brigade (Irish Brigade), 1st Division, II Corps",
+          "commander": "Thomas F. Meagher (wounded)",
+          "type": "brigade"
+        },
+        {
+          "id": "union-brooke",
+          "name": "3rd Brigade, 1st Division, II Corps",
+          "commander": "John R. Brooke",
+          "type": "brigade"
+        },
+        {
+          "id": "union-gorman",
+          "name": "1st Brigade, 2nd Division, II Corps",
+          "commander": "Willis A. Gorman",
+          "type": "brigade"
+        },
+        {
+          "id": "union-howard-2nd-brigade",
+          "name": "2nd Brigade, 2nd Division, II Corps",
+          "commander": "Oliver O. Howard",
+          "type": "brigade"
+        },
+        {
+          "id": "union-dana",
+          "name": "3rd Brigade, 2nd Division, II Corps",
+          "commander": "Napoleon J. T. Dana (wounded)",
+          "type": "brigade"
+        },
+        {
+          "id": "union-kimball",
+          "name": "1st Brigade, 3rd Division, II Corps",
+          "commander": "Nathan Kimball",
+          "type": "brigade"
+        },
+        {
+          "id": "union-morris",
+          "name": "2nd Brigade, 3rd Division, II Corps",
+          "commander": "Dwight Morris",
+          "type": "brigade"
+        },
+        {
+          "id": "union-weber",
+          "name": "3rd Brigade, 3rd Division, II Corps",
+          "commander": "Max Weber (wounded)",
+          "type": "brigade"
+        },
+        {
+          "id": "union-xii-corps",
+          "name": "XII Corps",
+          "commander": "Joseph K. F. Mansfield (mortally wounded); Alpheus S. Williams",
+          "type": "corps"
+        },
+        {
+          "id": "union-williams-1st-div",
+          "name": "1st Division, XII Corps",
+          "commander": "Alpheus S. Williams",
+          "type": "division"
+        },
+        {
+          "id": "union-greene",
+          "name": "2nd Division, XII Corps",
+          "commander": "George S. Greene",
+          "type": "division"
+        },
+        {
+          "id": "union-ix-corps",
+          "name": "IX Corps",
+          "commander": "Ambrose E. Burnside; Jacob D. Cox",
+          "type": "corps"
+        },
+        {
+          "id": "union-willcox",
+          "name": "1st Division, IX Corps",
+          "commander": "Orlando B. Willcox",
+          "type": "division"
+        },
+        {
+          "id": "union-sturgis",
+          "name": "2nd Division, IX Corps",
+          "commander": "Samuel D. Sturgis",
+          "type": "division"
+        },
+        {
+          "id": "union-rodman",
+          "name": "3rd Division, IX Corps",
+          "commander": "Isaac P. Rodman (mortally wounded)",
+          "type": "division"
+        },
+        {
+          "id": "union-kanawha",
+          "name": "Kanawha Division, IX Corps",
+          "commander": "Eliakim P. Scammon",
+          "type": "division"
+        },
+        {
+          "id": "union-ferrero",
+          "name": "2nd Brigade, 2nd Division, IX Corps",
+          "commander": "Edward Ferrero",
+          "type": "brigade"
+        },
+        {
+          "id": "union-crook",
+          "name": "2nd Brigade, Kanawha Division, IX Corps",
+          "commander": "George Crook",
+          "type": "brigade"
+        },
+        {
+          "id": "union-v-corps",
+          "name": "V Corps",
+          "commander": "Fitz John Porter",
+          "type": "corps"
+        },
+        {
+          "id": "union-vi-corps",
+          "name": "VI Corps",
+          "commander": "William B. Franklin",
+          "type": "corps"
+        },
+        {
+          "id": "union-iv-corps-couch",
+          "name": "1st Division, IV Corps",
+          "commander": "Darius N. Couch",
+          "type": "division"
+        },
+        {
+          "id": "union-cavalry-division",
+          "name": "Cavalry Division",
+          "commander": "Alfred Pleasonton",
+          "type": "division"
+        }
+      ]
+    },
+    "confederate": {
+      "commander": "Robert E. Lee",
+      "commanderRank": "General",
+      "armyName": "Army of Northern Virginia",
+      "totalStrength": 30646,
+      "casualties": {
+        "killed": 1546,
+        "wounded": 7752,
+        "captured": 1018,
+        "missing": 0,
+        "total": 10316
+      },
+      "units": [
+        {
+          "id": "confederate-longstreet-wing",
+          "name": "Right Wing (Longstreet's)",
+          "commander": "James Longstreet",
+          "type": "corps"
+        },
+        {
+          "id": "confederate-jackson-wing",
+          "name": "Left Wing (Jackson's)",
+          "commander": "Thomas J. Jackson",
+          "type": "corps"
+        },
+        {
+          "id": "confederate-mclaws",
+          "name": "McLaws's Division",
+          "commander": "Lafayette McLaws",
+          "type": "division"
+        },
+        {
+          "id": "confederate-r-h-anderson",
+          "name": "R. H. Anderson's Division",
+          "commander": "Richard H. Anderson; Roger A. Pryor",
+          "type": "division"
+        },
+        {
+          "id": "confederate-d-r-jones",
+          "name": "D. R. Jones's Division",
+          "commander": "David R. Jones",
+          "type": "division"
+        },
+        {
+          "id": "confederate-walker",
+          "name": "Walker's Division",
+          "commander": "John G. Walker",
+          "type": "division"
+        },
+        {
+          "id": "confederate-hood",
+          "name": "Hood's Division",
+          "commander": "John B. Hood",
+          "type": "division"
+        },
+        {
+          "id": "confederate-ewell-lawton",
+          "name": "Ewell's Division",
+          "commander": "Alexander Lawton; Jubal A. Early",
+          "type": "division"
+        },
+        {
+          "id": "confederate-a-p-hill",
+          "name": "A. P. Hill's Light Division",
+          "commander": "Ambrose P. Hill",
+          "type": "division"
+        },
+        {
+          "id": "confederate-jackson-division",
+          "name": "Jackson's Division",
+          "commander": "John R. Jones; William E. Starke; Andrew J. Grigsby",
+          "type": "division"
+        },
+        {
+          "id": "confederate-d-h-hill",
+          "name": "D. H. Hill's Division",
+          "commander": "Daniel H. Hill",
+          "type": "division"
+        },
+        {
+          "id": "confederate-stuart-cavalry",
+          "name": "Cavalry Division",
+          "commander": "J. E. B. Stuart",
+          "type": "division"
+        },
+        {
+          "id": "confederate-artillery-reserve",
+          "name": "Artillery Reserve",
+          "commander": "William N. Pendleton",
+          "type": "division"
+        },
+        {
+          "id": "confederate-toombs",
+          "name": "Toombs's Brigade, D. R. Jones's Division",
+          "commander": "Robert Toombs; Henry L. Benning",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-drayton",
+          "name": "Drayton's Brigade, D. R. Jones's Division",
+          "commander": "Thomas F. Drayton",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-kemper",
+          "name": "Kemper's Brigade, D. R. Jones's Division",
+          "commander": "James L. Kemper",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-manning-walker-brigade",
+          "name": "Walker's Brigade, Walker's Division",
+          "commander": "Van H. Manning",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-ransom",
+          "name": "Ransom's Brigade, Walker's Division",
+          "commander": "Robert Ransom Jr.",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-hood-texas",
+          "name": "Hood's (Texas) Brigade",
+          "commander": "William T. Wofford",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-law",
+          "name": "Whiting's Brigade, Hood's Division",
+          "commander": "Evander M. Law",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-lawton-brigade",
+          "name": "Lawton's Brigade, Ewell's Division",
+          "commander": "Marcellus Douglass; John H. Lowe; John H. Lamar",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-trimble-brigade",
+          "name": "Trimble's Brigade, Ewell's Division",
+          "commander": "James A. Walker",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-hays",
+          "name": "Hays's Brigade, Ewell's Division",
+          "commander": "Harry T. Hays",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-early-brigade",
+          "name": "Early's Brigade, Ewell's Division",
+          "commander": "Jubal A. Early; William Smith",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-gregg",
+          "name": "Gregg's Brigade, A. P. Hill's Division",
+          "commander": "Maxcy Gregg",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-branch",
+          "name": "Branch's Brigade, A. P. Hill's Division",
+          "commander": "Lawrence O. Branch; James H. Lane",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-pender",
+          "name": "Pender's Brigade, A. P. Hill's Division",
+          "commander": "William D. Pender",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-archer",
+          "name": "Archer's Brigade, A. P. Hill's Division",
+          "commander": "James J. Archer; Peter Turney",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-field-brockenbrough",
+          "name": "Field's Brigade, A. P. Hill's Division",
+          "commander": "John M. Brockenbrough",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-starke",
+          "name": "Starke's Brigade, Jackson's Division",
+          "commander": "William E. Starke; Jesse M. Williams",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-winder-brigade",
+          "name": "Winder's Brigade, Jackson's Division",
+          "commander": "Andrew J. Grigsby; Robert D. Gardner",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-taliaferro-brigade",
+          "name": "Taliaferro's Brigade, Jackson's Division",
+          "commander": "Edward T. H. Warren; James W. Jackson",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-jones-brigade-jackson",
+          "name": "Jones's Brigade, Jackson's Division",
+          "commander": "John E. Penn; A. C. Page; Robert W. Withers",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-ripley",
+          "name": "Ripley's Brigade, D. H. Hill's Division",
+          "commander": "Roswell S. Ripley; George P. Doles",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-rodes",
+          "name": "Rodes's Brigade, D. H. Hill's Division",
+          "commander": "Robert E. Rodes",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-garland",
+          "name": "Garland's Brigade, D. H. Hill's Division",
+          "commander": "Duncan K. McRae",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-g-b-anderson",
+          "name": "Anderson's Brigade, D. H. Hill's Division",
+          "commander": "George B. Anderson; Risden T. Bennett",
+          "type": "brigade"
+        },
+        {
+          "id": "confederate-colquitt",
+          "name": "Colquitt's Brigade, D. H. Hill's Division",
+          "commander": "Alfred H. Colquitt",
+          "type": "brigade"
+        }
+      ]
+    }
+  },
+  "landmarks": [
+    {
+      "id": "dunker-church",
+      "name": "Dunker Church",
+      "type": "church",
+      "lat": 39.47536,
+      "lng": -77.74678,
+      "description": "Whitewashed church on a plateau near the Hagerstown Pike. Objective of Hooker's attack. Coordinates from Wikipedia."
+    },
+    {
+      "id": "millers-cornfield",
+      "name": "Miller's Cornfield",
+      "type": "field",
+      "lat": 39.479,
+      "lng": -77.744,
+      "description": "Site of the dawn fighting, north of the Dunker Church. Position is an estimate from the narrative, not a surveyed coordinate. Wikipedia lists 39.47333, -77.74472, which is south of the church and conflicts with the narrative."
+    },
+    {
+      "id": "east-woods",
+      "name": "East Woods",
+      "type": "woods",
+      "lat": 39.4788,
+      "lng": -77.7385,
+      "description": "Woods east of the Cornfield where XII Corps advanced. Position is an estimate from the narrative, not a surveyed coordinate."
+    },
+    {
+      "id": "west-woods",
+      "name": "West Woods",
+      "type": "woods",
+      "lat": 39.479,
+      "lng": -77.7512,
+      "description": "Woods west of the Hagerstown Pike where Sedgwick's division was driven back. Position is an estimate from the narrative, not a surveyed coordinate."
+    },
+    {
+      "id": "hagerstown-pike",
+      "name": "Hagerstown Pike",
+      "type": "road",
+      "lat": 39.477,
+      "lng": -77.7466,
+      "description": "Road running north to south past the Dunker Church. Point shown is on the road between the Cornfield and the church. Position is an estimate from the narrative, not a surveyed coordinate."
+    },
+    {
+      "id": "sunken-road",
+      "name": "Sunken Road (Bloody Lane)",
+      "type": "road",
+      "lat": 39.4708,
+      "lng": -77.7398,
+      "description": "Farm lane that served as the Confederate center. About 5,500 men were killed or wounded there. Sources disagree on the coordinate (Wikipedia 39.475, -77.7444; MapQuest 39.4708, -77.7398). Position is an estimate from the narrative, not a surveyed coordinate."
+    },
+    {
+      "id": "piper-farm",
+      "name": "Piper Farm",
+      "type": "farm",
+      "lat": 39.468,
+      "lng": -77.7425,
+      "description": "Farm a few hundred yards behind the Sunken Road, where the Confederate line fell back. Position is an estimate from the narrative, not a surveyed coordinate."
+    },
+    {
+      "id": "roulette-farm",
+      "name": "Roulette Farm",
+      "type": "farm",
+      "lat": 39.4725,
+      "lng": -77.735,
+      "description": "Farm east of the Sunken Road crossed by French's division. Position is an estimate from the narrative, not a surveyed coordinate."
+    },
+    {
+      "id": "mumma-farm",
+      "name": "Mumma Farm",
+      "type": "farm",
+      "lat": 39.475,
+      "lng": -77.7412,
+      "description": "Farm on the Smoketown Road, south of the East Woods. Position is an estimate from the narrative, not a surveyed coordinate."
+    },
+    {
+      "id": "burnsides-bridge",
+      "name": "Burnside's Bridge (Rohrbach Bridge)",
+      "type": "bridge",
+      "lat": 39.45056,
+      "lng": -77.73194,
+      "description": "Stone bridge over Antietam Creek taken by Ferrero's brigade at about 12:30 PM. Coordinates from Wikipedia."
+    },
+    {
+      "id": "antietam-creek",
+      "name": "Antietam Creek",
+      "type": "creek",
+      "lat": 39.454,
+      "lng": -77.7315,
+      "description": "Creek that ran between the armies. Point shown is on the creek near the bridge. Position is an estimate from the narrative, not a surveyed coordinate."
+    },
+    {
+      "id": "sharpsburg",
+      "name": "Sharpsburg",
+      "type": "town",
+      "lat": 39.45833,
+      "lng": -77.74861,
+      "description": "Town behind the Confederate line. Coordinates from Wikipedia."
+    },
+    {
+      "id": "nicodemus-hill",
+      "name": "Nicodemus Hill",
+      "type": "hill",
+      "lat": 39.48,
+      "lng": -77.756,
+      "description": "Ridge west of the Hagerstown Pike used by Confederate artillery on the left flank. Position is an estimate from the narrative, not a surveyed coordinate."
+    },
+    {
+      "id": "cemetery-hill",
+      "name": "Cemetery Hill (Antietam National Cemetery)",
+      "type": "hill",
+      "lat": 39.45944,
+      "lng": -77.74139,
+      "description": "High ground at the edge of Sharpsburg. Coordinates are those of Antietam National Cemetery from Wikipedia."
+    },
+    {
+      "id": "snavelys-ford",
+      "name": "Snavely's Ford",
+      "type": "ford",
+      "lat": 39.441,
+      "lng": -77.74,
+      "description": "Ford on Antietam Creek downstream of the bridge crossed by Rodman's division. Position is an estimate from the narrative, not a surveyed coordinate."
+    },
+    {
+      "id": "botelers-ford",
+      "name": "Boteler's Ford",
+      "type": "ford",
+      "lat": 39.4335,
+      "lng": -77.7955,
+      "description": "Potomac River ford used by A. P. Hill's arrival and by Lee's retreat. Position is an estimate from the narrative, not a surveyed coordinate."
+    }
+  ],
+  "timeline": [
+    {
+      "id": "sep17-0530",
+      "datetime": "1862-09-17T05:30:00",
+      "label": "September 17, 5:30 AM",
+      "title": "Hooker attacks from the north",
+      "description": "Hooker's I Corps advances south toward the Dunker Church on the Hagerstown Pike. Ewell's and Jackson's divisions hold the ground around the Cornfield and West Woods. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "union-doubleday",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.485,
+          "lng": -77.747,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4815,
+            "lng": -77.7455
+          }
+        },
+        {
+          "unitId": "union-ricketts",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.485,
+          "lng": -77.741,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4805,
+            "lng": -77.7425
+          }
+        },
+        {
+          "unitId": "confederate-ewell-lawton",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.4815,
+          "lng": -77.744,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-jackson-division",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.479,
+          "lng": -77.7515,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-stuart-cavalry",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.48,
+          "lng": -77.756,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "hooker-attack",
+          "time": "1862-09-17T05:30:00",
+          "title": "Hooker's I Corps opens the battle",
+          "description": "I Corps attacks down the Hagerstown Turnpike toward the Dunker Church.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 39.479,
+            "lng": -77.744
+          },
+          "relatedUnits": [
+            "union-i-corps",
+            "union-doubleday",
+            "union-ricketts",
+            "confederate-ewell-lawton"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-0700",
+      "datetime": "1862-09-17T07:00:00",
+      "label": "September 17, 7:00 AM",
+      "title": "Hood counterattacks in the Cornfield",
+      "description": "The Cornfield fights are bloody and inconclusive and change hands many times. Hood's division counterattacks through the West Woods and holds the line at about 60 percent casualties. I Corps ends near where it began. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "confederate-hood",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.4795,
+          "lng": -77.7455,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4815,
+            "lng": -77.7435
+          }
+        },
+        {
+          "unitId": "union-i-corps",
+          "unitType": "corps",
+          "side": "union",
+          "lat": 39.484,
+          "lng": -77.744,
+          "status": "retreating"
+        },
+        {
+          "unitId": "confederate-jackson-division",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.479,
+          "lng": -77.7515,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "hood-counterattack",
+          "time": "1862-09-17T07:00:00",
+          "title": "Hood's counterattack",
+          "description": "Hood's division drives back I Corps through the Cornfield and holds the line at heavy cost.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 39.479,
+            "lng": -77.744
+          },
+          "relatedUnits": [
+            "confederate-hood",
+            "union-i-corps"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-0730",
+      "datetime": "1862-09-17T07:30:00",
+      "label": "September 17, 7:30 AM",
+      "title": "Mansfield's XII Corps goes in",
+      "description": "XII Corps advances through the East Woods toward the Cornfield and the Dunker Church. Mansfield is shot in the chest and dies the next day. Alpheus Williams takes temporary command. Sources give 7:30 to 9:00 for this phase. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "union-williams-1st-div",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.48,
+          "lng": -77.7385,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4795,
+            "lng": -77.743
+          }
+        },
+        {
+          "unitId": "union-greene",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.479,
+          "lng": -77.7365,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4765,
+            "lng": -77.743
+          }
+        },
+        {
+          "unitId": "confederate-hood",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.477,
+          "lng": -77.748,
+          "status": "retreating"
+        },
+        {
+          "unitId": "confederate-ewell-lawton",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.4815,
+          "lng": -77.745,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "mansfield-wounded",
+          "time": "1862-09-17T07:30:00",
+          "title": "Mansfield mortally wounded",
+          "description": "Mansfield is shot in the chest while XII Corps advances. Exact time is not given in the source; 7:30 is the start of the phase.",
+          "type": "casualty",
+          "importance": "major",
+          "location": {
+            "lat": 39.479,
+            "lng": -77.7395
+          },
+          "relatedUnits": [
+            "union-xii-corps"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-0900",
+      "datetime": "1862-09-17T09:00:00",
+      "label": "September 17, 9:00 AM",
+      "title": "Sedgwick in the West Woods",
+      "description": "Greene's division reaches the Dunker Church area and drives off Stephen Lee's batteries. Sedgwick's division attacks into the West Woods with Sumner. Confederate forces drive it back in under half an hour with more than 2,200 casualties. Sedgwick is wounded. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "union-greene",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.4755,
+          "lng": -77.7455,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-sedgwick",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.477,
+          "lng": -77.7435,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4795,
+            "lng": -77.75
+          }
+        },
+        {
+          "unitId": "confederate-jackson-division",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.4795,
+          "lng": -77.7515,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-mclaws",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.477,
+          "lng": -77.7525,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "sedgwick-west-woods",
+          "time": "1862-09-17T09:00:00",
+          "title": "Sedgwick's division in the West Woods",
+          "description": "Sedgwick's division is driven back with over 2,200 casualties.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 39.479,
+            "lng": -77.751
+          },
+          "relatedUnits": [
+            "union-sedgwick",
+            "union-ii-corps",
+            "confederate-jackson-division"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-0930",
+      "datetime": "1862-09-17T09:30:00",
+      "label": "September 17, 9:30 AM",
+      "title": "French attacks the Sunken Road",
+      "description": "French's division assaults D. H. Hill's division in the Sunken Road, later called Bloody Lane. French loses about 1,750 of 5,700 men in under an hour. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "union-french",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.472,
+          "lng": -77.732,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.471,
+            "lng": -77.7385
+          }
+        },
+        {
+          "unitId": "confederate-d-h-hill",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.4705,
+          "lng": -77.74,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "french-sunken-road",
+          "time": "1862-09-17T09:30:00",
+          "title": "French's assaults begin",
+          "description": "French's brigades attack the Sunken Road in successive waves. The fighting lasts to about 1:00 PM and causes about 5,600 casualties.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 39.4708,
+            "lng": -77.7398
+          },
+          "relatedUnits": [
+            "union-french",
+            "confederate-d-h-hill"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-1000",
+      "datetime": "1862-09-17T10:00:00",
+      "label": "September 17, 10:00 AM",
+      "title": "Dunker Church held; Burnside ordered forward",
+      "description": "Manning's Confederate brigade attacks Greene near the Dunker Church and is repulsed. Burnside receives his orders to take the bridge. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "confederate-manning-walker-brigade",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 39.473,
+          "lng": -77.749,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4752,
+            "lng": -77.7462
+          }
+        },
+        {
+          "unitId": "union-greene",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.4755,
+          "lng": -77.7455,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-ix-corps",
+          "unitType": "corps",
+          "side": "union",
+          "lat": 39.452,
+          "lng": -77.727,
+          "status": "reserve"
+        }
+      ],
+      "events": [
+        {
+          "id": "manning-repulsed",
+          "time": "1862-09-17T10:00:00",
+          "title": "Manning repulsed at the church",
+          "description": "Manning's brigade attacks Greene near the Dunker Church and is repulsed.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 39.47536,
+            "lng": -77.74678
+          },
+          "relatedUnits": [
+            "confederate-manning-walker-brigade",
+            "union-greene"
+          ]
+        },
+        {
+          "id": "burnside-ordered",
+          "time": "1862-09-17T10:00:00",
+          "title": "Burnside receives orders",
+          "description": "Burnside is ordered to attack at the bridge.",
+          "type": "command",
+          "importance": "major",
+          "relatedUnits": [
+            "union-ix-corps"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-1030",
+      "datetime": "1862-09-17T10:30:00",
+      "label": "September 17, 10:30 AM",
+      "title": "Richardson reaches French's left",
+      "description": "Richardson's division of about 4,000 men reaches French's left and joins the Sunken Road fight. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "union-richardson",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.47,
+          "lng": -77.7335,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4705,
+            "lng": -77.7385
+          }
+        },
+        {
+          "unitId": "union-french",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.4712,
+          "lng": -77.738,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-d-h-hill",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.4705,
+          "lng": -77.7405,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "richardson-arrives",
+          "time": "1862-09-17T10:30:00",
+          "title": "Richardson arrives",
+          "description": "Richardson's division reaches the left of French's line.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 39.4708,
+            "lng": -77.7398
+          },
+          "relatedUnits": [
+            "union-richardson"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-1200",
+      "datetime": "1862-09-17T12:00:00",
+      "label": "September 17, 12:00 PM",
+      "title": "The Sunken Road breaks",
+      "description": "Caldwell's brigade is committed and the Sunken Road line collapses. Richardson is mortally wounded. D. H. Hill's men fall back toward the Piper Farm. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "union-richardson",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.4708,
+          "lng": -77.7392,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.469,
+            "lng": -77.7415
+          }
+        },
+        {
+          "unitId": "union-caldwell",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 39.4706,
+          "lng": -77.7385,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4695,
+            "lng": -77.741
+          }
+        },
+        {
+          "unitId": "confederate-d-h-hill",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.468,
+          "lng": -77.7425,
+          "status": "retreating"
+        }
+      ],
+      "events": [
+        {
+          "id": "sunken-road-collapse",
+          "time": "1862-09-17T12:00:00",
+          "title": "Confederate center collapses",
+          "description": "The Sunken Road line breaks at about noon. Richardson is mortally wounded. The time is approximate ('about noon' in the source).",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 39.4708,
+            "lng": -77.7398
+          },
+          "relatedUnits": [
+            "union-caldwell",
+            "union-richardson",
+            "confederate-d-h-hill"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-1230",
+      "datetime": "1862-09-17T12:30:00",
+      "label": "September 17, 12:30 PM",
+      "title": "Burnside's Bridge taken",
+      "description": "After earlier failed attempts, Ferrero's brigade (51st New York and 51st Pennsylvania) takes the stone bridge. Toombs's Georgians hold the high ground above it. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "union-ferrero",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 39.451,
+          "lng": -77.73,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4502,
+            "lng": -77.7335
+          }
+        },
+        {
+          "unitId": "union-crook",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 39.452,
+          "lng": -77.729,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.451,
+            "lng": -77.7315
+          }
+        },
+        {
+          "unitId": "confederate-toombs",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 39.4495,
+          "lng": -77.7365,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "bridge-taken",
+          "time": "1862-09-17T12:30:00",
+          "title": "Ferrero's brigade takes the bridge",
+          "description": "Ferrero's brigade carries Burnside's Bridge (also called the Rohrbach Bridge).",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 39.45056,
+            "lng": -77.73194
+          },
+          "relatedUnits": [
+            "union-ferrero",
+            "confederate-toombs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-1300",
+      "datetime": "1862-09-17T13:00:00",
+      "label": "September 17, 1:00 PM",
+      "title": "Toombs withdraws",
+      "description": "The Sunken Road fight ends. Toombs's Confederates withdraw after word that Union troops are crossing Snavely's Ford. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "union-rodman",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.4425,
+          "lng": -77.739,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.447,
+            "lng": -77.741
+          }
+        },
+        {
+          "unitId": "union-ferrero",
+          "unitType": "brigade",
+          "side": "union",
+          "lat": 39.45,
+          "lng": -77.7345,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-toombs",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 39.451,
+          "lng": -77.7385,
+          "status": "retreating"
+        },
+        {
+          "unitId": "union-french",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.4712,
+          "lng": -77.738,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "toombs-withdraws",
+          "time": "1862-09-17T13:00:00",
+          "title": "Toombs withdraws",
+          "description": "Toombs's men leave the heights above the bridge after word of the Snavely's Ford crossing.",
+          "type": "movement",
+          "importance": "major",
+          "location": {
+            "lat": 39.449,
+            "lng": -77.737
+          },
+          "relatedUnits": [
+            "confederate-toombs",
+            "union-rodman"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-1430",
+      "datetime": "1862-09-17T14:30:00",
+      "label": "September 17, 2:30 PM",
+      "title": "A. P. Hill reaches the field",
+      "description": "A. P. Hill's men reach Boteler's Ford after a march from Harpers Ferry. Lee meets Hill at 2:30 PM. Sources give 2:00 to 2:30 PM for the arrival at the ford. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "confederate-a-p-hill",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.4335,
+          "lng": -77.7955,
+          "status": "arriving",
+          "movementTo": {
+            "lat": 39.4535,
+            "lng": -77.748
+          }
+        },
+        {
+          "unitId": "union-ix-corps",
+          "unitType": "corps",
+          "side": "union",
+          "lat": 39.45,
+          "lng": -77.7335,
+          "status": "reserve"
+        }
+      ],
+      "events": [
+        {
+          "id": "hill-at-ford",
+          "time": "1862-09-17T14:30:00",
+          "title": "Lee meets A. P. Hill",
+          "description": "Lee meets Hill as the division arrives from Harpers Ferry.",
+          "type": "command",
+          "importance": "major",
+          "location": {
+            "lat": 39.4335,
+            "lng": -77.7955
+          },
+          "relatedUnits": [
+            "confederate-a-p-hill"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-1500",
+      "datetime": "1862-09-17T15:00:00",
+      "label": "September 17, 3:00 PM",
+      "title": "Burnside advances on Sharpsburg",
+      "description": "Burnside advances with more than 8,000 troops and 22 guns and initially pushes D. R. Jones's division back toward Sharpsburg. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "union-ix-corps",
+          "unitType": "corps",
+          "side": "union",
+          "lat": 39.4505,
+          "lng": -77.737,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.455,
+            "lng": -77.7435
+          }
+        },
+        {
+          "unitId": "confederate-d-r-jones",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.456,
+          "lng": -77.7455,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "burnside-advance",
+          "time": "1862-09-17T15:00:00",
+          "title": "IX Corps attacks",
+          "description": "IX Corps advances toward Sharpsburg and pushes Jones's division back.",
+          "type": "combat",
+          "importance": "major",
+          "location": {
+            "lat": 39.4535,
+            "lng": -77.741
+          },
+          "relatedUnits": [
+            "union-ix-corps",
+            "confederate-d-r-jones"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-1530",
+      "datetime": "1862-09-17T15:30:00",
+      "label": "September 17, 3:30 PM",
+      "title": "A. P. Hill saves the right",
+      "description": "A. P. Hill's division arrives on the field. At 3:40 PM Gregg's South Carolina brigade hits Rodman's flank in the Otto cornfield. IX Corps falls back to the west bank of the creek. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "confederate-a-p-hill",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.452,
+          "lng": -77.7475,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.4505,
+            "lng": -77.741
+          }
+        },
+        {
+          "unitId": "confederate-gregg",
+          "unitType": "brigade",
+          "side": "confederate",
+          "lat": 39.451,
+          "lng": -77.744,
+          "status": "advancing",
+          "movementTo": {
+            "lat": 39.449,
+            "lng": -77.74
+          }
+        },
+        {
+          "unitId": "union-rodman",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.449,
+          "lng": -77.739,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 39.4495,
+            "lng": -77.7345
+          }
+        },
+        {
+          "unitId": "union-ix-corps",
+          "unitType": "corps",
+          "side": "union",
+          "lat": 39.452,
+          "lng": -77.739,
+          "status": "retreating",
+          "movementTo": {
+            "lat": 39.4505,
+            "lng": -77.734
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "hill-arrives",
+          "time": "1862-09-17T15:30:00",
+          "title": "A. P. Hill's division arrives",
+          "description": "The division reaches the field from Harpers Ferry.",
+          "type": "movement",
+          "importance": "critical",
+          "location": {
+            "lat": 39.452,
+            "lng": -77.7475
+          },
+          "relatedUnits": [
+            "confederate-a-p-hill"
+          ]
+        },
+        {
+          "id": "gregg-rodman",
+          "time": "1862-09-17T15:40:00",
+          "title": "Gregg strikes Rodman's flank",
+          "description": "Gregg's brigade hits Rodman's flank in the Otto cornfield. IX Corps falls back.",
+          "type": "combat",
+          "importance": "critical",
+          "location": {
+            "lat": 39.4495,
+            "lng": -77.74
+          },
+          "relatedUnits": [
+            "confederate-gregg",
+            "union-rodman"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sep17-1730",
+      "datetime": "1862-09-17T17:30:00",
+      "label": "September 17, 5:30 PM",
+      "title": "The battle ends",
+      "description": "The battle is over. The Union holds the area of the Sunken Road, the East Woods and the bridge. The Confederates keep the West Woods, the Dunker Church area and the ridge at Sharpsburg. Unit positions on the map are unverified estimates from the narrative.",
+      "positions": [
+        {
+          "unitId": "union-ix-corps",
+          "unitType": "corps",
+          "side": "union",
+          "lat": 39.4502,
+          "lng": -77.7335,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-a-p-hill",
+          "unitType": "division",
+          "side": "confederate",
+          "lat": 39.4515,
+          "lng": -77.745,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-french",
+          "unitType": "division",
+          "side": "union",
+          "lat": 39.4712,
+          "lng": -77.738,
+          "status": "defending"
+        },
+        {
+          "unitId": "union-xii-corps",
+          "unitType": "corps",
+          "side": "union",
+          "lat": 39.479,
+          "lng": -77.7395,
+          "status": "defending"
+        },
+        {
+          "unitId": "confederate-jackson-wing",
+          "unitType": "corps",
+          "side": "confederate",
+          "lat": 39.477,
+          "lng": -77.7495,
+          "status": "defending"
+        }
+      ],
+      "events": [
+        {
+          "id": "battle-ends",
+          "time": "1862-09-17T17:30:00",
+          "title": "End of the fighting",
+          "description": "The fighting ends with both armies on the field.",
+          "type": "command",
+          "importance": "major"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Battle_of_Antietam",
+    "https://en.wikipedia.org/wiki/Battle_of_Antietam_order_of_battle:_Union",
+    "https://en.wikipedia.org/wiki/Battle_of_Antietam_order_of_battle:_Confederate",
+    "https://www.battlefields.org/learn/civil-war/battles/antietam",
+    "https://www.nps.gov/places/sunken-road.htm",
+    "https://en.wikipedia.org/wiki/Dunker_Church",
+    "https://en.wikipedia.org/wiki/Bloody_Lane",
+    "https://en.wikipedia.org/wiki/Burnside%27s_Bridge",
+    "https://en.wikipedia.org/wiki/Miller%27s_Cornfield",
+    "https://en.wikipedia.org/wiki/Sharpsburg,_Maryland",
+    "https://en.wikipedia.org/wiki/Antietam_National_Cemetery",
+    "https://en.wikipedia.org/wiki/Antietam_National_Battlefield"
+  ],
+  "review": "unreviewed"
+}
