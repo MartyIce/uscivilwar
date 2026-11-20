@@ -2,8 +2,8 @@
  "id": "morgan",
  "commander": "Daniel Morgan",
  "name": "Morgan's light corps (Southern Army detachment)",
- "troop_strength": 1900,
- "troop_source": "https://en.wikipedia.org/wiki/Battle_of_Cowpens : \"closer to 1,900\" (Babits estimate; Morgan's own report said about 800). Same article: \"He had 600 men\" when he headed west Dec 21 1780.",
+ "troop_strength": 1000,
+ "troop_source": "Cowpens article: Morgan reported about 800; other estimates up to ~1,900 (contested); 1,000 used.",
  "rows": [
   {
    "date": "1775-07-14",
@@ -108,15 +108,6 @@
    "source": "https://en.wikipedia.org/wiki/Battle_of_Cowpens",
    "quote": "Morgan decided to stand and fight rather than continue to retreat",
    "note": "Quote is from the Cowpens article about the night of Jan 16 at Hannah's Cowpens; battle date Jan 17 from same article."
-  },
-  {
-   "date": "1781-02-10",
-   "kind": "pl",
-   "ref": "Winchester, Virginia",
-   "label": "Returns to his Virginia farm (leaves the army)",
-   "source": "https://en.wikipedia.org/wiki/Daniel_Morgan",
-   "quote": "on February 10, he returned to his Virginia farm",
-   "note": "Farm was in Frederick County near Winchester. Article does not describe the retreat to the Catawba, so no rows for it."
   }
  ]
 }

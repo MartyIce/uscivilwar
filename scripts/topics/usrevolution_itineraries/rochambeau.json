@@ -2,26 +2,26 @@
  "id": "rochambeau",
  "commander": "Comte de Rochambeau",
  "name": "French Expeditionary Army (Expédition Particulière)",
- "troop_strength": 7800,
- "troop_source": "https://en.wikipedia.org/wiki/Siege_of_Yorktown : \"army of 7,800 Frenchmen, 3,100 militia, and 8,000 Continentals\" (Yorktown, late Sept 1781; includes troops from de Grasse's fleet). At Newport: https://en.wikipedia.org/wiki/Newport,_Rhode_Island : \"an army of 450 officers and 5,300 men\" (July 1780); https://en.wikipedia.org/wiki/Exp%C3%A9dition_Particuli%C3%A8re : \"it numbered up to 5,500 troops\".",
+ "troop_strength": 5500,
+ "troop_source": "Rochambeau own army about 5,300-5,500 (Newport); the 7,800 at Yorktown includes de Grasse troops.",
  "rows": [
   {
-   "date": "1780-07-10",
+   "date": "1780-07-11",
    "kind": "pl",
    "ref": "Newport, Rhode Island",
    "label": "Newport (lands with the army)",
    "source": "https://en.wikipedia.org/wiki/Jean-Baptiste_Donatien_de_Vimeur,_comte_de_Rochambeau",
    "quote": "He landed at Newport, Rhode Island, on 10 July",
-   "note": "Other sources (Expédition Particulière article, NPS timeline) give July 11 for the fleet's arrival; July 10 per the Rochambeau and Newport articles."
+   "note": "Other sources (Expédition Particulière article, NPS timeline) give July 11 for the fleet's arrival; July 10 per the Rochambeau and Newport articles. Corrected after independent check: NPS and other sources give July 11 for the landing."
   },
   {
-   "date": "1781-05-23",
+   "date": "1781-05-22",
    "kind": "pl",
    "ref": "Wethersfield, Connecticut",
    "label": "Wethersfield conference with Washington",
    "source": "https://en.wikipedia.org/wiki/Yorktown_campaign",
    "quote": "On May 23 and 24, Washington and Rochambeau held a conference at Wethersfield",
-   "note": "Joseph Webb House article calls it a five-day conference; Yorktown campaign article dates it May 23-24."
+   "note": "Joseph Webb House article calls it a five-day conference; Yorktown campaign article dates it May 23-24. Corrected after independent check: Founders Online / HMDB: conference May 22-23."
   },
   {
    "date": "1781-06-10",

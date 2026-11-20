@@ -615,14 +615,6 @@
     "location_name": "Saint-Jean (rear guard of the retreat)"
    },
    {
-    "date": "1776-09-30",
-    "coordinates": {
-     "lat": 44.6217,
-     "lng": -73.4172
-    },
-    "location_name": "Valcour Island (takes up position)"
-   },
-   {
     "date": "1776-10-11",
     "coordinates": {
      "lat": 44.61056,
@@ -777,13 +769,13 @@
    {
     "date": "1776-06-01",
     "coordinates": {
-     "lat": 46.3431,
-     "lng": -72.5433
+     "lat": 46.8139,
+     "lng": -71.2081
     },
-    "location_name": "Trois-Rivières (arrives with reinforcements)"
+    "location_name": "Quebec (arrives with reinforcements)"
    },
    {
-    "date": "1776-06-17",
+    "date": "1776-06-18",
     "coordinates": {
      "lat": 45.3167,
      "lng": -73.2667
@@ -952,7 +944,7 @@
     "location_name": "Off Charleston harbor"
    },
    {
-    "date": "1776-06-08",
+    "date": "1776-06-09",
     "coordinates": {
      "lat": 32.8078,
      "lng": -79.745
@@ -1064,10 +1056,10 @@
    {
     "date": "1779-06-30",
     "coordinates": {
-     "lat": 41.0885,
-     "lng": -73.8636
+     "lat": 40.9356,
+     "lng": -73.8997
     },
-    "location_name": "Philipsburg Manor (headquarters)"
+    "location_name": "Philipse Manor Hall (headquarters)"
    },
    {
     "date": "1779-12-26",
@@ -1127,10 +1119,10 @@
    {
     "date": "1777-08-19",
     "coordinates": {
-     "lat": 42.9667,
-     "lng": -73.6833
+     "lat": 42.7792,
+     "lng": -73.7128
     },
-    "location_name": "Stillwater (assumes command of Northern Department army)"
+    "location_name": "Van Schaick Island (army camp at the mouth of the Mohawk)"
    },
    {
     "date": "1777-09-19",
@@ -1337,7 +1329,7 @@
     "location_name": "Guilford Court House (rendezvous)"
    },
    {
-    "date": "1781-02-14",
+    "date": "1781-02-13",
     "coordinates": {
      "lat": 36.7078,
      "lng": -78.9033
@@ -1359,14 +1351,6 @@
      "lng": -79.4889
     },
     "location_name": "Alamance Creek camp"
-   },
-   {
-    "date": "1781-03-12",
-    "coordinates": {
-     "lat": 36.1314,
-     "lng": -79.8464
-    },
-    "location_name": "Marches to Guilford Court House"
    },
    {
     "date": "1781-03-15",
@@ -1441,19 +1425,11 @@
    {
     "date": "1782-12-14",
     "coordinates": {
-     "lat": 32.8998,
-     "lng": -80.1365
-    },
-    "location_name": "Camp at Middleton Place (west of Ashley River)",
-    "gap_before": true
-   },
-   {
-    "date": "1782-12-14",
-    "coordinates": {
      "lat": 32.8139,
      "lng": -79.9319
     },
-    "location_name": "Charleston (British evacuate)"
+    "location_name": "Charleston (British evacuate)",
+    "gap_before": true
    }
   ]
  },
@@ -1615,14 +1591,6 @@
     "event_id": 20
    },
    {
-    "date": "1777-10-19",
-    "coordinates": {
-     "lat": 39.9528,
-     "lng": -75.1636
-    },
-    "location_name": "Philadelphia (army pulls back from Germantown)"
-   },
-   {
     "date": "1778-05-24",
     "coordinates": {
      "lat": 39.9528,
@@ -1639,7 +1607,7 @@
   "side": "union",
   "color": "#0d9488",
   "troop_strength": 4500,
-  "active_until": "1782-01-17",
+  "active_until": "1782-01-22",
   "waypoints": [
    {
     "date": "1777-06-13",
@@ -1668,7 +1636,7 @@
     "event_id": 18
    },
    {
-    "date": "1777-11-24",
+    "date": "1777-11-25",
     "coordinates": {
      "lat": 39.8917,
      "lng": -75.1167
@@ -1785,7 +1753,7 @@
     "event_id": 34
    },
    {
-    "date": "1781-12-18",
+    "date": "1781-12-23",
     "coordinates": {
      "lat": 42.3603,
      "lng": -71.0578
@@ -1800,8 +1768,8 @@
   "name": "Morgan's light corps (Southern Army detachment)",
   "side": "union",
   "color": "#65a30d",
-  "troop_strength": 1900,
-  "active_until": "1781-03-12",
+  "troop_strength": 1000,
+  "active_until": "1781-02-16",
   "waypoints": [
    {
     "date": "1775-07-14",
@@ -1909,14 +1877,6 @@
     "location_name": "Battle of Cowpens",
     "is_battle": true,
     "event_id": 29
-   },
-   {
-    "date": "1781-02-10",
-    "coordinates": {
-     "lat": 39.1833,
-     "lng": -78.1667
-    },
-    "location_name": "Returns to his Virginia farm (leaves the army)"
    }
   ]
  },
@@ -1926,11 +1886,11 @@
   "name": "French Expeditionary Army (Expédition Particulière)",
   "side": "union",
   "color": "#059669",
-  "troop_strength": 7800,
+  "troop_strength": 5500,
   "active_until": "1783-01-06",
   "waypoints": [
    {
-    "date": "1780-07-10",
+    "date": "1780-07-11",
     "coordinates": {
      "lat": 41.4917,
      "lng": -71.3119
@@ -1938,7 +1898,7 @@
     "location_name": "Newport (lands with the army)"
    },
    {
-    "date": "1781-05-23",
+    "date": "1781-05-22",
     "coordinates": {
      "lat": 41.7142,
      "lng": -72.6525
@@ -2130,7 +2090,7 @@
      "lat": 35.4283,
      "lng": -80.9519
     },
-    "location_name": "Cowan's Ford / Torrence's Tavern (crosses the Catawba)"
+    "location_name": "Cowan's Ford area (Torrence's Tavern skirmish)"
    },
    {
     "date": "1781-03-15",
@@ -2151,7 +2111,7 @@
     "location_name": "Charlottesville raid (to capture Jefferson and Assembly)"
    },
    {
-    "date": "1781-10-04",
+    "date": "1781-10-03",
     "coordinates": {
      "lat": 37.27,
      "lng": -76.4986

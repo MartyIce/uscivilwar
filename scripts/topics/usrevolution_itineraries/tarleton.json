@@ -86,10 +86,10 @@
    "date": "1781-02-01",
    "kind": "pl",
    "ref": "Battle of Cowan's Ford",
-   "label": "Cowan's Ford / Torrence's Tavern (crosses the Catawba)",
+   "label": "Cowan's Ford area (Torrence's Tavern skirmish)",
    "source": "https://en.wikipedia.org/wiki/Banastre_Tarleton",
    "quote": "successful in a skirmish at Torrence's Tavern",
-   "note": "Date given in the parenthetical 'Cowan's Ford Skirmish, 1 February 1781'. The skirmish at Torrence's Tavern was a separate action from the main crossing; Tarleton is placed in the area, not at the ford itself."
+   "note": "Date given in the parenthetical 'Cowan's Ford Skirmish, 1 February 1781'. The skirmish at Torrence's Tavern was a separate action from the main crossing; Tarleton is placed in the area, not at the ford itself. Corrected after independent check: Source places Tarleton at Torrence Tavern, not at the ford itself."
   },
   {
    "date": "1781-03-15",
@@ -110,13 +110,13 @@
    "note": "Article says Tarleton left Cornwallis's camp June 3 and arrived around dawn; June 4 date from the Charlottesville, Virginia article (Jouett's warning on June 4, 1781). Castle Hill is near Charlottesville."
   },
   {
-   "date": "1781-10-04",
+   "date": "1781-10-03",
    "kind": "pl",
    "ref": "Gloucester Point, Virginia",
    "label": "Gloucester Point (skirmish with Lauzun's Legion)",
    "source": "https://en.wikipedia.org/wiki/Banastre_Tarleton",
    "quote": "skirmished at Gloucester Point. Tarleton was unhorsed",
-   "note": "Cornwallis instructed him to hold Gloucester Point during the siege of Yorktown."
+   "note": "Cornwallis instructed him to hold Gloucester Point during the siege of Yorktown. Corrected after independent check: NPS Yorktown timeline: Oct 3 allied forces defeat Tarleton at Gloucester."
   },
   {
    "date": "1781-10-19",

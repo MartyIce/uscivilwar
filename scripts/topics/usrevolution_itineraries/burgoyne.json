@@ -8,20 +8,20 @@
   {
    "date": "1776-06-01",
    "kind": "pl",
-   "ref": "Trois-Rivières",
-   "label": "Trois-Rivières (arrives with reinforcements)",
+   "ref": "Quebec City",
+   "label": "Quebec (arrives with reinforcements)",
    "source": "https://en.wikipedia.org/wiki/Invasion_of_Canada_(1775)",
    "quote": "Lieutenant General John Burgoyne, who had arrived on June 1",
-   "note": "Source places the meeting with Carleton at Trois-Rivières; Battle of Trois-Rivières article says Burgoyne was in Carleton's command by June 2."
+   "note": "Source places the meeting with Carleton at Trois-Rivières; Battle of Trois-Rivières article says Burgoyne was in Carleton's command by June 2. Corrected after independent check: Carleton met Burgoyne at Quebec City, not Trois-Rivieres (Invasion of Canada 1775)."
   },
   {
-   "date": "1776-06-17",
+   "date": "1776-06-18",
    "kind": "pl",
    "ref": "Saint-Jean-sur-Richelieu",
    "label": "St. Jean (pursuit of the Americans)",
    "source": "https://en.wikipedia.org/wiki/Invasion_of_Canada_(1775)",
    "quote": "the vanguard of Burgoyne's army arrived on the scene",
-   "note": "Source states his army's vanguard arrived; Carleton had directed Burgoyne and 4,000 troops up the Richelieu on June 14. Less sure he was personally with the vanguard."
+   "note": "Source states his army's vanguard arrived; Carleton had directed Burgoyne and 4,000 troops up the Richelieu on June 14. Less sure he was personally with the vanguard. Corrected after independent check: 1776 in Canada: June 18, Burgoyne finds St. Johns evacuated."
   },
   {
    "date": "1777-05-06",

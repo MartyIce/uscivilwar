@@ -124,13 +124,13 @@
    "quote": "Greene reached Guilford Courthouse on February 7."
   },
   {
-   "date": "1781-02-14",
+   "date": "1781-02-13",
    "kind": "pl",
    "ref": "South Boston, Virginia",
    "label": "Crosses the Dan River",
    "source": "https://en.wikipedia.org/wiki/Nathanael_Greene",
    "quote": "Greene's force outpaced the British and crossed the Dan River on February 14",
-   "note": "Crossed at Irwin's/Boyd's Ferries near South Boston. Some accounts give Feb 13 for Greene himself and Feb 14 for Williams' rear guard."
+   "note": "Crossed at Irwin's/Boyd's Ferries near South Boston. Some accounts give Feb 13 for Greene himself and Feb 14 for Williams' rear guard. Corrected after independent check: Greene himself crossed the Dan on Feb 13; his rear guard crossed on the 14th (Emerging Revolutionary War)."
   },
   {
    "date": "1781-02-22",
@@ -149,15 +149,6 @@
    "source": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House",
    "quote": "Greene camped on the north side of the creek",
    "note": "Approximate location of Alamance Creek camp."
-  },
-  {
-   "date": "1781-03-12",
-   "kind": "pl",
-   "ref": "Guilford Courthouse National Military Park",
-   "label": "Marches to Guilford Court House",
-   "source": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House",
-   "quote": "On 12 March Greene marched his army of about 4,440",
-   "note": "Wikipedia gives 4,440 here and 4,500 in the lead."
   },
   {
    "date": "1781-03-15",
@@ -225,15 +216,6 @@
    "source": "https://en.wikipedia.org/wiki/Battle_of_Eutaw_Springs",
    "quote": "Greene's army began marching from Burdell's Plantation",
    "note": "Greene's force about 2,200 per Wikipedia."
-  },
-  {
-   "date": "1782-12-14",
-   "kind": "pl",
-   "ref": "Middleton Place",
-   "label": "Camp at Middleton Place (west of Ashley River)",
-   "source": "https://www.ccpl.org/charleston-time-machine/charlestons-victory-day-part-2",
-   "quote": "Greene's army was camped at Middleton Place, on the west side",
-   "note": "Quote is a paraphrase by the fetch tool of the CCPL page; verify wording."
   },
   {
    "date": "1782-12-14",

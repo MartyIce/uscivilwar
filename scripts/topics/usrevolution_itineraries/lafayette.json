@@ -33,13 +33,13 @@
    "note": "Joined Sullivan's division, rallied Conway's brigade, shot in the leg."
   },
   {
-   "date": "1777-11-24",
+   "date": "1777-11-25",
    "kind": "pl",
    "ref": "Gloucester City, New Jersey",
    "label": "Skirmish at Gloucester, NJ",
    "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
    "quote": "defeated a numerically superior Hessian force in Gloucester, on November 24, 1777",
-   "note": "Led 300 soldiers; article says only 'Gloucester', taken as Gloucester City NJ (Delaware River, opposite Philadelphia)."
+   "note": "Led 300 soldiers; article says only 'Gloucester', taken as Gloucester City NJ (Delaware River, opposite Philadelphia). Corrected after independent check: Battle of Gloucester skirmish was Nov 25."
   },
   {
    "date": "1778-05-18",
@@ -158,12 +158,13 @@
    "note": "Sources disagree on the redoubt: the Siege of Yorktown article says a French column took No. 9 and Hamilton took No. 10. Row marks Lafayette's presence in the siege lines only."
   },
   {
-   "date": "1781-12-18",
+   "date": "1781-12-23",
    "kind": "pl",
    "ref": "Boston",
    "label": "Boston (sails for France)",
    "source": "https://en.wikipedia.org/wiki/Marquis_de_Lafayette",
-   "quote": "Lafayette left Boston for France on December 18, 1781"
+   "quote": "Lafayette left Boston for France on December 18, 1781",
+   "note": "Corrected after independent check: Lafayette letter dated off Boston 21-23 Dec; sailed about Dec 23."
   }
  ]
 }
