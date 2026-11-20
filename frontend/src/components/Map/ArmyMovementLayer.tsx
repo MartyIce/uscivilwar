@@ -42,8 +42,10 @@ export default function ArmyMovementLayer({
   showTroopStrength = false,
 }: ArmyMovementLayerProps) {
   // Filter movements to only show selected commanders
-  const visibleMovements = movements.filter((m) =>
-    selectedCommanders.includes(m.commander)
+  const visibleMovements = movements.filter(
+    (m) =>
+      selectedCommanders.includes(m.commander) &&
+      (!m.active_until || currentDate <= m.active_until)
   );
 
   return (

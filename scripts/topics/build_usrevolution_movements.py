@@ -10,7 +10,7 @@ route bends (river crossings, winter quarters, ...). Dates come from the sources
 Output: frontend/src/topics/usrevolution/movements.json
 Run:    python3 scripts/topics/build_usrevolution_movements.py
 """
-import json, time, urllib.error, urllib.parse, urllib.request
+import datetime, json, time, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -102,6 +102,30 @@ COMMANDERS = [
 ]
 
 
+# Itineraries researched from sources live in usrevolution_itineraries/<id>.json (one file per commander,
+# each row carrying its source URL and a short quote). They are added after the inline ones above.
+ITINERARY_DIR = Path(__file__).resolve().parent / "usrevolution_itineraries"
+EXTRA_STYLE = {  # id -> (placeholder side key, map colour)
+    "greene": ("union", "#0891b2"),
+    "howe": ("confederate", "#ef4444"),
+    "clinton": ("confederate", "#f97316"),
+    "burgoyne": ("confederate", "#be123c"),
+}
+
+
+def load_extra_commanders():
+    out = []
+    for f in sorted(ITINERARY_DIR.glob("*.json")):
+        d = json.loads(f.read_text())
+        side, color = EXTRA_STYLE[d["id"]]
+        out.append({
+            "id": d["id"], "commander": d["commander"], "name": d["name"], "side": side, "color": color,
+            "troop_strength": d["troop_strength"],
+            "itinerary": [(r["date"], r["kind"], r["ref"], r["label"]) for r in d["rows"]],
+        })
+    return out
+
+
 def get_json(url):
     for attempt in range(8):
         try:
@@ -137,6 +161,7 @@ def wiki_coordinates(titles):
 
 def main():
     events = {e["id"]: e for e in json.load(open(EVENTS))}
+    COMMANDERS.extend(load_extra_commanders())
     titles = {r[2] for c in COMMANDERS for r in c["itinerary"] if r[1] == "pl"}
     coords = wiki_coordinates(titles)
     missing = titles - set(coords)
@@ -157,7 +182,9 @@ def main():
                 })
             else:
                 waypoints.append({"date": date, "coordinates": coords[ref], "location_name": label})
-        out.append({k: v for k, v in c.items() if k != "itinerary"} | {"waypoints": waypoints})
+        # The marker stays 30 days after the last sourced waypoint, then disappears
+        last_dt = datetime.date.fromisoformat(waypoints[-1]["date"]) + datetime.timedelta(days=30)
+        out.append({k: v for k, v in c.items() if k != "itinerary"} | {"active_until": last_dt.isoformat(), "waypoints": waypoints})
         print(f"{c['commander']}: {len(waypoints)} waypoints, {waypoints[0]['date']} to {waypoints[-1]['date']}")
 
     OUT.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")

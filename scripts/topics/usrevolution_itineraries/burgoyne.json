@@ -1,0 +1,149 @@
+{
+ "id": "burgoyne",
+ "commander": "John Burgoyne",
+ "name": "Army from Canada (Burgoyne's Northern Army)",
+ "troop_strength": 8000,
+ "troop_source": "https://en.wikipedia.org/wiki/Saratoga_campaign - \"Commanding a main force of some 8,000 men, he moved south in June from Quebec\"",
+ "rows": [
+  {
+   "date": "1776-06-01",
+   "kind": "pl",
+   "ref": "Trois-Rivières",
+   "label": "Trois-Rivières (arrives with reinforcements)",
+   "source": "https://en.wikipedia.org/wiki/Invasion_of_Canada_(1775)",
+   "quote": "Lieutenant General John Burgoyne, who had arrived on June 1",
+   "note": "Source places the meeting with Carleton at Trois-Rivières; Battle of Trois-Rivières article says Burgoyne was in Carleton's command by June 2."
+  },
+  {
+   "date": "1776-06-17",
+   "kind": "pl",
+   "ref": "Saint-Jean-sur-Richelieu",
+   "label": "St. Jean (pursuit of the Americans)",
+   "source": "https://en.wikipedia.org/wiki/Invasion_of_Canada_(1775)",
+   "quote": "the vanguard of Burgoyne's army arrived on the scene",
+   "note": "Source states his army's vanguard arrived; Carleton had directed Burgoyne and 4,000 troops up the Richelieu on June 14. Less sure he was personally with the vanguard."
+  },
+  {
+   "date": "1777-05-06",
+   "kind": "pl",
+   "ref": "Quebec City",
+   "label": "Quebec (returns with the invasion plan)",
+   "source": "https://en.wikipedia.org/wiki/Saratoga_campaign",
+   "quote": "Burgoyne returned to Quebec on May 6, 1777"
+  },
+  {
+   "date": "1777-06-13",
+   "kind": "pl",
+   "ref": "Saint-Jean-sur-Richelieu",
+   "label": "St. Johns (takes command)",
+   "source": "https://en.wikipedia.org/wiki/Saratoga_campaign",
+   "quote": "Burgoyne and Carleton reviewed the assembled forces at St. John's",
+   "note": "Army moved off the next day (June 14) onto Lake Champlain."
+  },
+  {
+   "date": "1777-06-30",
+   "kind": "pl",
+   "ref": "Crown Point, New York",
+   "label": "Crown Point (Lake Champlain)",
+   "source": "https://en.wikipedia.org/wiki/Saratoga_campaign",
+   "quote": "occupied the undefended Fort Crown Point by June 30",
+   "note": "Source gives the army, not Burgoyne by name; 'by June 30' is a latest date."
+  },
+  {
+   "date": "1777-07-06",
+   "kind": "pl",
+   "ref": "Fort Ticonderoga",
+   "label": "Ticonderoga taken",
+   "source": "https://en.wikipedia.org/wiki/Saratoga_campaign",
+   "quote": "Burgoyne's men occupied the main fortification and the positions on Mount Independence",
+   "note": "Date July 6 is the occupation of the fort by his men; Burgoyne's personal arrival that day is assumed."
+  },
+  {
+   "date": "1777-07-10",
+   "kind": "pl",
+   "ref": "Whitehall, New York",
+   "label": "Skenesboro (Whitehall)",
+   "source": "https://en.wikipedia.org/wiki/Saratoga_campaign",
+   "quote": "Burgoyne settled into the house of Loyalist Philip Skene at Skenesboro",
+   "note": "Exact arrival date not given; vanguard skirmished at Skenesboro July 7, and Burgoyne issued orders July 10 (date used)."
+  },
+  {
+   "date": "1777-07-29",
+   "kind": "pl",
+   "ref": "Fort Edward, New York",
+   "label": "Fort Edward",
+   "source": "https://en.wikipedia.org/wiki/Saratoga_campaign",
+   "quote": "reached Fort Edward on July 29",
+   "note": "Left Skenesboro July 24."
+  },
+  {
+   "date": "1777-09-13",
+   "kind": "pl",
+   "ref": "Schuylerville, New York",
+   "label": "Crosses the Hudson near Saratoga",
+   "source": "https://en.wikipedia.org/wiki/Saratoga_campaign",
+   "quote": "ordered the army to cross the river just north of Saratoga",
+   "note": "Crossing took place Sept 13-15 per source; start date used."
+  },
+  {
+   "date": "1777-09-19",
+   "kind": "ev",
+   "ref": 19,
+   "label": "Freeman's Farm",
+   "source": "https://en.wikipedia.org/wiki/Battles_of_Saratoga",
+   "quote": "In both battles, General John Burgoyne served as the British commander"
+  },
+  {
+   "date": "1777-10-07",
+   "kind": "ev",
+   "ref": 19,
+   "label": "Bemis Heights",
+   "source": "https://en.wikipedia.org/wiki/Saratoga_campaign",
+   "quote": "Burgoyne and Fraser led this detachment out early on the afternoon of October 7"
+  },
+  {
+   "date": "1777-10-13",
+   "kind": "pl",
+   "ref": "Schuylerville, New York",
+   "label": "Surrounded at Saratoga (Schuylerville)",
+   "source": "https://en.wikipedia.org/wiki/Saratoga_campaign",
+   "quote": "By the morning of October 13 Burgoyne's army was completely surrounded",
+   "note": "Retreat began after dark Oct 8; source says the army needed nearly two days to reach Saratoga."
+  },
+  {
+   "date": "1777-10-17",
+   "kind": "pl",
+   "ref": "Schuylerville, New York",
+   "label": "Surrender at Saratoga",
+   "source": "https://en.wikipedia.org/wiki/Saratoga_campaign",
+   "quote": "On October 17, Burgoyne's army surrendered with full honours of war"
+  },
+  {
+   "date": "1777-10-19",
+   "kind": "pl",
+   "ref": "Albany, New York",
+   "label": "Albany (guest of Schuyler)",
+   "source": "https://allthingsliberty.com/2024/03/general-john-burgoynes-stay-in-albany/",
+   "quote": "Burgoyne arrived in Albany, New York, a defeated man",
+   "note": "Stayed at Schuyler's home until Oct 27."
+  },
+  {
+   "date": "1777-11-07",
+   "kind": "pl",
+   "ref": "Cambridge, Massachusetts",
+   "label": "Cambridge (Convention Army's quarters)",
+   "source": "https://1777march.blogspot.com/2023/02/lieutenant-general-john-burgoyne-mutual.html",
+   "quote": "arrived in Cambridge on November 7th",
+   "note": "Blog (secondary source). Wikipedia's Convention Army article says the army arrived at Cambridge Nov 8; Burgoyne rode ahead."
+  },
+  {
+   "date": "1778-04-10",
+   "kind": "pl",
+   "ref": "Newport, Rhode Island",
+   "label": "Newport (awaits ship to England)",
+   "source": "https://1777march.blogspot.com/2023/02/lieutenant-general-john-burgoyne-mutual.html",
+   "quote": "Burgoyne left Cambridge and the Convention Army on April 5, 1778, bound for Newport",
+   "note": "Blog gives a reception on 'the 10th' and boarding the Grampus on the 13th; month (April) inferred from the April 5 departure. Less sure of exact day."
+  }
+ ]
+}

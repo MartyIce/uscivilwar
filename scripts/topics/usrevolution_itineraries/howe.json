@@ -1,0 +1,168 @@
+{
+ "id": "howe",
+ "commander": "William Howe",
+ "name": "British Army in North America",
+ "troop_strength": 22000,
+ "troop_source": "https://en.wikipedia.org/wiki/New_York_and_New_Jersey_campaign - \"the British transported about 22,000 men, including 9,000 Hessians, from Staten Island to Long Island\"",
+ "rows": [
+  {
+   "date": "1775-05-25",
+   "kind": "pl",
+   "ref": "Boston",
+   "label": "Boston (arrives aboard HMS Cerberus)",
+   "source": "https://en.wikipedia.org/wiki/William_Howe,_5th_Viscount_Howe",
+   "quote": "arrived there aboard HMS Cerberus on 25 May 1775"
+  },
+  {
+   "date": "1775-06-17",
+   "kind": "ev",
+   "ref": 4,
+   "label": "Battle of Bunker Hill",
+   "source": "https://en.wikipedia.org/wiki/William_Howe,_5th_Viscount_Howe",
+   "quote": "With Howe personally leading the right wing of the attack"
+  },
+  {
+   "date": "1775-10-11",
+   "kind": "pl",
+   "ref": "Boston",
+   "label": "Boston (takes over as commander-in-chief)",
+   "source": "https://en.wikipedia.org/wiki/William_Howe,_5th_Viscount_Howe",
+   "quote": "General Gage sailed for England, and Howe took over as Commander-in-Chief",
+   "note": "Date is Gage's sailing date; Howe stayed in Boston through the winter."
+  },
+  {
+   "date": "1776-03-17",
+   "kind": "pl",
+   "ref": "Boston",
+   "label": "Boston (evacuation fleet sails)",
+   "source": "https://en.wikipedia.org/wiki/William_Howe,_5th_Viscount_Howe",
+   "quote": "On 17 March, British troops and Loyalists evacuated the city, and sailed for Halifax"
+  },
+  {
+   "date": "1776-03-30",
+   "kind": "pl",
+   "ref": "Halifax, Nova Scotia",
+   "label": "Halifax",
+   "source": "https://en.wikipedia.org/wiki/History_of_Halifax,_Nova_Scotia",
+   "quote": "On March 30, 1776, General William Howe arrived, having been driven from Boston"
+  },
+  {
+   "date": "1776-07-03",
+   "kind": "pl",
+   "ref": "Staten Island",
+   "label": "Staten Island (landing)",
+   "source": "https://en.wikipedia.org/wiki/New_York_and_New_Jersey_campaign",
+   "quote": "Landing unopposed on Staten Island on July 3, 1776, Howe",
+   "note": "Battle of Long Island article says landings began July 2; 3 July is the date in the campaign article."
+  },
+  {
+   "date": "1776-08-27",
+   "kind": "ev",
+   "ref": 8,
+   "label": "Battle of Long Island",
+   "source": "https://en.wikipedia.org/wiki/William_Howe,_5th_Viscount_Howe",
+   "quote": "a large column led by Howe and Clinton passed around the American left flank"
+  },
+  {
+   "date": "1776-09-15",
+   "kind": "pl",
+   "ref": "Kips Bay, Manhattan",
+   "label": "Kip's Bay landing",
+   "source": "https://en.wikipedia.org/wiki/New_York_and_New_Jersey_campaign",
+   "quote": "On September 15, General Howe landed about 12,000 men on Lower Manhattan"
+  },
+  {
+   "date": "1776-10-28",
+   "kind": "ev",
+   "ref": 11,
+   "label": "Battle of White Plains",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_White_Plains",
+   "quote": "Howe remained at Scarsdale until the morning of October 28",
+   "note": "Source shows Howe with the advancing army that morning; the battle itself is described as his army's action."
+  },
+  {
+   "date": "1776-11-16",
+   "kind": "ev",
+   "ref": 12,
+   "label": "Battle of Fort Washington",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Fort_Washington",
+   "quote": "Mathew and his troops, accompanied by Howe, were ferried across the Harlem River"
+  },
+  {
+   "date": "1777-06-14",
+   "kind": "pl",
+   "ref": "Millstone, New Jersey",
+   "label": "Somerset Court House (Millstone)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Short_Hills",
+   "quote": "On June 14, Howe's army marched again toward Somerset Court House",
+   "note": "Source says Howe remained there five days (to June 19). Present-day Millstone."
+  },
+  {
+   "date": "1777-06-22",
+   "kind": "pl",
+   "ref": "Perth Amboy, New Jersey",
+   "label": "Perth Amboy",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Short_Hills",
+   "quote": "Howe returned to Amboy on June 22"
+  },
+  {
+   "date": "1777-07-23",
+   "kind": "pl",
+   "ref": "Sandy Hook",
+   "label": "Sandy Hook (fleet departs for the Chesapeake)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Brandywine",
+   "quote": "Howe's army departed from Sandy Hook ... on July 23, 1777",
+   "note": "Howe article says he 'sailed from New York on 23 July'; same date."
+  },
+  {
+   "date": "1777-08-25",
+   "kind": "pl",
+   "ref": "Elkton, Maryland",
+   "label": "Head of Elk (landing)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Cooch%27s_Bridge",
+   "quote": "After landing in Maryland on August 25",
+   "note": "Other articles say only 'late August'. Head of Elk is present-day Elkton."
+  },
+  {
+   "date": "1777-09-11",
+   "kind": "ev",
+   "ref": 18,
+   "label": "Battle of Brandywine",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Brandywine",
+   "quote": "The main British column under General Cornwallis (and accompanied by General Howe)"
+  },
+  {
+   "date": "1777-09-26",
+   "kind": "pl",
+   "ref": "Philadelphia",
+   "label": "Philadelphia (enters the city)",
+   "source": "https://en.wikipedia.org/wiki/William_Howe,_5th_Viscount_Howe",
+   "quote": "Howe triumphantly entered the city on 26 September"
+  },
+  {
+   "date": "1777-10-04",
+   "kind": "ev",
+   "ref": 20,
+   "label": "Battle of Germantown",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Germantown",
+   "quote": "Howe rode forward, thinking they were being attacked by foraging or skirmishing parties"
+  },
+  {
+   "date": "1777-10-19",
+   "kind": "pl",
+   "ref": "Philadelphia",
+   "label": "Philadelphia (army pulls back from Germantown)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_White_Marsh",
+   "quote": "On October 19, Howe withdrew the British forces from Germantown",
+   "note": "Army-level statement; Howe's own movement that day is inferred. Less sure."
+  },
+  {
+   "date": "1778-05-24",
+   "kind": "pl",
+   "ref": "Philadelphia",
+   "label": "Philadelphia (departs for England)",
+   "source": "https://en.wikipedia.org/wiki/William_Howe,_5th_Viscount_Howe",
+   "quote": "On 24 May 1778, Howe left Philadelphia on a ship bound for England"
+  }
+ ]
+}

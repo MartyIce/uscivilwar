@@ -1,0 +1,207 @@
+{
+ "id": "clinton",
+ "commander": "Henry Clinton",
+ "name": "British Army in North America",
+ "troop_strength": 19000,
+ "troop_source": "https://en.wikipedia.org/wiki/Battle_of_Monmouth : \"first division, which comprised some 10,000 troops\" and \"second division ... just over 9,000 personnel\" (army marching from Philadelphia, June 1778). For Charleston: https://en.wikipedia.org/wiki/Siege_of_Charleston : \"sailed southward with 8,500 troops and 5,000 sailors\" (+2,500 under Rawdon on 18 April).",
+ "rows": [
+  {
+   "date": "1775-05-25",
+   "kind": "pl",
+   "ref": "Boston",
+   "label": "Boston (arrives with Howe and Burgoyne)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Bunker_Hill",
+   "quote": "Henry Clinton arrived on May 25 aboard HMS Cerberus"
+  },
+  {
+   "date": "1775-06-17",
+   "kind": "ev",
+   "ref": 4,
+   "label": "Battle of Bunker Hill",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Bunker_Hill",
+   "quote": "followed himself to help rally the troops",
+   "note": "Clinton crossed to Charlestown with reserves for the third assault; battle date from same article."
+  },
+  {
+   "date": "1776-03-12",
+   "kind": "pl",
+   "ref": "Cape Fear (headland)",
+   "label": "Cape Fear (awaits Cornwallis's convoy)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Sullivan%27s_Island",
+   "quote": "Clinton arrived at Cape Fear on March 12"
+  },
+  {
+   "date": "1776-06-01",
+   "kind": "pl",
+   "ref": "Charleston, South Carolina",
+   "label": "Off Charleston harbor",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Sullivan%27s_Island",
+   "quote": "arrived outside Charles Town Harbor the next day",
+   "note": "Squadron weighed anchor at Cape Fear May 31; the article does not name Clinton in that sentence, he sailed with the squadron."
+  },
+  {
+   "date": "1776-06-08",
+   "kind": "pl",
+   "ref": "Isle of Palms, South Carolina",
+   "label": "Landing on Long Island, SC (now Isle of Palms)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Sullivan%27s_Island",
+   "quote": "Clinton began landing 2,200 troops on Long Island",
+   "note": "Long Island, SC is today's Isle of Palms."
+  },
+  {
+   "date": "1776-06-28",
+   "kind": "ev",
+   "ref": 7,
+   "label": "Battle of Sullivan's Island (attempted crossing)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Sullivan%27s_Island",
+   "quote": "General Clinton began movements to cross over to the northern end",
+   "note": "Battle date June 28 from the same article."
+  },
+  {
+   "date": "1776-08-01",
+   "kind": "pl",
+   "ref": "Staten Island",
+   "label": "Staten Island (arrives from the south)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Long_Island",
+   "quote": "On August 1, 45 ships arrived with generals Henry Clinton"
+  },
+  {
+   "date": "1776-08-22",
+   "kind": "pl",
+   "ref": "Gravesend, Brooklyn",
+   "label": "Gravesend Bay landing",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Long_Island",
+   "quote": "advance guard of 4,000 British troops left Staten Island under the command of Clinton"
+  },
+  {
+   "date": "1776-08-27",
+   "kind": "ev",
+   "ref": 8,
+   "label": "Battle of Long Island (Jamaica Pass flank march)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Long_Island",
+   "quote": "Clinton was to command the advance guard of the main army"
+  },
+  {
+   "date": "1776-10-18",
+   "kind": "pl",
+   "ref": "Pelham Bay Park",
+   "label": "Pell's Point landing",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Pell%27s_Point",
+   "quote": "Clinton's advance guard of 4,000 British light infantry and Hessian",
+   "note": "Date of the landing from the same article; Henry Clinton article says he led the army ashore in Westchester County."
+  },
+  {
+   "date": "1776-10-28",
+   "kind": "pl",
+   "ref": "White Plains, New York",
+   "label": "White Plains (commands British right)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_White_Plains",
+   "quote": "British troops on the right under General Henry Clinton"
+  },
+  {
+   "date": "1776-12-08",
+   "kind": "pl",
+   "ref": "Newport, Rhode Island",
+   "label": "Newport (occupied)",
+   "source": "https://en.wikipedia.org/wiki/New_York_and_New_Jersey_campaign",
+   "quote": "which they did without opposition on December 8",
+   "note": "Same article says Howe detached Clinton with 6,000 men to occupy Newport."
+  },
+  {
+   "date": "1777-10-06",
+   "kind": "pl",
+   "ref": "Fort Montgomery (Hudson River)",
+   "label": "Fort Montgomery (Hudson Highlands)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Forts_Clinton_and_Montgomery",
+   "quote": "On the foggy morning of October 6, Sir Henry Clinton landed 2,100 men",
+   "note": "Landed at Stony Point, marched on Forts Montgomery and Clinton the same day."
+  },
+  {
+   "date": "1778-05-24",
+   "kind": "pl",
+   "ref": "Philadelphia",
+   "label": "Philadelphia (takes over from Howe)",
+   "source": "https://en.wikipedia.org/wiki/William_Howe,_5th_Viscount_Howe",
+   "quote": "That same day, General Clinton took over as commander-in-chief",
+   "note": "Henry Clinton article says only 'May 1778'; this date is from the William Howe article."
+  },
+  {
+   "date": "1778-06-24",
+   "kind": "pl",
+   "ref": "Allentown, New Jersey",
+   "label": "Allentown (march across New Jersey)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Monmouth",
+   "quote": "On June 24, the first division arrived at Allentown",
+   "note": "Article says Clinton accompanied the first division."
+  },
+  {
+   "date": "1778-06-28",
+   "kind": "ev",
+   "ref": 21,
+   "label": "Battle of Monmouth",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Monmouth",
+   "quote": "Clinton disengaged when he found Washington in an unassailable defensive position"
+  },
+  {
+   "date": "1778-09-01",
+   "kind": "pl",
+   "ref": "Newport, Rhode Island",
+   "label": "Newport (relief of the garrison)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Rhode_Island",
+   "quote": "relief force of Clinton and Grey arrived at Newport on September 1"
+  },
+  {
+   "date": "1779-06-30",
+   "kind": "pl",
+   "ref": "Philipsburg Manor House",
+   "label": "Philipsburg Manor (headquarters)",
+   "source": "https://en.wikipedia.org/wiki/Henry_Clinton_(British_Army_officer,_born_1730)",
+   "quote": "On 30 June 1779, Clinton issued what has become known as",
+   "note": "Proclamation issued from his headquarters at the Philipsburg Manor House, Westchester County."
+  },
+  {
+   "date": "1779-12-26",
+   "kind": "pl",
+   "ref": "New York City",
+   "label": "New York (sails south for Charleston)",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Charleston",
+   "quote": "the day after Christmas 1779, Clinton and his second-in-command",
+   "note": "Article says they sailed southward; Henry Clinton article says from New York."
+  },
+  {
+   "date": "1780-02-01",
+   "kind": "pl",
+   "ref": "Tybee Island, Georgia",
+   "label": "Savannah River (fleet anchors)",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Charleston",
+   "quote": "the fleet anchored in the Savannah River on 1 February 1780",
+   "note": "Position approximate: Tybee Island at the river mouth."
+  },
+  {
+   "date": "1780-02-24",
+   "kind": "pl",
+   "ref": "James Island, South Carolina",
+   "label": "James Island (crosses Stono River)",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Charleston",
+   "quote": "By 24 February, the British had crossed the Stono River onto James Island",
+   "note": "Army movement; Clinton led the expedition."
+  },
+  {
+   "date": "1780-04-01",
+   "kind": "ev",
+   "ref": 26,
+   "label": "Siege of Charleston begins",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Charleston",
+   "quote": "Clinton began a siege on 1 April"
+  },
+  {
+   "date": "1780-05-12",
+   "kind": "ev",
+   "ref": 26,
+   "label": "Charleston surrenders",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Charleston",
+   "quote": "On May 12, Lincoln formally surrendered 3,371 men to the British",
+   "note": "Clinton was in command at the siege; some sources date the fall May 11 (negotiations began May 11, surrender May 12 per Wikipedia)."
+  }
+ ]
+}

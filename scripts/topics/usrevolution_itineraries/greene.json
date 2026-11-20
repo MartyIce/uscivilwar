@@ -1,0 +1,248 @@
+{
+ "id": "greene",
+ "commander": "Nathanael Greene",
+ "name": "Southern Army (Southern Department, Continental Army)",
+ "troop_strength": 4500,
+ "troop_source": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House : \"Major General Nathanael Greene's 4,500 Americans\"",
+ "rows": [
+  {
+   "date": "1776-09-16",
+   "kind": "ev",
+   "ref": 9,
+   "label": "Battle of Harlem Heights",
+   "source": "https://en.wikipedia.org/wiki/Nathanael_Greene",
+   "quote": "Greene saw combat for the first time in the Battle of Harlem Heights"
+  },
+  {
+   "date": "1776-11-16",
+   "kind": "ev",
+   "ref": 12,
+   "label": "Battle of Fort Washington",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Fort_Washington",
+   "quote": "where Washington, Greene, Putnam and Hugh Mercer were located",
+   "note": "Greene then crossed to Fort Lee."
+  },
+  {
+   "date": "1776-11-20",
+   "kind": "pl",
+   "ref": "Fort Lee, New Jersey",
+   "label": "Fort Lee (evacuated)",
+   "source": "https://en.wikipedia.org/wiki/Fort_Lee_Historic_Park",
+   "quote": "Washington and Greene quickly ordered the evacuation of the fort"
+  },
+  {
+   "date": "1776-12-26",
+   "kind": "ev",
+   "ref": 13,
+   "label": "Battle of Trenton",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Trenton",
+   "quote": "infantry divisions commanded by Major Generals Nathanael Greene and John Sullivan"
+  },
+  {
+   "date": "1777-01-03",
+   "kind": "ev",
+   "ref": 15,
+   "label": "Battle of Princeton",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Princeton",
+   "quote": "Major Generals Henry Knox and Nathanael Greene talked him out of it",
+   "note": "Presence at Princeton also stated in Greene article (commanded part of the army)."
+  },
+  {
+   "date": "1777-09-11",
+   "kind": "ev",
+   "ref": 18,
+   "label": "Battle of Brandywine",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Brandywine",
+   "quote": "Washington and Greene arrived with reinforcements to try to hold off the British"
+  },
+  {
+   "date": "1777-10-04",
+   "kind": "ev",
+   "ref": 20,
+   "label": "Battle of Germantown",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Germantown",
+   "quote": "Nathanael Greene's column on Limekiln Road had finally caught up",
+   "note": "Greene's column arrived late."
+  },
+  {
+   "date": "1777-12-19",
+   "kind": "pl",
+   "ref": "Valley Forge National Historical Park",
+   "label": "Valley Forge (winter quarters)",
+   "source": "https://en.wikipedia.org/wiki/Nathanael_Greene",
+   "quote": "Greene joined with the rest of Washington's army in establishing a camp at Valley Forge",
+   "note": "Date is the encampment start date (Valley Forge article: from December 19, 1777); Greene article says only 'In December'. Less certain."
+  },
+  {
+   "date": "1778-06-28",
+   "kind": "ev",
+   "ref": 21,
+   "label": "Battle of Monmouth",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Monmouth",
+   "quote": "he ordered Greene to take Brigadier General William Woodford's brigade"
+  },
+  {
+   "date": "1778-08-29",
+   "kind": "ev",
+   "ref": 22,
+   "label": "Battle of Rhode Island",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Rhode_Island",
+   "quote": "General Greene concentrated his forces in front of Turkey Hill"
+  },
+  {
+   "date": "1780-06-23",
+   "kind": "pl",
+   "ref": "Battle of Springfield",
+   "label": "Springfield, NJ (blocks Knyphausen)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Springfield",
+   "quote": "Major General Nathanael Greene had 1,500 Continental troops and 500 New Jersey Militia"
+  },
+  {
+   "date": "1780-12-03",
+   "kind": "pl",
+   "ref": "Charlotte, North Carolina",
+   "label": "Charlotte (takes Southern command)",
+   "source": "https://www.army.mil/article-amp/48618/greene_takes_command",
+   "quote": "took formal command of the Southern Theater",
+   "note": "Cowpens article also has Morgan reporting to Greene's HQ at Charlotte on Dec 3."
+  },
+  {
+   "date": "1781-02-03",
+   "kind": "pl",
+   "ref": "Salisbury, North Carolina",
+   "label": "Trading Ford / Salisbury (joins Morgan)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House",
+   "quote": "Greene joined Daniel Morgan's Continentals at Trading Ford on the Yadkin River",
+   "note": "Trading Ford has no Wikipedia coordinates; Salisbury is the nearby town. Another source says Greene evacuated Salisbury stores Feb 2."
+  },
+  {
+   "date": "1781-02-07",
+   "kind": "pl",
+   "ref": "Guilford Courthouse National Military Park",
+   "label": "Guilford Court House (rendezvous)",
+   "source": "https://emergingrevolutionarywar.org/2019/09/02/judiciously-designed-and-vigorously-executed-the-march-to-the-dan-river/",
+   "quote": "Greene reached Guilford Courthouse on February 7."
+  },
+  {
+   "date": "1781-02-14",
+   "kind": "pl",
+   "ref": "South Boston, Virginia",
+   "label": "Crosses the Dan River",
+   "source": "https://en.wikipedia.org/wiki/Nathanael_Greene",
+   "quote": "Greene's force outpaced the British and crossed the Dan River on February 14",
+   "note": "Crossed at Irwin's/Boyd's Ferries near South Boston. Some accounts give Feb 13 for Greene himself and Feb 14 for Williams' rear guard."
+  },
+  {
+   "date": "1781-02-22",
+   "kind": "pl",
+   "ref": "South Boston, Virginia",
+   "label": "Recrosses the Dan",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House",
+   "quote": "On 22 February Greene moved his army south across the Dan",
+   "note": "Same ferry area as the first crossing."
+  },
+  {
+   "date": "1781-02-25",
+   "kind": "pl",
+   "ref": "Alamance, North Carolina",
+   "label": "Alamance Creek camp",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House",
+   "quote": "Greene camped on the north side of the creek",
+   "note": "Approximate location of Alamance Creek camp."
+  },
+  {
+   "date": "1781-03-12",
+   "kind": "pl",
+   "ref": "Guilford Courthouse National Military Park",
+   "label": "Marches to Guilford Court House",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House",
+   "quote": "On 12 March Greene marched his army of about 4,440",
+   "note": "Wikipedia gives 4,440 here and 4,500 in the lead."
+  },
+  {
+   "date": "1781-03-15",
+   "kind": "ev",
+   "ref": 30,
+   "label": "Battle of Guilford Court House",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Guilford_Court_House",
+   "quote": "Major General Nathanael Greene's 4,500 Americans"
+  },
+  {
+   "date": "1781-04-20",
+   "kind": "pl",
+   "ref": "Camden, SC",
+   "label": "Camden (Hobkirk's Hill camp)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Hobkirk%27s_Hill",
+   "quote": "Greene chose to encamp his army about a mile and a half away"
+  },
+  {
+   "date": "1781-04-25",
+   "kind": "ev",
+   "ref": 31,
+   "label": "Battle of Hobkirk's Hill",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Hobkirk%27s_Hill",
+   "quote": "1,550 American regulars and militia under Major General Nathanael Greene"
+  },
+  {
+   "date": "1781-05-22",
+   "kind": "pl",
+   "ref": "Ninety Six, South Carolina",
+   "label": "Siege of Ninety Six begins",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Ninety_Six",
+   "quote": "Greene and about 1,000 men arrived outside Ninety Six on May 22"
+  },
+  {
+   "date": "1781-06-18",
+   "kind": "pl",
+   "ref": "Ninety Six, South Carolina",
+   "label": "Assault on Star Fort fails",
+   "source": "https://en.wikipedia.org/wiki/Siege_of_Ninety_Six",
+   "quote": "Greene launched an unsuccessful attack on the British fort at Ninety Six",
+   "note": "Date of assault stated in Siege of Ninety Six article (June 18)."
+  },
+  {
+   "date": "1781-07-16",
+   "kind": "pl",
+   "ref": "High Hills of Santee",
+   "label": "High Hills of Santee (rest camp)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Eutaw_Springs",
+   "quote": "On 16 July, Greene moved his army",
+   "note": "Camp until late August."
+  },
+  {
+   "date": "1781-09-04",
+   "kind": "pl",
+   "ref": "Fort Motte",
+   "label": "Fort Motte",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Eutaw_Springs",
+   "quote": "By 4 Sept., they were camped at Fort Motte"
+  },
+  {
+   "date": "1781-09-08",
+   "kind": "ev",
+   "ref": 33,
+   "label": "Battle of Eutaw Springs",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_Eutaw_Springs",
+   "quote": "Greene's army began marching from Burdell's Plantation",
+   "note": "Greene's force about 2,200 per Wikipedia."
+  },
+  {
+   "date": "1782-12-14",
+   "kind": "pl",
+   "ref": "Middleton Place",
+   "label": "Camp at Middleton Place (west of Ashley River)",
+   "source": "https://www.ccpl.org/charleston-time-machine/charlestons-victory-day-part-2",
+   "quote": "Greene's army was camped at Middleton Place, on the west side",
+   "note": "Quote is a paraphrase by the fetch tool of the CCPL page; verify wording."
+  },
+  {
+   "date": "1782-12-14",
+   "kind": "pl",
+   "ref": "Charleston, South Carolina",
+   "label": "Charleston (British evacuate)",
+   "source": "https://www.ccpl.org/charleston-time-machine/charlestons-victory-day-part-2",
+   "quote": "At 3 o'clock, p.m. General Greene conducted Governor Mathews",
+   "note": "Moultrie memoir quoted by CCPL; some accounts say Wayne's 400 men entered first around 11 a.m."
+  }
+ ]
+}

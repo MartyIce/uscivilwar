@@ -166,6 +166,8 @@ export interface ArmyMovement {
   color: string; // For visualization
   /** Peak approximate strength; used by topics whose movements are data files */
   troop_strength?: number;
+  /** Hide the marker after this date (the sourced track has ended) */
+  active_until?: string;
   waypoints: ArmyWaypoint[];
 }
 

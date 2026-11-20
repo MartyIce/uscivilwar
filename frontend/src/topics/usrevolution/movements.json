@@ -6,6 +6,7 @@
   "side": "union",
   "color": "#1d4ed8",
   "troop_strength": 19000,
+  "active_until": "1784-01-23",
   "waypoints": [
    {
     "date": "1775-06-15",
@@ -300,6 +301,7 @@
   "side": "confederate",
   "color": "#b91c1c",
   "troop_strength": 7800,
+  "active_until": "1781-11-18",
   "waypoints": [
    {
     "date": "1776-08-27",
@@ -500,6 +502,788 @@
     "location_name": "Surrender at Yorktown",
     "is_battle": true,
     "event_id": 34
+   }
+  ]
+ },
+ {
+  "id": "burgoyne",
+  "commander": "John Burgoyne",
+  "name": "Army from Canada (Burgoyne's Northern Army)",
+  "side": "confederate",
+  "color": "#be123c",
+  "troop_strength": 8000,
+  "active_until": "1778-05-10",
+  "waypoints": [
+   {
+    "date": "1776-06-01",
+    "coordinates": {
+     "lat": 46.3431,
+     "lng": -72.5433
+    },
+    "location_name": "Trois-Rivières (arrives with reinforcements)"
+   },
+   {
+    "date": "1776-06-17",
+    "coordinates": {
+     "lat": 45.3167,
+     "lng": -73.2667
+    },
+    "location_name": "St. Jean (pursuit of the Americans)"
+   },
+   {
+    "date": "1777-05-06",
+    "coordinates": {
+     "lat": 46.8139,
+     "lng": -71.2081
+    },
+    "location_name": "Quebec (returns with the invasion plan)"
+   },
+   {
+    "date": "1777-06-13",
+    "coordinates": {
+     "lat": 45.3167,
+     "lng": -73.2667
+    },
+    "location_name": "St. Johns (takes command)"
+   },
+   {
+    "date": "1777-06-30",
+    "coordinates": {
+     "lat": 43.9503,
+     "lng": -73.4369
+    },
+    "location_name": "Crown Point (Lake Champlain)"
+   },
+   {
+    "date": "1777-07-06",
+    "coordinates": {
+     "lat": 43.8417,
+     "lng": -73.3875
+    },
+    "location_name": "Ticonderoga taken"
+   },
+   {
+    "date": "1777-07-10",
+    "coordinates": {
+     "lat": 43.55,
+     "lng": -73.4
+    },
+    "location_name": "Skenesboro (Whitehall)"
+   },
+   {
+    "date": "1777-07-29",
+    "coordinates": {
+     "lat": 43.2264,
+     "lng": -73.5592
+    },
+    "location_name": "Fort Edward"
+   },
+   {
+    "date": "1777-09-13",
+    "coordinates": {
+     "lat": 43.1008,
+     "lng": -73.5814
+    },
+    "location_name": "Crosses the Hudson near Saratoga"
+   },
+   {
+    "date": "1777-09-19",
+    "coordinates": {
+     "lat": 42.99889,
+     "lng": -73.6375
+    },
+    "location_name": "Freeman's Farm",
+    "is_battle": true,
+    "event_id": 19
+   },
+   {
+    "date": "1777-10-07",
+    "coordinates": {
+     "lat": 42.99889,
+     "lng": -73.6375
+    },
+    "location_name": "Bemis Heights",
+    "is_battle": true,
+    "event_id": 19
+   },
+   {
+    "date": "1777-10-13",
+    "coordinates": {
+     "lat": 43.1008,
+     "lng": -73.5814
+    },
+    "location_name": "Surrounded at Saratoga (Schuylerville)"
+   },
+   {
+    "date": "1777-10-17",
+    "coordinates": {
+     "lat": 43.1008,
+     "lng": -73.5814
+    },
+    "location_name": "Surrender at Saratoga"
+   },
+   {
+    "date": "1777-10-19",
+    "coordinates": {
+     "lat": 42.6525,
+     "lng": -73.7572
+    },
+    "location_name": "Albany (guest of Schuyler)"
+   },
+   {
+    "date": "1777-11-07",
+    "coordinates": {
+     "lat": 42.3736,
+     "lng": -71.1106
+    },
+    "location_name": "Cambridge (Convention Army's quarters)"
+   },
+   {
+    "date": "1778-04-10",
+    "coordinates": {
+     "lat": 41.4917,
+     "lng": -71.3119
+    },
+    "location_name": "Newport (awaits ship to England)"
+   }
+  ]
+ },
+ {
+  "id": "clinton",
+  "commander": "Henry Clinton",
+  "name": "British Army in North America",
+  "side": "confederate",
+  "color": "#f97316",
+  "troop_strength": 19000,
+  "active_until": "1780-06-11",
+  "waypoints": [
+   {
+    "date": "1775-05-25",
+    "coordinates": {
+     "lat": 42.3603,
+     "lng": -71.0578
+    },
+    "location_name": "Boston (arrives with Howe and Burgoyne)"
+   },
+   {
+    "date": "1775-06-17",
+    "coordinates": {
+     "lat": 42.37639,
+     "lng": -71.06083
+    },
+    "location_name": "Battle of Bunker Hill",
+    "is_battle": true,
+    "event_id": 4
+   },
+   {
+    "date": "1776-03-12",
+    "coordinates": {
+     "lat": 33.8406,
+     "lng": -77.9603
+    },
+    "location_name": "Cape Fear (awaits Cornwallis's convoy)"
+   },
+   {
+    "date": "1776-06-01",
+    "coordinates": {
+     "lat": 32.8139,
+     "lng": -79.9319
+    },
+    "location_name": "Off Charleston harbor"
+   },
+   {
+    "date": "1776-06-08",
+    "coordinates": {
+     "lat": 32.8078,
+     "lng": -79.745
+    },
+    "location_name": "Landing on Long Island, SC (now Isle of Palms)"
+   },
+   {
+    "date": "1776-06-28",
+    "coordinates": {
+     "lat": 32.759,
+     "lng": -79.8579
+    },
+    "location_name": "Battle of Sullivan's Island (attempted crossing)",
+    "is_battle": true,
+    "event_id": 7
+   },
+   {
+    "date": "1776-08-01",
+    "coordinates": {
+     "lat": 40.5719,
+     "lng": -74.1469
+    },
+    "location_name": "Staten Island (arrives from the south)"
+   },
+   {
+    "date": "1776-08-22",
+    "coordinates": {
+     "lat": 40.598,
+     "lng": -73.971
+    },
+    "location_name": "Gravesend Bay landing"
+   },
+   {
+    "date": "1776-08-27",
+    "coordinates": {
+     "lat": 40.666,
+     "lng": -73.966
+    },
+    "location_name": "Battle of Long Island (Jamaica Pass flank march)",
+    "is_battle": true,
+    "event_id": 8
+   },
+   {
+    "date": "1776-10-18",
+    "coordinates": {
+     "lat": 40.8656,
+     "lng": -73.8083
+    },
+    "location_name": "Pell's Point landing"
+   },
+   {
+    "date": "1776-10-28",
+    "coordinates": {
+     "lat": 41.0325,
+     "lng": -73.7667
+    },
+    "location_name": "White Plains (commands British right)"
+   },
+   {
+    "date": "1776-12-08",
+    "coordinates": {
+     "lat": 41.4917,
+     "lng": -71.3119
+    },
+    "location_name": "Newport (occupied)"
+   },
+   {
+    "date": "1777-10-06",
+    "coordinates": {
+     "lat": 41.3239,
+     "lng": -73.9869
+    },
+    "location_name": "Fort Montgomery (Hudson Highlands)"
+   },
+   {
+    "date": "1778-05-24",
+    "coordinates": {
+     "lat": 39.9528,
+     "lng": -75.1636
+    },
+    "location_name": "Philadelphia (takes over from Howe)"
+   },
+   {
+    "date": "1778-06-24",
+    "coordinates": {
+     "lat": 40.1786,
+     "lng": -74.5901
+    },
+    "location_name": "Allentown (march across New Jersey)"
+   },
+   {
+    "date": "1778-06-28",
+    "coordinates": {
+     "lat": 40.25634,
+     "lng": -74.3209
+    },
+    "location_name": "Battle of Monmouth",
+    "is_battle": true,
+    "event_id": 21
+   },
+   {
+    "date": "1778-09-01",
+    "coordinates": {
+     "lat": 41.4917,
+     "lng": -71.3119
+    },
+    "location_name": "Newport (relief of the garrison)"
+   },
+   {
+    "date": "1779-06-30",
+    "coordinates": {
+     "lat": 41.0885,
+     "lng": -73.8636
+    },
+    "location_name": "Philipsburg Manor (headquarters)"
+   },
+   {
+    "date": "1779-12-26",
+    "coordinates": {
+     "lat": 40.7128,
+     "lng": -74.0061
+    },
+    "location_name": "New York (sails south for Charleston)"
+   },
+   {
+    "date": "1780-02-01",
+    "coordinates": {
+     "lat": 32.0075,
+     "lng": -80.845
+    },
+    "location_name": "Savannah River (fleet anchors)"
+   },
+   {
+    "date": "1780-02-24",
+    "coordinates": {
+     "lat": 32.7303,
+     "lng": -79.9661
+    },
+    "location_name": "James Island (crosses Stono River)"
+   },
+   {
+    "date": "1780-04-01",
+    "coordinates": {
+     "lat": 32.79417,
+     "lng": -79.94194
+    },
+    "location_name": "Siege of Charleston begins",
+    "is_battle": true,
+    "event_id": 26
+   },
+   {
+    "date": "1780-05-12",
+    "coordinates": {
+     "lat": 32.79417,
+     "lng": -79.94194
+    },
+    "location_name": "Charleston surrenders",
+    "is_battle": true,
+    "event_id": 26
+   }
+  ]
+ },
+ {
+  "id": "greene",
+  "commander": "Nathanael Greene",
+  "name": "Southern Army (Southern Department, Continental Army)",
+  "side": "union",
+  "color": "#0891b2",
+  "troop_strength": 4500,
+  "active_until": "1783-01-13",
+  "waypoints": [
+   {
+    "date": "1776-09-16",
+    "coordinates": {
+     "lat": 40.81194,
+     "lng": -73.96361
+    },
+    "location_name": "Battle of Harlem Heights",
+    "is_battle": true,
+    "event_id": 9
+   },
+   {
+    "date": "1776-11-16",
+    "coordinates": {
+     "lat": 40.85278,
+     "lng": -73.93806
+    },
+    "location_name": "Battle of Fort Washington",
+    "is_battle": true,
+    "event_id": 12
+   },
+   {
+    "date": "1776-11-20",
+    "coordinates": {
+     "lat": 40.8506,
+     "lng": -73.971
+    },
+    "location_name": "Fort Lee (evacuated)"
+   },
+   {
+    "date": "1776-12-26",
+    "coordinates": {
+     "lat": 40.22583,
+     "lng": -74.76472
+    },
+    "location_name": "Battle of Trenton",
+    "is_battle": true,
+    "event_id": 13
+   },
+   {
+    "date": "1777-01-03",
+    "coordinates": {
+     "lat": 40.33,
+     "lng": -74.675
+    },
+    "location_name": "Battle of Princeton",
+    "is_battle": true,
+    "event_id": 15
+   },
+   {
+    "date": "1777-09-11",
+    "coordinates": {
+     "lat": 39.872,
+     "lng": -75.59
+    },
+    "location_name": "Battle of Brandywine",
+    "is_battle": true,
+    "event_id": 18
+   },
+   {
+    "date": "1777-10-04",
+    "coordinates": {
+     "lat": 40.043,
+     "lng": -75.181
+    },
+    "location_name": "Battle of Germantown",
+    "is_battle": true,
+    "event_id": 20
+   },
+   {
+    "date": "1777-12-19",
+    "coordinates": {
+     "lat": 40.0969,
+     "lng": -75.4389
+    },
+    "location_name": "Valley Forge (winter quarters)"
+   },
+   {
+    "date": "1778-06-28",
+    "coordinates": {
+     "lat": 40.25634,
+     "lng": -74.3209
+    },
+    "location_name": "Battle of Monmouth",
+    "is_battle": true,
+    "event_id": 21
+   },
+   {
+    "date": "1778-08-29",
+    "coordinates": {
+     "lat": 41.6,
+     "lng": -71.25
+    },
+    "location_name": "Battle of Rhode Island",
+    "is_battle": true,
+    "event_id": 22
+   },
+   {
+    "date": "1780-06-23",
+    "coordinates": {
+     "lat": 40.7101,
+     "lng": -74.3069
+    },
+    "location_name": "Springfield, NJ (blocks Knyphausen)"
+   },
+   {
+    "date": "1780-12-03",
+    "coordinates": {
+     "lat": 35.2272,
+     "lng": -80.8431
+    },
+    "location_name": "Charlotte (takes Southern command)"
+   },
+   {
+    "date": "1781-02-03",
+    "coordinates": {
+     "lat": 35.6656,
+     "lng": -80.4908
+    },
+    "location_name": "Trading Ford / Salisbury (joins Morgan)"
+   },
+   {
+    "date": "1781-02-07",
+    "coordinates": {
+     "lat": 36.1314,
+     "lng": -79.8464
+    },
+    "location_name": "Guilford Court House (rendezvous)"
+   },
+   {
+    "date": "1781-02-14",
+    "coordinates": {
+     "lat": 36.7078,
+     "lng": -78.9033
+    },
+    "location_name": "Crosses the Dan River"
+   },
+   {
+    "date": "1781-02-22",
+    "coordinates": {
+     "lat": 36.7078,
+     "lng": -78.9033
+    },
+    "location_name": "Recrosses the Dan"
+   },
+   {
+    "date": "1781-02-25",
+    "coordinates": {
+     "lat": 36.0286,
+     "lng": -79.4889
+    },
+    "location_name": "Alamance Creek camp"
+   },
+   {
+    "date": "1781-03-12",
+    "coordinates": {
+     "lat": 36.1314,
+     "lng": -79.8464
+    },
+    "location_name": "Marches to Guilford Court House"
+   },
+   {
+    "date": "1781-03-15",
+    "coordinates": {
+     "lat": 36.132,
+     "lng": -79.844
+    },
+    "location_name": "Battle of Guilford Court House",
+    "is_battle": true,
+    "event_id": 30
+   },
+   {
+    "date": "1781-04-20",
+    "coordinates": {
+     "lat": 34.2472,
+     "lng": -80.625
+    },
+    "location_name": "Camden (Hobkirk's Hill camp)"
+   },
+   {
+    "date": "1781-04-25",
+    "coordinates": {
+     "lat": 34.27444,
+     "lng": -80.60722
+    },
+    "location_name": "Battle of Hobkirk's Hill",
+    "is_battle": true,
+    "event_id": 31
+   },
+   {
+    "date": "1781-05-22",
+    "coordinates": {
+     "lat": 34.1697,
+     "lng": -82.0239
+    },
+    "location_name": "Siege of Ninety Six begins"
+   },
+   {
+    "date": "1781-06-18",
+    "coordinates": {
+     "lat": 34.1697,
+     "lng": -82.0239
+    },
+    "location_name": "Assault on Star Fort fails"
+   },
+   {
+    "date": "1781-07-16",
+    "coordinates": {
+     "lat": 33.984,
+     "lng": -80.548
+    },
+    "location_name": "High Hills of Santee (rest camp)"
+   },
+   {
+    "date": "1781-09-04",
+    "coordinates": {
+     "lat": 33.7392,
+     "lng": -80.6925
+    },
+    "location_name": "Fort Motte"
+   },
+   {
+    "date": "1781-09-08",
+    "coordinates": {
+     "lat": 33.4,
+     "lng": -80.35
+    },
+    "location_name": "Battle of Eutaw Springs",
+    "is_battle": true,
+    "event_id": 33
+   },
+   {
+    "date": "1782-12-14",
+    "coordinates": {
+     "lat": 32.8998,
+     "lng": -80.1365
+    },
+    "location_name": "Camp at Middleton Place (west of Ashley River)"
+   },
+   {
+    "date": "1782-12-14",
+    "coordinates": {
+     "lat": 32.8139,
+     "lng": -79.9319
+    },
+    "location_name": "Charleston (British evacuate)"
+   }
+  ]
+ },
+ {
+  "id": "howe",
+  "commander": "William Howe",
+  "name": "British Army in North America",
+  "side": "confederate",
+  "color": "#ef4444",
+  "troop_strength": 22000,
+  "active_until": "1778-06-23",
+  "waypoints": [
+   {
+    "date": "1775-05-25",
+    "coordinates": {
+     "lat": 42.3603,
+     "lng": -71.0578
+    },
+    "location_name": "Boston (arrives aboard HMS Cerberus)"
+   },
+   {
+    "date": "1775-06-17",
+    "coordinates": {
+     "lat": 42.37639,
+     "lng": -71.06083
+    },
+    "location_name": "Battle of Bunker Hill",
+    "is_battle": true,
+    "event_id": 4
+   },
+   {
+    "date": "1775-10-11",
+    "coordinates": {
+     "lat": 42.3603,
+     "lng": -71.0578
+    },
+    "location_name": "Boston (takes over as commander-in-chief)"
+   },
+   {
+    "date": "1776-03-17",
+    "coordinates": {
+     "lat": 42.3603,
+     "lng": -71.0578
+    },
+    "location_name": "Boston (evacuation fleet sails)"
+   },
+   {
+    "date": "1776-03-30",
+    "coordinates": {
+     "lat": 44.6475,
+     "lng": -63.5906
+    },
+    "location_name": "Halifax"
+   },
+   {
+    "date": "1776-07-03",
+    "coordinates": {
+     "lat": 40.5719,
+     "lng": -74.1469
+    },
+    "location_name": "Staten Island (landing)"
+   },
+   {
+    "date": "1776-08-27",
+    "coordinates": {
+     "lat": 40.666,
+     "lng": -73.966
+    },
+    "location_name": "Battle of Long Island",
+    "is_battle": true,
+    "event_id": 8
+   },
+   {
+    "date": "1776-09-15",
+    "coordinates": {
+     "lat": 40.7417,
+     "lng": -73.9781
+    },
+    "location_name": "Kip's Bay landing"
+   },
+   {
+    "date": "1776-10-28",
+    "coordinates": {
+     "lat": 41.03,
+     "lng": -73.78
+    },
+    "location_name": "Battle of White Plains",
+    "is_battle": true,
+    "event_id": 11
+   },
+   {
+    "date": "1776-11-16",
+    "coordinates": {
+     "lat": 40.85278,
+     "lng": -73.93806
+    },
+    "location_name": "Battle of Fort Washington",
+    "is_battle": true,
+    "event_id": 12
+   },
+   {
+    "date": "1777-06-14",
+    "coordinates": {
+     "lat": 40.4999,
+     "lng": -74.5955
+    },
+    "location_name": "Somerset Court House (Millstone)"
+   },
+   {
+    "date": "1777-06-22",
+    "coordinates": {
+     "lat": 40.5086,
+     "lng": -74.2678
+    },
+    "location_name": "Perth Amboy"
+   },
+   {
+    "date": "1777-07-23",
+    "coordinates": {
+     "lat": 40.453,
+     "lng": -73.995
+    },
+    "location_name": "Sandy Hook (fleet departs for the Chesapeake)"
+   },
+   {
+    "date": "1777-08-25",
+    "coordinates": {
+     "lat": 39.6078,
+     "lng": -75.8297
+    },
+    "location_name": "Head of Elk (landing)"
+   },
+   {
+    "date": "1777-09-11",
+    "coordinates": {
+     "lat": 39.872,
+     "lng": -75.59
+    },
+    "location_name": "Battle of Brandywine",
+    "is_battle": true,
+    "event_id": 18
+   },
+   {
+    "date": "1777-09-26",
+    "coordinates": {
+     "lat": 39.9528,
+     "lng": -75.1636
+    },
+    "location_name": "Philadelphia (enters the city)"
+   },
+   {
+    "date": "1777-10-04",
+    "coordinates": {
+     "lat": 40.043,
+     "lng": -75.181
+    },
+    "location_name": "Battle of Germantown",
+    "is_battle": true,
+    "event_id": 20
+   },
+   {
+    "date": "1777-10-19",
+    "coordinates": {
+     "lat": 39.9528,
+     "lng": -75.1636
+    },
+    "location_name": "Philadelphia (army pulls back from Germantown)"
+   },
+   {
+    "date": "1778-05-24",
+    "coordinates": {
+     "lat": 39.9528,
+     "lng": -75.1636
+    },
+    "location_name": "Philadelphia (departs for England)"
    }
   ]
  }
